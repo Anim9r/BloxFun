@@ -6119,90 +6119,102 @@ local function DestroyArms()
 end
 
 local function GlovesLeftRightTexture(l_gl_asset, r_gl_asset)
-	if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("GIGNArms") then
-		game:GetService("ReplicatedStorage")["Viewmodels"]["GIGNArms"]["Left Arm"].LGlove.Mesh.TextureId = l_gl_asset
+	local CurrentArms= "BDSArms"
+	if ReplicatedStorage["Viewmodels"]:FindFirstChild(CurrentArms) then
+		if ReplicatedStorage["Viewmodels"][CurrentArms]["Left Arm"]["Glove"]:FindFirstChild("SurfaceAppearance") then
+			ReplicatedStorage["Viewmodels"][CurrentArms]["Left Arm"]["Glove"]["SurfaceAppearance"]:Destroy(); task.wait()
+			local PBR= Instance.new("SurfaceAppearance", ReplicatedStorage["Viewmodels"][CurrentArms]["Left Arm"]["Glove"])
+			PBR.ColorMap= l_gl_asset
+		else ReplicatedStorage["Viewmodels"][CurrentArms]["Left Arm"]["Glove"].TextureID= l_gl_asset end
+		if ReplicatedStorage["Viewmodels"][CurrentArms]["Right Arm"]["Glove"]:FindFirstChild("SurfaceAppearance") then
+			ReplicatedStorage["Viewmodels"][CurrentArms]["Right Arm"]["Glove"]["SurfaceAppearance"]:Destroy(); task.wait()
+			local PBR= Instance.new("SurfaceAppearance", ReplicatedStorage["Viewmodels"][CurrentArms]["Right Arm"]["Glove"])
+			PBR.ColorMap= r_gl_asset
+		else ReplicatedStorage["Viewmodels"][CurrentArms]["Right Arm"]["Glove"].TextureID= r_gl_asset end
 	end
-	if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("ECArms") then
-		game:GetService("ReplicatedStorage")["Viewmodels"]["ECArms"]["Left Arm"].LGlove.Mesh.TextureId = l_gl_asset
+	local CurrentArms= "ECArms"
+	if ReplicatedStorage["Viewmodels"]:FindFirstChild(CurrentArms) then
+		if ReplicatedStorage["Viewmodels"][CurrentArms]["Left Arm"]["Glove"]:FindFirstChild("SurfaceAppearance") then
+			ReplicatedStorage["Viewmodels"][CurrentArms]["Left Arm"]["Glove"]["SurfaceAppearance"]:Destroy(); task.wait()
+			local PBR= Instance.new("SurfaceAppearance", ReplicatedStorage["Viewmodels"][CurrentArms]["Left Arm"]["Glove"])
+			PBR.ColorMap= l_gl_asset
+		else ReplicatedStorage["Viewmodels"][CurrentArms]["Left Arm"]["Glove"].TextureID= l_gl_asset end
+		if ReplicatedStorage["Viewmodels"][CurrentArms]["Right Arm"]["Glove"]:FindFirstChild("SurfaceAppearance") then
+			ReplicatedStorage["Viewmodels"][CurrentArms]["Right Arm"]["Glove"]["SurfaceAppearance"]:Destroy(); task.wait()
+			local PBR= Instance.new("SurfaceAppearance", ReplicatedStorage["Viewmodels"][CurrentArms]["Right Arm"]["Glove"])
+			PBR.ColorMap= r_gl_asset
+		else ReplicatedStorage["Viewmodels"][CurrentArms]["Right Arm"]["Glove"].TextureID= r_gl_asset end
 	end
-	if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("SASArms") then
-		game:GetService("ReplicatedStorage")["Viewmodels"]["SASArms"]["Left Arm"].LGlove.Mesh.TextureId = l_gl_asset
+	local CurrentArms= "PTArms"
+	if ReplicatedStorage["Viewmodels"]:FindFirstChild(CurrentArms) then
+		if ReplicatedStorage["Viewmodels"][CurrentArms]["Left Arm"]["Glove"]:FindFirstChild("SurfaceAppearance") then
+			ReplicatedStorage["Viewmodels"][CurrentArms]["Left Arm"]["Glove"]["SurfaceAppearance"]:Destroy(); task.wait()
+			local PBR= Instance.new("SurfaceAppearance", ReplicatedStorage["Viewmodels"][CurrentArms]["Left Arm"]["Glove"])
+			PBR.ColorMap= l_gl_asset
+		else ReplicatedStorage["Viewmodels"][CurrentArms]["Left Arm"]["Glove"].TextureID= l_gl_asset end
+		if ReplicatedStorage["Viewmodels"][CurrentArms]["Right Arm"]["Glove"]:FindFirstChild("SurfaceAppearance") then
+			ReplicatedStorage["Viewmodels"][CurrentArms]["Right Arm"]["Glove"]["SurfaceAppearance"]:Destroy(); task.wait()
+			local PBR= Instance.new("SurfaceAppearance", ReplicatedStorage["Viewmodels"][CurrentArms]["Right Arm"]["Glove"])
+			PBR.ColorMap= r_gl_asset
+		else ReplicatedStorage["Viewmodels"][CurrentArms]["Right Arm"]["Glove"].TextureID= r_gl_asset end
 	end
-	if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("IDFArms") then
-		game:GetService("ReplicatedStorage")["Viewmodels"]["IDFArms"]["Left Arm"].LGlove.Mesh.TextureId = l_gl_asset
-	end
-	if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("UTArms") then
-		game:GetService("ReplicatedStorage")["Viewmodels"]["UTArms"]["Left Arm"].LGlove.Mesh.TextureId = l_gl_asset
-	end
-	if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("GCTArms") then
-		game:GetService("ReplicatedStorage")["Viewmodels"]["GCTArms"]["Left Arm"].LGlove.Mesh.TextureId = l_gl_asset
-	end
-	if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("PCArms") then
-		game:GetService("ReplicatedStorage")["Viewmodels"]["PCArms"]["Left Arm"].LGlove.Mesh.TextureId = l_gl_asset
-	end
-	if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("BDSArms") then
-		game:GetService("ReplicatedStorage")["Viewmodels"]["BDSArms"]["Left Arm"].LGlove.Mesh.TextureId = l_gl_asset
-	end
-	if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("GSGArms") then
-		game:GetService("ReplicatedStorage")["Viewmodels"]["GSGArms"]["Left Arm"].LGlove.Mesh.TextureId = l_gl_asset
-	end
-	if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("SPArms") then
-		game:GetService("ReplicatedStorage")["Viewmodels"]["SPArms"]["Left Arm"].LGlove.Mesh.TextureId = l_gl_asset
-	end
-	if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("WDArms") then
-		game:GetService("ReplicatedStorage")["Viewmodels"]["WDArms"]["Left Arm"].LGlove.Mesh.TextureId = l_gl_asset
-	end
-	if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("GTArms") then
-		game:GetService("ReplicatedStorage")["Viewmodels"]["GTArms"]["Left Arm"].LGlove.Mesh.TextureId = l_gl_asset
-	end
-	if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("PTArms") then
-		game:GetService("ReplicatedStorage")["Viewmodels"]["PTArms"]["Left Arm"].LGlove.Mesh.TextureId = l_gl_asset
-	end
-	if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("AAArms") then
-		game:GetService("ReplicatedStorage")["Viewmodels"]["AAArms"]["Left Arm"].LGlove.Mesh.TextureId = l_gl_asset
-	end
-	if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("GIGNArms") then
-		game:GetService("ReplicatedStorage")["Viewmodels"]["GIGNArms"]["Right Arm"].RGlove.Mesh.TextureId = r_gl_asset
-	end
-	if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("ECArms") then
-		game:GetService("ReplicatedStorage")["Viewmodels"]["ECArms"]["Right Arm"].RGlove.Mesh.TextureId = r_gl_asset
-	end
-	if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("SASArms") then
-		game:GetService("ReplicatedStorage")["Viewmodels"]["SASArms"]["Right Arm"].RGlove.Mesh.TextureId = r_gl_asset
-	end
-	if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("IDFArms") then
-		game:GetService("ReplicatedStorage")["Viewmodels"]["IDFArms"]["Right Arm"].RGlove.Mesh.TextureId = r_gl_asset
-	end
-	if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("UTArms") then
-		game:GetService("ReplicatedStorage")["Viewmodels"]["UTArms"]["Right Arm"].RGlove.Mesh.TextureId = r_gl_asset
-	end
-	if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("GCTArms") then
-		game:GetService("ReplicatedStorage")["Viewmodels"]["GCTArms"]["Right Arm"].RGlove.Mesh.TextureId = r_gl_asset
-	end
-	if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("PCArms") then
-		game:GetService("ReplicatedStorage")["Viewmodels"]["PCArms"]["Right Arm"].RGlove.Mesh.TextureId = r_gl_asset
-	end
-	if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("BDSArms") then
-		game:GetService("ReplicatedStorage")["Viewmodels"]["BDSArms"]["Right Arm"].RGlove.Mesh.TextureId = r_gl_asset
-	end
-	if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("GSGArms") then
-		game:GetService("ReplicatedStorage")["Viewmodels"]["GSGArms"]["Right Arm"].RGlove.Mesh.TextureId = r_gl_asset
-	end
-	if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("SPArms") then
-		game:GetService("ReplicatedStorage")["Viewmodels"]["SPArms"]["Right Arm"].RGlove.Mesh.TextureId = r_gl_asset
-	end
-	if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("WDArms") then
-		game:GetService("ReplicatedStorage")["Viewmodels"]["WDArms"]["Right Arm"].RGlove.Mesh.TextureId = r_gl_asset
-	end
-	if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("GTArms") then
-		game:GetService("ReplicatedStorage")["Viewmodels"]["GTArms"]["Right Arm"].RGlove.Mesh.TextureId = r_gl_asset
-	end
-	if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("PTArms") then
-		game:GetService("ReplicatedStorage")["Viewmodels"]["PTArms"]["Right Arm"].RGlove.Mesh.TextureId = r_gl_asset
-	end
-	if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("AAArms") then
-		game:GetService("ReplicatedStorage")["Viewmodels"]["AAArms"]["Right Arm"].RGlove.Mesh.TextureId = r_gl_asset
-	end
+	--Old
+	-- if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("GIGNArms") then
+	-- 	game:GetService("ReplicatedStorage")["Viewmodels"]["GIGNArms"]["Left Arm"].LGlove.Mesh.TextureId = l_gl_asset
+	-- 	game:GetService("ReplicatedStorage")["Viewmodels"]["GIGNArms"]["Right Arm"].RGlove.Mesh.TextureId = r_gl_asset
+	-- end
+	-- if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("ECArms") then
+	-- 	game:GetService("ReplicatedStorage")["Viewmodels"]["ECArms"]["Left Arm"].LGlove.Mesh.TextureId = l_gl_asset
+	-- 	game:GetService("ReplicatedStorage")["Viewmodels"]["ECArms"]["Right Arm"].RGlove.Mesh.TextureId = r_gl_asset
+	-- end
+	-- if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("SASArms") then
+	-- 	game:GetService("ReplicatedStorage")["Viewmodels"]["SASArms"]["Left Arm"].LGlove.Mesh.TextureId = l_gl_asset
+	-- 	game:GetService("ReplicatedStorage")["Viewmodels"]["SASArms"]["Right Arm"].RGlove.Mesh.TextureId = r_gl_asset
+	-- end
+	-- if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("IDFArms") then
+	-- 	game:GetService("ReplicatedStorage")["Viewmodels"]["IDFArms"]["Left Arm"].LGlove.Mesh.TextureId = l_gl_asset
+	-- 	game:GetService("ReplicatedStorage")["Viewmodels"]["IDFArms"]["Right Arm"].RGlove.Mesh.TextureId = r_gl_asset
+	-- end
+	-- if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("UTArms") then
+	-- 	game:GetService("ReplicatedStorage")["Viewmodels"]["UTArms"]["Left Arm"].LGlove.Mesh.TextureId = l_gl_asset
+	-- 	game:GetService("ReplicatedStorage")["Viewmodels"]["UTArms"]["Right Arm"].RGlove.Mesh.TextureId = r_gl_asset
+	-- end
+	-- if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("GCTArms") then
+	-- 	game:GetService("ReplicatedStorage")["Viewmodels"]["GCTArms"]["Left Arm"].LGlove.Mesh.TextureId = l_gl_asset
+	-- 	game:GetService("ReplicatedStorage")["Viewmodels"]["GCTArms"]["Right Arm"].RGlove.Mesh.TextureId = r_gl_asset
+	-- end
+	-- if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("PCArms") then
+	-- 	game:GetService("ReplicatedStorage")["Viewmodels"]["PCArms"]["Left Arm"].LGlove.Mesh.TextureId = l_gl_asset
+	-- 	game:GetService("ReplicatedStorage")["Viewmodels"]["PCArms"]["Right Arm"].RGlove.Mesh.TextureId = r_gl_asset
+	-- end
+	-- if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("BDSArms") then
+	-- 	game:GetService("ReplicatedStorage")["Viewmodels"]["BDSArms"]["Left Arm"].LGlove.Mesh.TextureId = l_gl_asset
+	-- 	game:GetService("ReplicatedStorage")["Viewmodels"]["BDSArms"]["Right Arm"].RGlove.Mesh.TextureId = r_gl_asset
+	-- end
+	-- if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("GSGArms") then
+	-- 	game:GetService("ReplicatedStorage")["Viewmodels"]["GSGArms"]["Left Arm"].LGlove.Mesh.TextureId = l_gl_asset
+	-- 	game:GetService("ReplicatedStorage")["Viewmodels"]["GSGArms"]["Right Arm"].RGlove.Mesh.TextureId = r_gl_asset
+	-- end
+	-- if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("SPArms") then
+	-- 	game:GetService("ReplicatedStorage")["Viewmodels"]["SPArms"]["Left Arm"].LGlove.Mesh.TextureId = l_gl_asset
+	-- 	game:GetService("ReplicatedStorage")["Viewmodels"]["SPArms"]["Right Arm"].RGlove.Mesh.TextureId = r_gl_asset
+	-- end
+	-- if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("WDArms") then
+	-- 	game:GetService("ReplicatedStorage")["Viewmodels"]["WDArms"]["Left Arm"].LGlove.Mesh.TextureId = l_gl_asset
+	-- 	game:GetService("ReplicatedStorage")["Viewmodels"]["WDArms"]["Right Arm"].RGlove.Mesh.TextureId = r_gl_asset
+	-- end
+	-- if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("GTArms") then
+	-- 	game:GetService("ReplicatedStorage")["Viewmodels"]["GTArms"]["Left Arm"].LGlove.Mesh.TextureId = l_gl_asset
+	-- 	game:GetService("ReplicatedStorage")["Viewmodels"]["GTArms"]["Right Arm"].RGlove.Mesh.TextureId = r_gl_asset
+	-- end
+	-- if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("PTArms") then
+	-- 	game:GetService("ReplicatedStorage")["Viewmodels"]["PTArms"]["Left Arm"].LGlove.Mesh.TextureId = l_gl_asset
+	-- 	game:GetService("ReplicatedStorage")["Viewmodels"]["PTArms"]["Right Arm"].RGlove.Mesh.TextureId = r_gl_asset
+	-- end
+	-- if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("AAArms") then
+	-- 	game:GetService("ReplicatedStorage")["Viewmodels"]["AAArms"]["Left Arm"].LGlove.Mesh.TextureId = l_gl_asset
+	-- 	game:GetService("ReplicatedStorage")["Viewmodels"]["AAArms"]["Right Arm"].RGlove.Mesh.TextureId = r_gl_asset
+	-- end
 end
 
 local function EquipGloves(GloveType, LeftTexture, RightTexture)
@@ -6213,16 +6225,16 @@ local function EquipGloves(GloveType, LeftTexture, RightTexture)
 	local gl_model: string;
 	if GloveType == "Handwraps" or GloveType == "Handwrap" or GloveType == "Wraps" or GloveType == "Wrap" then
 		gl_type = "Handwraps_Models"
-		gl_model = "rbxassetid://7687142147"
+		gl_model = "rbxassetid://75904947076725" --7687142147 (Old)
 	elseif GloveType == "SportGloves" or GloveType == "SportsGlove" or GloveType == "Sports" or GloveType == "Sport" then
 		gl_type = "Sports_Models"
-		gl_model = "rbxassetid://7687143935"
+		gl_model = "rbxassetid://74000991652640" --7687143935 (Old)
 	elseif GloveType == "StrappedGloves" or GloveType == "StrappedGlove" or GloveType == "Strapped" or GloveType == "Strappeds" then
 		gl_type = "Strapped_Models"
-		gl_model = "rbxassetid://7687144943"
+		gl_model = "rbxassetid://71520951825644" --7687144943 (Old)
 	elseif GloveType == "FingerlessGloves" or GloveType == "FingerlessGlove" or GloveType == "Fingerless" then
 		gl_type = "Fingerless_Models"
-		gl_model = "rbxassetid://7687118060"
+		gl_model = "rbxassetid://132938358346526" --7687118060 (Old)
 	end
 	DestroyArms()
 	task.wait()
@@ -54126,7 +54138,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomViewmodelsScrollingFrame.TabCustomViewm
 			CoreGui["BF_Values"]["AWPsilencer_Handle"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID
 			CoreGui["BF_Values"]["AWPsilencer_Scope"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID
 			CoreGui["BF_Values"]["AWPsilencer_Mag"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID
-			CoreGui["BF_Values"]["AWPsilencer_Barrel"].Value = --game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID
+			CoreGui["BF_Values"]["AWPsilencer_Barrel"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID
 			CoreGui["BF_Values"]["AWPsilencer_Slide"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID
 			CoreGui["BF_Values"]["AWPsilencer_Slide 2"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID
 		else
@@ -54152,7 +54164,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomViewmodelsScrollingFrame.TabCustomViewm
 			CoreGui["BF_Values"]["AWPsilencer_Handle"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID
 			CoreGui["BF_Values"]["AWPsilencer_Scope"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID
 			CoreGui["BF_Values"]["AWPsilencer_Mag"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID
-			CoreGui["BF_Values"]["AWPsilencer_Barrel"].Value = --game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID
+			CoreGui["BF_Values"]["AWPsilencer_Barrel"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID
 			CoreGui["BF_Values"]["AWPsilencer_Slide"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID
 			CoreGui["BF_Values"]["AWPsilencer_Slide 2"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID
 		end
@@ -56283,7 +56295,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton5_Frame.TabAr
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -56306,7 +56318,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton6_Frame.TabAr
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -56329,7 +56341,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton7_Frame.TabAr
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -56352,7 +56364,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton8_Frame.TabAr
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -56375,7 +56387,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton9_Frame.TabAr
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -56398,7 +56410,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton10_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -56421,7 +56433,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton11_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -56444,7 +56456,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton12_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -56467,7 +56479,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton13_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -56490,7 +56502,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton14_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -56513,7 +56525,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton15_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -56536,7 +56548,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton16_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -56559,7 +56571,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton17_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -56582,7 +56594,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton18_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -56605,7 +56617,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton19_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -56628,7 +56640,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton20_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -56651,7 +56663,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton21_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -56674,7 +56686,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton22_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -56697,7 +56709,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton23_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -56720,7 +56732,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton24_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687144943')[1].Parent = Model1
+	game:GetObjects('rbxassetid://71520951825644')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -56743,7 +56755,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton25_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687144943')[1].Parent = Model1
+	game:GetObjects('rbxassetid://71520951825644')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -56766,7 +56778,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton26_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687144943')[1].Parent = Model1
+	game:GetObjects('rbxassetid://71520951825644')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -56789,7 +56801,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton27_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687142147')[1].Parent = Model1
+	game:GetObjects('rbxassetid://75904947076725')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -56812,7 +56824,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton28_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687142147')[1].Parent = Model1
+	game:GetObjects('rbxassetid://75904947076725')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -56835,7 +56847,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton29_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -56858,7 +56870,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton30_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -56881,7 +56893,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton31_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -56936,7 +56948,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton32_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687144943')[1].Parent = Model1
+	game:GetObjects('rbxassetid://71520951825644')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -56959,7 +56971,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton33_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -56982,7 +56994,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton34_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -57005,7 +57017,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton35_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -57028,7 +57040,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton36_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -57051,7 +57063,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton37_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -57074,7 +57086,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton38_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -57119,14 +57131,15 @@ end)
 --8/40
 CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton40_Frame.TabArmsButton40_Roundify.TabArmsButton40_Roundify_Frame.TabArmsButton40_Script.MouseButton1Down:Connect(function()
 	--(Remove Gloves)
-	game:GetService("ReplicatedStorage")["Viewmodels"]["Arms"]["Left Arm"]["LGlove"].Transparency=1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["Arms"]["Right Arm"]["RGlove"].Transparency=1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["BDSArms"]["Left Arm"]["LGlove"].Transparency=1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["BDSArms"]["Right Arm"]["RGlove"].Transparency=1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["ECArms"]["Left Arm"]["LGlove"].Transparency=1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["ECArms"]["Right Arm"]["RGlove"].Transparency=1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["PTArms"]["Left Arm"]["LGlove"].Transparency=1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["PTArms"]["Right Arm"]["RGlove"].Transparency=1
+	if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("BDSArms", true) then
+		game:GetService("ReplicatedStorage")["Viewmodels"]["BDSArms"]["Left Arm"]["LGlove"].Transparency=1
+		game:GetService("ReplicatedStorage")["Viewmodels"]["BDSArms"]["Right Arm"]["RGlove"].Transparency=1 end
+	if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("ECArms", true) then
+		game:GetService("ReplicatedStorage")["Viewmodels"]["ECArms"]["Left Arm"]["LGlove"].Transparency=1
+		game:GetService("ReplicatedStorage")["Viewmodels"]["ECArms"]["Right Arm"]["RGlove"].Transparency=1 end
+	if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("PTArms", true) then
+		game:GetService("ReplicatedStorage")["Viewmodels"]["PTArms"]["Left Arm"]["LGlove"].Transparency=1
+		game:GetService("ReplicatedStorage")["Viewmodels"]["PTArms"]["Right Arm"]["RGlove"].Transparency=1 end
 	--Old
 	-- game:GetService("ReplicatedStorage")["Viewmodels"]["ECArms"]["Left Arm"]["LGlove"].Transparency = 1
 	-- game:GetService("ReplicatedStorage")["Viewmodels"]["ECArms"]["Right Arm"]["RGlove"].Transparency = 1
@@ -57209,7 +57222,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton41_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -57232,7 +57245,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton42_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687142147')[1].Parent = Model1
+	game:GetObjects('rbxassetid://75904947076725')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -57255,7 +57268,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton43_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -57278,7 +57291,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton44_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -57301,7 +57314,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton45_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -57324,7 +57337,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton46_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -57347,7 +57360,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton47_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -57370,7 +57383,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton48_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -57393,7 +57406,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton49_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -57435,7 +57448,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton51_Frame.TabA
 	DestroyArms()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687144943')[1].Parent = Model1
+	game:GetObjects('rbxassetid://71520951825644')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -57508,7 +57521,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabExplicitContentScrollingFrame.TabExplicitCont
 	game:GetService("ReplicatedStorage")["Viewmodels"]["AAArms"]:Destroy()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -57571,7 +57584,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabExplicitContentScrollingFrame.TabExplicitCont
 	game:GetService("ReplicatedStorage")["Viewmodels"]["AAArms"]:Destroy()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -57669,7 +57682,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabExplicitContentScrollingFrame.TabExplicitCont
 	game:GetService("ReplicatedStorage")["Viewmodels"]["AAArms"]:Destroy()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -57732,7 +57745,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabExplicitContentScrollingFrame.TabExplicitCont
 	game:GetService("ReplicatedStorage")["Viewmodels"]["AAArms"]:Destroy()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
@@ -57886,7 +57899,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabExplicitContentScrollingFrame.TabExplicitCont
 	game:GetService("ReplicatedStorage")["Viewmodels"]["AAArms"]:Destroy()
 	task.wait()
 	local Model1 = Instance.new("Model", game:GetService("ReplicatedStorage")["Viewmodels"])
-	game:GetObjects('rbxassetid://7687143935')[1].Parent = Model1
+	game:GetObjects('rbxassetid://74000991652640')[1].Parent = Model1
 	Model1 = game:GetService("ReplicatedStorage")["Viewmodels"].Model
 	for _, Child in pairs(Model1:GetChildren()) do
 	    Child.Parent = Model1.Parent
