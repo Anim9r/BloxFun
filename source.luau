@@ -6112,6 +6112,9 @@ local function DestroyArms()
 	end
 	if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("AAArms") then
 		game:GetService("ReplicatedStorage")["Viewmodels"]["AAArms"]:Destroy()
+	end
+	if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("Arms") then
+		game:GetService("ReplicatedStorage")["Viewmodels"]["Arms"]:Destroy()
 	end	
 end
 
@@ -48519,456 +48522,456 @@ end
 --1/1
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton1_Frame.TabCustomSkinsButton1_Roundify.TabCustomSkinsButton1_Roundify_Frame.TabCustomSkinsButton1_Script.MouseButton1Down:Connect(function()
 	--AK47 Chromatic Aberration
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Handle"].TextureID = "rbxassetid://6574439340"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Bolt"].TextureID = "rbxassetid://6574438120"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID = "rbxassetid://6574517743"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://6574439340"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://6574438120"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://6574517743"
 	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/2
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton2_Frame.TabCustomSkinsButton2_Roundify.TabCustomSkinsButton2_Roundify_Frame.TabCustomSkinsButton2_Script.MouseButton1Down:Connect(function()
 	--AK47 Chromatic Aberration
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Handle"].TextureID = "rbxassetid://6585686554"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Bolt"].TextureID = "rbxassetid://6585685092"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID = "rbxassetid://6585687653"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://6585686554"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://6585685092"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://6585687653"
 	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/3
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton3_Frame.TabCustomSkinsButton3_Roundify.TabCustomSkinsButton3_Roundify_Frame.TabCustomSkinsButton3_Script.MouseButton1Down:Connect(function()
 	--AK47 Starkov
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Handle"].TextureID = "rbxassetid://6538676814"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Bolt"].TextureID = "rbxassetid://6538676814"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID = "rbxassetid://6538676814"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://6538676814"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://6538676814"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://6538676814"
 	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/4
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton4_Frame.TabCustomSkinsButton4_Roundify.TabCustomSkinsButton4_Roundify_Frame.TabCustomSkinsButton4_Script.MouseButton1Down:Connect(function()
 	--AK47 Aquamarine Revenge
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Handle"].TextureID = "rbxassetid://6448558943"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Bolt"].TextureID = "rbxassetid://6448557262"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID = "rbxassetid://6448560045"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://6448558943"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://6448557262"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://6448560045"
 	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/5
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton5_Frame.TabCustomSkinsButton5_Roundify.TabCustomSkinsButton5_Roundify_Frame.TabCustomSkinsButton5_Script.MouseButton1Down:Connect(function()
 	--AK47 Neon Rider
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Handle"].TextureID = "rbxassetid://6451119080"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Bolt"].TextureID = "rbxassetid://6451120406"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID = "rbxassetid://6451117699"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://6451119080"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://6451120406"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://6451117699"
 	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/6
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton6_Frame.TabCustomSkinsButton6_Roundify.TabCustomSkinsButton6_Roundify_Frame.TabCustomSkinsButton6_Script.MouseButton1Down:Connect(function()
 	--AK47 Wild Lotus
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Handle"].TextureID = "rbxassetid://6451260038"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Bolt"].TextureID = "rbxassetid://6451261292"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID = "rbxassetid://6451260682"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://6451260038"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://6451261292"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://6451260682"
 	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/7
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton7_Frame.TabCustomSkinsButton7_Roundify.TabCustomSkinsButton7_Roundify_Frame.TabCustomSkinsButton7_Script.MouseButton1Down:Connect(function()
 	--AK47 Legion of Anubis
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Handle"].TextureID = "rbxassetid://6451429545"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Bolt"].TextureID = "rbxassetid://6476838768"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID = "rbxassetid://6451427955"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://6451429545"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://6476838768"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://6451427955"
 	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/8
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton8_Frame.TabCustomSkinsButton8_Roundify.TabCustomSkinsButton8_Roundify_Frame.TabCustomSkinsButton8_Script.MouseButton1Down:Connect(function()
 	--AK47 Mummy
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Handle"].TextureID = "rbxassetid://6476841400"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Bolt"].TextureID = "rbxassetid://6476842942"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID = "rbxassetid://6476842198"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://6476841400"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://6476842942"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://6476842198"
 	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/9
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton9_Frame.TabCustomSkinsButton9_Roundify.TabCustomSkinsButton9_Roundify_Frame.TabCustomSkinsButton9_Script.MouseButton1Down:Connect(function()
 	--AK47 Colors
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Handle"].TextureID = "rbxassetid://9528700462"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Bolt"].TextureID = "rbxassetid://9528704344"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID = "rbxassetid://9528702335"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://9528700462"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://9528704344"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://9528702335"
 	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/10
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton10_Frame.TabCustomSkinsButton10_Roundify.TabCustomSkinsButton10_Roundify_Frame.TabCustomSkinsButton10_Script.MouseButton1Down:Connect(function()
 	--AK47 Dragon
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Handle"].TextureID = "rbxassetid://6525737160"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Bolt"].TextureID = "rbxassetid://6525735946"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID = "rbxassetid://6525738132"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://6525737160"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://6525735946"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://6525738132"
 	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/11
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton11_Frame.TabCustomSkinsButton11_Roundify.TabCustomSkinsButton11_Roundify_Frame.TabCustomSkinsButton11_Script.MouseButton1Down:Connect(function()
 	--AK47 Vulcan
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Handle"].TextureID = "rbxassetid://6698167994"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Bolt"].TextureID = "rbxassetid://6698170295"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID = "rbxassetid://6698169370"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://6698167994"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://6698170295"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://6698169370"
 	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/12
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton12_Frame.TabCustomSkinsButton12_Roundify.TabCustomSkinsButton12_Roundify_Frame.TabCustomSkinsButton12_Script.MouseButton1Down:Connect(function()
 	--M4A4 Howl
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Chamber"].TextureID = "rbxassetid://6451097179"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Handle"].TextureID = "rbxassetid://6451097179"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Barrel"].TextureID = "rbxassetid://6451097179"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Sight"].TextureID = "rbxassetid://6451098107"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Cover"].TextureID = "rbxassetid://6451097179"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["notex"].TextureID = "rbxassetid://6451097179"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Back"].TextureID = "rbxassetid://6451097179"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Bolt"].TextureID = "rbxassetid://6451097179"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Mag"].TextureID = "rbxassetid://6451097179"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Handle2"].TextureID = "rbxassetid://6451097179"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Barrel"].TextureID = "rbxassetid://6451097179"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Part"].TextureID = "rbxassetid://6451098107"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Cover"].TextureID = "rbxassetid://6451097179"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["notex"].TextureID = "rbxassetid://6451097179"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Back"].TextureID = "rbxassetid://6451097179"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Bolt2"].TextureID = "rbxassetid://6451097179"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Mag2"].TextureID = "rbxassetid://6451097179"
 end)
 --1/13
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton13_Frame.TabCustomSkinsButton13_Roundify.TabCustomSkinsButton13_Roundify_Frame.TabCustomSkinsButton13_Script.MouseButton1Down:Connect(function()
 	--M4A4 Draconic
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Chamber"].TextureID = "rbxassetid://6451101071"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Handle"].TextureID = "rbxassetid://6451101071"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Barrel"].TextureID = "rbxassetid://6451101071"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Sight"].TextureID = "rbxassetid://6451102847"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Cover"].TextureID = "rbxassetid://6451101071"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["notex"].TextureID = "rbxassetid://6451101071"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Back"].TextureID = "rbxassetid://6451101071"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Bolt"].TextureID = "rbxassetid://6451101071"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Mag"].TextureID = "rbxassetid://6451101071"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Handle2"].TextureID = "rbxassetid://6451101071"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Barrel"].TextureID = "rbxassetid://6451101071"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Part"].TextureID = "rbxassetid://6451102847"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Cover"].TextureID = "rbxassetid://6451101071"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["notex"].TextureID = "rbxassetid://6451101071"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Back"].TextureID = "rbxassetid://6451101071"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Bolt2"].TextureID = "rbxassetid://6451101071"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Mag2"].TextureID = "rbxassetid://6451101071"
 end)
 --1/14
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton14_Frame.TabCustomSkinsButton14_Roundify.TabCustomSkinsButton14_Roundify_Frame.TabCustomSkinsButton14_Script.MouseButton1Down:Connect(function()
 	--M4A4 Dragon
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Chamber"].TextureID = "rbxassetid://6522624583"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Handle"].TextureID = "rbxassetid://6522624583"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Barrel"].TextureID = "rbxassetid://6522624583"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Sight"].TextureID = "rbxassetid://6522626082"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Cover"].TextureID = "rbxassetid://6522624583"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["notex"].TextureID = "rbxassetid://6522624583"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Back"].TextureID = "rbxassetid://6522624583"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Bolt"].TextureID = "rbxassetid://6522624583"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Mag"].TextureID = "rbxassetid://6522624583"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Handle2"].TextureID = "rbxassetid://6522624583"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Barrel"].TextureID = "rbxassetid://6522624583"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Part"].TextureID = "rbxassetid://6522626082"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Cover"].TextureID = "rbxassetid://6522624583"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["notex"].TextureID = "rbxassetid://6522624583"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Back"].TextureID = "rbxassetid://6522624583"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Bolt2"].TextureID = "rbxassetid://6522624583"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Mag2"].TextureID = "rbxassetid://6522624583"
 end)
 --1/15
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton15_Frame.TabCustomSkinsButton15_Roundify.TabCustomSkinsButton15_Roundify_Frame.TabCustomSkinsButton15_Script.MouseButton1Down:Connect(function()
 	--M4A1-S Hyper Beast
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Silencer2"].TextureID = "rbxassetid://6451124368"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Silencer"].TextureID = "rbxassetid://6451124368"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Barrel"].TextureID = "rbxassetid://6451126496"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Handle"].TextureID = "rbxassetid://6451126496"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Bolt"].TextureID = "rbxassetid://6451126496"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Grip"].TextureID = "rbxassetid://6451126496"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Back"].TextureID = "rbxassetid://6451126496"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Top"].TextureID = "rbxassetid://6451126496"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Mag"].TextureID = "rbxassetid://6451127619"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Silencer"].TextureID = "rbxassetid://6451124368"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part4"].TextureID = "rbxassetid://6451126496"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Handle2"].TextureID = "rbxassetid://6451126496"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Bolt2"].TextureID = "rbxassetid://6451126496"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part3"].TextureID = "rbxassetid://6451126496"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part2"].TextureID = "rbxassetid://6451126496"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part"].TextureID = "rbxassetid://6451126496"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Mag2"].TextureID = "rbxassetid://6451127619"
 end)
 --1/16
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton16_Frame.TabCustomSkinsButton16_Roundify.TabCustomSkinsButton16_Roundify_Frame.TabCustomSkinsButton16_Script.MouseButton1Down:Connect(function()
 	--M4A1-S Player Two
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Silencer2"].TextureID = "rbxassetid://6451635627"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Silencer"].TextureID = "rbxassetid://6451635627"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Barrel"].TextureID = "rbxassetid://6451638011"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Handle"].TextureID = "rbxassetid://6451638011"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Bolt"].TextureID = "rbxassetid://6451638011"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Grip"].TextureID = "rbxassetid://6451638011"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Back"].TextureID = "rbxassetid://6451638011"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Top"].TextureID = "rbxassetid://6451638011"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Mag"].TextureID = "rbxassetid://6451636759"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Silencer"].TextureID = "rbxassetid://6451635627"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part4"].TextureID = "rbxassetid://6451638011"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Handle2"].TextureID = "rbxassetid://6451638011"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Bolt2"].TextureID = "rbxassetid://6451638011"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part3"].TextureID = "rbxassetid://6451638011"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part2"].TextureID = "rbxassetid://6451638011"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part"].TextureID = "rbxassetid://6451638011"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Mag2"].TextureID = "rbxassetid://6451636759"
 end)
 --1/17
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton17_Frame.TabCustomSkinsButton17_Roundify.TabCustomSkinsButton17_Roundify_Frame.TabCustomSkinsButton17_Script.MouseButton1Down:Connect(function()
 	--AWP Prince
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle"].TextureID = "rbxassetid://6439619884"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Scope"].TextureID = "rbxassetid://6439621097"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6439619884"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6439619884"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6439619884"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide 2"].TextureID = "rbxassetid://6439619884"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6439619884"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6439621097"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6439619884"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6439619884"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6439619884"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6439619884"
 end)
 --1/18
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton18_Frame.TabCustomSkinsButton18_Roundify.TabCustomSkinsButton18_Roundify_Frame.TabCustomSkinsButton18_Script.MouseButton1Down:Connect(function()
 	--AWP Megumin
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle"].TextureID = "rbxassetid://6439622192"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Scope"].TextureID = "rbxassetid://6439622719"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6439622192"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6439622192"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6439622192"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide 2"].TextureID = "rbxassetid://6439622192"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6439622192"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6439622719"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6439622192"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6439622192"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6439622192"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6439622192"
 end)
 --1/19
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton19_Frame.TabCustomSkinsButton19_Roundify.TabCustomSkinsButton19_Roundify_Frame.TabCustomSkinsButton19_Script.MouseButton1Down:Connect(function()
 	--AWP Sea Creature
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle"].TextureID = "rbxassetid://6451112581"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Scope"].TextureID = "rbxassetid://6451107022"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6451112581"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6451112581"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6451112581"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide 2"].TextureID = "rbxassetid://6451112581"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6451112581"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6451107022"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6451112581"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6451112581"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6451112581"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6451112581"
 end)
 --1/20
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton20_Frame.TabCustomSkinsButton20_Roundify.TabCustomSkinsButton20_Roundify_Frame.TabCustomSkinsButton20_Script.MouseButton1Down:Connect(function()
 	--AWP Mecha Dragon
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle"].TextureID = "rbxassetid://6451200990"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Scope"].TextureID = "rbxassetid://6451199638"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6451200990"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6451200990"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6451200990"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide 2"].TextureID = "rbxassetid://6451200990"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6451200990"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6451199638"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6451200990"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6451200990"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6451200990"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6451200990"
 end)
 --1/21
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton21_Frame.TabCustomSkinsButton21_Roundify.TabCustomSkinsButton21_Roundify_Frame.TabCustomSkinsButton21_Script.MouseButton1Down:Connect(function()
 	--AWP Oni Taiji
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle"].TextureID = "rbxassetid://6451254361"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Scope"].TextureID = "rbxassetid://6451255146"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6451254361"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6451254361"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6451254361"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide 2"].TextureID = "rbxassetid://6451254361"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6451254361"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6451255146"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6451254361"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6451254361"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6451254361"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6451254361"
 end)
 --1/22
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton22_Frame.TabCustomSkinsButton22_Roundify.TabCustomSkinsButton22_Roundify_Frame.TabCustomSkinsButton22_Script.MouseButton1Down:Connect(function()
 	--AWP Dragon Lore
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle"].TextureID = "rbxassetid://6451539744"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Scope"].TextureID = "rbxassetid://6451541040"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6451539744"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6451539744"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6451539744"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide 2"].TextureID = "rbxassetid://6451539744"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6451539744"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6451541040"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6451539744"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6451539744"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6451539744"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6451539744"
 end)
 --1/23
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton23_Frame.TabCustomSkinsButton23_Roundify.TabCustomSkinsButton23_Roundify_Frame.TabCustomSkinsButton23_Script.MouseButton1Down:Connect(function()
 	--AWP Cosmos
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle"].TextureID = "rbxassetid://6451643445"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Scope"].TextureID = "rbxassetid://6451642429"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6451643445"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6451643445"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6451643445"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide 2"].TextureID = "rbxassetid://6451643445"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6451643445"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6451642429"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6451643445"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6451643445"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6451643445"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6451643445"
 end)
 --1/24
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton24_Frame.TabCustomSkinsButton24_Roundify.TabCustomSkinsButton24_Roundify_Frame.TabCustomSkinsButton24_Script.MouseButton1Down:Connect(function()
 	--AWP BloxFun Skin Committee
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle"].TextureID = "rbxassetid://6475019349"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Scope"].TextureID = "rbxassetid://6474929848"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6475019349"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6475019349"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6475019349"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide 2"].TextureID = "rbxassetid://6475019349"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6475019349"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6474929848"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6475019349"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6475019349"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6475019349"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6475019349"
 end)
 --1/25
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton25_Frame.TabCustomSkinsButton25_Roundify.TabCustomSkinsButton25_Roundify_Frame.TabCustomSkinsButton25_Script.MouseButton1Down:Connect(function()
 	--AWP Christmas
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle"].TextureID = "rbxassetid://6476855964"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Scope"].TextureID = "rbxassetid://6476856340"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6476855964"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6476855964"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6476855964"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide 2"].TextureID = "rbxassetid://6476855964"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6476855964"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6476856340"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6476855964"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6476855964"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6476855964"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6476855964"
 end)
 --1/26
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton26_Frame.TabCustomSkinsButton26_Roundify.TabCustomSkinsButton26_Roundify_Frame.TabCustomSkinsButton26_Script.MouseButton1Down:Connect(function()
 	--AWP Fairy
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle"].TextureID = "rbxassetid://6478556721"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Scope"].TextureID = "rbxassetid://6478558789"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6478556721"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6478556721"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6478556721"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide 2"].TextureID = "rbxassetid://6478556721"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6478556721"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6478558789"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6478556721"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6478556721"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6478556721"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6478556721"
 end)
 --1/27
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton27_Frame.TabCustomSkinsButton27_Roundify.TabCustomSkinsButton27_Roundify_Frame.TabCustomSkinsButton27_Script.MouseButton1Down:Connect(function()
 	--AWP G2
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle"].TextureID = "rbxassetid://6507359798"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Scope"].TextureID = "rbxassetid://6507360157"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6507359798"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6507359798"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6507359798"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide 2"].TextureID = "rbxassetid://6507359798"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6507359798"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6507360157"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6507359798"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6507359798"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6507359798"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6507359798"
 end)
 --1/28
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton28_Frame.TabCustomSkinsButton28_Roundify.TabCustomSkinsButton28_Roundify_Frame.TabCustomSkinsButton28_Script.MouseButton1Down:Connect(function()
 	--AWP Ice Obama
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle"].TextureID = "rbxassetid://6558575052"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Scope"].TextureID = "rbxassetid://6558665889"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6558575052"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6558575052"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6558575052"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide 2"].TextureID = "rbxassetid://6558604477"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6558575052"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6558665889"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6558575052"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6558575052"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6558575052"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6558604477"
 end)
 --1/29
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton29_Frame.TabCustomSkinsButton29_Roundify.TabCustomSkinsButton29_Roundify_Frame.TabCustomSkinsButton29_Script.MouseButton1Down:Connect(function()
 	--AWP Gungnir
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle"].TextureID = "rbxassetid://6559063434"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Scope"].TextureID = "rbxassetid://6561080965"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6559063434"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6559063434"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6559063434"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide 2"].TextureID = "rbxassetid://6559063434"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6559063434"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6561080965"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6559063434"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6559063434"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6559063434"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6559063434"
 end)
 --1/30
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton30_Frame.TabCustomSkinsButton30_Roundify.TabCustomSkinsButton30_Roundify_Frame.TabCustomSkinsButton30_Script.MouseButton1Down:Connect(function()
 	--AWP Cyber Nerf
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle"].TextureID = "rbxassetid://6561165602"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Scope"].TextureID = "rbxassetid://6561166890"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6561165602"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6561165602"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6561165602"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide 2"].TextureID = "rbxassetid://6561165602"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6561165602"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6561166890"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6561165602"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6561165602"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6561165602"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6561165602"
 end)
 --1/31
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton31_Frame.TabCustomSkinsButton31_Roundify.TabCustomSkinsButton31_Roundify_Frame.TabCustomSkinsButton31_Script.MouseButton1Down:Connect(function()
 	--AWP G2 Justin
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle"].TextureID = "rbxassetid://6561363492"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Scope"].TextureID = "rbxassetid://6561364214"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6561363492"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6561363492"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6561363492"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide 2"].TextureID = "rbxassetid://6561363492"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6561363492"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6561364214"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6561363492"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6561363492"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6561363492"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6561363492"
 end)
 --1/32
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton32_Frame.TabCustomSkinsButton32_Roundify.TabCustomSkinsButton32_Roundify_Frame.TabCustomSkinsButton32_Script.MouseButton1Down:Connect(function()
 	--AWP Hyper Beast
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle"].TextureID = "rbxassetid://6576205981"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Scope"].TextureID = "rbxassetid://6576207672"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6576205981"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6576205981"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6576205981"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide 2"].TextureID = "rbxassetid://6576205981"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6576205981"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6576207672"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6576205981"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6576205981"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6576205981"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6576205981"
 end)
 --1/33
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton33_Frame.TabCustomSkinsButton33_Roundify.TabCustomSkinsButton33_Roundify_Frame.TabCustomSkinsButton33_Script.MouseButton1Down:Connect(function()
 	--AWP Chromatic Aberration
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle"].TextureID = "rbxassetid://6585694311"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Scope"].TextureID = "rbxassetid://6585692708"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6585694311"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6585694311"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6585694311"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide 2"].TextureID = "rbxassetid://6585694311"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6585694311"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6585692708"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6585694311"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6585694311"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6585694311"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6585694311"
 end)
 --1/34
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton34_Frame.TabCustomSkinsButton34_Roundify.TabCustomSkinsButton34_Roundify_Frame.TabCustomSkinsButton34_Script.MouseButton1Down:Connect(function()
 	--Desert Eagle Code Red
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Handle"].TextureID = "rbxassetid://6451093913"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Slide"].TextureID = "rbxassetid://6451093913"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag 2"].TextureID = "rbxassetid://6451093913"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag"].TextureID = "rbxassetid://6451093913"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Handle2"].TextureID = "rbxassetid://6451093913"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Slide2"].TextureID = "rbxassetid://6451093913"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag2"].TextureID = "rbxassetid://6451093913"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag"].TextureID = "rbxassetid://6451093913"
 end)
 --1/35
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton35_Frame.TabCustomSkinsButton35_Roundify.TabCustomSkinsButton35_Roundify_Frame.TabCustomSkinsButton35_Script.MouseButton1Down:Connect(function()
 	--Desert Eagle Printstream
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Handle"].TextureID = "rbxassetid://6451245869"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Slide"].TextureID = "rbxassetid://6451245869"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag 2"].TextureID = "rbxassetid://6451245869"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag"].TextureID = "rbxassetid://6451245869"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Handle2"].TextureID = "rbxassetid://6451245869"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Slide2"].TextureID = "rbxassetid://6451245869"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag2"].TextureID = "rbxassetid://6451245869"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag"].TextureID = "rbxassetid://6451245869"
 end)
 --1/36
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton36_Frame.TabCustomSkinsButton36_Roundify.TabCustomSkinsButton36_Roundify_Frame.TabCustomSkinsButton36_Script.MouseButton1Down:Connect(function()
 	--Desert Eagle Drip Megumin
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Handle"].TextureID = "rbxassetid://6451535238"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Slide"].TextureID = "rbxassetid://6451535238"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag 2"].TextureID = "rbxassetid://6451535238"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag"].TextureID = "rbxassetid://6451535238"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Handle2"].TextureID = "rbxassetid://6451535238"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Slide2"].TextureID = "rbxassetid://6451535238"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag2"].TextureID = "rbxassetid://6451535238"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag"].TextureID = "rbxassetid://6451535238"
 end)
 --1/37
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton37_Frame.TabCustomSkinsButton37_Roundify.TabCustomSkinsButton37_Roundify_Frame.TabCustomSkinsButton37_Script.MouseButton1Down:Connect(function()
 	--Desert Eagle City
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Handle"].TextureID = "rbxassetid://6458222794"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Slide"].TextureID = "rbxassetid://6458222794"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag 2"].TextureID = "rbxassetid://6458222794"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag"].TextureID = "rbxassetid://6458222794"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Handle2"].TextureID = "rbxassetid://6458222794"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Slide2"].TextureID = "rbxassetid://6458222794"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag2"].TextureID = "rbxassetid://6458222794"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag"].TextureID = "rbxassetid://6458222794"
 end)
 --1/38
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton38_Frame.TabCustomSkinsButton38_Roundify.TabCustomSkinsButton38_Roundify_Frame.TabCustomSkinsButton38_Script.MouseButton1Down:Connect(function()
 	--USP-S Neo-Noir
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Silencer2"].TextureID = "rbxassetid://6451626172"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Silencer"].TextureID = "rbxassetid://6451626172"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Silencer"].TextureID = "rbxassetid://6451626172"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Handle2"].TextureID = "rbxassetid://6451626172"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Handle"].TextureID = "rbxassetid://6451626172"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Handle"].TextureID = "rbxassetid://6451626172"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Slide2"].TextureID = "rbxassetid://6451626172"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Slide"].TextureID = "rbxassetid://6451626172"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Slide"].TextureID = "rbxassetid://6451626172"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Mag2"].TextureID = "rbxassetid://6451626172"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Mag"].TextureID = "rbxassetid://6451626172"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Mag"].TextureID = "rbxassetid://6451626172"
 end)
 --1/39
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton39_Frame.TabCustomSkinsButton39_Roundify.TabCustomSkinsButton39_Roundify_Frame.TabCustomSkinsButton39_Script.MouseButton1Down:Connect(function()
 	--USP-S Cortex
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Silencer2"].TextureID = "rbxassetid://6451647156"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Silencer"].TextureID = "rbxassetid://6451647156"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Silencer"].TextureID = "rbxassetid://6451647156"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Handle2"].TextureID = "rbxassetid://6451647156"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Handle"].TextureID = "rbxassetid://6451647156"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Handle"].TextureID = "rbxassetid://6451647156"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Slide2"].TextureID = "rbxassetid://6451647156"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Slide"].TextureID = "rbxassetid://6451647156"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Slide"].TextureID = "rbxassetid://6451647156"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Mag2"].TextureID = "rbxassetid://6451647156"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Mag"].TextureID = "rbxassetid://6451647156"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Mag"].TextureID = "rbxassetid://6451647156"
 end)
 --1/40
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton40_Frame.TabCustomSkinsButton40_Roundify.TabCustomSkinsButton40_Roundify_Frame.TabCustomSkinsButton40_Script.MouseButton1Down:Connect(function()
 	--Glock-18 Bullet Queen
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Handle2"].TextureID = "rbxassetid://6452960086"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Slide2"].TextureID = "rbxassetid://6452960086"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Mag3"].TextureID = "rbxassetid://6452960086"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Mag2"].TextureID = "rbxassetid://6452960086"
 end)
 --1/41
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton41_Frame.TabCustomSkinsButton41_Roundify.TabCustomSkinsButton41_Roundify_Frame.TabCustomSkinsButton41_Script.MouseButton1Down:Connect(function()
 	--AWP Disco
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle"].TextureID = "rbxassetid://7661852507"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Scope"].TextureID = "rbxassetid://7661855561"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://7661852507"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://7661852507"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://7661852507"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide 2"].TextureID = "rbxassetid://7661852507"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://7661852507"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://7661855561"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://7661852507"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://7661852507"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://7661852507"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://7661852507"
 end)
 --1/42
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton42_Frame.TabCustomSkinsButton42_Roundify.TabCustomSkinsButton42_Roundify_Frame.TabCustomSkinsButton42_Script.MouseButton1Down:Connect(function()
 	--AWP Stardust
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle"].TextureID = "rbxassetid://7661850914"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Scope"].TextureID = "rbxassetid://7661851787"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://7661850914"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://7661850914"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://7661850914"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide 2"].TextureID = "rbxassetid://7661850914"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://7661850914"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://7661851787"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://7661850914"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://7661850914"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://7661850914"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://7661850914"
 end)
 --1/43
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton43_Frame.TabCustomSkinsButton43_Roundify.TabCustomSkinsButton43_Roundify_Frame.TabCustomSkinsButton43_Script.MouseButton1Down:Connect(function()
 	--AK47 Hallows
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Handle"].TextureID = "rbxassetid://7826367064"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Bolt"].TextureID = "rbxassetid://7826367064"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID = "rbxassetid://7826367064"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://7826367064"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://7826367064"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://7826367064"
 	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/44
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton44_Frame.TabCustomSkinsButton44_Roundify.TabCustomSkinsButton44_Roundify_Frame.TabCustomSkinsButton44_Script.MouseButton1Down:Connect(function()
 	--Desert Eagle Hallows
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Handle"].TextureID = "rbxassetid://7826232738"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Slide"].TextureID = "rbxassetid://7826232738"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag 2"].TextureID = "rbxassetid://7826232738"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag"].TextureID = "rbxassetid://7826232738"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Handle2"].TextureID = "rbxassetid://7826232738"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Slide2"].TextureID = "rbxassetid://7826232738"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag2"].TextureID = "rbxassetid://7826232738"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag"].TextureID = "rbxassetid://7826232738"
 end)
 --1/45
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton45_Frame.TabCustomSkinsButton45_Roundify.TabCustomSkinsButton45_Roundify_Frame.TabCustomSkinsButton45_Script.MouseButton1Down:Connect(function()
 	--AWP Twitch
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle"].TextureID = "rbxassetid://7826240654"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Scope"].TextureID = "rbxassetid://7826242521"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://7826240654"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://7826240654"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://7826240654"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide 2"].TextureID = "rbxassetid://7826240654"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://7826240654"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://7826242521"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://7826240654"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://7826240654"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://7826240654"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://7826240654"
 end)
 --1/46
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton46_Frame.TabCustomSkinsButton46_Roundify.TabCustomSkinsButton46_Roundify_Frame.TabCustomSkinsButton46_Script.MouseButton1Down:Connect(function()
 	--AWP Tonight Halloween
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle"].TextureID = "rbxassetid://6698533624"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Scope"].TextureID = "rbxassetid://6698534178"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6698533624"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6698533624"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6698533624"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide 2"].TextureID = "rbxassetid://6698533624"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6698533624"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6698534178"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6698533624"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6698533624"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6698533624"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6698533624"
 end)
 --1/47
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton47_Frame.TabCustomSkinsButton47_Roundify.TabCustomSkinsButton47_Roundify_Frame.TabCustomSkinsButton47_Script.MouseButton1Down:Connect(function()
@@ -49096,75 +49099,75 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	--Glock-18 Pink Dream
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Handle2"].TextureID = "rbxassetid://7826369166"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Slide2"].TextureID = "rbxassetid://7826369166"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Mag3"].TextureID = "rbxassetid://7826369166"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Mag2"].TextureID = "rbxassetid://7826369166"
 end)
 --1/50
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton50_Frame.TabCustomSkinsButton50_Roundify.TabCustomSkinsButton50_Roundify_Frame.TabCustomSkinsButton50_Script.MouseButton1Down:Connect(function()
 	--Glock-18 ROLVe
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Handle2"].TextureID = "rbxassetid://7826371801"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Slide2"].TextureID = "rbxassetid://7826371801"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Mag3"].TextureID = "rbxassetid://7826371801"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Mag2"].TextureID = "rbxassetid://7826371801"
 end)
 --1/51
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton51_Frame.TabCustomSkinsButton51_Roundify.TabCustomSkinsButton51_Roundify_Frame.TabCustomSkinsButton51_Script.MouseButton1Down:Connect(function()
 	--M4A4 Team Cringe
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Chamber"].TextureID = "rbxassetid://6698394338"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Handle"].TextureID = "rbxassetid://6698394338"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Barrel"].TextureID = "rbxassetid://6698394338"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Sight"].TextureID = "rbxassetid://6698395808"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Cover"].TextureID = "rbxassetid://6698394338"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["notex"].TextureID = "rbxassetid://6698394338"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Back"].TextureID = "rbxassetid://6698394338"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Bolt"].TextureID = "rbxassetid://6698394338"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Mag"].TextureID = "rbxassetid://6698394338"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Handle2"].TextureID = "rbxassetid://6698394338"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Barrel"].TextureID = "rbxassetid://6698394338"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Part"].TextureID = "rbxassetid://6698395808"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Cover"].TextureID = "rbxassetid://6698394338"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["notex"].TextureID = "rbxassetid://6698394338"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Back"].TextureID = "rbxassetid://6698394338"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Bolt2"].TextureID = "rbxassetid://6698394338"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Mag2"].TextureID = "rbxassetid://6698394338"
 end)
 --1/52
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton52_Frame.TabCustomSkinsButton52_Roundify.TabCustomSkinsButton52_Roundify_Frame.TabCustomSkinsButton52_Script.MouseButton1Down:Connect(function()
 	--AWP Forest Monster
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle"].TextureID = "rbxassetid://6698335965"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Scope"].TextureID = "rbxassetid://6698336975"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6698335965"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6698335965"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6698335965"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide 2"].TextureID = "rbxassetid://6698335965"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6698335965"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6698336975"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6698335965"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6698335965"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6698335965"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6698335965"
 end)
 --1/53
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton53_Frame.TabCustomSkinsButton53_Roundify.TabCustomSkinsButton53_Roundify_Frame.TabCustomSkinsButton53_Script.MouseButton1Down:Connect(function()
 	--AK47 Asiimov
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Handle"].TextureID = "rbxassetid://6698314618"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Bolt"].TextureID = "rbxassetid://6698316807"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID = "rbxassetid://6820836083"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://6698314618"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://6698316807"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://6820836083"
 	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/54
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton54_Frame.TabCustomSkinsButton54_Roundify.TabCustomSkinsButton54_Roundify_Frame.TabCustomSkinsButton54_Script.MouseButton1Down:Connect(function()
 	--AK47 Bloodsport
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Handle"].TextureID = "rbxassetid://6698325103"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Bolt"].TextureID = "rbxassetid://6698327498"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID = "rbxassetid://6698326376"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://6698325103"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://6698327498"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://6698326376"
 	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/55
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton55_Frame.TabCustomSkinsButton55_Roundify.TabCustomSkinsButton55_Roundify_Frame.TabCustomSkinsButton55_Script.MouseButton1Down:Connect(function()
 	--AWP Blast
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle"].TextureID = "rbxassetid://6698293238"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Scope"].TextureID = "rbxassetid://6698295140"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6698293238"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6698293238"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6698293238"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide 2"].TextureID = "rbxassetid://6698293238"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6698293238"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6698295140"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6698293238"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6698293238"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6698293238"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6698293238"
 end)
 --1/56
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton56_Frame.TabCustomSkinsButton56_Roundify.TabCustomSkinsButton56_Roundify_Frame.TabCustomSkinsButton56_Script.MouseButton1Down:Connect(function()
 	--AWP Nerf
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle"].TextureID = "rbxassetid://7701405678"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Scope"].TextureID = "rbxassetid://7701407577"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://7701405678"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://7701405678"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://7701405678"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide 2"].TextureID = "rbxassetid://7701405678"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://7701405678"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://7701407577"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://7701405678"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://7701405678"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://7701405678"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://7701405678"
 end)
 --1/57
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton57_Frame.TabCustomSkinsButton57_Roundify.TabCustomSkinsButton57_Roundify_Frame.TabCustomSkinsButton57_Script.MouseButton1Down:Connect(function()
@@ -49224,32 +49227,32 @@ end)
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton58_Frame.TabCustomSkinsButton58_Roundify.TabCustomSkinsButton58_Roundify_Frame.TabCustomSkinsButton58_Script.MouseButton1Down:Connect(function()
 	--USP-S Aesthetic
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Silencer2"].TextureID = "rbxassetid://7701409698"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Silencer"].TextureID = "rbxassetid://7701409698"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Silencer"].TextureID = "rbxassetid://7701409698"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Handle2"].TextureID = "rbxassetid://7701409698"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Handle"].TextureID = "rbxassetid://7701409698"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Handle"].TextureID = "rbxassetid://7701409698"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Slide2"].TextureID = "rbxassetid://7701409698"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Slide"].TextureID = "rbxassetid://7701409698"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Slide"].TextureID = "rbxassetid://7701409698"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Mag2"].TextureID = "rbxassetid://7701409698"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Mag"].TextureID = "rbxassetid://7701409698"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Mag"].TextureID = "rbxassetid://7701409698"
 end)
 --1/59
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton59_Frame.TabCustomSkinsButton59_Roundify.TabCustomSkinsButton59_Roundify_Frame.TabCustomSkinsButton59_Script.MouseButton1Down:Connect(function()
 	--AK47 Redline
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Handle"].TextureID = "rbxassetid://6663268904"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Bolt"].TextureID = "rbxassetid://6663270884"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID = "rbxassetid://6663270220"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://6663268904"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://6663270884"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://6663270220"
 	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/60
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton60_Frame.TabCustomSkinsButton60_Roundify.TabCustomSkinsButton60_Roundify_Frame.TabCustomSkinsButton60_Script.MouseButton1Down:Connect(function()
 	--AWP Redline
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle"].TextureID = "rbxassetid://6657425659"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Scope"].TextureID = "rbxassetid://6657426143"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6657425659"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6657425659"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6657425659"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide 2"].TextureID = "rbxassetid://6657425659"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6657425659"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6657426143"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6657425659"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6657425659"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6657425659"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6657425659"
 end)
 --1/61
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton61_Frame.TabCustomSkinsButton61_Roundify.TabCustomSkinsButton61_Roundify_Frame.TabCustomSkinsButton61_Script.MouseButton1Down:Connect(function()
@@ -49390,14 +49393,14 @@ end)
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton63_Frame.TabCustomSkinsButton63_Roundify.TabCustomSkinsButton63_Roundify_Frame.TabCustomSkinsButton63_Script.MouseButton1Down:Connect(function()
 	--M4A4 Regina
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Chamber"].TextureID = "rbxassetid://9116144313"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Handle"].TextureID = "rbxassetid://9116144313"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Barrel"].TextureID = "rbxassetid://9116144313"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Sight"].TextureID = "rbxassetid://7701401612"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Cover"].TextureID = "rbxassetid://9116144313"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["notex"].TextureID = "rbxassetid://9116144313"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Back"].TextureID = "rbxassetid://9116144313"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Bolt"].TextureID = "rbxassetid://9116144313"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Mag"].TextureID = "rbxassetid://9116144313"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Handle2"].TextureID = "rbxassetid://9116144313"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Barrel"].TextureID = "rbxassetid://9116144313"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Part"].TextureID = "rbxassetid://7701401612"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Cover"].TextureID = "rbxassetid://9116144313"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["notex"].TextureID = "rbxassetid://9116144313"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Back"].TextureID = "rbxassetid://9116144313"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Bolt2"].TextureID = "rbxassetid://9116144313"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Mag2"].TextureID = "rbxassetid://9116144313"
 end)
 --1/64
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton64_Frame.TabCustomSkinsButton64_Roundify.TabCustomSkinsButton64_Roundify_Frame.TabCustomSkinsButton64_Script.MouseButton1Down:Connect(function()
@@ -49585,13 +49588,13 @@ end)
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton67_Frame.TabCustomSkinsButton67_Roundify.TabCustomSkinsButton67_Roundify_Frame.TabCustomSkinsButton67_Script.MouseButton1Down:Connect(function()
 	--USP-S Fluorescent
     game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Silencer2"].TextureID = "rbxassetid://9115445447"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Silencer"].TextureID = "rbxassetid://9115445447"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Silencer"].TextureID = "rbxassetid://9115445447"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Handle2"].TextureID = "rbxassetid://9115445447"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Handle"].TextureID = "rbxassetid://9115445447"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Handle"].TextureID = "rbxassetid://9115445447"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Slide2"].TextureID = "rbxassetid://9115445447"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Slide"].TextureID = "rbxassetid://9115445447"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Slide"].TextureID = "rbxassetid://9115445447"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Mag2"].TextureID = "rbxassetid://9115445447"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Mag"].TextureID = "rbxassetid://9115445447"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Mag"].TextureID = "rbxassetid://9115445447"
 end)
 --1/68
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton68_Frame.TabCustomSkinsButton68_Roundify.TabCustomSkinsButton68_Roundify_Frame.TabCustomSkinsButton68_Script.MouseButton1Down:Connect(function()
@@ -49617,43 +49620,43 @@ end)
 --1/70
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton70_Frame.TabCustomSkinsButton70_Roundify.TabCustomSkinsButton70_Roundify_Frame.TabCustomSkinsButton70_Script.MouseButton1Down:Connect(function()
 	--AK47 Cyber Technology
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Handle"].TextureID = "rbxassetid://6698130074"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Bolt"].TextureID = "rbxassetid://6698161313"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID = "rbxassetid://6698158848"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://6698130074"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://6698161313"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://6698158848"
 	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/71
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton71_Frame.TabCustomSkinsButton71_Roundify.TabCustomSkinsButton71_Roundify_Frame.TabCustomSkinsButton71_Script.MouseButton1Down:Connect(function()
 	--AWP Ancient Dragon
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle"].TextureID = "rbxassetid://6668821785"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Scope"].TextureID = "rbxassetid://6668822961"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6668821785"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6668821785"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6668821785"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide 2"].TextureID = "rbxassetid://6668821785"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6668821785"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6668822961"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6668821785"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6668821785"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6668821785"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6668821785"
 end)
 --1/72
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton72_Frame.TabCustomSkinsButton72_Roundify.TabCustomSkinsButton72_Roundify_Frame.TabCustomSkinsButton72_Script.MouseButton1Down:Connect(function()
 	--AK47 Nightmare
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Handle"].TextureID = "rbxassetid://6667790295"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Bolt"].TextureID = "rbxassetid://6667791939"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID = "rbxassetid://6667791440"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://6667790295"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://6667791939"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://6667791440"
 	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/73
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton73_Frame.TabCustomSkinsButton73_Roundify.TabCustomSkinsButton73_Roundify_Frame.TabCustomSkinsButton73_Script.MouseButton1Down:Connect(function()
 	--M4A4 Prey
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Chamber"].TextureID = "rbxassetid://6662202702"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Handle"].TextureID = "rbxassetid://6662202702"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Barrel"].TextureID = "rbxassetid://6662202702"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Sight"].TextureID = "rbxassetid://6662203299"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Cover"].TextureID = "rbxassetid://6662202702"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["notex"].TextureID = "rbxassetid://6662202702"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Back"].TextureID = "rbxassetid://6662202702"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Bolt"].TextureID = "rbxassetid://6662202702"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Mag"].TextureID = "rbxassetid://6662202702"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Handle2"].TextureID = "rbxassetid://6662202702"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Barrel"].TextureID = "rbxassetid://6662202702"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Part"].TextureID = "rbxassetid://6662203299"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Cover"].TextureID = "rbxassetid://6662202702"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["notex"].TextureID = "rbxassetid://6662202702"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Back"].TextureID = "rbxassetid://6662202702"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Bolt2"].TextureID = "rbxassetid://6662202702"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Mag2"].TextureID = "rbxassetid://6662202702"
 end)
 --1/74
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton74_Frame.TabCustomSkinsButton74_Roundify.TabCustomSkinsButton74_Roundify_Frame.TabCustomSkinsButton74_Script.MouseButton1Down:Connect(function()
@@ -49792,66 +49795,66 @@ end)
 --1/76
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton76_Frame.TabCustomSkinsButton76_Roundify.TabCustomSkinsButton76_Roundify_Frame.TabCustomSkinsButton76_Script.MouseButton1Down:Connect(function()
 	--Desert Eagle Crimson Snake
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Handle"].TextureID = "rbxassetid://6750924413"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Slide"].TextureID = "rbxassetid://6750924413"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag 2"].TextureID = "rbxassetid://6750924413"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag"].TextureID = "rbxassetid://6750924413"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Handle2"].TextureID = "rbxassetid://6750924413"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Slide2"].TextureID = "rbxassetid://6750924413"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag2"].TextureID = "rbxassetid://6750924413"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag"].TextureID = "rbxassetid://6750924413"
 end)
 --1/77
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton77_Frame.TabCustomSkinsButton77_Roundify.TabCustomSkinsButton77_Roundify_Frame.TabCustomSkinsButton77_Script.MouseButton1Down:Connect(function()
 	--M4A1-S Cyber Demon
     game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Silencer2"].TextureID = "rbxassetid://6663285050"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Silencer"].TextureID = "rbxassetid://6663285050"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Barrel"].TextureID = "rbxassetid://6663280903"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Handle"].TextureID = "rbxassetid://6663280903"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Bolt"].TextureID = "rbxassetid://6663280903"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Grip"].TextureID = "rbxassetid://6663280903"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Back"].TextureID = "rbxassetid://6663280903"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Top"].TextureID = "rbxassetid://6663280903"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Mag"].TextureID = "rbxassetid://6666916786"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Silencer"].TextureID = "rbxassetid://6663285050"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part4"].TextureID = "rbxassetid://6663280903"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Handle2"].TextureID = "rbxassetid://6663280903"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Bolt2"].TextureID = "rbxassetid://6663280903"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part3"].TextureID = "rbxassetid://6663280903"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part2"].TextureID = "rbxassetid://6663280903"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part"].TextureID = "rbxassetid://6663280903"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Mag2"].TextureID = "rbxassetid://6666916786"
 end)
 --1/78
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton78_Frame.TabCustomSkinsButton78_Roundify.TabCustomSkinsButton78_Roundify_Frame.TabCustomSkinsButton78_Script.MouseButton1Down:Connect(function()
 	--M4A4 Cyber Metro
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Chamber"].TextureID = "rbxassetid://6661884982"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Handle"].TextureID = "rbxassetid://6661884982"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Barrel"].TextureID = "rbxassetid://6661884982"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Sight"].TextureID = "rbxassetid://6661885367"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Cover"].TextureID = "rbxassetid://6661884982"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["notex"].TextureID = "rbxassetid://6661884982"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Back"].TextureID = "rbxassetid://6661884982"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Bolt"].TextureID = "rbxassetid://6661884982"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Mag"].TextureID = "rbxassetid://6661884982"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Handle2"].TextureID = "rbxassetid://6661884982"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Barrel"].TextureID = "rbxassetid://6661884982"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Part"].TextureID = "rbxassetid://6661885367"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Cover"].TextureID = "rbxassetid://6661884982"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["notex"].TextureID = "rbxassetid://6661884982"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Back"].TextureID = "rbxassetid://6661884982"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Bolt2"].TextureID = "rbxassetid://6661884982"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Mag2"].TextureID = "rbxassetid://6661884982"
 end)
 --1/79
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton79_Frame.TabCustomSkinsButton79_Roundify.TabCustomSkinsButton79_Roundify_Frame.TabCustomSkinsButton79_Script.MouseButton1Down:Connect(function()
 	--M4A4 Mars
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Chamber"].TextureID = "rbxassetid://6659465658"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Handle"].TextureID = "rbxassetid://6659465658"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Barrel"].TextureID = "rbxassetid://6659465658"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Sight"].TextureID = "rbxassetid://6659466516"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Cover"].TextureID = "rbxassetid://6659465658"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["notex"].TextureID = "rbxassetid://6659465658"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Back"].TextureID = "rbxassetid://6659465658"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Bolt"].TextureID = "rbxassetid://6659465658"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Mag"].TextureID = "rbxassetid://6659465658"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Handle2"].TextureID = "rbxassetid://6659465658"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Barrel"].TextureID = "rbxassetid://6659465658"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Part"].TextureID = "rbxassetid://6659466516"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Cover"].TextureID = "rbxassetid://6659465658"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["notex"].TextureID = "rbxassetid://6659465658"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Back"].TextureID = "rbxassetid://6659465658"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Bolt2"].TextureID = "rbxassetid://6659465658"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Mag2"].TextureID = "rbxassetid://6659465658"
 end)
 --1/80
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton80_Frame.TabCustomSkinsButton80_Roundify.TabCustomSkinsButton80_Roundify_Frame.TabCustomSkinsButton80_Script.MouseButton1Down:Connect(function()
 	--AWP Heaven Demon
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle"].TextureID = "rbxassetid://6659479853"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Scope"].TextureID = "rbxassetid://6659480859"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6659479853"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6659479853"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6659479853"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide 2"].TextureID = "rbxassetid://6659479853"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6659479853"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6659480859"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6659479853"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6659479853"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6659479853"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6659479853"
 end)
 --1/81
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton81_Frame.TabCustomSkinsButton81_Roundify.TabCustomSkinsButton81_Roundify_Frame.TabCustomSkinsButton81_Script.MouseButton1Down:Connect(function()
 	--Glock-18 Cyber Security
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Handle2"].TextureID = "rbxassetid://6661883626"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Slide2"].TextureID = "rbxassetid://6661883626"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Mag3"].TextureID = "rbxassetid://6661883626"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Mag2"].TextureID = "rbxassetid://6661883626"
 end)
 --1/82
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton82_Frame.TabCustomSkinsButton82_Roundify.TabCustomSkinsButton82_Roundify_Frame.TabCustomSkinsButton82_Script.MouseButton1Down:Connect(function()
@@ -49922,12 +49925,12 @@ end)
 --1/83
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton83_Frame.TabCustomSkinsButton83_Roundify.TabCustomSkinsButton83_Roundify_Frame.TabCustomSkinsButton83_Script.MouseButton1Down:Connect(function()
 	--AWP Printstream
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle"].TextureID = "rbxassetid://6609674580"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Scope"].TextureID = "rbxassetid://6598224637"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6609674580"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6609674580"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6609674580"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide 2"].TextureID = "rbxassetid://6609674580"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6609674580"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6598224637"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6609674580"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6609674580"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6609674580"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6609674580"
 end)
 --1/84
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton84_Frame.TabCustomSkinsButton84_Roundify.TabCustomSkinsButton84_Roundify_Frame.TabCustomSkinsButton84_Script.MouseButton1Down:Connect(function()
@@ -49943,64 +49946,64 @@ end)
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton85_Frame.TabCustomSkinsButton85_Roundify.TabCustomSkinsButton85_Roundify_Frame.TabCustomSkinsButton85_Script.MouseButton1Down:Connect(function()
 	--USP-S Cyber Police
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Silencer2"].TextureID = "rbxassetid://6659472042"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Silencer"].TextureID = "rbxassetid://6659472042"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Silencer"].TextureID = "rbxassetid://6659472042"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Handle2"].TextureID = "rbxassetid://6659472042"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Handle"].TextureID = "rbxassetid://6659472042"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Handle"].TextureID = "rbxassetid://6659472042"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Slide2"].TextureID = "rbxassetid://6659472042"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Slide"].TextureID = "rbxassetid://6659472042"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Slide"].TextureID = "rbxassetid://6659472042"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Mag2"].TextureID = "rbxassetid://6659472042"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Mag"].TextureID = "rbxassetid://6659472042"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Mag"].TextureID = "rbxassetid://6659472042"
 end)
 --1/86
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton86_Frame.TabCustomSkinsButton86_Roundify.TabCustomSkinsButton86_Roundify_Frame.TabCustomSkinsButton86_Script.MouseButton1Down:Connect(function()
 	--USP-S Mars
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Silencer2"].TextureID = "rbxassetid://6659468445"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Silencer"].TextureID = "rbxassetid://6659468445"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Silencer"].TextureID = "rbxassetid://6659468445"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Handle2"].TextureID = "rbxassetid://6659468445"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Handle"].TextureID = "rbxassetid://6659468445"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Handle"].TextureID = "rbxassetid://6659468445"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Slide2"].TextureID = "rbxassetid://6659468445"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Slide"].TextureID = "rbxassetid://6659468445"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Slide"].TextureID = "rbxassetid://6659468445"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Mag2"].TextureID = "rbxassetid://6659468445"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Mag"].TextureID = "rbxassetid://6659468445"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Mag"].TextureID = "rbxassetid://6659468445"
 end)
 --1/87
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton87_Frame.TabCustomSkinsButton87_Roundify.TabCustomSkinsButton87_Roundify_Frame.TabCustomSkinsButton87_Script.MouseButton1Down:Connect(function()
 	--M4A4 Samurai
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Chamber"].TextureID = "rbxassetid://6750921452"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Handle"].TextureID = "rbxassetid://6750921452"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Barrel"].TextureID = "rbxassetid://6750921452"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Sight"].TextureID = "rbxassetid://6662203299"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Cover"].TextureID = "rbxassetid://6750921452"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["notex"].TextureID = "rbxassetid://6750921452"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Back"].TextureID = "rbxassetid://6750921452"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Bolt"].TextureID = "rbxassetid://6750921452"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Mag"].TextureID = "rbxassetid://6750921452"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Handle2"].TextureID = "rbxassetid://6750921452"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Barrel"].TextureID = "rbxassetid://6750921452"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Part"].TextureID = "rbxassetid://6662203299"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Cover"].TextureID = "rbxassetid://6750921452"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["notex"].TextureID = "rbxassetid://6750921452"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Back"].TextureID = "rbxassetid://6750921452"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Bolt2"].TextureID = "rbxassetid://6750921452"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Mag2"].TextureID = "rbxassetid://6750921452"
 end)
 --1/88
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton88_Frame.TabCustomSkinsButton88_Roundify.TabCustomSkinsButton88_Roundify_Frame.TabCustomSkinsButton88_Script.MouseButton1Down:Connect(function()
 	--M4A4 Jujutsu Kaisen
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Chamber"].TextureID = "rbxassetid://6748496450"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Handle"].TextureID = "rbxassetid://6748496450"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Barrel"].TextureID = "rbxassetid://6748496450"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Sight"].TextureID = "rbxassetid://6662203299"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Cover"].TextureID = "rbxassetid://6748496450"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["notex"].TextureID = "rbxassetid://6748496450"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Back"].TextureID = "rbxassetid://6748496450"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Bolt"].TextureID = "rbxassetid://6748496450"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Mag"].TextureID = "rbxassetid://6748496450"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Handle2"].TextureID = "rbxassetid://6748496450"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Barrel"].TextureID = "rbxassetid://6748496450"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Part"].TextureID = "rbxassetid://6662203299"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Cover"].TextureID = "rbxassetid://6748496450"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["notex"].TextureID = "rbxassetid://6748496450"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Back"].TextureID = "rbxassetid://6748496450"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Bolt2"].TextureID = "rbxassetid://6748496450"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Mag2"].TextureID = "rbxassetid://6748496450"
 end)
 --1/89
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton89_Frame.TabCustomSkinsButton89_Roundify.TabCustomSkinsButton89_Roundify_Frame.TabCustomSkinsButton89_Script.MouseButton1Down:Connect(function()
 	--M4A4 Cute Bunny
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Chamber"].TextureID = "rbxassetid://6828837501"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Handle"].TextureID = "rbxassetid://6828837501"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Barrel"].TextureID = "rbxassetid://6828837501"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Sight"].TextureID = "rbxassetid://6666916786"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Cover"].TextureID = "rbxassetid://6828837501"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["notex"].TextureID = "rbxassetid://6828837501"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Back"].TextureID = "rbxassetid://6828837501"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Bolt"].TextureID = "rbxassetid://6828837501"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Mag"].TextureID = "rbxassetid://6828837501"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Handle2"].TextureID = "rbxassetid://6828837501"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Barrel"].TextureID = "rbxassetid://6828837501"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Part"].TextureID = "rbxassetid://6666916786"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Cover"].TextureID = "rbxassetid://6828837501"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["notex"].TextureID = "rbxassetid://6828837501"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Back"].TextureID = "rbxassetid://6828837501"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Bolt2"].TextureID = "rbxassetid://6828837501"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Mag2"].TextureID = "rbxassetid://6828837501"
 end)
 --1/90
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton90_Frame.TabCustomSkinsButton90_Roundify.TabCustomSkinsButton90_Roundify_Frame.TabCustomSkinsButton90_Script.MouseButton1Down:Connect(function()
@@ -50017,7 +50020,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	--Glock-18 The Empress
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Handle2"].TextureID = "rbxassetid://6818829534"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Slide2"].TextureID = "rbxassetid://6818830495"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Mag3"].TextureID = "rbxassetid://6818829534"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Mag2"].TextureID = "rbxassetid://6818829534"
 end)
 --1/92
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton92_Frame.TabCustomSkinsButton92_Roundify.TabCustomSkinsButton92_Roundify_Frame.TabCustomSkinsButton92_Script.MouseButton1Down:Connect(function()
@@ -50289,15 +50292,15 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	--Glock-18 Xmas
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Handle2"].TextureID = "rbxassetid://6768567101"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Slide2"].TextureID = "rbxassetid://6768567590"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Mag3"].TextureID = "rbxassetid://6768567101"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Mag2"].TextureID = "rbxassetid://6768567101"
 end)
 --1/97
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton97_Frame.TabCustomSkinsButton97_Roundify.TabCustomSkinsButton97_Roundify_Frame.TabCustomSkinsButton97_Script.MouseButton1Down:Connect(function()
 	--Desert Eagle Enraged Dragon
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Handle"].TextureID = "rbxassetid://6794842359"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Slide"].TextureID = "rbxassetid://6794842359"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag 2"].TextureID = "rbxassetid://6794842817"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag"].TextureID = "rbxassetid://6794842817"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Handle2"].TextureID = "rbxassetid://6794842359"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Slide2"].TextureID = "rbxassetid://6794842359"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag2"].TextureID = "rbxassetid://6794842817"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag"].TextureID = "rbxassetid://6794842817"
 end)
 --1/98
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton98_Frame.TabCustomSkinsButton98_Roundify.TabCustomSkinsButton98_Roundify_Frame.TabCustomSkinsButton98_Script.MouseButton1Down:Connect(function()
@@ -50368,15 +50371,15 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	--Glock-18 Mummy
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Handle2"].TextureID = "rbxassetid://9438684934"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Slide2"].TextureID = "rbxassetid://9438684934"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Mag3"].TextureID = "rbxassetid://9438684934"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Mag2"].TextureID = "rbxassetid://9438684934"
 end)
 --1/100
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton100_Frame.TabCustomSkinsButton100_Roundify.TabCustomSkinsButton100_Roundify_Frame.TabCustomSkinsButton100_Script.MouseButton1Down:Connect(function()
 	--Desert Eagle Cardboard
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Handle"].TextureID = "rbxassetid://6762546688"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Slide"].TextureID = "rbxassetid://6762546688"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag 2"].TextureID = "rbxassetid://6762546688"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag"].TextureID = "rbxassetid://6762546688"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Handle2"].TextureID = "rbxassetid://6762546688"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Slide2"].TextureID = "rbxassetid://6762546688"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag2"].TextureID = "rbxassetid://6762546688"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag"].TextureID = "rbxassetid://6762546688"
 end)
 --1/101
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton101_Frame.TabCustomSkinsButton101_Roundify.TabCustomSkinsButton101_Roundify_Frame.TabCustomSkinsButton101_Script.MouseButton1Down:Connect(function()
@@ -50509,23 +50512,23 @@ end)
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton104_Frame.TabCustomSkinsButton104_Roundify.TabCustomSkinsButton104_Roundify_Frame.TabCustomSkinsButton104_Script.MouseButton1Down:Connect(function()
 	--M4A1-S Golden Storm
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Silencer2"].TextureID = "rbxassetid://7365743775"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Silencer"].TextureID = "rbxassetid://7365743775"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Barrel"].TextureID = "rbxassetid://7365742542"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Handle"].TextureID = "rbxassetid://7365742542"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Bolt"].TextureID = "rbxassetid://7365742542"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Grip"].TextureID = "rbxassetid://7365742542"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Back"].TextureID = "rbxassetid://7365742542"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Top"].TextureID = "rbxassetid://7365742542"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Mag"].TextureID = "rbxassetid://7365741222"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Silencer"].TextureID = "rbxassetid://7365743775"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part4"].TextureID = "rbxassetid://7365742542"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Handle2"].TextureID = "rbxassetid://7365742542"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Bolt2"].TextureID = "rbxassetid://7365742542"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part3"].TextureID = "rbxassetid://7365742542"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part2"].TextureID = "rbxassetid://7365742542"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part"].TextureID = "rbxassetid://7365742542"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Mag2"].TextureID = "rbxassetid://7365741222"
 end)
 --1/105
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton105_Frame.TabCustomSkinsButton105_Roundify.TabCustomSkinsButton105_Roundify_Frame.TabCustomSkinsButton105_Script.MouseButton1Down:Connect(function()
 	--AK47 Pure Webs
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Handle"].TextureID = "rbxassetid://6698420309"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Bolt"].TextureID = "rbxassetid://6698422340"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID = "rbxassetid://6698421135"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://6698420309"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://6698422340"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://6698421135"
 	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/106
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton106_Frame.TabCustomSkinsButton106_Roundify.TabCustomSkinsButton106_Roundify_Frame.TabCustomSkinsButton106_Script.MouseButton1Down:Connect(function()
@@ -50651,7 +50654,7 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	--Glock-18 Midnight
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Handle2"].TextureID = "rbxassetid://9438439674"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Slide2"].TextureID = "rbxassetid://9438439674"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Mag3"].TextureID = "rbxassetid://9438439674"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Mag2"].TextureID = "rbxassetid://9438439674"
 end)
 --1/110
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton110_Frame.TabCustomSkinsButton110_Roundify.TabCustomSkinsButton110_Roundify_Frame.TabCustomSkinsButton110_Script.MouseButton1Down:Connect(function()
@@ -50666,23 +50669,24 @@ end)
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton111_Frame.TabCustomSkinsButton111_Roundify.TabCustomSkinsButton111_Roundify_Frame.TabCustomSkinsButton111_Script.MouseButton1Down:Connect(function()
 	--M4A4 Shards
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Chamber"].TextureID = "rbxassetid://10022415831"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Handle"].TextureID = "rbxassetid://10022415831"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Barrel"].TextureID = "rbxassetid://10022415831"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Sight"].TextureID = "rbxassetid://9438442518"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Cover"].TextureID = "rbxassetid://10022415831"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["notex"].TextureID = "rbxassetid://10022415831"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Back"].TextureID = "rbxassetid://10022415831"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Bolt"].TextureID = "rbxassetid://10022415831"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Mag"].TextureID = "rbxassetid://10022415831"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Handle2"].TextureID = "rbxassetid://10022415831"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Barrel"].TextureID = "rbxassetid://10022415831"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Part"].TextureID = "rbxassetid://9438442518"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Cover"].TextureID = "rbxassetid://10022415831"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["notex"].TextureID = "rbxassetid://10022415831"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Back"].TextureID = "rbxassetid://10022415831"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Bolt2"].TextureID = "rbxassetid://10022415831"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Mag2"].TextureID = "rbxassetid://10022415831"
+	-- Old
 	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Chamber"].TextureID = "rbxassetid://9438441069"
-	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Handle"].TextureID = "rbxassetid://9438441069"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Handle2"].TextureID = "rbxassetid://9438441069"
 	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Barrel"].TextureID = "rbxassetid://9438441069"
-	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Sight"].TextureID = "rbxassetid://9438442518"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Part"].TextureID = "rbxassetid://9438442518"
 	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Cover"].TextureID = "rbxassetid://9438441069"
 	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["notex"].TextureID = "rbxassetid://9438441069"
 	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Back"].TextureID = "rbxassetid://9438441069"
-	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Bolt"].TextureID = "rbxassetid://9438441069"
-	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Mag"].TextureID = "rbxassetid://9438441069"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Bolt2"].TextureID = "rbxassetid://9438441069"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Mag2"].TextureID = "rbxassetid://9438441069"
 end)
 --1/112
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton112_Frame.TabCustomSkinsButton112_Roundify.TabCustomSkinsButton112_Roundify_Frame.TabCustomSkinsButton112_Script.MouseButton1Down:Connect(function()
@@ -50725,20 +50729,20 @@ end)
 --1/116
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton116_Frame.TabCustomSkinsButton116_Roundify.TabCustomSkinsButton116_Roundify_Frame.TabCustomSkinsButton116_Script.MouseButton1Down:Connect(function()
 	--AK47 Case Hardened
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Handle"].TextureID = "rbxassetid://9438683416"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Bolt"].TextureID = "rbxassetid://9438683416"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID = "rbxassetid://9438683416"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://9438683416"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://9438683416"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://9438683416"
 	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/117
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton117_Frame.TabCustomSkinsButton117_Roundify.TabCustomSkinsButton117_Roundify_Frame.TabCustomSkinsButton117_Script.MouseButton1Down:Connect(function()
 	--AK47 Kaneki Ken
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Handle"].TextureID = "rbxassetid://6858669581"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Bolt"].TextureID = "rbxassetid://6858663834"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID = "rbxassetid://6858671103"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://6858669581"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://6858663834"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://6858671103"
 	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/118
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton118_Frame.TabCustomSkinsButton118_Roundify.TabCustomSkinsButton118_Roundify_Frame.TabCustomSkinsButton118_Script.MouseButton1Down:Connect(function()
@@ -51046,50 +51050,50 @@ end)
 --1/123
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton123_Frame.TabCustomSkinsButton123_Roundify.TabCustomSkinsButton123_Roundify_Frame.TabCustomSkinsButton123_Script.MouseButton1Down:Connect(function()
 	--AWP Chan
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle"].TextureID = "rbxassetid://9478416651"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Scope"].TextureID = "rbxassetid://9478417089"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://9478416651"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://9478416651"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://9478416651"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide 2"].TextureID = "rbxassetid://9478416651"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://9478416651"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://9478417089"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://9478416651"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://9478416651"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://9478416651"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://9478416651"
 end)
 --1/124
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton124_Frame.TabCustomSkinsButton124_Roundify.TabCustomSkinsButton124_Roundify_Frame.TabCustomSkinsButton124_Script.MouseButton1Down:Connect(function()
 	--Glock-18 Oxide Blaze
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Handle2"].TextureID = "rbxassetid://6677165904"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Slide2"].TextureID = "rbxassetid://6677162230"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Mag3"].TextureID = "rbxassetid://6677162230"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Mag2"].TextureID = "rbxassetid://6677162230"
 end)
 --1/125
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton125_Frame.TabCustomSkinsButton125_Roundify.TabCustomSkinsButton125_Roundify_Frame.TabCustomSkinsButton125_Script.MouseButton1Down:Connect(function()
 	--AK47 Crimson
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Handle"].TextureID = "rbxassetid://9639506047"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Bolt"].TextureID = "rbxassetid://9639506653"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID = "rbxassetid://9639505186"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://9639506047"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://9639506653"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://9639505186"
 	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/126
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton126_Frame.TabCustomSkinsButton126_Roundify.TabCustomSkinsButton126_Roundify_Frame.TabCustomSkinsButton126_Script.MouseButton1Down:Connect(function()
 	--AK47 True King
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Handle"].TextureID = "rbxassetid://9639567189"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Bolt"].TextureID = "rbxassetid://9639567980"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID = "rbxassetid://9639565755"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://9639567189"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://9639567980"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://9639565755"
 	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/127
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton127_Frame.TabCustomSkinsButton127_Roundify.TabCustomSkinsButton127_Roundify_Frame.TabCustomSkinsButton127_Script.MouseButton1Down:Connect(function()
 	--M4A4 Flame
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Chamber"].TextureID = "rbxassetid://9639597978"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Handle"].TextureID = "rbxassetid://9639597978"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Barrel"].TextureID = "rbxassetid://9639597978"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Sight"].TextureID = "rbxassetid://9639599047"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Cover"].TextureID = "rbxassetid://9639597978"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["notex"].TextureID = "rbxassetid://9639597978"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Back"].TextureID = "rbxassetid://9639597978"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Bolt"].TextureID = "rbxassetid://9639597978"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Mag"].TextureID = "rbxassetid://9639597978"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Handle2"].TextureID = "rbxassetid://9639597978"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Barrel"].TextureID = "rbxassetid://9639597978"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Part"].TextureID = "rbxassetid://9639599047"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Cover"].TextureID = "rbxassetid://9639597978"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["notex"].TextureID = "rbxassetid://9639597978"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Back"].TextureID = "rbxassetid://9639597978"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Bolt2"].TextureID = "rbxassetid://9639597978"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Mag2"].TextureID = "rbxassetid://9639597978"
 end)
 --1/128
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton128_Frame.TabCustomSkinsButton128_Roundify.TabCustomSkinsButton128_Roundify_Frame.TabCustomSkinsButton128_Script.MouseButton1Down:Connect(function()
@@ -51161,36 +51165,36 @@ end)
 --1/129
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton129_Frame.TabCustomSkinsButton129_Roundify.TabCustomSkinsButton129_Roundify_Frame.TabCustomSkinsButton129_Script.MouseButton1Down:Connect(function()
 	--Desert Eagle Dragon King
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Handle"].TextureID = "rbxassetid://9639662171"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Slide"].TextureID = "rbxassetid://9639662171"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag 2"].TextureID = "rbxassetid://9639662171"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag"].TextureID = "rbxassetid://9639662171"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Handle2"].TextureID = "rbxassetid://9639662171"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Slide2"].TextureID = "rbxassetid://9639662171"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag2"].TextureID = "rbxassetid://9639662171"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag"].TextureID = "rbxassetid://9639662171"
 end)
 --1/130
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton130_Frame.TabCustomSkinsButton130_Roundify.TabCustomSkinsButton130_Roundify_Frame.TabCustomSkinsButton130_Script.MouseButton1Down:Connect(function()
 	--Desert Eagle Black Dragon King
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Handle"].TextureID = "rbxassetid://9639670980"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Slide"].TextureID = "rbxassetid://9639670980"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag 2"].TextureID = "rbxassetid://9639670980"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag"].TextureID = "rbxassetid://9639670980"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Handle2"].TextureID = "rbxassetid://9639670980"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Slide2"].TextureID = "rbxassetid://9639670980"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag2"].TextureID = "rbxassetid://9639670980"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag"].TextureID = "rbxassetid://9639670980"
 end)
 --1/131
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton131_Frame.TabCustomSkinsButton131_Roundify.TabCustomSkinsButton131_Roundify_Frame.TabCustomSkinsButton131_Script.MouseButton1Down:Connect(function()
 	--AK47 Dragon King
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Handle"].TextureID = "rbxassetid://9639719305"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Bolt"].TextureID = "rbxassetid://9639720240"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID = "rbxassetid://9640344796"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://9639719305"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://9639720240"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://9640344796"
 	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/132
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton132_Frame.TabCustomSkinsButton132_Roundify.TabCustomSkinsButton132_Roundify_Frame.TabCustomSkinsButton132_Script.MouseButton1Down:Connect(function()
 	--AK47 Black Dragon King
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Handle"].TextureID = "rbxassetid://9639737246"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Bolt"].TextureID = "rbxassetid://9639737892"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID = "rbxassetid://9639735854"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://9639737246"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://9639737892"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://9639735854"
 	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/133
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton133_Frame.TabCustomSkinsButton133_Roundify.TabCustomSkinsButton133_Roundify_Frame.TabCustomSkinsButton133_Script.MouseButton1Down:Connect(function()
@@ -51330,66 +51334,66 @@ end)
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton135_Frame.TabCustomSkinsButton135_Roundify.TabCustomSkinsButton135_Roundify_Frame.TabCustomSkinsButton135_Script.MouseButton1Down:Connect(function()
 	--M4A4 Dragon King
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Chamber"].TextureID = "rbxassetid://9639781927"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Handle"].TextureID = "rbxassetid://9639781927"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Barrel"].TextureID = "rbxassetid://9639781927"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Sight"].TextureID = "rbxassetid://9639783166"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Cover"].TextureID = "rbxassetid://9639781927"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["notex"].TextureID = "rbxassetid://9639781927"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Back"].TextureID = "rbxassetid://9639781927"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Bolt"].TextureID = "rbxassetid://9639781927"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Mag"].TextureID = "rbxassetid://9639781927"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Handle2"].TextureID = "rbxassetid://9639781927"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Barrel"].TextureID = "rbxassetid://9639781927"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Part"].TextureID = "rbxassetid://9639783166"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Cover"].TextureID = "rbxassetid://9639781927"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["notex"].TextureID = "rbxassetid://9639781927"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Back"].TextureID = "rbxassetid://9639781927"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Bolt2"].TextureID = "rbxassetid://9639781927"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Mag2"].TextureID = "rbxassetid://9639781927"
 end)
 --1/136
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton136_Frame.TabCustomSkinsButton136_Roundify.TabCustomSkinsButton136_Roundify_Frame.TabCustomSkinsButton136_Script.MouseButton1Down:Connect(function()
 	--M4A4 Black Dragon King
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Chamber"].TextureID = "rbxassetid://9639794868"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Handle"].TextureID = "rbxassetid://9639794868"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Barrel"].TextureID = "rbxassetid://9639794868"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Sight"].TextureID = "rbxassetid://9639795608"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Cover"].TextureID = "rbxassetid://9639794868"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["notex"].TextureID = "rbxassetid://9639794868"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Back"].TextureID = "rbxassetid://9639794868"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Bolt"].TextureID = "rbxassetid://9639794868"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Mag"].TextureID = "rbxassetid://9639794868"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Handle2"].TextureID = "rbxassetid://9639794868"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Barrel"].TextureID = "rbxassetid://9639794868"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Part"].TextureID = "rbxassetid://9639795608"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Cover"].TextureID = "rbxassetid://9639794868"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["notex"].TextureID = "rbxassetid://9639794868"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Back"].TextureID = "rbxassetid://9639794868"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Bolt2"].TextureID = "rbxassetid://9639794868"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Mag2"].TextureID = "rbxassetid://9639794868"
 end)
 --1/137
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton137_Frame.TabCustomSkinsButton137_Roundify.TabCustomSkinsButton137_Roundify_Frame.TabCustomSkinsButton137_Script.MouseButton1Down:Connect(function()
 	--M4A4 Neon Revolution
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Chamber"].TextureID = "rbxassetid://9639807810"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Handle"].TextureID = "rbxassetid://9639807810"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Barrel"].TextureID = "rbxassetid://9639807810"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Sight"].TextureID = "rbxassetid://9639808855"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Cover"].TextureID = "rbxassetid://9639807810"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["notex"].TextureID = "rbxassetid://9639807810"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Back"].TextureID = "rbxassetid://9639807810"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Bolt"].TextureID = "rbxassetid://9639807810"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Mag"].TextureID = "rbxassetid://9639807810"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Handle2"].TextureID = "rbxassetid://9639807810"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Barrel"].TextureID = "rbxassetid://9639807810"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Part"].TextureID = "rbxassetid://9639808855"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Cover"].TextureID = "rbxassetid://9639807810"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["notex"].TextureID = "rbxassetid://9639807810"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Back"].TextureID = "rbxassetid://9639807810"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Bolt2"].TextureID = "rbxassetid://9639807810"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Mag2"].TextureID = "rbxassetid://9639807810"
 end)
 --1/138
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton138_Frame.TabCustomSkinsButton138_Roundify.TabCustomSkinsButton138_Roundify_Frame.TabCustomSkinsButton138_Script.MouseButton1Down:Connect(function()
 	--M4A1-S Black Death
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Silencer2"].TextureID = "rbxassetid://9639828499"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Silencer"].TextureID = "rbxassetid://9639828499"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Barrel"].TextureID = "rbxassetid://9639827892"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Handle"].TextureID = "rbxassetid://9639827892"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Bolt"].TextureID = "rbxassetid://9639827892"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Grip"].TextureID = "rbxassetid://9639827892"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Back"].TextureID = "rbxassetid://9639827892"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Top"].TextureID = "rbxassetid://9639827892"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Mag"].TextureID = "rbxassetid://9639829370"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Silencer"].TextureID = "rbxassetid://9639828499"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part4"].TextureID = "rbxassetid://9639827892"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Handle2"].TextureID = "rbxassetid://9639827892"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Bolt2"].TextureID = "rbxassetid://9639827892"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part3"].TextureID = "rbxassetid://9639827892"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part2"].TextureID = "rbxassetid://9639827892"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part"].TextureID = "rbxassetid://9639827892"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Mag2"].TextureID = "rbxassetid://9639829370"
 end)
 --1/139
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton139_Frame.TabCustomSkinsButton139_Roundify.TabCustomSkinsButton139_Roundify_Frame.TabCustomSkinsButton139_Script.MouseButton1Down:Connect(function()
 	--M4A1-S Volt
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Silencer2"].TextureID = "rbxassetid://9639854159"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Silencer"].TextureID = "rbxassetid://9639854159"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Barrel"].TextureID = "rbxassetid://9639852996"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Handle"].TextureID = "rbxassetid://9639852996"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Bolt"].TextureID = "rbxassetid://9639852996"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Grip"].TextureID = "rbxassetid://9639852996"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Back"].TextureID = "rbxassetid://9639852996"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Top"].TextureID = "rbxassetid://9639852996"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Mag"].TextureID = "rbxassetid://9639855203"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Silencer"].TextureID = "rbxassetid://9639854159"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part4"].TextureID = "rbxassetid://9639852996"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Handle2"].TextureID = "rbxassetid://9639852996"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Bolt2"].TextureID = "rbxassetid://9639852996"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part3"].TextureID = "rbxassetid://9639852996"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part2"].TextureID = "rbxassetid://9639852996"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part"].TextureID = "rbxassetid://9639852996"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Mag2"].TextureID = "rbxassetid://9639855203"
 end)
 --1/140
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton140_Frame.TabCustomSkinsButton140_Roundify.TabCustomSkinsButton140_Roundify_Frame.TabCustomSkinsButton140_Script.MouseButton1Down:Connect(function()
@@ -51415,101 +51419,101 @@ end)
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton142_Frame.TabCustomSkinsButton142_Roundify.TabCustomSkinsButton142_Roundify_Frame.TabCustomSkinsButton142_Script.MouseButton1Down:Connect(function()
 	--M4A4 Samurai
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Chamber"].TextureID = "rbxassetid://9639901924"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Handle"].TextureID = "rbxassetid://9639901924"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Barrel"].TextureID = "rbxassetid://9639901924"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Sight"].TextureID = "rbxassetid://9639902704"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Cover"].TextureID = "rbxassetid://9639901924"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["notex"].TextureID = "rbxassetid://9639901924"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Back"].TextureID = "rbxassetid://9639901924"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Bolt"].TextureID = "rbxassetid://9639901924"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Mag"].TextureID = "rbxassetid://9639901924"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Handle2"].TextureID = "rbxassetid://9639901924"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Barrel"].TextureID = "rbxassetid://9639901924"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Part"].TextureID = "rbxassetid://9639902704"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Cover"].TextureID = "rbxassetid://9639901924"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["notex"].TextureID = "rbxassetid://9639901924"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Back"].TextureID = "rbxassetid://9639901924"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Bolt2"].TextureID = "rbxassetid://9639901924"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Mag2"].TextureID = "rbxassetid://9639901924"
 end)
 --1/143
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton143_Frame.TabCustomSkinsButton143_Roundify.TabCustomSkinsButton143_Roundify_Frame.TabCustomSkinsButton143_Script.MouseButton1Down:Connect(function()
 	--USP-S 1648 White
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Silencer2"].TextureID = "rbxassetid://9640435333"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Silencer"].TextureID = "rbxassetid://9640435333"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Silencer"].TextureID = "rbxassetid://9640435333"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Handle2"].TextureID = "rbxassetid://9640435333"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Handle"].TextureID = "rbxassetid://9640435333"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Handle"].TextureID = "rbxassetid://9640435333"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Slide2"].TextureID = "rbxassetid://9640435333"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Slide"].TextureID = "rbxassetid://9640435333"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Slide"].TextureID = "rbxassetid://9640435333"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Mag2"].TextureID = "rbxassetid://9640435333"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Mag"].TextureID = "rbxassetid://9640435333"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_USP"]["Mag"].TextureID = "rbxassetid://9640435333"
 end)
 --1/144
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton144_Frame.TabCustomSkinsButton144_Roundify.TabCustomSkinsButton144_Roundify_Frame.TabCustomSkinsButton144_Script.MouseButton1Down:Connect(function()
 	--M4A4 1648 White
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Chamber"].TextureID = "rbxassetid://9640445832"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Handle"].TextureID = "rbxassetid://9640445832"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Barrel"].TextureID = "rbxassetid://9640445832"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Sight"].TextureID = "rbxassetid://9640447540"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Cover"].TextureID = "rbxassetid://9640445832"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["notex"].TextureID = "rbxassetid://9640445832"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Back"].TextureID = "rbxassetid://9640445832"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Bolt"].TextureID = "rbxassetid://9640445832"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Mag"].TextureID = "rbxassetid://9640445832"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Handle2"].TextureID = "rbxassetid://9640445832"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Barrel"].TextureID = "rbxassetid://9640445832"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Part"].TextureID = "rbxassetid://9640447540"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Cover"].TextureID = "rbxassetid://9640445832"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["notex"].TextureID = "rbxassetid://9640445832"
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Back"].TextureID = "rbxassetid://9640445832"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Bolt2"].TextureID = "rbxassetid://9640445832"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A4"]["Mag2"].TextureID = "rbxassetid://9640445832"
 end)
 --1/145
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton145_Frame.TabCustomSkinsButton145_Roundify.TabCustomSkinsButton145_Roundify_Frame.TabCustomSkinsButton145_Script.MouseButton1Down:Connect(function()
 	--AK47 1648 White
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Handle"].TextureID = "rbxassetid://9640464905"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Bolt"].TextureID = "rbxassetid://9640465477"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID = "rbxassetid://9640463705"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://9640464905"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://9640465477"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://9640463705"
 	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/146
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton146_Frame.TabCustomSkinsButton146_Roundify.TabCustomSkinsButton146_Roundify_Frame.TabCustomSkinsButton146_Script.MouseButton1Down:Connect(function()
 	--AUG 1648 White
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AUG"]["Handle"].TextureID = "rbxassetid://9640478738"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AUG"]["Handle2"].TextureID = "rbxassetid://9640478738"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AUG"]["Scope"].TextureID = "rbxassetid://9640477176"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AUG"]["notex"].TextureID = "rbxassetid://9640479984"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AUG"]["notex"].TextureID = "rbxassetid://9640479984"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AUG"]["Part"].TextureID = "rbxassetid://9640478738"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AUG"]["Bolt"].TextureID = "rbxassetid://9640478738"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AUG"]["Mag"].TextureID = "rbxassetid://9640478738"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AUG"]["Bolt2"].TextureID = "rbxassetid://9640478738"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AUG"]["Mag2"].TextureID = "rbxassetid://9640478738"
 end)
 --1/147
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton147_Frame.TabCustomSkinsButton147_Roundify.TabCustomSkinsButton147_Roundify_Frame.TabCustomSkinsButton147_Script.MouseButton1Down:Connect(function()
 	--AWP 1648 White
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle"].TextureID = "rbxassetid://9640496908"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Scope"].TextureID = "rbxassetid://9640497840"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://9640496908"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://9640496908"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://9640496908"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide 2"].TextureID = "rbxassetid://9640496908"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://9640496908"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://9640497840"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://9640496908"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://9640496908"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://9640496908"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://9640496908"
 end)
 --1/148
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton148_Frame.TabCustomSkinsButton148_Roundify.TabCustomSkinsButton148_Roundify_Frame.TabCustomSkinsButton148_Script.MouseButton1Down:Connect(function()
 	--Desert Eagle 1648 White
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Handle"].TextureID = "rbxassetid://9640502933"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Slide"].TextureID = "rbxassetid://9640502933"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag 2"].TextureID = "rbxassetid://9640502933"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag"].TextureID = "rbxassetid://9640502933"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Handle2"].TextureID = "rbxassetid://9640502933"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Slide2"].TextureID = "rbxassetid://9640502933"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag2"].TextureID = "rbxassetid://9640502933"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag"].TextureID = "rbxassetid://9640502933"
 end)
 --1/149
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton149_Frame.TabCustomSkinsButton149_Roundify.TabCustomSkinsButton149_Roundify_Frame.TabCustomSkinsButton149_Script.MouseButton1Down:Connect(function()
 	--Glock-18 1648 White
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Handle2"].TextureID = "rbxassetid://9640508128"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Slide2"].TextureID = "rbxassetid://9640508128"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Mag3"].TextureID = "rbxassetid://9640508128"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Mag2"].TextureID = "rbxassetid://9640508128"
 end)
 --1/150
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton150_Frame.TabCustomSkinsButton150_Roundify.TabCustomSkinsButton150_Roundify_Frame.TabCustomSkinsButton150_Script.MouseButton1Down:Connect(function()
 	--AWP Crimson Snake
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle"].TextureID = "rbxassetid://9640707190"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Scope"].TextureID = "rbxassetid://9640706204"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://9640707190"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://9640707190"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://9640707190"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide 2"].TextureID = "rbxassetid://9640707190"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://9640707190"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://9640706204"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://9640707190"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://9640707190"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://9640707190"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://9640707190"
 end)
 --1/151
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton151_Frame.TabCustomSkinsButton151_Roundify.TabCustomSkinsButton151_Roundify_Frame.TabCustomSkinsButton151_Script.MouseButton1Down:Connect(function()
 	--Desert Eagle Crimson Snake
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Handle"].TextureID = "rbxassetid://9640708832"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Slide"].TextureID = "rbxassetid://9640708832"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag 2"].TextureID = "rbxassetid://9640708832"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag"].TextureID = "rbxassetid://9640708832"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Handle2"].TextureID = "rbxassetid://9640708832"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Slide2"].TextureID = "rbxassetid://9640708832"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag2"].TextureID = "rbxassetid://9640708832"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_DesertEagle"]["Mag"].TextureID = "rbxassetid://9640708832"
 end)
 --1/152
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton152_Frame.TabCustomSkinsButton152_Roundify.TabCustomSkinsButton152_Roundify_Frame.TabCustomSkinsButton152_Script.MouseButton1Down:Connect(function()
@@ -51647,12 +51651,12 @@ end)
 --1/154
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton154_Frame.TabCustomSkinsButton154_Roundify.TabCustomSkinsButton154_Roundify_Frame.TabCustomSkinsButton154_Script.MouseButton1Down:Connect(function()
 	--AWP Cube
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle"].TextureID = "rbxassetid://9777481233"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Scope"].TextureID = "rbxassetid://9777481913"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://9777481233"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://9777481233"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://9777481233"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide 2"].TextureID = "rbxassetid://9777481233"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://9777481233"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://9777481913"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://9777481233"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://9777481233"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://9777481233"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://9777481233"
 end)
 --1/155
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton155_Frame.TabCustomSkinsButton155_Roundify.TabCustomSkinsButton155_Roundify_Frame.TabCustomSkinsButton155_Script.MouseButton1Down:Connect(function()
@@ -51983,11 +51987,11 @@ end)
 --1/160
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton160_Frame.TabCustomSkinsButton160_Roundify.TabCustomSkinsButton160_Roundify_Frame.TabCustomSkinsButton160_Script.MouseButton1Down:Connect(function()
 	--AK47 Weeb
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Handle"].TextureID = "rbxassetid://9941187376"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Bolt"].TextureID = "rbxassetid://9941189735"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID = "rbxassetid://9941188382"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://9941187376"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://9941189735"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://9941188382"
 	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/161
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton161_Frame.TabCustomSkinsButton161_Roundify.TabCustomSkinsButton161_Roundify_Frame.TabCustomSkinsButton161_Script.MouseButton1Down:Connect(function()
@@ -52116,14 +52120,14 @@ end)
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton164_Frame.TabCustomSkinsButton164_Roundify.TabCustomSkinsButton164_Roundify_Frame.TabCustomSkinsButton164_Script.MouseButton1Down:Connect(function()
 	--M4A1-S Mutant
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Silencer2"].TextureID = "rbxassetid://9947930556"
-    game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Silencer"].TextureID = "rbxassetid://9947930556"
-    game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Barrel"].TextureID = "rbxassetid://9947928946"
-    game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Handle"].TextureID = "rbxassetid://9947928946"
-    game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Bolt"].TextureID = "rbxassetid://9947930556"
-    game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Grip"].TextureID = "rbxassetid://9947931337"
-    game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Back"].TextureID = "rbxassetid://9947931337"
-    game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Top"].TextureID = "rbxassetid://9947928946"
-    game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Mag"].TextureID = "rbxassetid://9947929798"
+    --game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Silencer"].TextureID = "rbxassetid://9947930556"
+    game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part4"].TextureID = "rbxassetid://9947928946"
+    game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Handle2"].TextureID = "rbxassetid://9947928946"
+    game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Bolt2"].TextureID = "rbxassetid://9947930556"
+    game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part3"].TextureID = "rbxassetid://9947931337"
+    game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part2"].TextureID = "rbxassetid://9947931337"
+    game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part"].TextureID = "rbxassetid://9947928946"
+    game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Mag2"].TextureID = "rbxassetid://9947929798"
 end)
 --1/165
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton165_Frame.TabCustomSkinsButton165_Roundify.TabCustomSkinsButton165_Roundify_Frame.TabCustomSkinsButton165_Script.MouseButton1Down:Connect(function()
@@ -52292,16 +52296,16 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	--Glock-18 BloxFun Redesign
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Handle2"].TextureID = "rbxassetid://9973554968"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Slide2"].TextureID = "rbxassetid://9973554968"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Mag3"].TextureID = "rbxassetid://9973554968"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_Glock"]["Mag2"].TextureID = "rbxassetid://9973554968"
 end)
 --1/169
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton169_Frame.TabCustomSkinsButton169_Roundify.TabCustomSkinsButton169_Roundify_Frame.TabCustomSkinsButton169_Script.MouseButton1Down:Connect(function()
 	--AK47 Weeb
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Handle"].TextureID = "rbxassetid://9973551915"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Bolt"].TextureID = "rbxassetid://9973552978"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID = "rbxassetid://9973552599"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://9973551915"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://9973552978"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://9973552599"
 	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/170
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton170_Frame.TabCustomSkinsButton170_Roundify.TabCustomSkinsButton170_Roundify_Frame.TabCustomSkinsButton170_Script.MouseButton1Down:Connect(function()
@@ -53234,9 +53238,9 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomViewmodelsScrollingFrame.TabCustomViewm
 	--AK47 with silencer
 	if CoreGui:FindFirstChild("BF_Values", true) then
 		if CoreGui["BF_Values"]:FindFirstChild("AK47silencer_Handle", true) and CoreGui["BF_Values"]:FindFirstChild("AK47silencer_Bolt", true) and CoreGui["BF_Values"]:FindFirstChild("AK47silencer_Mag", true) then
-			CoreGui["BF_Values"]["AK47silencer_Handle"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Handle"].TextureID
-			CoreGui["BF_Values"]["AK47silencer_Bolt"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Bolt"].TextureID
-			CoreGui["BF_Values"]["AK47silencer_Mag"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID
+			CoreGui["BF_Values"]["AK47silencer_Handle"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID
+			CoreGui["BF_Values"]["AK47silencer_Bolt"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID
+			CoreGui["BF_Values"]["AK47silencer_Mag"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 		else
 			local TEMPVALUE_AK47silencer_Handle = Instance.new("StringValue")
 			TEMPVALUE_AK47silencer_Handle.Parent = CoreGui["BF_Values"]
@@ -53248,9 +53252,9 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomViewmodelsScrollingFrame.TabCustomViewm
 			TEMPVALUE_AK47silencer_Mag.Parent = CoreGui["BF_Values"]
 			TEMPVALUE_AK47silencer_Mag.Name = "AK47silencer_Mag"
 			task.wait()
-			CoreGui["BF_Values"]["AK47silencer_Handle"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Handle"].TextureID
-			CoreGui["BF_Values"]["AK47silencer_Bolt"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Bolt"].TextureID
-			CoreGui["BF_Values"]["AK47silencer_Mag"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID
+			CoreGui["BF_Values"]["AK47silencer_Handle"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID
+			CoreGui["BF_Values"]["AK47silencer_Bolt"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID
+			CoreGui["BF_Values"]["AK47silencer_Mag"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 		end
 	end
 	task.wait()
@@ -53267,9 +53271,9 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomViewmodelsScrollingFrame.TabCustomViewm
 	task.wait()
 	if CoreGui:FindFirstChild("BF_Values", true) then
 		if CoreGui["BF_Values"]:FindFirstChild("AK47silencer_Handle", true) and CoreGui["BF_Values"]:FindFirstChild("AK47silencer_Bolt", true) and CoreGui["BF_Values"]:FindFirstChild("AK47silencer_Mag", true) then
-			game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Handle"].TextureID = CoreGui["BF_Values"]["AK47silencer_Handle"].Value
-			game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Bolt"].TextureID = CoreGui["BF_Values"]["AK47silencer_Bolt"].Value
-			game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID =CoreGui["BF_Values"]["AK47silencer_Mag"].Value
+			game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = CoreGui["BF_Values"]["AK47silencer_Handle"].Value
+			game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = CoreGui["BF_Values"]["AK47silencer_Bolt"].Value
+			game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID =CoreGui["BF_Values"]["AK47silencer_Mag"].Value
 		end
 	end
 end)
@@ -53280,13 +53284,13 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomViewmodelsScrollingFrame.TabCustomViewm
 		if CoreGui["BF_Values"]:FindFirstChild("M4A1anime_Silencer2", true) and CoreGui["BF_Values"]:FindFirstChild("M4A1anime_Silencer", true) and CoreGui["BF_Values"]:FindFirstChild("M4A1anime_Handle", true) and CoreGui["BF_Values"]:FindFirstChild("M4A1anime_Barrel", true) and CoreGui["BF_Values"]:FindFirstChild("M4A1anime_Bolt", true)  and CoreGui["BF_Values"]:FindFirstChild("M4A1anime_Grip", true) and CoreGui["BF_Values"]:FindFirstChild("M4A1anime_Back", true) and CoreGui["BF_Values"]:FindFirstChild("M4A1anime_Top", true) and CoreGui["BF_Values"]:FindFirstChild("M4A1anime_Mag", true) then
 			CoreGui["BF_Values"]["M4A1anime_Silencer2"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Silencer2"].TextureID
 			CoreGui["BF_Values"]["M4A1anime_Silencer"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Silencer"].TextureID
-			CoreGui["BF_Values"]["M4A1anime_Barrel"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Barrel"].TextureID
-			CoreGui["BF_Values"]["M4A1anime_Handle"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Handle"].TextureID
-			CoreGui["BF_Values"]["M4A1anime_Bolt"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Bolt"].TextureID
-			CoreGui["BF_Values"]["M4A1anime_Grip"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Grip"].TextureID
-			CoreGui["BF_Values"]["M4A1anime_Back"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Back"].TextureID
-			CoreGui["BF_Values"]["M4A1anime_Top"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Top"].TextureID
-			CoreGui["BF_Values"]["M4A1anime_Mag"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Mag"].TextureID
+			CoreGui["BF_Values"]["M4A1anime_Barrel"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part4"].TextureID
+			CoreGui["BF_Values"]["M4A1anime_Handle"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Handle2"].TextureID
+			CoreGui["BF_Values"]["M4A1anime_Bolt"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Bolt2"].TextureID
+			CoreGui["BF_Values"]["M4A1anime_Grip"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part3"].TextureID
+			CoreGui["BF_Values"]["M4A1anime_Back"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part2"].TextureID
+			CoreGui["BF_Values"]["M4A1anime_Top"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part"].TextureID
+			CoreGui["BF_Values"]["M4A1anime_Mag"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Mag2"].TextureID
 		else
 			local TEMPVALUE_M4A1anime_Silencer2 = Instance.new("StringValue")
 			TEMPVALUE_M4A1anime_Silencer2.Parent = CoreGui["BF_Values"]
@@ -53318,13 +53322,13 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomViewmodelsScrollingFrame.TabCustomViewm
 			task.wait()
 			CoreGui["BF_Values"]["M4A1anime_Silencer2"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Silencer2"].TextureID
 			CoreGui["BF_Values"]["M4A1anime_Silencer"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Silencer"].TextureID
-			CoreGui["BF_Values"]["M4A1anime_Barrel"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Barrel"].TextureID
-			CoreGui["BF_Values"]["M4A1anime_Handle"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Handle"].TextureID
-			CoreGui["BF_Values"]["M4A1anime_Bolt"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Bolt"].TextureID
-			CoreGui["BF_Values"]["M4A1anime_Grip"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Grip"].TextureID
-			CoreGui["BF_Values"]["M4A1anime_Back"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Back"].TextureID
-			CoreGui["BF_Values"]["M4A1anime_Top"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Top"].TextureID
-			CoreGui["BF_Values"]["M4A1anime_Mag"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Mag"].TextureID
+			CoreGui["BF_Values"]["M4A1anime_Barrel"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part4"].TextureID
+			CoreGui["BF_Values"]["M4A1anime_Handle"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Handle2"].TextureID
+			CoreGui["BF_Values"]["M4A1anime_Bolt"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Bolt2"].TextureID
+			CoreGui["BF_Values"]["M4A1anime_Grip"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part3"].TextureID
+			CoreGui["BF_Values"]["M4A1anime_Back"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part2"].TextureID
+			CoreGui["BF_Values"]["M4A1anime_Top"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part"].TextureID
+			CoreGui["BF_Values"]["M4A1anime_Mag"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Mag2"].TextureID
 		end
 	end
 	task.wait()
@@ -53343,13 +53347,13 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomViewmodelsScrollingFrame.TabCustomViewm
 		if CoreGui["BF_Values"]:FindFirstChild("M4A1anime_Silencer2", true) and CoreGui["BF_Values"]:FindFirstChild("M4A1anime_Silencer", true) and CoreGui["BF_Values"]:FindFirstChild("M4A1anime_Handle", true) and CoreGui["BF_Values"]:FindFirstChild("M4A1anime_Barrel", true) and CoreGui["BF_Values"]:FindFirstChild("M4A1anime_Bolt", true)  and CoreGui["BF_Values"]:FindFirstChild("M4A1anime_Grip", true) and CoreGui["BF_Values"]:FindFirstChild("M4A1anime_Back", true) and CoreGui["BF_Values"]:FindFirstChild("M4A1anime_Top", true) and CoreGui["BF_Values"]:FindFirstChild("M4A1anime_Mag", true) then
 			game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Silencer2"].TextureID = CoreGui["BF_Values"]["M4A1anime_Silencer2"].Value
 			game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Silencer"].TextureID = CoreGui["BF_Values"]["M4A1anime_Silencer"].Value
-			game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Barrel"].TextureID = CoreGui["BF_Values"]["M4A1anime_Barrel"].Value
-			game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Handle"].TextureID = CoreGui["BF_Values"]["M4A1anime_Handle"].Value
-			game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Bolt"].TextureID = CoreGui["BF_Values"]["M4A1anime_Bolt"].Value
-			game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Grip"].TextureID = CoreGui["BF_Values"]["M4A1anime_Grip"].Value
-			game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Back"].TextureID = CoreGui["BF_Values"]["M4A1anime_Back"].Value
-			game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Top"].TextureID = CoreGui["BF_Values"]["M4A1anime_Top"].Value
-			game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Mag"].TextureID = CoreGui["BF_Values"]["M4A1anime_Mag"].Value
+			game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part4"].TextureID = CoreGui["BF_Values"]["M4A1anime_Barrel"].Value
+			game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Handle2"].TextureID = CoreGui["BF_Values"]["M4A1anime_Handle"].Value
+			game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Bolt2"].TextureID = CoreGui["BF_Values"]["M4A1anime_Bolt"].Value
+			game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part3"].TextureID = CoreGui["BF_Values"]["M4A1anime_Grip"].Value
+			game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part2"].TextureID = CoreGui["BF_Values"]["M4A1anime_Back"].Value
+			game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Part"].TextureID = CoreGui["BF_Values"]["M4A1anime_Top"].Value
+			game:GetService("ReplicatedStorage")["Viewmodels"]["v_M4A1"]["Mag2"].TextureID = CoreGui["BF_Values"]["M4A1anime_Mag"].Value
 		end
 	end
 end)
@@ -53468,11 +53472,11 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomViewmodelsScrollingFrame.TabCustomViewm
 	task.wait()
 	game:GetService("ReplicatedStorage")["Viewmodels"]["ak5671"].Name = "v_AK47"
 	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Handle"].TextureID = "rbxassetid://7661848565"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Bolt"].TextureID = "rbxassetid://7661848565"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID = "rbxassetid://7661848565"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://7661848565"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://7661848565"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://7661848565"
 	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --3/47
 CoreGui["BloxFunGui"].BaseFrame.TabCustomViewmodelsScrollingFrame.TabCustomViewmodelsButton47_Frame.TabCustomViewmodelsButton47_Roundify.TabCustomViewmodelsButton47_Roundify_Frame.TabCustomViewmodelsButton47_Script.MouseButton1Down:Connect(function()
@@ -54119,12 +54123,12 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomViewmodelsScrollingFrame.TabCustomViewm
 	--AWP with silencer
 	if CoreGui:FindFirstChild("BF_Values", true) then
 		if CoreGui["BF_Values"]:FindFirstChild("AWPsilencer_Handle", true) and CoreGui["BF_Values"]:FindFirstChild("AWPsilencer_Scope", true) and CoreGui["BF_Values"]:FindFirstChild("AWPsilencer_Mag", true) and CoreGui["BF_Values"]:FindFirstChild("AWPsilencer_Barrel", true) and CoreGui["BF_Values"]:FindFirstChild("AWPsilencer_Slide", true) and CoreGui["BF_Values"]:FindFirstChild("AWPsilencer_Slide 2", true) then
-			CoreGui["BF_Values"]["AWPsilencer_Handle"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle"].TextureID
-			CoreGui["BF_Values"]["AWPsilencer_Scope"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Scope"].TextureID
-			CoreGui["BF_Values"]["AWPsilencer_Mag"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID
-			CoreGui["BF_Values"]["AWPsilencer_Barrel"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID
-			CoreGui["BF_Values"]["AWPsilencer_Slide"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID
-			CoreGui["BF_Values"]["AWPsilencer_Slide 2"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide 2"].TextureID
+			CoreGui["BF_Values"]["AWPsilencer_Handle"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID
+			CoreGui["BF_Values"]["AWPsilencer_Scope"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID
+			CoreGui["BF_Values"]["AWPsilencer_Mag"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID
+			CoreGui["BF_Values"]["AWPsilencer_Barrel"].Value = --game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID
+			CoreGui["BF_Values"]["AWPsilencer_Slide"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID
+			CoreGui["BF_Values"]["AWPsilencer_Slide 2"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID
 		else
 			local TEMPVALUE_AWPsilencer_Handle = Instance.new("StringValue")
 			TEMPVALUE_AWPsilencer_Handle.Parent = CoreGui["BF_Values"]
@@ -54145,12 +54149,12 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomViewmodelsScrollingFrame.TabCustomViewm
 			TEMPVALUE_AWPsilencer_Slide2.Parent = CoreGui["BF_Values"]
 			TEMPVALUE_AWPsilencer_Slide2.Name = "AWPsilencer_Slide 2"
 			task.wait()
-			CoreGui["BF_Values"]["AWPsilencer_Handle"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle"].TextureID
-			CoreGui["BF_Values"]["AWPsilencer_Scope"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Scope"].TextureID
-			CoreGui["BF_Values"]["AWPsilencer_Mag"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID
-			CoreGui["BF_Values"]["AWPsilencer_Barrel"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID
-			CoreGui["BF_Values"]["AWPsilencer_Slide"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID
-			CoreGui["BF_Values"]["AWPsilencer_Slide 2"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide 2"].TextureID
+			CoreGui["BF_Values"]["AWPsilencer_Handle"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID
+			CoreGui["BF_Values"]["AWPsilencer_Scope"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID
+			CoreGui["BF_Values"]["AWPsilencer_Mag"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID
+			CoreGui["BF_Values"]["AWPsilencer_Barrel"].Value = --game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID
+			CoreGui["BF_Values"]["AWPsilencer_Slide"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID
+			CoreGui["BF_Values"]["AWPsilencer_Slide 2"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID
 		end
 	end
 	task.wait()
@@ -54168,12 +54172,12 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomViewmodelsScrollingFrame.TabCustomViewm
 	task.wait()
 	if CoreGui:FindFirstChild("BF_Values", true) then
 		if CoreGui["BF_Values"]:FindFirstChild("AWPsilencer_Handle", true) and CoreGui["BF_Values"]:FindFirstChild("AWPsilencer_Scope", true) and CoreGui["BF_Values"]:FindFirstChild("AWPsilencer_Mag", true) and CoreGui["BF_Values"]:FindFirstChild("AWPsilencer_Barrel", true) and CoreGui["BF_Values"]:FindFirstChild("AWPsilencer_Slide", true) and CoreGui["BF_Values"]:FindFirstChild("AWPsilencer_Slide 2", true) then
-			game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle"].TextureID = CoreGui["BF_Values"]["AWPsilencer_Handle"].Value
-			game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Scope"].TextureID = CoreGui["BF_Values"]["AWPsilencer_Scope"].Value
-			game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = CoreGui["BF_Values"]["AWPsilencer_Mag"].Value
-			game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = CoreGui["BF_Values"]["AWPsilencer_Barrel"].Value
-			game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = CoreGui["BF_Values"]["AWPsilencer_Slide"].Value
-			game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide 2"].TextureID = CoreGui["BF_Values"]["AWPsilencer_Slide 2"].Value
+			game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = CoreGui["BF_Values"]["AWPsilencer_Handle"].Value
+			game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = CoreGui["BF_Values"]["AWPsilencer_Scope"].Value
+			game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = CoreGui["BF_Values"]["AWPsilencer_Mag"].Value
+			--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = CoreGui["BF_Values"]["AWPsilencer_Barrel"].Value
+			game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = CoreGui["BF_Values"]["AWPsilencer_Slide"].Value
+			game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = CoreGui["BF_Values"]["AWPsilencer_Slide 2"].Value
 		end
 	end
 end)
@@ -57090,64 +57094,76 @@ end)
 --8/39
 CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton39_Frame.TabArmsButton39_Roundify.TabArmsButton39_Roundify_Frame.TabArmsButton39_Script.MouseButton1Down:Connect(function()
 	--(Remove Sleeves)
-	game:GetService("ReplicatedStorage")["Viewmodels"]["GIGNArms"]["Left Arm"].Sleeve.Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["GIGNArms"]["Right Arm"].Sleeve.Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["SASArms"]["Left Arm"].Sleeve.Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["SASArms"]["Right Arm"].Sleeve.Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["IDFArms"]["Left Arm"].Sleeve.Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["IDFArms"]["Right Arm"].Sleeve.Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["UTArms"]["Left Arm"].Sleeve.Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["UTArms"]["Right Arm"].Sleeve.Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["BDSArms"]["Left Arm"].Sleeve.Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["BDSArms"]["Right Arm"].Sleeve.Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["GSGArms"]["Left Arm"].Sleeve.Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["GSGArms"]["Right Arm"].Sleeve.Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["SPArms"]["Left Arm"].Sleeve.Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["SPArms"]["Right Arm"].Sleeve.Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["WDArms"]["Left Arm"].Sleeve.Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["WDArms"]["Right Arm"].Sleeve.Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["AAArms"]["Left Arm"].Sleeve.Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["AAArms"]["Right Arm"].Sleeve.Transparency = 1
+	game:GetService("ReplicatedStorage")["Viewmodels"]["BDSArms"]["Left Arm"].Sleeve.Transparency=1
+	game:GetService("ReplicatedStorage")["Viewmodels"]["BDSArms"]["Right Arm"].Sleeve.Transparency=1
+	--Old
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["GIGNArms"]["Left Arm"].Sleeve.Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["GIGNArms"]["Right Arm"].Sleeve.Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["SASArms"]["Left Arm"].Sleeve.Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["SASArms"]["Right Arm"].Sleeve.Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["IDFArms"]["Left Arm"].Sleeve.Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["IDFArms"]["Right Arm"].Sleeve.Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["UTArms"]["Left Arm"].Sleeve.Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["UTArms"]["Right Arm"].Sleeve.Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["BDSArms"]["Left Arm"].Sleeve.Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["BDSArms"]["Right Arm"].Sleeve.Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["GSGArms"]["Left Arm"].Sleeve.Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["GSGArms"]["Right Arm"].Sleeve.Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["SPArms"]["Left Arm"].Sleeve.Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["SPArms"]["Right Arm"].Sleeve.Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["WDArms"]["Left Arm"].Sleeve.Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["WDArms"]["Right Arm"].Sleeve.Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["AAArms"]["Left Arm"].Sleeve.Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["AAArms"]["Right Arm"].Sleeve.Transparency = 1
 end)
 --8/40
 CoreGui["BloxFunGui"].BaseFrame.TabArmsScrollingFrame.TabArmsButton40_Frame.TabArmsButton40_Roundify.TabArmsButton40_Roundify_Frame.TabArmsButton40_Script.MouseButton1Down:Connect(function()
 	--(Remove Gloves)
-	game:GetService("ReplicatedStorage")["Viewmodels"]["ECArms"]["Left Arm"]["LGlove"].Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["ECArms"]["Right Arm"]["RGlove"].Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["GIGNArms"]["Left Arm"]["LGlove"].Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["GIGNArms"]["Right Arm"]["RGlove"].Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["SASArms"]["Left Arm"]["LGlove"].Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["SASArms"]["Right Arm"]["RGlove"].Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["IDFArms"]["Left Arm"]["LGlove"].Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["IDFArms"]["Right Arm"]["RGlove"].Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["UTArms"]["Left Arm"]["LGlove"].Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["UTArms"]["Right Arm"]["RGlove"].Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["GCTArms"]["Left Arm"]["LGlove"].Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["GCTArms"]["Right Arm"]["RGlove"].Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["PCArms"]["Left Arm"]["LGlove"].Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["PCArms"]["Right Arm"]["RGlove"].Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["BDSArms"]["Left Arm"]["LGlove"].Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["BDSArms"]["Right Arm"]["RGlove"].Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["GSGArms"]["Left Arm"]["LGlove"].Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["GSGArms"]["Right Arm"]["RGlove"].Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["SPArms"]["Left Arm"]["LGlove"].Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["SPArms"]["Right Arm"]["RGlove"].Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["WDArms"]["Left Arm"]["LGlove"].Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["WDArms"]["Right Arm"]["RGlove"].Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["GTArms"]["Left Arm"]["LGlove"].Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["GTArms"]["Right Arm"]["RGlove"].Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["PTArms"]["Left Arm"]["LGlove"].Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["PTArms"]["Right Arm"]["RGlove"].Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["AAArms"]["Left Arm"]["LGlove"].Transparency = 1
-	game:GetService("ReplicatedStorage")["Viewmodels"]["AAArms"]["Right Arm"]["RGlove"].Transparency = 1
-	game:GetService("ReplicatedStorage")["Gloves"]["Models"]["Sports Glove"]["LGlove"].Transparency = 1
-	game:GetService("ReplicatedStorage")["Gloves"]["Models"]["Sports Glove"]["RGlove"].Transparency = 1
-	game:GetService("ReplicatedStorage")["Gloves"]["Models"]["Handwraps"]["LGlove"].Transparency = 1
-	game:GetService("ReplicatedStorage")["Gloves"]["Models"]["Handwraps"]["RGlove"].Transparency = 1
-	game:GetService("ReplicatedStorage")["Gloves"]["Models"]["Fingerless Glove"]["LGlove"].Transparency = 1
-	game:GetService("ReplicatedStorage")["Gloves"]["Models"]["Fingerless Glove"]["RGlove"].Transparency = 1
-	game:GetService("ReplicatedStorage")["Gloves"]["Models"]["Strapped Glove"]["LGlove"].Transparency = 1
-	game:GetService("ReplicatedStorage")["Gloves"]["Models"]["Strapped Glove"]["RGlove"].Transparency = 1
+	game:GetService("ReplicatedStorage")["Viewmodels"]["Arms"]["Left Arm"]["LGlove"].Transparency=1
+	game:GetService("ReplicatedStorage")["Viewmodels"]["Arms"]["Right Arm"]["RGlove"].Transparency=1
+	game:GetService("ReplicatedStorage")["Viewmodels"]["BDSArms"]["Left Arm"]["LGlove"].Transparency=1
+	game:GetService("ReplicatedStorage")["Viewmodels"]["BDSArms"]["Right Arm"]["RGlove"].Transparency=1
+	game:GetService("ReplicatedStorage")["Viewmodels"]["ECArms"]["Left Arm"]["LGlove"].Transparency=1
+	game:GetService("ReplicatedStorage")["Viewmodels"]["ECArms"]["Right Arm"]["RGlove"].Transparency=1
+	game:GetService("ReplicatedStorage")["Viewmodels"]["PTArms"]["Left Arm"]["LGlove"].Transparency=1
+	game:GetService("ReplicatedStorage")["Viewmodels"]["PTArms"]["Right Arm"]["RGlove"].Transparency=1
+	--Old
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["ECArms"]["Left Arm"]["LGlove"].Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["ECArms"]["Right Arm"]["RGlove"].Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["GIGNArms"]["Left Arm"]["LGlove"].Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["GIGNArms"]["Right Arm"]["RGlove"].Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["SASArms"]["Left Arm"]["LGlove"].Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["SASArms"]["Right Arm"]["RGlove"].Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["IDFArms"]["Left Arm"]["LGlove"].Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["IDFArms"]["Right Arm"]["RGlove"].Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["UTArms"]["Left Arm"]["LGlove"].Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["UTArms"]["Right Arm"]["RGlove"].Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["GCTArms"]["Left Arm"]["LGlove"].Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["GCTArms"]["Right Arm"]["RGlove"].Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["PCArms"]["Left Arm"]["LGlove"].Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["PCArms"]["Right Arm"]["RGlove"].Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["BDSArms"]["Left Arm"]["LGlove"].Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["BDSArms"]["Right Arm"]["RGlove"].Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["GSGArms"]["Left Arm"]["LGlove"].Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["GSGArms"]["Right Arm"]["RGlove"].Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["SPArms"]["Left Arm"]["LGlove"].Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["SPArms"]["Right Arm"]["RGlove"].Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["WDArms"]["Left Arm"]["LGlove"].Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["WDArms"]["Right Arm"]["RGlove"].Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["GTArms"]["Left Arm"]["LGlove"].Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["GTArms"]["Right Arm"]["RGlove"].Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["PTArms"]["Left Arm"]["LGlove"].Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["PTArms"]["Right Arm"]["RGlove"].Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["AAArms"]["Left Arm"]["LGlove"].Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Viewmodels"]["AAArms"]["Right Arm"]["RGlove"].Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Gloves"]["Models"]["Sports Glove"]["LGlove"].Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Gloves"]["Models"]["Sports Glove"]["RGlove"].Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Gloves"]["Models"]["Handwraps"]["LGlove"].Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Gloves"]["Models"]["Handwraps"]["RGlove"].Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Gloves"]["Models"]["Fingerless Glove"]["LGlove"].Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Gloves"]["Models"]["Fingerless Glove"]["RGlove"].Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Gloves"]["Models"]["Strapped Glove"]["LGlove"].Transparency = 1
+	-- game:GetService("ReplicatedStorage")["Gloves"]["Models"]["Strapped Glove"]["RGlove"].Transparency = 1
 	--[[
 	game:GetService("ReplicatedStorage")["Viewmodels"]["ECArms"]["Left Arm"]["Glove"].Transparency = 1
 	game:GetService("ReplicatedStorage")["Viewmodels"]["ECArms"]["Right Arm"]["Glove"].Transparency = 1
@@ -57602,12 +57618,12 @@ end)
 --9/4
 CoreGui["BloxFunGui"].BaseFrame.TabExplicitContentScrollingFrame.TabExplicitContentButton4_Frame.TabExplicitContentButton4_Roundify.TabExplicitContentButton4_Roundify_Frame.TabExplicitContentButton4_Script.MouseButton1Down:Connect(function()
 	--AWP Hentai
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle"].TextureID = "rbxassetid://7374031818"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Scope"].TextureID = "rbxassetid://9472658926"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://7374031818"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://7374031818"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://7374031818"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide 2"].TextureID = "rbxassetid://7374031818"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://7374031818"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://9472658926"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://7374031818"
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://7374031818"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://7374031818"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://7374031818"
 end)
 --9/5
 CoreGui["BloxFunGui"].BaseFrame.TabExplicitContentScrollingFrame.TabExplicitContentButton5_Frame.TabExplicitContentButton5_Roundify.TabExplicitContentButton5_Roundify_Frame.TabExplicitContentButton5_Script.MouseButton1Down:Connect(function()
@@ -57771,11 +57787,11 @@ end)
 --9/9
 CoreGui["BloxFunGui"].BaseFrame.TabExplicitContentScrollingFrame.TabExplicitContentButton9_Frame.TabExplicitContentButton9_Roundify.TabExplicitContentButton9_Roundify_Frame.TabExplicitContentButton9_Script.MouseButton1Down:Connect(function()
 	--AK47 NSFW
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Handle"].TextureID = "rbxassetid://9479845699"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Bolt"].TextureID = "rbxassetid://9479846680"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID = "rbxassetid://9479846211"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://9479845699"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://9479846680"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://9479846211"
 	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --9/10
 CoreGui["BloxFunGui"].BaseFrame.TabExplicitContentScrollingFrame.TabExplicitContentButton10_Frame.TabExplicitContentButton10_Roundify.TabExplicitContentButton10_Roundify_Frame.TabExplicitContentButton10_Script.MouseButton1Down:Connect(function()
@@ -57917,11 +57933,11 @@ end)
 --9/14
 CoreGui["BloxFunGui"].BaseFrame.TabExplicitContentScrollingFrame.TabExplicitContentButton14_Frame.TabExplicitContentButton14_Roundify.TabExplicitContentButton14_Roundify_Frame.TabExplicitContentButton14_Script.MouseButton1Down:Connect(function()
 	--AK47 Weeb
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Handle"].TextureID = "rbxassetid://9922476869"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Bolt"].TextureID = "rbxassetid://9922394702"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID = "rbxassetid://9922394161"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://9922476869"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://9922394702"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://9922394161"
 	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["LEGACY"]["Mag"].TextureID
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 ----------------------------------------------------------------------------------------------------
 --[[
@@ -60941,8 +60957,8 @@ end)
 CreateTabButton('GamePins', 'APPEND', 'Halloween 2017', '1158104700', 0, function()
     EquipPin('1158104700')
 end)
-CreateTabButton('GamePins', 'APPEND', 'Halloween 2018', '2566906953', 0, function()
-    EquipPin('2566906953')
+CreateTabButton('GamePins', 'APPEND', 'Halloween 2018', '98993444966478', 0, function()
+    EquipPin('98993444966478') --2566906953 (Old)
 end)
 CreateTabButton('GamePins', 'APPEND', 'Team Cringe', '4864433344', 0, function()
     EquipPin('4864433344') --7369002608 (Old)
@@ -60982,6 +60998,15 @@ CreateTabButton('GamePins', 'APPEND', 'Guapo', '18222477830', 0, function()
 end)
 CreateTabButton('GamePins', 'APPEND', 'ababa', '17725118837', 0, function()
     EquipPin('17725118837')
+end)
+CreateTabButton('GamePins', 'APPEND', 'Candy Cane 2025', '138256669494821', 0, function()
+    EquipPin('138256669494821')
+end)
+CreateTabButton('GamePins', 'APPEND', 'Xmas 2025', '104273144044014', 0, function()
+    EquipPin('104273144044014')
+end)
+CreateTabButton('GamePins', 'APPEND', 'RacerX', '102268080918984', 0, function()
+    EquipPin('102268080918984')
 end)
 
 --SkinTest
