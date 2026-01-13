@@ -20,6 +20,7 @@
 - Animations in options (+tab);
 - Get current month using os.time() and swap sidebar icons to seasonal ones (e.g. December, etc. = Xmas icons);
 - Hovering over sidebar buttons adjusts icon size - grows or shrinks a bit; no animation;
+- Optimize all functions and systems;
 
 --]]
 
@@ -5755,21 +5756,871 @@ local BloxFunGui = {
 
 -- Variables
 
-local RBXAID = "rbxassetid://" -- Roblox Texture Prefix
-local THUMBNAILAID = "http://www.roblox.com/Game/Tools/ThumbnailAsset.ashx?fmt=png&wd=420&ht=420&aid=" -- Roblox Thumbnail Prefix --TODO: Try x1024
-local PLACEHOLDERICON = "9438528836" -- Default / Placeholder Icon ID || Todo: Try 112387648016894 
+-- TODO: Replace old variables with these:
+local GCA; if getcustomasset then GCA=getcustomasset end -- LocalFile
+local RID= "rbxassetid://" -- RbxAsset
+local RLID= "http://www.roblox.com/asset/?id=" -- RbxLink
+local RTID= "http://www.roblox.com/Game/Tools/ThumbnailAsset.ashx?fmt=png&wd=420&ht=420&aid=" -- RbxThumbnail
+local PHID= "9438528836" -- Placeholder
+local nilstr, blank, EMPTY_STRING = '', nilstr, nilstr;
+local anycase = string.lower; --local allcases, caseinsensitive = anycase, anycase;
 
-local anycase = string.lower; allcases=anycase; caseinsensitive=anycase;
+--Old (in use):
+local RBXAID = "rbxassetid://" -- Rbx Asset Prefix
+local THUMBNAILAID = "http://www.roblox.com/Game/Tools/ThumbnailAsset.ashx?fmt=png&wd=420&ht=420&aid=" -- Rbx Thumbnail Prefix --TODO: Try x1024
+local PLACEHOLDERICON = "9438528836" -- Default / Placeholder Icon ID || Todo: Try 112387648016894 
 
 local function log(logfunction, ...)
     local logprefix= "[BF]:"
-    if anycase(logfunction)=="print" or anycase(logfunction)=="p" or anycase(logfunction)=='' then
+    if anycase(logfunction)=="print" or anycase(logfunction)=="p" or anycase(logfunction)==nilstr then
         print(logprefix, ...)
     elseif anycase(logfunction)=='warn' or anycase(logfunction)=='w' then
         warn(logprefix, ...)
     else print(logprefix, ...) end
 end; local Output, output, Log =log,log,log;
 
+-- TODO: Replace all path with these:
+local Viewmodels= ReplicatedStorage["Viewmodels"]
+local Weapons= ReplicatedStorage["Weapons"]
+
+-- Cached constants
+local C={
+	V_AK47 = "v_AK47",
+	V_AK_47, V_AK = V_AK47, V_AK47,
+	AK47 = "AK47",
+	AK_47, AK = AK47, AK47,
+
+	V_AUG = "v_AUG",
+	AUG = "AUG",
+
+	V_AWP = "v_AWP",
+	AWP = "AWP",
+
+	V_BANANA = "v_Banana",
+	BANANA = "Banana",
+
+	V_BAYONET = "v_Bayonet",
+	V_BAY = V_BAYONET,
+	BAYONET = "Bayonet",
+	BAY = BAYONET,
+
+	-- Note: Isn't in game:
+	V_BEARDED_AXE_CLASSIC = "v_Bearded Axe Classic",
+	V_AXE_CLASSIC = V_BEARDED_AXE_CLASSIC,
+	BEARDED_AXE_CLASSIC = "Bearded Axe Classic",
+	AXE_CLASSIC = BEARDED_AXE_CLASSIC,
+
+	V_BEARDED_AXE = "v_Bearded Axe",
+	V_BEARDEDAXE, V_BAXE = V_BEARDED_AXE, V_BEARDED_AXE,
+	BEARDED_AXE = "Bearded Axe",
+	AXE = "Axe",
+
+	V_BISON = "v_Bizon",
+	V_THOMPSON = V_BISON,
+	BISON = "Bizon",
+	THOMPSON = BISON,
+
+	V_BUTTERFLY_KNIFE = "v_Butterfly Knife",
+	V_BUTTERFLY, V_BUTTER, V_BALISONG_KNIFE, V_BALISONG, V_BALIS = V_BUTTERFLY_KNIFE, V_BUTTERFLY_KNIFE, V_BUTTERFLY_KNIFE, V_BUTTERFLY_KNIFE, V_BUTTERFLY_KNIFE,
+	BUTTERFLY_KNIFE = "Butterfly Knife",
+	BUTTERFLY, BUTTER, BALISONG_KNIFE, BALISONG, BALIS = BUTTERFLY_KNIFE, BUTTERFLY_KNIFE, BUTTERFLY_KNIFE, BUTTERFLY_KNIFE, BUTTERFLY_KNIFE,
+
+	V_C4 = "v_C4",
+	V_BOMB = V_C4,
+	C4 = "C4",
+	BOMB = C4,
+
+	-- Note: Isn't in game:
+	V_CLEAVER_CLASSIC = "v_Cleaver Classic",
+	CLEAVER_CLASSIC = "Cleaver Classic",
+
+	V_CLEAVER = "v_Cleaver",
+	CLEAVER = "Cleaver",
+
+	V_CROWBAR = "v_Crowbar",
+	CROWBAR = "Crowbar",
+
+	V_CT_KNIFE_BF = "v_CT Knife_BF",
+	CT_KNIFE_BF = "CT Knife_BF",
+
+	V_CT_KNIFE = "v_CT Knife",
+	V_CTKNIFE, V_CTK = V_CT_KNIFE, V_CT_KNIFE,
+	CT_KNIFE = "CT Knife",
+	CTKNIFE, CTK = CT_KNIFE, CT_KNIFE,
+
+	V_CZ = "v_CZ",
+	V_CZ75A, V_CZ75, V_CZ_75 = V_CZ, V_CZ, V_CZ,
+	CZ = "CZ",
+	CZ75A, CZ75, CZ_75 = CZ, CZ, CZ,
+
+	V_DECOY_GRENADE = "v_Decoy Grenade",
+	V_DECOY = V_DECOY_GRENADE,
+	DECOY_GRENADE = "Decoy Grenade",
+	DECOY = DECOY_GRENADE,
+
+	V_DESERTEAGLE = "v_DesertEagle",
+	V_DESERT_EAGLE, V_DEAGLE = V_DESERTEAGLE, V_DESERTEAGLE,
+	DESERTEAGLE = "DesertEagle",
+	DESERT_EAGLE, DEAGLE = DESERTEAGLE, DESERTEAGLE,
+
+	V_DUALBERETTAS = "v_DualBerettas",
+	V_DUAL_BERETTAS, V_BERETTAS = V_DUALBERETTAS, V_DUALBERETTAS,
+	DUALBERETTAS = "DualBerettas",
+	DUAL_BERETTAS, BERETTAS = DUALBERETTAS, DUALBERETTAS,
+
+	V_FALCHION_CLASSIC = "v_Falchion Classic",
+	V_FALCH_CLASSIC, V_FALCHIONC, V_FALCH_C, V_FALCHC = V_FALCHION_CLASSIC, V_FALCHION_CLASSIC, V_FALCHION_CLASSIC, V_FALCHION_CLASSIC,
+	FALCHION_CLASSIC = "Falchion Classic",
+	FALCH_CLASSIC , FALCHIONC, FALCH_C, FALCHC = FALCHION_CLASSIC, FALCHION_CLASSIC, FALCHION_CLASSIC, FALCHION_CLASSIC,
+
+	V_FALCHION_KNIFE = "v_Falchion Knife",
+	V_FALCHION, V_FALCH = V_FALCHION_KNIFE, V_FALCHION_KNIFE,
+	FALCHION_KNIFE = "Falchion Knife",
+	FALCHION, FALCH = FALCHION_KNIFE, FALCHION_KNIFE,
+
+	V_FAMAS = "v_Famas",
+	FAMAS = "Famas",
+
+	V_FIVE_SEVEN = "v_FiveSeven",
+	FIVE_SEVEN = "FiveSeven",
+
+	V_FLASHBANG = "v_Flashbang",
+	V_FLASH = V_FLASHBANG,
+	FLASHBANG = "Flashbang",
+	FLASH = FLASHBANG,
+
+	V_G3SG1 = "v_G3SG1",
+	G3SG1 = "G3SG1",
+
+	V_GALIL = "v_Galil",
+	V_GALILAR = V_GALIL,
+	GALIL = "Galil",
+	GALILAR = GALIL,
+
+	V_GLOCK = "v_Glock",
+	V_GLOCK18 = V_GLOCK,
+	GLOCK = "Glock",
+	GLOCK18 = GLOCK,
+
+	V_GUT_KNIFE = "v_Gut Knife",
+	V_GUT = V_GUT_KNIFE,
+	GUT_KNIFE = "Gut Knife",
+	GUT = GUT_KNIFE,
+
+	V_HE_GRENADE = "v_HE Grenade",
+	V_HE, V_HGRENADE = V_HE_GRENADE, V_HE_GRENADE,
+	HE_GRENADE = "HE Grenade",
+	HE, HGRENADE = HE_GRENADE, HE_GRENADE,
+
+	V_HUNTSMAN_KNIFE = "v_Huntsman Knife",
+	V_HUNTSMAN, V_HUNTS = V_HUNTSMAN_KNIFE, V_HUNTSMAN_KNIFE,
+	HUNTSMAN_KNIFE = "Huntsman Knife",
+	HUNTSMAN, HUNTS = HUNTSMAN_KNIFE, HUNTSMAN_KNIFE,
+
+	V_INCENDIARY_GRENADE = "v_Incendiary Grenade",
+	V_INCENDIARY, V_MOLOTOVCT = V_INCENDIARY_GRENADE, V_INCENDIARY_GRENADE,
+	INCENDIARY_GRENADE = "Incendiary Grenade",
+	INCENDIARY, MOLOTOVCT = INCENDIARY_GRENADE, INCENDIARY_GRENADE,
+
+	V_KARAMBIT = "v_Karambit",
+	V_KARA = V_KARAMBIT,
+	KARAMBIT = "Karambit",
+	KARA = KARAMBIT,
+
+	V_M249 = "v_M249",
+	M249 = "M249",
+
+	V_M4A1 = "v_M4A1",
+	V_M4A1S, V_M4A1S_ = V_M4A1, V_M4A1,
+	M4A1 = "M4A1",
+	M4A1S, M4A1S_ = M4A1, M4A1,
+
+	V_M4A4 = "v_M4A4",
+	V_M4 = V_M4A4,
+	M4A4 = "M4A4",
+	M4 = M4A4,
+
+	V_M9_BAYONET = "v_M9 Bayonet",
+	V_M9BAY, V_M9B, V_M9 = V_M9_BAYONET, V_M9_BAYONET, V_M9_BAYONET,
+	M9_BAYONET = "M9 Bayonet",
+	M9BAY, M9B, M9 = M9_BAYONET, M9_BAYONET, M9_BAYONET,
+
+	V_MAC10 = "v_MAC10",
+	V_MAC = V_MAC10,
+	MAC10 = "MAC10",
+	MAC = MAC10,
+
+	V_MAG7 = "v_MAG7",
+	V_MAG = V_MAG7,
+	MAG7 = "MAG7",
+	MAG = MAG7,
+
+	V_MOLOTOV = "v_Molotov",
+	V_MOLOTOVT = V_MOLOTOV,
+	MOLOTOV = "Molotov",
+	MOLOTOVT = MOLOTOV,
+
+	V_MP7 = "v_MP7",
+	MP7 = "MP7",
+
+	V_MP7_SD = "v_MP7-SD",
+	V_MP7SD = V_MP7_SD,
+	MP7_SD = "MP7-SD",
+	MP7SD = MP7_SD,
+
+	V_MP9 = "v_MP9",
+	MP9 = "MP9",
+
+	V_NEGEV = "v_Negev",
+	NEGEV = "Negev",
+
+	V_NOVA = "v_Nova",
+	NOVA = "Nova",
+
+	V_P2000 = "v_P2000",
+	V_PX4 = V_P2000,
+	P2000 = "P2000",
+	PX4 = P2000,
+
+	V_P250 = "v_P250",
+	P250 = "P250",
+
+	V_P90 = "v_P90",
+	V_P_90 = V_P90,
+	P90 = "P90",
+	P_90 = P90,
+
+	V_R8 = "v_R8",
+	V_REVOLVER = V_R8,
+	R8 = "R8",
+	REVOLVER = R8,
+
+	V_SAWEDOFF = "v_SawedOff",
+	V_SAWED_OFF = V_SAWEDOFF,
+	SAWEDOFF = "SawedOff",
+	SAWED_OFF = SAWEDOFF,
+
+	V_SCAR_20 = "v_SCAR-20",
+	V_SCAR20 = V_SCAR_20,
+	SCAR_20 = "SCAR-20",
+	SCAR20 = SCAR_20,
+
+	V_SCOUT = "v_Scout",
+	V_SSG08, V_SSG = V_SCOUT, V_SCOUT,
+	SCOUT = "Scout",
+	SSG08, SSG = SCOUT, SCOUT,
+
+	V_SG = "v_SG",
+	V_SG_553, V_SG553 = V_SG, V_SG,
+	SG = "SG",
+	SG_553, SG553 = SG, SG,
+
+	V_SICKLE = "v_Sickle",
+	SICKLE = "Sickle",
+
+	V_SICKLE_CLASSIC = "v_Sickle Classic",
+	V_SICKLECLASSIC, V_SICKLEC = V_SICKLE_CLASSIC, V_SICKLE_CLASSIC,
+	SICKLE_CLASSIC = "Sickle Classic",
+	SICKLECLASSIC, SICKLEC = SICKLE_CLASSIC, SICKLE_CLASSIC,
+
+	V_SMOKE_GRENADE = "v_Smoke Grenade",
+	V_SMOKEGRENADE, V_SMOKE = V_SMOKE_GRENADE, V_SMOKE_GRENADE,
+	SMOKE_GRENADE = "Smoke Grenade",
+	SMOKEGRENADE, SMOKE = SMOKE_GRENADE, SMOKE_GRENADE,
+
+	V_T_KNIFE_BF = "v_T Knife_BF",
+	T_KNIFE_BF = "T Knife_BF",
+
+	V_T_KNIFE = "v_T Knife",
+	V_TKNIFE, V_TK = V_T_KNIFE, V_T_KNIFE,
+	T_KNIFE = "T Knife",
+	TKNIFE, TK = T_KNIFE, T_KNIFE,
+
+	V_TEC9 = "v_Tec9",
+	V_TEC_9 = V_TEC9,
+	TEC9 = "Tec9",
+	TEC_9 = TEC9,
+
+	V_UMP = "v_UMP",
+	V_UMP_45, V_UMP45 = V_UMP, V_UMP,
+	UMP = "UMP",
+	UMP_45, UMP45 = UMP, UMP,
+
+	V_USP = "v_USP",
+	V_USP_S, V_USPS = V_USP, V_USP,
+	USP = "USP",
+	USP_S, USPS = USP, USP,
+
+	V_XM = "v_XM",
+	V_XM1014 = V_XM,
+	XM = "XM",
+	XM1014 = XM,
+}
+
+-- Note: My dumb exceeded the 200 limit of 'local registers'.
+-- Note: I've switched to the variable approach instead of these lookup tables.
+--[[
+-- Caching constants
+local V_AK47 = "v_AK47"
+local AK47 = "AK47"
+local AK__47 = "AK-47"
+local AK = "AK"
+
+local V_AUG = "v_AUG"
+local AUG = "AUG"
+
+local V_AWP = "v_AWP"
+local AWP = "AWP"
+
+local V_BANANA = "v_Banana"
+local BANANA = "Banana"
+
+local V_BAYONET = "v_Bayonet"
+local BAYONET = "Bayonet"
+local BAY = "Bay"
+
+local V_BEARDED_AXE = "v_Bearded Axe"
+local BEARDED_AXE = "Bearded Axe"
+local AXE = "Axe"
+
+local V_BISON = "v_Bizon"
+local BISON = "Bizon"
+local THOMPSON = "Thompson"
+
+local V_BUTTERFLY_KNIFE = "v_Butterfly Knife"
+local BUTTERFLY_KNIFE = "Butterfly Knife"
+local BUTTERFLY = "Butterfly"
+local BUTTER = "Butter"
+local BALISONG_KNIFE = "Balisong Knife"
+local BALISONG = "Balisong"
+
+local V_C4 = "v_C4"
+local C4 = "C4"
+local BOMB = "Bomb"
+
+local V_CLEAVER = "v_Cleaver"
+local CLEAVER = "Cleaver"
+
+local V_CROWBAR = "v_Crowbar"
+local CROWBAR = "Crowbar"
+
+local V_CT_KNIFE_BF = "v_CT Knife_BF"
+local V_CT_KNIFE = "v_CT Knife"
+local CT_KNIFE_BF = "CT Knife_BF"
+local CT_KNIFE = "CT Knife"
+local CTKNIFE = "CTKnife"
+local CTK = "CTK"
+
+local V_CZ = "v_CZ"
+local CZ = "CZ"
+local CZ75__A = "CZ75-A"
+local CZ75A = "CZ75A"
+local CZ75 = "CZ75"
+local CZ__75__A = "CZ-75-A"
+local CZ__75A = "CZ-75A"
+local CZ__75 = "CZ-75"
+
+local V_DECOY_GRENADE = "v_Decoy Grenade"
+local DECOY_GRENADE = "Decoy Grenade"
+local DECOY = "Decoy"
+
+local V_DESERTEAGLE = "v_DesertEagle"
+local DESERTEAGLE = "DesertEagle"
+local DESERT_EAGLE = "Desert Eagle"
+local DEAGLE = "Deagle"
+
+local V_DUALBERETTAS = "v_DualBerettas"
+local DUALBERETTAS = "DualBerettas"
+local DUAL_BERETTAS = "Dual Berettas"
+local BERETTAS = "Berettas"
+
+local V_FALCHION_CLASSIC = "v_Falchion Classic"
+local FALCHION_CLASSIC = "Falchion Classic"
+local FALCH_CLASSIC = "Falch Classic"
+local FALCHIONC = "FalchionC"
+local FALCHC = "FalchC"
+
+local V_FALCHION_KNIFE = "v_Falchion Knife"
+local FALCHION_KNIFE = "Falchion Knife"
+local FALCHION = "Falchion"
+local FALCH = "Falch"
+
+local V_FAMAS = "v_Famas"
+local FAMAS = "Famas"
+
+local V_FIVE_SEVEN = "v_FiveSeven"
+local FIVE_SEVEN = "FiveSeven"
+
+local V_FLASHBANG = "v_Flashbang"
+local FLASHBANG = "Flashbang"
+
+local V_G3SG1 = "v_G3SG1"
+local G3SG1 = "G3SG1"
+
+local V_GALIL = "v_Galil"
+local GALIL = "Galil"
+local GALILAR = "GalilAR"
+
+local V_GLOCK = "v_Glock"
+local GLOCK = "Glock"
+local GLOCK18 = "Glock18"
+
+local V_GUT_KNIFE = "v_Gut Knife"
+local GUT_KNIFE = "Gut Knife"
+local GUT = "Gut"
+
+local V_HE_GRENADE = "v_HE Grenade"
+local HE_GRENADE = "HE Grenade"
+local HE = "HE"
+
+local V_HUNTSMAN_KNIFE = "v_Huntsman Knife"
+local HUNTSMAN_KNIFE = "Huntsman Knife"
+local HUNTSMAN = "Huntsman"
+local HUNTS = "Hunts"
+
+local V_INCENDIARY_GRENADE = "v_Incendiary Grenade"
+local INCENDIARY_GRENADE = "Incendiary Grenade"
+local INCENDIARY = "Incendiary"
+local MOLOTOVCT = "MolotovCT"
+
+local V_KARAMBIT = "v_Karambit"
+local KARAMBIT = "Karambit"
+local KARA = "Kara"
+
+local V_M249 = "v_M249"
+local M249 = "M249"
+
+local V_M4A1 = "v_M4A1"
+local M4A1 = "M4A1"
+local M4A1S = "M4A1S"
+local M4A1__S = "M4A1-S"
+
+local V_M4A4 = "v_M4A4"
+local M4A4 = "M4A4"
+local M4 = "M4"
+
+local V_M9_BAYONET = "v_M9 Bayonet"
+local M9_BAYONET = "M9 Bayonet"
+local M9BAY = "M9Bay"
+local M9B = "M9B"
+local M9 = "M9"
+
+local V_MAC10 = "v_MAC10"
+local MAC10 = "MAC10"
+local MAC = "MAC"
+
+local V_MAG7 = "v_MAG7"
+local MAG7 = "MAG7"
+
+local V_MOLOTOV = "v_Molotov"
+local MOLOTOV = "Molotov"
+local MOLOTOVT = "MolotovT"
+
+local V_MP7 = "v_MP7"
+local MP7 = "MP7"
+
+local V_MP7_SD = "v_MP7-SD"
+local MP7_SD = "MP7-SD"
+local MP7SD = "MP7SD"
+
+local V_MP9 = "v_MP9"
+local MP9 = "MP9"
+
+local V_NEGEV = "v_Negev"
+local NEGEV = "Negev"
+
+local V_NOVA = "v_Nova"
+local NOVA = "Nova"
+
+local V_P2000 = "v_P2000"
+local P2000 = "P2000"
+local PX4 = "PX4"
+
+local V_P250 = "v_P250"
+local P250 = "P250"
+
+local V_P90 = "v_P90"
+local P90 = "P90"
+
+local V_R8 = "v_R8"
+local R8 = "R8"
+local REVOLVER = "Revolver"
+
+local V_SAWEDOFF = "v_SawedOff"
+local SAWEDOFF = "SawedOff"
+local SAWED_OFF = "Sawed Off"
+
+local V_SCAR_20 = "v_SCAR-20"
+local SCAR_20 = "SCAR-20"
+local SCAR20 = "SCAR20"
+
+local V_SCOUT = "v_Scout"
+local SCOUT = "Scout"
+local SSG08 = "SSG08"
+local SSG = "SSG"
+
+local V_SG = "v_SG"
+local SG = "SG"
+local SG_553 = "SG 553"
+local SG553 = "SG553"
+
+local V_SICKLE = "v_Sickle"
+local SICKLE = "Sickle"
+
+local V_SICKLE_CLASSIC = "v_Sickle Classic"
+local SICKLE_CLASSIC = "Sickle Classic"
+local SICKLEC = "SickleC"
+
+local V_SMOKE_GRENADE = "v_Smoke Grenade"
+local SMOKE_GRENADE = "Smoke Grenade"
+local SMOKE = "Smoke"
+
+local V_T_KNIFE_BF = "v_T Knife_BF"
+local V_T_KNIFE = "v_T Knife"
+local T_KNIFE_BF = "T Knife_BF"
+local T_KNIFE = "T Knife"
+local TKNIFE = "TKnife"
+local TK = "TK"
+
+local V_TEC9 = "v_Tec9"
+local TEC9 = "Tec9"
+local TEC__9 = "Tec-9"
+local TEC = "Tec"
+
+local V_UMP = "v_UMP"
+local UMP = "UMP"
+local UMP__45 = "UMP-45"
+local UMP45 = "UMP45"
+
+local V_USP = "v_USP"
+local USP = "USP"
+local USP__S = "USP-S"
+local USPS = "USPS"
+
+local V_XM = "v_XM"
+local XM = "XM"
+local XM1014 = "XM1014"
+
+-- Tables using cached constants
+local ViewmodelLookup = {
+    [AK47] = V_AK47,
+    [AK__47] = V_AK47,
+    [AK] = V_AK47,
+    [AUG] = V_AUG,
+    [AWP] = V_AWP,
+    [BANANA] = V_BANANA,
+    [BAYONET] = V_BAYONET,
+    [BAY] = V_BAYONET,
+    [BEARDED_AXE] = V_BEARDED_AXE,
+    [AXE] = V_BEARDED_AXE,
+    [BISON] = V_BISON,
+    [THOMPSON] = V_BISON,
+    [BUTTERFLY_KNIFE] = V_BUTTERFLY_KNIFE,
+    [BUTTERFLY] = V_BUTTERFLY_KNIFE,
+    [BUTTER] = V_BUTTERFLY_KNIFE,
+    [BALISONG_KNIFE] = V_BUTTERFLY_KNIFE,
+    [BALISONG] = V_BUTTERFLY_KNIFE,
+    [CLEAVER] = V_CLEAVER,
+    [CROWBAR] = V_CROWBAR,
+    [C4] = V_C4,
+    [BOMB] = V_C4,
+    [CT_KNIFE_BF] = V_CT_KNIFE_BF,
+    [CT_KNIFE] = V_CT_KNIFE,
+    [CTKNIFE] = V_CT_KNIFE,
+    [CTK] = V_CT_KNIFE,
+    [CZ] = V_CZ,
+    [CZ75__A] = V_CZ,
+    [CZ75A] = V_CZ,
+    [CZ75] = V_CZ,
+    [CZ__75__A] = V_CZ,
+    [CZ__75A] = V_CZ,
+    [CZ__75] = V_CZ,
+    [DECOY_GRENADE] = V_DECOY_GRENADE,
+    [DECOY] = V_DECOY_GRENADE,
+    [DESERTEAGLE] = V_DESERTEAGLE,
+    [DESERT_EAGLE] = V_DESERTEAGLE,
+    [DEAGLE] = V_DESERTEAGLE,
+    [DUALBERETTAS] = V_DUALBERETTAS,
+    [DUAL_BERETTAS] = V_DUALBERETTAS,
+    [BERETTAS] = V_DUALBERETTAS,
+    [FALCHION_CLASSIC] = V_FALCHION_CLASSIC,
+    [FALCH_CLASSIC] = V_FALCHION_CLASSIC,
+    [FALCHIONC] = V_FALCHION_CLASSIC,
+    [FALCHC] = V_FALCHION_CLASSIC,
+    [FALCHION_KNIFE] = V_FALCHION_KNIFE,
+    [FALCHION] = V_FALCHION_KNIFE,
+    [FALCH] = V_FALCHION_KNIFE,
+    [FAMAS] = V_FAMAS,
+    [FIVE_SEVEN] = V_FIVE_SEVEN,
+    [FLASHBANG] = V_FLASHBANG,
+    [G3SG1] = V_G3SG1,
+    [GALIL] = V_GALIL,
+    [GALILAR] = V_GALIL,
+    [GLOCK] = V_GLOCK,
+    [GLOCK18] = V_GLOCK,
+    [GUT_KNIFE] = V_GUT_KNIFE,
+    [GUT] = V_GUT_KNIFE,
+    [HE_GRENADE] = V_HE_GRENADE,
+    [HE] = V_HE_GRENADE,
+    [HUNTSMAN_KNIFE] = V_HUNTSMAN_KNIFE,
+    [HUNTSMAN] = V_HUNTSMAN_KNIFE,
+    [HUNTS] = V_HUNTSMAN_KNIFE,
+    [INCENDIARY_GRENADE] = V_INCENDIARY_GRENADE,
+    [INCENDIARY] = V_INCENDIARY_GRENADE,
+    [MOLOTOVCT] = V_INCENDIARY_GRENADE,
+    [KARAMBIT] = V_KARAMBIT,
+    [KARA] = V_KARAMBIT,
+    [M249] = V_M249,
+    [M4A1] = V_M4A1,
+    [M4A1S] = V_M4A1,
+    [M4A1__S] = V_M4A1,
+    [M4A4] = V_M4A4,
+    [M4] = V_M4A4,
+    [M9_BAYONET] = V_M9_BAYONET,
+    [M9BAY] = V_M9_BAYONET,
+    [M9B] = V_M9_BAYONET,
+    [M9] = V_M9_BAYONET,
+    [MAC10] = V_MAC10,
+    [MAC] = V_MAC10,
+    [MAG7] = V_MAG7,
+    [MOLOTOV] = V_MOLOTOV,
+    [MOLOTOVT] = V_MOLOTOV,
+    [MP7] = V_MP7,
+    [MP7_SD] = V_MP7_SD,
+    [MP7SD] = V_MP7_SD,
+    [MP9] = V_MP9,
+    [NEGEV] = V_NEGEV,
+    [NOVA] = V_NOVA,
+    [P2000] = V_P2000,
+    [PX4] = V_P2000,
+    [P250] = V_P250,
+    [P90] = V_P90,
+    [R8] = V_R8,
+    [REVOLVER] = V_R8,
+    [SAWEDOFF] = V_SAWEDOFF,
+    [SAWED_OFF] = V_SAWEDOFF,
+    [SCAR_20] = V_SCAR_20,
+    [SCAR20] = V_SCAR_20,
+    [SCOUT] = V_SCOUT,
+    [SSG08] = V_SCOUT,
+    [SSG] = V_SCOUT,
+    [SG] = V_SG,
+    [SG_553] = V_SG,
+    [SG553] = V_SG,
+    [SICKLE] = V_SICKLE,
+    [SICKLE_CLASSIC] = V_SICKLE_CLASSIC,
+    [SICKLEC] = V_SICKLE_CLASSIC,
+    [SMOKE_GRENADE] = V_SMOKE_GRENADE,
+    [SMOKE] = V_SMOKE_GRENADE,
+    [T_KNIFE_BF] = V_T_KNIFE_BF,
+    [T_KNIFE] = V_T_KNIFE,
+    [TKNIFE] = V_T_KNIFE,
+    [TK] = V_T_KNIFE,
+    [TEC9] = V_TEC9,
+    [TEC__9] = V_TEC9,
+    [TEC] = V_TEC9,
+    [UMP] = V_UMP,
+    [UMP__45] = V_UMP,
+    [UMP45] = V_UMP,
+    [USP] = V_USP,
+    [USP__S] = V_USP,
+    [USPS] = V_USP,
+    [XM] = V_XM,
+    [XM1014] = V_XM1014
+}
+
+local WeaponLookup = {
+    [AK47] = AK47,
+    [AK__47] = AK47,
+    [AK] = AK,
+    [AUG] = AUG,
+    [AWP] = AWP,
+    [BANANA] = BANANA,
+    [BAYONET] = BAYONET,
+    [BAY] = BAYONET,
+    [BEARDED_AXE] = BEARDED_AXE,
+    [AXE] = BEARDED_AXE,
+    [BISON] = BISON,
+    [THOMPSON] = BISON,
+    [BUTTERFLY_KNIFE] = BUTTERFLY_KNIFE,
+    [BUTTERFLY] = BUTTERFLY_KNIFE,
+    [BUTTER] = BUTTERFLY_KNIFE,
+    [BALISONG_KNIFE] = BUTTERFLY_KNIFE,
+    [BALISONG] = BUTTERFLY_KNIFE,
+    [CLEAVER] = CLEAVER,
+    [CROWBAR] = CROWBAR,
+    [C4] = C4,
+    [BOMB] = C4,
+    [CT_KNIFE_BF] = CT_KNIFE_BF,
+    [CT_KNIFE] = CT_KNIFE,
+    [CTKNIFE] = CT_KNIFE,
+    [CTK] = CT_KNIFE,
+    [CZ] = CZ,
+    [CZ75__A] = CZ,
+    [CZ75A] = CZ,
+    [CZ75] = CZ,
+    [CZ__75__A] = CZ,
+    [CZ__75A] = CZ,
+    [CZ__75] = CZ,
+    [DECOY_GRENADE] = DECOY_GRENADE,
+    [DECOY] = DECOY_GRENADE,
+    [DESERTEAGLE] = DESERTEAGLE,
+    [DESERT_EAGLE] = DESERTEAGLE,
+    [DEAGLE] = DESERTEAGLE,
+    [DUALBERETTAS] = DUALBERETTAS,
+    [DUAL_BERETTAS] = DUALBERETTAS,
+    [BERETTAS] = DUALBERETTAS,
+    [FALCHION_CLASSIC] = FALCHION_CLASSIC,
+    [FALCH_CLASSIC] = FALCHION_CLASSIC,
+    [FALCHIONC] = FALCHION_CLASSIC,
+    [FALCHC] = FALCHION_CLASSIC,
+    [FALCHION_KNIFE] = FALCHION_KNIFE,
+    [FALCHION] = FALCHION_KNIFE,
+    [FALCH] = FALCHION_KNIFE,
+    [FAMAS] = FAMAS,
+    [FIVE_SEVEN] = FIVE_SEVEN,
+    [FLASHBANG] = FLASHBANG,
+    [G3SG1] = G3SG1,
+    [GALIL] = GALIL,
+    [GALILAR] = GALIL,
+    [GLOCK] = GLOCK,
+    [GLOCK18] = GLOCK,
+    [GUT_KNIFE] = GUT_KNIFE,
+    [GUT] = GUT_KNIFE,
+    [HE_GRENADE] = HE_GRENADE,
+    [HE] = HE_GRENADE,
+    [HUNTSMAN_KNIFE] = HUNTSMAN_KNIFE,
+    [HUNTSMAN] = HUNTSMAN_KNIFE,
+    [HUNTS] = HUNTSMAN_KNIFE,
+    [INCENDIARY_GRENADE] = INCENDIARY_GRENADE,
+    [INCENDIARY] = INCENDIARY_GRENADE,
+    [MOLOTOVCT] = INCENDIARY_GRENADE,
+    [KARAMBIT] = KARAMBIT,
+    [KARA] = KARAMBIT,
+    [M249] = M249,
+    [M4A1] = M4A1,
+    [M4A1S] = M4A1,
+    [M4A1__S] = M4A1,
+    [M4A4] = M4A4,
+    [M4] = M4A4,
+    [M9_BAYONET] = M9_BAYONET,
+    [M9BAY] = M9_BAYONET,
+    [M9B] = M9_BAYONET,
+    [M9] = M9_BAYONET,
+    [MAC10] = MAC10,
+    [MAC] = MAC10,
+    [MAG7] = MAG7,
+    [MOLOTOV] = MOLOTOV,
+    [MOLOTOVT] = MOLOTOV,
+    [MP7] = MP7,
+    [MP7_SD] = MP7_SD,
+    [MP7SD] = MP7_SD,
+    [MP9] = MP9,
+    [NEGEV] = NEGEV,
+    [NOVA] = NOVA,
+    [P2000] = P2000,
+    [PX4] = P2000,
+    [P250] = P250,
+    [P90] = P90,
+    [R8] = R8,
+    [REVOLVER] = R8,
+    [SAWEDOFF] = SAWEDOFF,
+    [SAWED_OFF] = SAWEDOFF,
+    [SCAR_20] = SCAR_20,
+    [SCAR20] = SCAR_20,
+    [SCOUT] = SCOUT,
+    [SSG08] = SCOUT,
+    [SSG] = SCOUT,
+    [SG] = SG,
+    [SG_553] = SG,
+    [SG553] = SG,
+    [SICKLE] = SICKLE,
+    [SICKLE_CLASSIC] = SICKLE_CLASSIC,
+    [SICKLEC] = SICKLE_CLASSIC,
+    [SMOKE_GRENADE] = SMOKE_GRENADE,
+    [SMOKE] = SMOKE_GRENADE,
+    [T_KNIFE_BF] = T_KNIFE_BF,
+    [T_KNIFE] = T_KNIFE,
+    [TKNIFE] = T_KNIFE,
+    [TK] = T_KNIFE,
+    [TEC9] = TEC9,
+    [TEC__9] = TEC9,
+    [TEC] = TEC9,
+    [UMP] = UMP,
+    [UMP__45] = UMP,
+    [UMP45] = UMP,
+    [USP] = USP,
+    [USP__S] = USP,
+    [USPS] = USP,
+    [XM] = XM,
+    [XM1014] = XM1014
+}
+
+local function GetViewmodelName(WeaponName)
+    return ViewmodelLookup[WeaponName]
+end
+local function GetWeaponName(WeaponName)
+    return WeaponLookup[WeaponName]
+end
+local VRef, VmdlRef, WRef, WeapRef = GetViewmodelName, GetViewmodelName, GetWeaponName, GetWeaponName;
+--]]
+
+--Old:
+-- Second argument to true incase I want to use the Weapon names instead of Viewmodel names
+--[[
+local function WeaponReference(WeaponName, WeaponType)
+    if WeaponName == "Bayonet" or WeaponName == "Bay" then
+        return WeaponType and "Bayonet" or "v_Bayonet"
+    elseif WeaponName == "CT Knife" or WeaponName == "CTK" then
+        return WeaponType and "CT Knife" or "v_CT Knife"
+    elseif WeaponName == "T Knife" or WeaponName == "TK" then
+        return WeaponType and "T Knife" or "v_T Knife"
+    end
+end
+local WRef, VmdlRef = WeaponReference, WeaponReference;
+--]]
+
+local function CreatePBR(Path, ColorMap, NormalMap, MetalnessMap, RoughnessMap, EmissiveMap)
+    local PBR = Instance.new("SurfaceAppearance", Path) --.Name="PBR_BF"  | TODO
+    PBR.ColorMap= ColorMap; PBR.NormalMap= NormalMap; PBR.MetalnessMap= MetalnessMap PBR.RoughnessMap= RoughnessMap;
+    if EmissiveMap and EmissiveMap~=nilstr then PBR.EmissiveMap= EmissiveMap end
+end
+
+local function InsertTextures(WeaponPath, WeaponParts)
+    for PartName, Textures in pairs(WeaponParts) do 
+        local ColorMap, NormalMap, MetalnessMap, RoughnessMap, EmissiveMap = Textures.ColorMap or nilstr, Textures.NormalMap or nilstr, Textures.MetalnessMap or nilstr, Textures.RoughnessMap or nilstr, Textures.EmissiveMap or nilstr;
+        if WeaponPath then
+            CreatePBR(WeaponPath, Textures.ColorMap or nilstr, Textures.NormalMap or nilstr, Textures.RoughnessMap or nilstr, Textures.MetalnessMap or nilstr, Textures.EmissiveMap or nilstr)
+        else log('Warn', 'InsertTextures() failed to check WeaponPath') end
+    end
+end
+
+local function SwapViewmodel(Viewmodel, NewName, ToClone)
+    if ToClone then
+        local ClonedViewmodel = Viewmodels:FindFirstChild(Viewmodel):Clone()
+        ClonedViewmodel.Name = NewName
+        ClonedViewmodel.Parent = Viewmodels
+    else Viewmodels:FindFirstChild(Viewmodel).Name = NewName end
+    -- else Instance.new("Model", Viewmodels).Name = Viewmodel end -- TODO: 'Spawn' the viewmodel instead. This is temporary thing
+end
+
+-- local vctk,vctkbf,vtk,vtkbf=VRef("CT Knife"),VRef("CT Knife_BF"),VRef("T Knife"),VRef("T Knife_BF");
+local function SwapDefaultKnives() SwapViewmodel(C[V_CT_KNIFE], C[V_CT_KNIFE_BF]); SwapViewmodel(C[V_T_KNIFE], C[V_T_KNIFE_BF]) end
+
+local function EquipSkin(Weapon, WeaponParts)
+    -- TODO: Also ReplicatedStorage["Weapons"]
+    if Weapon == C[BAYONET] then
+        SwapDefaultKnives(); task.wait()
+        SwapViewmodel(C[V_BAYONET], C[V_CT_KNIFE], true); SwapViewmodel(C[V_BAYONET], C[V_T_KNIFE], true); task.wait()
+        InsertTextures(Viewmodels[C[V_CT_KNIFE]], WeaponParts); InsertTextures(Viewmodels[C[V_T_KNIFE]], WeaponParts)
+	elseif Weapon == C[FALCHION] then
+        SwapDefaultKnives(); task.wait()
+        SwapViewmodel(C[V_FALCHION], C[V_CT_KNIFE], true); SwapViewmodel(C[V_FALCHION], C[V_T_KNIFE], true); task.wait()
+        InsertTextures(Viewmodels[C[V_CT_KNIFE]], WeaponParts); InsertTextures(Viewmodels[C[V_T_KNIFE]], WeaponParts)
+    end
+end
+
+--Old:
 local function CBR_Animations(CBR_Weapon)
 	if table.find(CBR_PlaceIDs, game.PlaceId--[[.game["PlaceId"]--]]) then
 		if CBR_Weapon == "v_Gut Knife" or CBR_Weapon == "Gut Knife" then
@@ -6252,6 +7103,7 @@ local function EquipGloves(GloveType, LeftTexture, RightTexture)
 	end
 	Model2:Destroy()
 	task.wait()
+	-- TODO: Support for 'RAW' asset
 	GlovesLeftRightTexture(RBXAID..LeftTexture, RBXAID..RightTexture)
 end
 
@@ -7840,7 +8692,7 @@ BloxFunGui.VersionText.BorderSizePixel = 0
 BloxFunGui.VersionText.Position = UDim2.new(0.150343642, 0, 0, 0)
 BloxFunGui.VersionText.Size = UDim2.new(0, 405, 0, 50)
 BloxFunGui.VersionText.Font = Enum.Font.Cartoon
-BloxFunGui.VersionText.Text = "Last Updated: 30/12ᴹ/2025"
+BloxFunGui.VersionText.Text = "Last Updated: 07/01ᴹ/2026"
 BloxFunGui.VersionText.TextColor3 = Color3.fromRGB(255, 255, 255)
 BloxFunGui.VersionText.TextScaled = true
 BloxFunGui.VersionText.TextSize = 50.000
@@ -60605,6 +61457,14 @@ end)
 CreateTabButton('Skyboxes', 'RANDOM', '(Coming Soon)', PLACEHOLDERICON, 10, function() end)
 
 --GameSkins
+--[[
+CreateTabButton('GameSkins', 'RANDOM', 'test skin', PLACEHOLDERICON, 0, function()
+	EquipSkin(C[BAYONET], {
+    ["Handle"] = {
+        ColorMap= GCA("SkinFolder/Bayonet_Merry_Christmas_Handle1Mtl.png")
+    }})
+end)
+--]]
 CreateTabButton('GameSkins', 'RANDOM', '(Coming Soon)', PLACEHOLDERICON, 0, function() end)
 --[[
 CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Yellow Hazard', PLACEHOLDERICON, 0, function()
@@ -61009,8 +61869,8 @@ end)
 CreateTabButton('GamePins', 'APPEND', 'Guapo', '18222477830', 0, function()
     EquipPin('18222477830')
 end)
-CreateTabButton('GamePins', 'APPEND', 'ababa', '17725118837', 0, function()
-    EquipPin('17725118837')
+CreateTabButton('GamePins', 'APPEND', 'ababa', '95811487076455', 0, function()
+    EquipPin('95811487076455') -- 17725118837 (Old, archived)
 end)
 CreateTabButton('GamePins', 'APPEND', 'Candy Cane 2025', '138256669494821', 0, function()
     EquipPin('138256669494821')
