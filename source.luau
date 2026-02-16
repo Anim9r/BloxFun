@@ -5775,6 +5775,7 @@ local PLACEHOLDERICON = "9438528836" -- Default / Placeholder Icon ID || Todo: T
 local Viewmodels= ReplicatedStorage["Viewmodels"]
 local Weapons= ReplicatedStorage["Weapons"]
 
+-- TODO: Append new ones (with testing): GSG, PC, SP. 
 local AllArms = {"Arms","BDSArms","ECArms","PTArms"}
 --[[
     {"GIGNArms", "ECArms", "SASArms", "IDFArms", "UTArms",
@@ -8178,7 +8179,7 @@ BloxFunGui.VersionText.BorderSizePixel = 0
 BloxFunGui.VersionText.Position = UDim2.new(0.150343642, 0, 0, 0)
 BloxFunGui.VersionText.Size = UDim2.new(0, 405, 0, 50)
 BloxFunGui.VersionText.Font = Enum.Font.Cartoon
-BloxFunGui.VersionText.Text = "Last Updated: 17/01ᴹ/2026"
+BloxFunGui.VersionText.Text = "Last Updated: 16/02ᴹ/2026"
 BloxFunGui.VersionText.TextColor3 = Color3.fromRGB(255, 255, 255)
 BloxFunGui.VersionText.TextScaled = true
 BloxFunGui.VersionText.TextSize = 50.000
@@ -8521,7 +8522,7 @@ BloxFunGui.TabCustomSkinsTitle_TextLabel.BorderSizePixel = 0
 BloxFunGui.TabCustomSkinsTitle_TextLabel.Size = UDim2.new(0, 200, 0, 50)
 BloxFunGui.TabCustomSkinsTitle_TextLabel.Visible = false
 BloxFunGui.TabCustomSkinsTitle_TextLabel.Font = Enum.Font.Cartoon
-BloxFunGui.TabCustomSkinsTitle_TextLabel.Text = "Tab: Custom Skins"
+BloxFunGui.TabCustomSkinsTitle_TextLabel.Text = "Tab: Custom Skins (Risky!)"
 BloxFunGui.TabCustomSkinsTitle_TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 BloxFunGui.TabCustomSkinsTitle_TextLabel.TextScaled = true
 BloxFunGui.TabCustomSkinsTitle_TextLabel.TextSize = 50.000
@@ -8559,7 +8560,7 @@ BloxFunGui.TabCustomViewmodelsTitle_TextLabel.BorderSizePixel = 0
 BloxFunGui.TabCustomViewmodelsTitle_TextLabel.Size = UDim2.new(0, 200, 0, 50)
 BloxFunGui.TabCustomViewmodelsTitle_TextLabel.Visible = false
 BloxFunGui.TabCustomViewmodelsTitle_TextLabel.Font = Enum.Font.Cartoon
-BloxFunGui.TabCustomViewmodelsTitle_TextLabel.Text = "Tab: Custom Viewmodels"
+BloxFunGui.TabCustomViewmodelsTitle_TextLabel.Text = "Tab: Custom Viewmodels (Risky!)"
 BloxFunGui.TabCustomViewmodelsTitle_TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 BloxFunGui.TabCustomViewmodelsTitle_TextLabel.TextScaled = true
 BloxFunGui.TabCustomViewmodelsTitle_TextLabel.TextSize = 50.000
@@ -8654,7 +8655,7 @@ BloxFunGui.TabArmsTitle_TextLabel.BorderSizePixel = 0
 BloxFunGui.TabArmsTitle_TextLabel.Size = UDim2.new(0, 200, 0, 50)
 BloxFunGui.TabArmsTitle_TextLabel.Visible = false
 BloxFunGui.TabArmsTitle_TextLabel.Font = Enum.Font.Cartoon
-BloxFunGui.TabArmsTitle_TextLabel.Text = "Tab: Arms"
+BloxFunGui.TabArmsTitle_TextLabel.Text = "Tab: Arms (Risky!)"
 BloxFunGui.TabArmsTitle_TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 BloxFunGui.TabArmsTitle_TextLabel.TextScaled = true
 BloxFunGui.TabArmsTitle_TextLabel.TextSize = 50.000
@@ -48875,8 +48876,8 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://6574439340"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://6574438120"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://6574517743"
-	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
+	--task.wait()
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/2
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton2_Frame.TabCustomSkinsButton2_Roundify.TabCustomSkinsButton2_Roundify_Frame.TabCustomSkinsButton2_Script.MouseButton1Down:Connect(function()
@@ -48884,8 +48885,8 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://6585686554"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://6585685092"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://6585687653"
-	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
+	--task.wait()
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/3
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton3_Frame.TabCustomSkinsButton3_Roundify.TabCustomSkinsButton3_Roundify_Frame.TabCustomSkinsButton3_Script.MouseButton1Down:Connect(function()
@@ -48893,8 +48894,8 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://6538676814"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://6538676814"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://6538676814"
-	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
+	--task.wait()
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/4
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton4_Frame.TabCustomSkinsButton4_Roundify.TabCustomSkinsButton4_Roundify_Frame.TabCustomSkinsButton4_Script.MouseButton1Down:Connect(function()
@@ -48902,8 +48903,8 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://6448558943"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://6448557262"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://6448560045"
-	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
+	--task.wait()
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/5
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton5_Frame.TabCustomSkinsButton5_Roundify.TabCustomSkinsButton5_Roundify_Frame.TabCustomSkinsButton5_Script.MouseButton1Down:Connect(function()
@@ -48911,8 +48912,8 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://6451119080"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://6451120406"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://6451117699"
-	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
+	--task.wait()
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/6
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton6_Frame.TabCustomSkinsButton6_Roundify.TabCustomSkinsButton6_Roundify_Frame.TabCustomSkinsButton6_Script.MouseButton1Down:Connect(function()
@@ -48920,8 +48921,8 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://6451260038"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://6451261292"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://6451260682"
-	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
+	--task.wait()
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/7
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton7_Frame.TabCustomSkinsButton7_Roundify.TabCustomSkinsButton7_Roundify_Frame.TabCustomSkinsButton7_Script.MouseButton1Down:Connect(function()
@@ -48929,8 +48930,8 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://6451429545"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://6476838768"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://6451427955"
-	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
+	--task.wait()
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/8
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton8_Frame.TabCustomSkinsButton8_Roundify.TabCustomSkinsButton8_Roundify_Frame.TabCustomSkinsButton8_Script.MouseButton1Down:Connect(function()
@@ -48938,8 +48939,8 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://6476841400"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://6476842942"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://6476842198"
-	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
+	--task.wait()
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/9
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton9_Frame.TabCustomSkinsButton9_Roundify.TabCustomSkinsButton9_Roundify_Frame.TabCustomSkinsButton9_Script.MouseButton1Down:Connect(function()
@@ -48947,8 +48948,8 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://9528700462"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://9528704344"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://9528702335"
-	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
+	--task.wait()
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/10
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton10_Frame.TabCustomSkinsButton10_Roundify.TabCustomSkinsButton10_Roundify_Frame.TabCustomSkinsButton10_Script.MouseButton1Down:Connect(function()
@@ -48956,8 +48957,8 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://6525737160"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://6525735946"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://6525738132"
-	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
+	--task.wait()
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/11
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton11_Frame.TabCustomSkinsButton11_Roundify.TabCustomSkinsButton11_Roundify_Frame.TabCustomSkinsButton11_Script.MouseButton1Down:Connect(function()
@@ -48965,8 +48966,8 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://6698167994"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://6698170295"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://6698169370"
-	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
+	--task.wait()
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/12
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton12_Frame.TabCustomSkinsButton12_Roundify.TabCustomSkinsButton12_Roundify_Frame.TabCustomSkinsButton12_Script.MouseButton1Down:Connect(function()
@@ -49292,8 +49293,8 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://7826367064"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://7826367064"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://7826367064"
-	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
+	--task.wait()
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/44
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton44_Frame.TabCustomSkinsButton44_Roundify.TabCustomSkinsButton44_Roundify_Frame.TabCustomSkinsButton44_Script.MouseButton1Down:Connect(function()
@@ -49487,8 +49488,8 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://6698314618"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://6698316807"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://6820836083"
-	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
+	--task.wait()
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/54
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton54_Frame.TabCustomSkinsButton54_Roundify.TabCustomSkinsButton54_Roundify_Frame.TabCustomSkinsButton54_Script.MouseButton1Down:Connect(function()
@@ -49496,8 +49497,8 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://6698325103"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://6698327498"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://6698326376"
-	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
+	--task.wait()
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/55
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton55_Frame.TabCustomSkinsButton55_Roundify.TabCustomSkinsButton55_Roundify_Frame.TabCustomSkinsButton55_Script.MouseButton1Down:Connect(function()
@@ -49591,8 +49592,8 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://6663268904"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://6663270884"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://6663270220"
-	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
+	--task.wait()
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/60
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton60_Frame.TabCustomSkinsButton60_Roundify.TabCustomSkinsButton60_Roundify_Frame.TabCustomSkinsButton60_Script.MouseButton1Down:Connect(function()
@@ -49973,8 +49974,8 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://6698130074"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://6698161313"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://6698158848"
-	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
+	--task.wait()
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/71
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton71_Frame.TabCustomSkinsButton71_Roundify.TabCustomSkinsButton71_Roundify_Frame.TabCustomSkinsButton71_Script.MouseButton1Down:Connect(function()
@@ -49992,8 +49993,8 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://6667790295"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://6667791939"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://6667791440"
-	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
+	--task.wait()
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/73
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton73_Frame.TabCustomSkinsButton73_Roundify.TabCustomSkinsButton73_Roundify_Frame.TabCustomSkinsButton73_Script.MouseButton1Down:Connect(function()
@@ -50877,8 +50878,8 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://6698420309"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://6698422340"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://6698421135"
-	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
+	--task.wait()
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/106
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton106_Frame.TabCustomSkinsButton106_Roundify.TabCustomSkinsButton106_Roundify_Frame.TabCustomSkinsButton106_Script.MouseButton1Down:Connect(function()
@@ -51082,8 +51083,8 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://9438683416"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://9438683416"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://9438683416"
-	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
+	--task.wait()
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/117
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton117_Frame.TabCustomSkinsButton117_Roundify.TabCustomSkinsButton117_Roundify_Frame.TabCustomSkinsButton117_Script.MouseButton1Down:Connect(function()
@@ -51091,8 +51092,8 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://6858669581"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://6858663834"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://6858671103"
-	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
+	--task.wait()
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/118
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton118_Frame.TabCustomSkinsButton118_Roundify.TabCustomSkinsButton118_Roundify_Frame.TabCustomSkinsButton118_Script.MouseButton1Down:Connect(function()
@@ -51420,8 +51421,8 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://9639506047"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://9639506653"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://9639505186"
-	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
+	--task.wait()
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/126
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton126_Frame.TabCustomSkinsButton126_Roundify.TabCustomSkinsButton126_Roundify_Frame.TabCustomSkinsButton126_Script.MouseButton1Down:Connect(function()
@@ -51429,8 +51430,8 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://9639567189"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://9639567980"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://9639565755"
-	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
+	--task.wait()
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/127
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton127_Frame.TabCustomSkinsButton127_Roundify.TabCustomSkinsButton127_Roundify_Frame.TabCustomSkinsButton127_Script.MouseButton1Down:Connect(function()
@@ -51534,8 +51535,8 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://9639719305"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://9639720240"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://9640344796"
-	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
+	--task.wait()
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/132
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton132_Frame.TabCustomSkinsButton132_Roundify.TabCustomSkinsButton132_Roundify_Frame.TabCustomSkinsButton132_Script.MouseButton1Down:Connect(function()
@@ -51543,8 +51544,8 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://9639737246"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://9639737892"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://9639735854"
-	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
+	--task.wait()
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/133
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton133_Frame.TabCustomSkinsButton133_Roundify.TabCustomSkinsButton133_Roundify_Frame.TabCustomSkinsButton133_Script.MouseButton1Down:Connect(function()
@@ -51809,8 +51810,8 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://9640464905"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://9640465477"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://9640463705"
-	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
+	--task.wait()
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/146
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton146_Frame.TabCustomSkinsButton146_Roundify.TabCustomSkinsButton146_Roundify_Frame.TabCustomSkinsButton146_Script.MouseButton1Down:Connect(function()
@@ -52340,8 +52341,8 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://9941187376"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://9941189735"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://9941188382"
-	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
+	--task.wait()
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/161
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton161_Frame.TabCustomSkinsButton161_Roundify.TabCustomSkinsButton161_Roundify_Frame.TabCustomSkinsButton161_Script.MouseButton1Down:Connect(function()
@@ -52654,8 +52655,8 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://9973551915"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://9973552978"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://9973552599"
-	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
+	--task.wait()
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --1/170
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton170_Frame.TabCustomSkinsButton170_Roundify.TabCustomSkinsButton170_Roundify_Frame.TabCustomSkinsButton170_Script.MouseButton1Down:Connect(function()
@@ -53825,8 +53826,8 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomViewmodelsScrollingFrame.TabCustomViewm
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://7661848565"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://7661848565"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://7661848565"
-	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
+	--task.wait()
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --3/47
 CoreGui["BloxFunGui"].BaseFrame.TabCustomViewmodelsScrollingFrame.TabCustomViewmodelsButton47_Frame.TabCustomViewmodelsButton47_Roundify.TabCustomViewmodelsButton47_Roundify_Frame.TabCustomViewmodelsButton47_Script.MouseButton1Down:Connect(function()
@@ -58141,8 +58142,8 @@ CoreGui["BloxFunGui"].BaseFrame.TabExplicitContentScrollingFrame.TabExplicitCont
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://9479845699"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://9479846680"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://9479846211"
-	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
+	--task.wait()
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 --9/10
 CoreGui["BloxFunGui"].BaseFrame.TabExplicitContentScrollingFrame.TabExplicitContentButton10_Frame.TabExplicitContentButton10_Roundify.TabExplicitContentButton10_Roundify_Frame.TabExplicitContentButton10_Script.MouseButton1Down:Connect(function()
@@ -58287,8 +58288,8 @@ CoreGui["BloxFunGui"].BaseFrame.TabExplicitContentScrollingFrame.TabExplicitCont
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Handle"].TextureID = "rbxassetid://9922476869"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Bolt"].TextureID = "rbxassetid://9922394702"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID = "rbxassetid://9922394161"
-	task.wait()
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
+	--task.wait()
+	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["2Mag"].TextureID = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AK47"]["Mag"].TextureID
 end)
 ----------------------------------------------------------------------------------------------------
 --[[
@@ -61098,6 +61099,27 @@ CreateTabButton('GameSkins', 'APPEND', 'AK-47 | BloxersClub', PLACEHOLDERICON, 0
 	})
 end)
 
+-- Note: Removed (was a PBR test)
+CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Caroot', PLACEHOLDERICON, 0, function()
+	EquipSkin("AK47", {
+		["Bolt"] = {
+			NormalMap = RID.."124291864338283",
+			ColorMap = RID.."124291864338283",
+			RoughnessMap = RID.."125929391356727",
+			MetalnessMap = RID.."137511777062146"},
+		["Handle"] = {
+			ColorMap = RID.."87381490961343",
+			NormalMap = RID.."134118861595481",
+			RoughnessMap = RID.."71907116828883",
+			MetalnessMap = RID.."112291039938252"},
+		["Mag"] = {
+			ColorMap = RID.."118649789010838",
+			NormalMap = RID.."137539207054778",
+			RoughnessMap = RID.."108402800389176",
+			MetalnessMap = RID.."103792259968266"}
+	})
+end)
+
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Clown', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
@@ -61251,6 +61273,26 @@ CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Jester', PLACEHOLDERICON, 0, fun
 			ColorMap = RID.."4614565943"},
 		["Mag"] = {
 			ColorMap = RID.."4614565943"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Lil Tim', PLACEHOLDERICON, 0, function()
+	EquipSkin("AK47", {
+		["Bolt"] = {
+			ColorMap = RID.."122079702018204",
+			NormalMap = RID.."134114086261137",
+			RoughnessMap = RID.."123855495198355",
+			MetalnessMap = RID.."97134864476718"},
+		["Handle"] = {
+			ColorMap = RID.."138204534535671",
+			NormalMap = RID.."138731933631797",
+			RoughnessMap = RID.."120755615517764",
+			MetalnessMap = RID.."131418816879077"},
+		["Mag"] = {
+			ColorMap = RID.."80337144831493",
+			NormalMap = RID.."96084895165208",
+			RoughnessMap = RID.."99781135457452",
+			MetalnessMap = RID.."75072642622716"}
 	})
 end)
 
@@ -61629,6 +61671,21 @@ CreateTabButton('GameSkins', 'APPEND', 'AUG A3 | Graffiti', PLACEHOLDERICON, 0, 
 	})
 end)
 
+CreateTabButton('GameSkins', 'APPEND', 'AUG A3 | Hollows', PLACEHOLDERICON, 0, function()
+	EquipSkin("AUG", {
+		["Bolt2"] = {
+			ColorMap = RID.."132612437207916"},
+		["Handle2"] = {
+			ColorMap = RID.."132612437207916"},
+		["Mag2"] = {
+			ColorMap = RID.."132612437207916"},
+		["Part"] = {
+			ColorMap = RID.."132612437207916"},
+		["Scope"] = {
+			ColorMap = RID.."113776776616533"}
+	})
+end)
+
 CreateTabButton('GameSkins', 'APPEND', 'AUG A3 | Homestead', PLACEHOLDERICON, 0, function()
 	EquipSkin("AUG", {
 		["Bolt2"] = {
@@ -61916,16 +61973,52 @@ CreateTabButton('GameSkins', 'APPEND', 'AWP | Dragon', PLACEHOLDERICON, 0, funct
 	})
 end)
 
+CreateTabButton('GameSkins', 'APPEND', 'AWP | Cybertech', PLACEHOLDERICON, 0, function()
+	EquipSkin("AWP", {
+		-- ["Barrel"] = {
+		-- 	ColorMap = RID.."94491101274985",
+		-- 	NormalMap = RID.."86079320669016",
+		-- 	RoughnessMap = RID.."136731322685929",
+		-- 	MetalnessMap = RID.."115959003478987"},
+		["Handle2"] = {
+			ColorMap = RID.."90772588096821",
+			NormalMap = RID.."131220992987868",
+			RoughnessMap = RID.."138379340073117",
+			MetalnessMap = RID.."116257701110032"},
+		["Mag2"] = {
+			ColorMap = RID.."90772588096821",
+			NormalMap = RID.."131220992987868",
+			RoughnessMap = RID.."138379340073117",
+			MetalnessMap = RID.."116257701110032"},
+		["Bolt2"] = {
+			ColorMap = RID.."90772588096821",
+			NormalMap = RID.."131220992987868",
+			RoughnessMap = RID.."138379340073117",
+			MetalnessMap = RID.."116257701110032"},
+		["Lever2"] = {
+			ColorMap = RID.."90772588096821",
+			NormalMap = RID.."131220992987868",
+			RoughnessMap = RID.."138379340073117",
+			MetalnessMap = RID.."116257701110032"},
+		["Part1"] = {
+			ColorMap = RID.."87926088735639",
+			NormalMap = RID.."96337851280552",
+			RoughnessMap = RID.."80315568171928",
+			MetalnessMap = RID.."106592880637945"}
+	})
+end)
+
+-- Note/TODO: Mag2 is now different in-game for some reason. Was "140099799357339"
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Elfspire', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
 		["Handle2"] = {
 			ColorMap = RID.."140099799357339"},
 		["Mag2"] = {
-			ColorMap = RID.."140099799357339"},
+			ColorMap = RID.."114231872126726"},
 		["Bolt2"] = {
-			ColorMap = RID.."140099799357339"},
+			ColorMap = RID.."114231872126726"},
 		["Lever2"] = {
-			ColorMap = RID.."140099799357339"},
+			ColorMap = RID.."114231872126726"},
 		["Part1"] = {
 			ColorMap = RID.."117420927136399"}
 	})
@@ -63467,6 +63560,26 @@ CreateTabButton('GameSkins', 'APPEND', 'Deagle | Independence', PLACEHOLDERICON,
 	})
 end)
 
+CreateTabButton('GameSkins', 'APPEND', 'Deagle | Industrial', PLACEHOLDERICON, 0, function()
+	EquipSkin("Deagle", {
+		["Handle2"] = {
+			ColorMap = RID.."132712849149689",
+			NormalMap = RID.."79120607062213",
+			RoughnessMap = RID.."108938149309266",
+			MetalnessMap = RID.."135148192590783"},
+		["Mag2"] = {
+			ColorMap = RID.."83870058011915",
+			NormalMap = RID.."131209014219431",
+			RoughnessMap = RID.."73257320929596",
+			MetalnessMap = RID.."132432564050365"},
+		["Slide2"] = {
+			ColorMap = RID.."132712849149689",
+			NormalMap = RID.."79120607062213",
+			RoughnessMap = RID.."108938149309266",
+			MetalnessMap = RID.."135148192590783"}
+	})
+end)
+
 CreateTabButton('GameSkins', 'APPEND', 'Deagle | Krystallos', PLACEHOLDERICON, 0, function()
 	EquipSkin("Deagle", {
 		["Handle2"] = {
@@ -64622,6 +64735,21 @@ CreateTabButton('GameSkins', 'APPEND', 'Galil SAR | Hardware 2', PLACEHOLDERICON
 	})
 end)
 
+CreateTabButton('GameSkins', 'APPEND', 'Galil SAR | Pastel', PLACEHOLDERICON, 0, function()
+	EquipSkin("Galil", {
+		["Handle"] = {
+			ColorMap = RID.."79114627348635", -- First version: 90697649253364
+			NormalMap = RID.."72236360194547",
+			RoughnessMap = RID.."9582865028233",
+			MetalnessMap = RID.."132454643341934"},
+		["Mag"] = {
+			ColorMap = RID.."79114627348635",
+			NormalMap = RID.."72236360194547",
+			RoughnessMap = RID.."9582865028233",
+			MetalnessMap = RID.."132454643341934"}
+	})
+end)
+
 CreateTabButton('GameSkins', 'APPEND', 'Galil SAR | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("Galil", {
 		["Handle"] = {
@@ -64646,6 +64774,26 @@ CreateTabButton('GameSkins', 'APPEND', 'Galil SAR | Vortex', PLACEHOLDERICON, 0,
 			ColorMap = RID.."76954921837619"},
 		["Mag"] = {
 			ColorMap = RID.."76954921837619"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Glock-18 | Alpine', PLACEHOLDERICON, 0, function()
+	EquipSkin("Glock", {
+		["Handle2"] = {
+			ColorMap = RID.."116402070889658",
+			NormalMap = RID.."77833112167720",
+			RoughnessMap = RID.."108091233390763",
+			MetalnessMap = RID.."104245158996020"},
+		["Mag2"] = {
+			ColorMap = RID.."116402070889658",
+			NormalMap = RID.."77833112167720",
+			RoughnessMap = RID.."108091233390763",
+			MetalnessMap = RID.."104245158996020"},
+		["Slide2"] = {
+			ColorMap = RID.."116269230517570",
+			NormalMap = RID.."130770152449259",
+			RoughnessMap = RID.."116008860276079",
+			MetalnessMap = RID.."99383225219259"}
 	})
 end)
 
@@ -65427,7 +65575,7 @@ end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Ghost', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
-		["Skin"] = {
+		["Handle2"] = {
 			Texture = RID.."4186668302"}
 	})
 end)
@@ -66560,6 +66708,31 @@ CreateTabButton('GameSkins', 'APPEND', 'MAC-10 | Gift Wrapped', PLACEHOLDERICON,
 	})
 end)
 
+CreateTabButton('GameSkins', 'APPEND', 'MAC-10 | Glowball', PLACEHOLDERICON, 0, function()
+	EquipSkin("MAC10", {
+		["Bolt"] = {
+			ColorMap = RID.."97166456135311",
+			NormalMap = RID.."93932859212957",
+			RoughnessMap = RID.."118967840833351",
+			MetalnessMap = RID.."124426897574207"},
+		["Handle"] = {
+			ColorMap = RID.."97166456135311",
+			NormalMap = RID.."93932859212957",
+			RoughnessMap = RID.."118967840833351",
+			MetalnessMap = RID.."124426897574207"},
+		["Mag"] = {
+			ColorMap = RID.."97166456135311",
+			NormalMap = RID.."93932859212957",
+			RoughnessMap = RID.."118967840833351",
+			MetalnessMap = RID.."124426897574207"},
+		["Part"] = {
+			ColorMap = RID.."97166456135311",
+			NormalMap = RID.."93932859212957",
+			RoughnessMap = RID.."118967840833351",
+			MetalnessMap = RID.."124426897574207"}
+	})
+end)
+
 CreateTabButton('GameSkins', 'APPEND', 'MAC-10 | Golden Rings', PLACEHOLDERICON, 0, function()
 	EquipSkin("MAC10", {
 		["Bolt"] = {
@@ -66678,6 +66851,37 @@ CreateTabButton('GameSkins', 'APPEND', 'MAG-7 | Bombshell', PLACEHOLDERICON, 0, 
 			ColorMap = RID.."3034035933"}
 	})
 end)
+
+CreateTabButton('GameSkins', 'APPEND', 'MAG-7 | Camouflage', PLACEHOLDERICON, 0, function()
+	EquipSkin("MAG7", {
+		["Handle2"] = {
+			ColorMap = RID.."78323833466193", -- First version: 103321329265359
+			NormalMap = RID.."92229005896800", -- First version: 88058599510417
+			RoughnessMap = RID.."92229005896800",
+			MetalnessMap = RID.."110437650090823"},
+		["Part"] = {
+			ColorMap = RID.."78323833466193",
+			NormalMap = RID.."92229005896800",
+			RoughnessMap = RID.."92229005896800",
+			MetalnessMap = RID.."110437650090823"},
+		["Pump"] = {
+			ColorMap = RID.."78323833466193",
+			NormalMap = RID.."92229005896800",
+			RoughnessMap = RID.."92229005896800",
+			MetalnessMap = RID.."110437650090823"},
+		["Slide1"] = {
+			ColorMap = RID.."78323833466193",
+			NormalMap = RID.."92229005896800",
+			RoughnessMap = RID.."92229005896800",
+			MetalnessMap = RID.."110437650090823"},
+		["Slide2"] = {
+			ColorMap = RID.."78323833466193",
+			NormalMap = RID.."92229005896800",
+			RoughnessMap = RID.."92229005896800",
+			MetalnessMap = RID.."110437650090823"}
+	})
+end)
+
 
 CreateTabButton('GameSkins', 'APPEND', 'MAG-7 | C4UTION', PLACEHOLDERICON, 0, function()
 	EquipSkin("MAG7", {
@@ -66994,6 +67198,31 @@ CreateTabButton('GameSkins', 'APPEND', 'MP9 | Decked Halls', PLACEHOLDERICON, 0,
 			ColorMap = RID.."2666244725"},
 		["Stock"] = {
 			ColorMap = RID.."2666244725"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'MP9 | Framepact', PLACEHOLDERICON, 0, function()
+	EquipSkin("MP9", {
+		["Handle2"] = {
+			ColorMap = RID.."120208712803262",
+			NormalMap = RID.."82707048904074",
+			RoughnessMap = RID.."96949480473799",
+			MetalnessMap = RID.."132554900491806"},
+		["Mag2"] = {
+			ColorMap = RID.."120208712803262",
+			NormalMap = RID.."82707048904074",
+			RoughnessMap = RID.."96949480473799",
+			MetalnessMap = RID.."132554900491806"},
+		["Bolt"] = {
+			ColorMap = RID.."120208712803262",
+			NormalMap = RID.."82707048904074",
+			RoughnessMap = RID.."96949480473799",
+			MetalnessMap = RID.."132554900491806"},
+		["Stock"] = {
+			ColorMap = RID.."120208712803262",
+			NormalMap = RID.."82707048904074",
+			RoughnessMap = RID.."96949480473799",
+			MetalnessMap = RID.."132554900491806"}
 	})
 end)
 
@@ -67399,6 +67628,26 @@ CreateTabButton('GameSkins', 'APPEND', 'PX4 | Lunar', PLACEHOLDERICON, 0, functi
 			ColorMap = RID.."2916263400"},
 		["Slide2"] = {
 			ColorMap = RID.."2916263400"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'PX4 | MGZN', PLACEHOLDERICON, 0, function()
+	EquipSkin("PX4", {
+		["Handle2"] = {
+			ColorMap = RID.."92612414876461",
+			NormalMap = RID.."88971677491924",
+			RoughnessMap = RID.."122297241627941",
+			MetalnessMap = RID.."108579811569115"},
+		["Mag2"] = {
+			ColorMap = RID.."92612414876461",
+			NormalMap = RID.."88971677491924",
+			RoughnessMap = RID.."122297241627941",
+			MetalnessMap = RID.."108579811569115"},
+		["Slide2"] = {
+			ColorMap = RID.."92612414876461",
+			NormalMap = RID.."88971677491924",
+			RoughnessMap = RID.."122297241627941",
+			MetalnessMap = RID.."108579811569115"}
 	})
 end)
 
@@ -68069,6 +68318,31 @@ CreateTabButton('GameSkins', 'APPEND', 'SG 553 | Yltude', PLACEHOLDERICON, 0, fu
 			ColorMap = RID.."3270746596"},
 		["Scope"] = {
 			ColorMap = RID.."3270746686"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Sawed Off | A-Data', PLACEHOLDERICON, 0, function()
+	EquipSkin("SawedOff", {
+		["Handle2"] = {
+			ColorMap = RID.."109001261503403",
+			NormalMap = RID.."138629670897280",
+			RoughnessMap = RID.."95327782632048",
+			MetalnessMap = RID.."81652337977658"},
+		["Pump2"] = {
+			ColorMap = RID.."99887602199611",
+			NormalMap = RID.."78154536659511",
+			RoughnessMap = RID.."91994192702085",
+			MetalnessMap = RID.."137995462138587"},
+		["Part"] = {
+			ColorMap = RID.."109756331447634",
+			NormalMap = RID.."101633436329528",
+			RoughnessMap = RID.."118746146644072",
+			MetalnessMap = RID.."133685696496798"},
+		["Shell"] = {
+			ColorMap = RID.."96314923415603",
+			NormalMap = RID.."73572714872032",
+			RoughnessMap = RID.."103139580566093",
+			MetalnessMap = RID.."121502233694589"}
 	})
 end)
 
@@ -69140,6 +69414,26 @@ CreateTabButton('GameSkins', 'APPEND', 'XM1014 | Red', PLACEHOLDERICON, 0, funct
 	})
 end)
 
+CreateTabButton('GameSkins', 'APPEND', 'XM1014 | Resonate', PLACEHOLDERICON, 0, function()
+	EquipSkin("XM", {
+		["Bolt2"] = {
+			ColorMap = RID.."134193460715640",
+			NormalMap = RID.."103719155013149",
+			RoughnessMap = RID.."72788150283977",
+			MetalnessMap = RID.."116207789554453"},
+		["Handle2"] = {
+			ColorMap = RID.."134193460715640",
+			NormalMap = RID.."103719155013149",
+			RoughnessMap = RID.."72788150283977",
+			MetalnessMap = RID.."116207789554453"},
+		["Part"] = {
+			ColorMap = RID.."135949541801447",
+			NormalMap = RID.."78610958042379",
+			RoughnessMap = RID.."82902154526617",
+			MetalnessMap = RID.."75348531239367"}
+	})
+end)
+
 CreateTabButton('GameSkins', 'APPEND', 'XM1014 | Spectrum', PLACEHOLDERICON, 0, function()
 	EquipSkin("XM", {
 		["Bolt2"] = {
@@ -69170,497 +69464,503 @@ end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Fingerless Gloves | Crystal', PLACEHOLDERICON, 0, function()
 	EquipSkin("Fingerless Gloves", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."2135973675"},
-    ["RightGlove"] = {
-        ColorMap= RID.."2135973675"}
+		["LeftGlove"] = {
+			ColorMap= RID.."2135973675"},
+		["RightGlove"] = {
+			ColorMap= RID.."2135973675"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Fingerless Gloves | Digital', PLACEHOLDERICON, 0, function()
 	EquipSkin("Fingerless Gloves", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."2135974031"},
-    ["RightGlove"] = {
-        ColorMap= RID.."2135974031"}
+		["LeftGlove"] = {
+			ColorMap= RID.."2135974031"},
+		["RightGlove"] = {
+			ColorMap= RID.."2135974031"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Fingerless Gloves | Kimura', PLACEHOLDERICON, 0, function()
 	EquipSkin("Fingerless Gloves", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."89041056640438"},
-    ["RightGlove"] = {
-        ColorMap= RID.."89041056640438"}
+		["LeftGlove"] = {
+			ColorMap= RID.."89041056640438"},
+		["RightGlove"] = {
+			ColorMap= RID.."89041056640438"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Fingerless Gloves | Patch', PLACEHOLDERICON, 0, function()
 	EquipSkin("Fingerless Gloves", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."2135974348"},
-    ["RightGlove"] = {
-        ColorMap= RID.."2135974348"}
+		["LeftGlove"] = {
+			ColorMap= RID.."2135974348"},
+		["RightGlove"] = {
+			ColorMap= RID.."2135974348"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Fingerless Gloves | Scapter', PLACEHOLDERICON, 0, function()
 	EquipSkin("Fingerless Gloves", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."2217790167"},
-    ["RightGlove"] = {
-        ColorMap= RID.."2217790167"}
+		["LeftGlove"] = {
+			ColorMap= RID.."2217790167"},
+		["RightGlove"] = {
+			ColorMap= RID.."2217790167"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Fingerless Gloves | Spookiness', PLACEHOLDERICON, 0, function()
 	EquipSkin("Fingerless Gloves", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."7944129369"},
-    ["RightGlove"] = {
-        ColorMap= RID.."7944129369"}
+		["LeftGlove"] = {
+			ColorMap= RID.."7944129369"},
+		["RightGlove"] = {
+			ColorMap= RID.."7944129369"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Fingerless Gloves | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("Fingerless Gloves", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."85625470681662"},
-    ["RightGlove"] = {
-        ColorMap= RID.."85625470681662"}
+		["LeftGlove"] = {
+			ColorMap= RID.."85625470681662"},
+		["RightGlove"] = {
+			ColorMap= RID.."85625470681662"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Dark Damascus', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."89766139472336"},
-    ["RightGlove"] = {
-        ColorMap= RID.."89766139472336"}
+		["LeftGlove"] = {
+			ColorMap= RID.."89766139472336"},
+		["RightGlove"] = {
+			ColorMap= RID.."89766139472336"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Ghoul Hex', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."4212660824"},
-    ["RightGlove"] = {
-        ColorMap= RID.."4212660824"}
+		["LeftGlove"] = {
+			ColorMap= RID.."4212660824"},
+		["RightGlove"] = {
+			ColorMap= RID.."4212660824"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Gilded', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."126795995401524"},
-    ["RightGlove"] = {
-        ColorMap= RID.."126795995401524"}
+		["LeftGlove"] = {
+			ColorMap= RID.."126795995401524"},
+		["RightGlove"] = {
+			ColorMap= RID.."126795995401524"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Green Hex', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."4212661339"},
-    ["RightGlove"] = {
-        ColorMap= RID.."4212661339"}
+		["LeftGlove"] = {
+			ColorMap= RID.."4212661339"},
+		["RightGlove"] = {
+			ColorMap= RID.."4212661339"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Guts', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."95496903700805"},
-    ["RightGlove"] = {
-        ColorMap= RID.."95496903700805"}
+		["LeftGlove"] = {
+			ColorMap= RID.."95496903700805"},
+		["RightGlove"] = {
+			ColorMap= RID.."95496903700805"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | MMA', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."114987738016404"},
-    ["RightGlove"] = {
-        ColorMap= RID.."114987738016404"}
+		["LeftGlove"] = {
+			ColorMap= RID.."114987738016404"},
+		["RightGlove"] = {
+			ColorMap= RID.."114987738016404"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Microbes', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."7944157395"},
-    ["RightGlove"] = {
-        ColorMap= RID.."7944157395"}
+		["LeftGlove"] = {
+			ColorMap= RID.."7944157395"},
+		["RightGlove"] = {
+			ColorMap= RID.."7944157395"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Mummy', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."5894322563"},
-    ["RightGlove"] = {
-        ColorMap= RID.."5894322563"}
+		["LeftGlove"] = {
+			ColorMap= RID.."5894322563"},
+		["RightGlove"] = {
+			ColorMap= RID.."5894322563"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Orange Hex', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."4212661898"},
-    ["RightGlove"] = {
-        ColorMap= RID.."4212661898"}
+		["LeftGlove"] = {
+			ColorMap= RID.."4212661898"},
+		["RightGlove"] = {
+			ColorMap= RID.."4212661898"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Phantom Hex', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."4212662590"},
-    ["RightGlove"] = {
-        ColorMap= RID.."4212662590"}
+		["LeftGlove"] = {
+			ColorMap= RID.."4212662590"},
+		["RightGlove"] = {
+			ColorMap= RID.."4212662590"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Purple Hex', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."4212663201"},
-    ["RightGlove"] = {
-        ColorMap= RID.."4212663201"}
+		["LeftGlove"] = {
+			ColorMap= RID.."4212663201"},
+		["RightGlove"] = {
+			ColorMap= RID.."4212663201"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Spector Hex', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."4212663733"},
-    ["RightGlove"] = {
-        ColorMap= RID.."4212663733"}
+		["LeftGlove"] = {
+			ColorMap= RID.."4212663733"},
+		["RightGlove"] = {
+			ColorMap= RID.."4212663733"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."115638307976493"},
-    ["RightGlove"] = {
-        ColorMap= RID.."115638307976493"}
+		["LeftGlove"] = {
+			ColorMap= RID.."115638307976493"},
+		["RightGlove"] = {
+			ColorMap= RID.."115638307976493"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Tape', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."110968161283312"},
-    ["RightGlove"] = {
-        ColorMap= RID.."110968161283312"}
+		["LeftGlove"] = {
+			ColorMap= RID.."110968161283312"},
+		["RightGlove"] = {
+			ColorMap= RID.."110968161283312"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Toxic Nitro', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."4680487306"},
-    ["RightGlove"] = {
-        ColorMap= RID.."4680487306"}
+		["LeftGlove"] = {
+			ColorMap= RID.."4680487306"},
+		["RightGlove"] = {
+			ColorMap= RID.."4680487306"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Wetland', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."112319150446072"},
-    ["RightGlove"] = {
-        ColorMap= RID.."112319150446072"}
+		["LeftGlove"] = {
+			ColorMap= RID.."112319150446072"},
+		["RightGlove"] = {
+			ColorMap= RID.."112319150446072"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Yellow Hazard', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."74108980847744"},
-    ["RightGlove"] = {
-        ColorMap= RID.."74108980847744"}
+		["LeftGlove"] = {
+			ColorMap= RID.."74108980847744",
+			NormalMap= RID.."121907918789945",
+			RoughnessMap= RID.."137511414861555",
+			MetalnessMap= RID.."135429296028655"},
+		["RightGlove"] = {
+			ColorMap= RID.."74108980847744",
+			NormalMap= RID.."121907918789945",
+			RoughnessMap= RID.."137511414861555",
+			MetalnessMap= RID.."135429296028655"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Amethyst', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."137324499588396"},
-    ["RightGlove"] = {
-        ColorMap= RID.."137324499588396"}
+		["LeftGlove"] = {
+			ColorMap= RID.."137324499588396"},
+		["RightGlove"] = {
+			ColorMap= RID.."137324499588396"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Blood Web', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."77696820441822"},
-    ["RightGlove"] = {
-        ColorMap= RID.."77696820441822"}
+		["LeftGlove"] = {
+			ColorMap= RID.."77696820441822"},
+		["RightGlove"] = {
+			ColorMap= RID.."77696820441822"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Calamity', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."6891919220"},
-    ["RightGlove"] = {
-        ColorMap= RID.."6891919220"}
+		["LeftGlove"] = {
+			ColorMap= RID.."6891919220"},
+		["RightGlove"] = {
+			ColorMap= RID.."6891919220"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | CottonTail', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."3096311966"},
-    ["RightGlove"] = {
-        ColorMap= RID.."3096311966"}
+		["LeftGlove"] = {
+			ColorMap= RID.."3096311966"},
+		["RightGlove"] = {
+			ColorMap= RID.."3096311966"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Dark Damascus', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."127612234295604"},
-    ["RightGlove"] = {
-        ColorMap= RID.."127612234295604"}
+		["LeftGlove"] = {
+			ColorMap= RID.."127612234295604"},
+		["RightGlove"] = {
+			ColorMap= RID.."127612234295604"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Dead Prey', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."7998990929"},
-    ["RightGlove"] = {
-        ColorMap= RID.."7998990929"}
+		["LeftGlove"] = {
+			ColorMap= RID.."7998990929"},
+		["RightGlove"] = {
+			ColorMap= RID.."7998990929"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Hallows', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."2504760117"},
-    ["RightGlove"] = {
-        ColorMap= RID.."2504760117"}
+		["LeftGlove"] = {
+			ColorMap= RID.."2504760117"},
+		["RightGlove"] = {
+			ColorMap= RID.."2504760117"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Hazard', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."2135535438"},
-    ["RightGlove"] = {
-        ColorMap= RID.."2135535438"}
+		["LeftGlove"] = {
+			ColorMap= RID.."2135535438"},
+		["RightGlove"] = {
+			ColorMap= RID.."2135535438"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Hellfire', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."89763492782581"},
-    ["RightGlove"] = {
-        ColorMap= RID.."89763492782581"}
+		["LeftGlove"] = {
+			ColorMap= RID.."89763492782581"},
+		["RightGlove"] = {
+			ColorMap= RID.."89763492782581"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Majesty', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."2135581144"},
-    ["RightGlove"] = {
-        ColorMap= RID.."2135581144"}
+		["LeftGlove"] = {
+			ColorMap= RID.."2135581144"},
+		["RightGlove"] = {
+			ColorMap= RID.."2135581144"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Mud Bath', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."103317132588064"},
-    ["RightGlove"] = {
-        ColorMap= RID.."103317132588064"}
+		["LeftGlove"] = {
+			ColorMap= RID.."103317132588064"},
+		["RightGlove"] = {
+			ColorMap= RID.."103317132588064"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Pumpkin', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."5861601404"},
-    ["RightGlove"] = {
-        ColorMap= RID.."5861601404"}
+		["LeftGlove"] = {
+			ColorMap= RID.."5861601404"},
+		["RightGlove"] = {
+			ColorMap= RID.."5861601404"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | RSL', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."3367350589"},
-    ["RightGlove"] = {
-        ColorMap= RID.."3367350589"}
+		["LeftGlove"] = {
+			ColorMap= RID.."3367350589"},
+		["RightGlove"] = {
+			ColorMap= RID.."3367350589"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Reinforced', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."71756736916558"},
-    ["RightGlove"] = {
-        ColorMap= RID.."71756736916558"}
+		["LeftGlove"] = {
+			ColorMap= RID.."71756736916558"},
+		["RightGlove"] = {
+			ColorMap= RID.."71756736916558"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Royal', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."2135534686"},
-    ["RightGlove"] = {
-        ColorMap= RID.."2135534686"}
+		["LeftGlove"] = {
+			ColorMap= RID.."2135534686"},
+		["RightGlove"] = {
+			ColorMap= RID.."2135534686"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Skulls', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."5861139281"},
-    ["RightGlove"] = {
-        ColorMap= RID.."5861139281"}
+		["LeftGlove"] = {
+			ColorMap= RID.."5861139281"},
+		["RightGlove"] = {
+			ColorMap= RID.."5861139281"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."107664944433724"},
-    ["RightGlove"] = {
-        ColorMap= RID.."107664944433724"}
+		["LeftGlove"] = {
+			ColorMap= RID.."107664944433724"},
+		["RightGlove"] = {
+			ColorMap= RID.."107664944433724"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Twitch', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."6899073614"},
-    ["RightGlove"] = {
-        ColorMap= RID.."6899073614"}
+		["LeftGlove"] = {
+			ColorMap= RID.."6899073614"},
+		["RightGlove"] = {
+			ColorMap= RID.."6899073614"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Weeb', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."3055822171"},
-    ["RightGlove"] = {
-        ColorMap= RID.."3055822171"}
+		["LeftGlove"] = {
+			ColorMap= RID.."3055822171"},
+		["RightGlove"] = {
+			ColorMap= RID.."3055822171"}
 	})
 end)
 
 -- Note: Archived
 CreateTabButton('GameSkins', 'RANDOM', 'Strapped Gloves | BloxersClub', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."17611821908"},
-    ["RightGlove"] = {
-        ColorMap= RID.."17611821908"}
+		["LeftGlove"] = {
+			ColorMap= RID.."17611821908"},
+		["RightGlove"] = {
+			ColorMap= RID.."17611821908"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Strapped Gloves | Caffeine', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."121078147459979"},
-    ["RightGlove"] = {
-        ColorMap= RID.."121078147459979"}
+		["LeftGlove"] = {
+			ColorMap= RID.."121078147459979"},
+		["RightGlove"] = {
+			ColorMap= RID.."121078147459979"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Strapped Gloves | Cob Web', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."7944168763"},
-    ["RightGlove"] = {
-        ColorMap= RID.."7944168763"}
+		["LeftGlove"] = {
+			ColorMap= RID.."7944168763"},
+		["RightGlove"] = {
+			ColorMap= RID.."7944168763"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Strapped Gloves | Drop-Out', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."5894322927"},
-    ["RightGlove"] = {
-        ColorMap= RID.."5894322927"}
+		["LeftGlove"] = {
+			ColorMap= RID.."5894322927"},
+		["RightGlove"] = {
+			ColorMap= RID.."5894322927"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Strapped Gloves | Grim', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."2132122442"},
-    ["RightGlove"] = {
-        ColorMap= RID.."2132122442"}
+		["LeftGlove"] = {
+			ColorMap= RID.."2132122442"},
+		["RightGlove"] = {
+			ColorMap= RID.."2132122442"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Strapped Gloves | Kringle', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."2664358019"},
-    ["RightGlove"] = {
-        ColorMap= RID.."2664358019"}
+		["LeftGlove"] = {
+			ColorMap= RID.."2664358019"},
+		["RightGlove"] = {
+			ColorMap= RID.."2664358019"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Strapped Gloves | Molten', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."2135909426"},
-    ["RightGlove"] = {
-        ColorMap= RID.."2135909426"}
+		["LeftGlove"] = {
+			ColorMap= RID.."2135909426"},
+		["RightGlove"] = {
+			ColorMap= RID.."2135909426"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Strapped Gloves | Racer', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."4614503547"},
-    ["RightGlove"] = {
-        ColorMap= RID.."4614503547"}
+		["LeftGlove"] = {
+			ColorMap= RID.."4614503547"},
+		["RightGlove"] = {
+			ColorMap= RID.."4614503547"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Strapped Gloves | Snow Leopard', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."81717979708040"},
-    ["RightGlove"] = {
-        ColorMap= RID.."81717979708040"}
+		["LeftGlove"] = {
+			ColorMap= RID.."81717979708040"},
+		["RightGlove"] = {
+			ColorMap= RID.."81717979708040"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Strapped Gloves | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."89172511600807"},
-    ["RightGlove"] = {
-        ColorMap= RID.."89172511600807"}
+		["LeftGlove"] = {
+			ColorMap= RID.."89172511600807"},
+		["RightGlove"] = {
+			ColorMap= RID.."89172511600807"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Strapped Gloves | Vesper', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."115852572279642"},
-    ["RightGlove"] = {
-        ColorMap= RID.."115852572279642"}
+		["LeftGlove"] = {
+			ColorMap= RID.."115852572279642"},
+		["RightGlove"] = {
+			ColorMap= RID.."115852572279642"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Strapped Gloves | Wisk', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
-    ["LeftGlove"] = {
-        ColorMap= RID.."2135910089"},
-    ["RightGlove"] = {
-        ColorMap= RID.."2135910089"}
+		["LeftGlove"] = {
+			ColorMap= RID.."2135910089"},
+		["RightGlove"] = {
+			ColorMap= RID.."2135910089"}
 	})
 end)
 
@@ -70041,6 +70341,15 @@ end)
 CreateTabButton('GamePins', 'APPEND', 'RacerX', '102268080918984', 0, function()
     EquipPin(RID..'102268080918984')
 end)
+CreateTabButton('GamePins', 'APPEND', 'Lil Tim', '97253283813447', 0, function()
+    EquipPin(RID..'97253283813447')
+end)
+CreateTabButton('GamePins', 'APPEND', 'Racer', '4614503358', 0, function()
+    EquipPin(RID..'4614503358')
+end)
+-- CreateTabButton('GamePins', 'APPEND', 'Valentine 2025', '0', 0, function()
+--     EquipPin(RID..'0')
+-- end)
 -- Note: Animated
 CreateTabButton('GamePins', 'APPEND', 'Komaru', '71126846633032', 0, function()
     EquipPin(RID..'71126846633032')
@@ -70072,7 +70381,7 @@ CreateTabButton('GamePins', 'APPEND', 'Komaru', '71126846633032', 0, function()
 	-- ["Delay"] = 0.08
 end)
 
---SkinTest
+--SkinTest --skt
 pcall(function()
 	-- Old game UI:
 	-- if LocalPlayer.PlayerGui.Menew.MainFrame.PlayerCard.pName.Text=="Skin" then CoreGui["BloxFunGui"].BaseFrame.SideBarButtonsHolderFrame.SideBarButtonsHolderScrollingFrame.SideBar11_Frame.Visible=true;
