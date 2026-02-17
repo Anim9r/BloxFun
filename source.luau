@@ -5776,7 +5776,7 @@ local Viewmodels= ReplicatedStorage["Viewmodels"]
 local Weapons= ReplicatedStorage["Weapons"]
 
 -- TODO: Append new ones (with testing): GSG, PC, SP. 
-local AllArms = {"Arms","BDSArms","ECArms","PTArms"}
+local AllArms = {"Arms","BDSArms","ECArms","PTArms","GSGArms","PCArms","SPArms"}
 --[[
     {"GIGNArms", "ECArms", "SASArms", "IDFArms", "UTArms",
     "GCTArms", "PCArms", "BDSArms", "GSGArms", "SPArms",
@@ -8179,7 +8179,7 @@ BloxFunGui.VersionText.BorderSizePixel = 0
 BloxFunGui.VersionText.Position = UDim2.new(0.150343642, 0, 0, 0)
 BloxFunGui.VersionText.Size = UDim2.new(0, 405, 0, 50)
 BloxFunGui.VersionText.Font = Enum.Font.Cartoon
-BloxFunGui.VersionText.Text = "Last Updated: 16/02ᴹ/2026"
+BloxFunGui.VersionText.Text = "Last Updated: 17/02ᴹ/2026"
 BloxFunGui.VersionText.TextColor3 = Color3.fromRGB(255, 255, 255)
 BloxFunGui.VersionText.TextScaled = true
 BloxFunGui.VersionText.TextSize = 50.000
@@ -62114,19 +62114,19 @@ CreateTabButton('GameSkins', 'APPEND', 'AWP | Instinct', PLACEHOLDERICON, 0, fun
 	})
 end)
 
--- Note: Archived
+-- Note: FLACKO's version
 CreateTabButton('GameSkins', 'APPEND', 'AWP | JTF2', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
 		["Handle2"] = {
-			ColorMap = RID.."17838336871"},
+			ColorMap = RID.."108193534024900"},
 		["Mag2"] = {
-			ColorMap = RID.."17838336871"},
+			ColorMap = RID.."108193534024900"},
 		["Bolt2"] = {
-			ColorMap = RID.."17838336871"},
+			ColorMap = RID.."108193534024900"},
 		["Lever2"] = {
-			ColorMap = RID.."17838336871"},
+			ColorMap = RID.."108193534024900"},
 		["Part1"] = {
-			ColorMap = RID.."17838337156"}
+			ColorMap = RID.."125454516616667"}
 	})
 end)
 
@@ -62415,12 +62415,13 @@ CreateTabButton('GameSkins', 'APPEND', 'AWP | Weeb', PLACEHOLDERICON, 0, functio
 	})
 end)
 
-CreateTabButton('GameSkins', 'APPEND', 'Banana | Stock', PLACEHOLDERICON, 0, function()
-	EquipSkin("Banana", {
-		["Handle"] = {
-			ColorMap = RID.."64374853"}
-	})
-end)
+-- Note: Detected
+-- CreateTabButton('GameSkins', 'APPEND', 'Banana | Stock', PLACEHOLDERICON, 0, function()
+-- 	EquipSkin("Banana", {
+-- 		["Handle"] = {
+-- 			ColorMap = RID.."64374853"}
+-- 	})
+-- end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Aequalis', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
@@ -65573,10 +65574,11 @@ CreateTabButton('GameSkins', 'APPEND', 'Karambit | Frozen Gift', PLACEHOLDERICON
 	})
 end)
 
+-- Note: Is a Texture parented to MeshPart (doesn't work). See the "AK-47 | Ghost" note
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Ghost', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			Texture = RID.."4186668302"}
+			ColorMap = RID.."4186668302"}
 	})
 end)
 
@@ -70196,7 +70198,7 @@ end)
 CreateTabButton('GamePins', 'APPEND', 'Xmas 2018', '2627834049', 0, function()
     EquipPin(RID..'2627834049')
 end)
-CreateTabButton('GamePins', 'APPEND', 'Xmas Calendar 2018', '2656299034', 0, function()
+CreateTabButton('GamePins', 'APPEND', 'Snowflake 2018', '2656299034', 0, function()
     EquipPin(RID..'2656299034')
 end)
 CreateTabButton('GamePins', 'APPEND', 'Xmas 2019', '4540756250', 0, function()
@@ -70347,9 +70349,9 @@ end)
 CreateTabButton('GamePins', 'APPEND', 'Racer', '4614503358', 0, function()
     EquipPin(RID..'4614503358')
 end)
--- CreateTabButton('GamePins', 'APPEND', 'Valentine 2025', '0', 0, function()
---     EquipPin(RID..'0')
--- end)
+CreateTabButton('GamePins', 'APPEND', 'Valentine 2025', '70569590204907', 0, function()
+    EquipPin(RID..'70569590204907')
+end)
 -- Note: Animated
 CreateTabButton('GamePins', 'APPEND', 'Komaru', '71126846633032', 0, function()
     EquipPin(RID..'71126846633032')
