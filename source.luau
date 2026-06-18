@@ -13,7 +13,7 @@
 - Perhaps disable or remake support for 3rd party PlaceIds (use GameId instead, too);
 - Define former developers in Credits section;
 
--- Ideas (might not implement some for this project but a brand new GUI if I happen to create one):
+- Ideas: (might not implement some for this project but a brand new GUI if I happen to create one):
 - Custom Materials (+tab);
 - Finally implement Map Themes (+tab); unsure cuz requires lighting tweaks system too;
 - Animations in options (+tab);
@@ -24,7 +24,6 @@
 - Animated skins system;
 
 --]]
-
 
 
 ToggleKeybind = Enum.KeyCode.RightAlt
@@ -5759,7 +5758,7 @@ local BloxFunGui = {
 
 -- TODO: Replace old variables with these:
 local GCA; if getcustomasset then GCA=getcustomasset end -- LocalFile
-local RID= "rbxassetid://" -- RbxAsset
+-- local RID= "rbxassetid://" -- RbxAsset
 local RLID= "http://www.roblox.com/asset/?id=" -- RbxLink
 local RTID= "http://www.roblox.com/Game/Tools/ThumbnailAsset.ashx?fmt=png&wd=420&ht=420&aid=" -- RbxThumbnail
 local PHID= "9438528836" -- Placeholder
@@ -7423,7 +7422,7 @@ BloxFunGui.SideBarGamePins_Script.BackgroundColor3 = Color3.fromRGB(255, 255, 25
 BloxFunGui.SideBarGamePins_Script.BackgroundTransparency = 1.000
 BloxFunGui.SideBarGamePins_Script.BorderSizePixel = 0
 BloxFunGui.SideBarGamePins_Script.Size = UDim2.new(0, 100, 0, 100)
-BloxFunGui.SideBarGamePins_Script.Image = RBXAID.."8062688046" --8062690766 (Green), 8357798814 (Xmas)
+BloxFunGui.SideBarGamePins_Script.Image = "rbxassetid://8062688046" --8062690766 (Green), 8357798814 (Xmas)
 --BloxFunGui.SideBarGamePins_Script.HoverImage = RBXAID..PLACEHOLDERICON
 
 BloxFunGui.SideBarArms_Frame.Name = "SideBarArms_Frame"
@@ -8179,7 +8178,7 @@ BloxFunGui.VersionText.BorderSizePixel = 0
 BloxFunGui.VersionText.Position = UDim2.new(0.150343642, 0, 0, 0)
 BloxFunGui.VersionText.Size = UDim2.new(0, 405, 0, 50)
 BloxFunGui.VersionText.Font = Enum.Font.Cartoon
-BloxFunGui.VersionText.Text = "Last Updated: 17/02ᴹ/2026"
+BloxFunGui.VersionText.Text = "Last Updated: 18/06ᴹ/2026"
 BloxFunGui.VersionText.TextColor3 = Color3.fromRGB(255, 255, 255)
 BloxFunGui.VersionText.TextScaled = true
 BloxFunGui.VersionText.TextSize = 50.000
@@ -49039,170 +49038,170 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	--AWP Prince
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6439619884"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6439621097"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6439619884"
-	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6439619884"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6439619884"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6439619884"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6439619884"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6439619884"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6439619884"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide2"].TextureID = "rbxassetid://6439619884"
 end)
 --1/18
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton18_Frame.TabCustomSkinsButton18_Roundify.TabCustomSkinsButton18_Roundify_Frame.TabCustomSkinsButton18_Script.MouseButton1Down:Connect(function()
 	--AWP Megumin
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6439622192"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6439622719"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6439622192"
-	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6439622192"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6439622192"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6439622192"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6439622192"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6439622192"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6439622192"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide2"].TextureID = "rbxassetid://6439622192"
 end)
 --1/19
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton19_Frame.TabCustomSkinsButton19_Roundify.TabCustomSkinsButton19_Roundify_Frame.TabCustomSkinsButton19_Script.MouseButton1Down:Connect(function()
 	--AWP Sea Creature
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6451112581"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6451107022"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6451112581"
-	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6451112581"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6451112581"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6451112581"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6451112581"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6451112581"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6451112581"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide2"].TextureID = "rbxassetid://6451112581"
 end)
 --1/20
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton20_Frame.TabCustomSkinsButton20_Roundify.TabCustomSkinsButton20_Roundify_Frame.TabCustomSkinsButton20_Script.MouseButton1Down:Connect(function()
 	--AWP Mecha Dragon
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6451200990"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6451199638"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6451200990"
-	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6451200990"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6451200990"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6451200990"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6451200990"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6451200990"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6451200990"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide2"].TextureID = "rbxassetid://6451200990"
 end)
 --1/21
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton21_Frame.TabCustomSkinsButton21_Roundify.TabCustomSkinsButton21_Roundify_Frame.TabCustomSkinsButton21_Script.MouseButton1Down:Connect(function()
 	--AWP Oni Taiji
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6451254361"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6451255146"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6451254361"
-	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6451254361"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6451254361"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6451254361"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6451254361"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6451254361"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6451254361"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide2"].TextureID = "rbxassetid://6451254361"
 end)
 --1/22
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton22_Frame.TabCustomSkinsButton22_Roundify.TabCustomSkinsButton22_Roundify_Frame.TabCustomSkinsButton22_Script.MouseButton1Down:Connect(function()
 	--AWP Dragon Lore
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6451539744"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6451541040"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6451539744"
-	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6451539744"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6451539744"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6451539744"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6451539744"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6451539744"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6451539744"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide2"].TextureID = "rbxassetid://6451539744"
 end)
 --1/23
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton23_Frame.TabCustomSkinsButton23_Roundify.TabCustomSkinsButton23_Roundify_Frame.TabCustomSkinsButton23_Script.MouseButton1Down:Connect(function()
 	--AWP Cosmos
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6451643445"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6451642429"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6451643445"
-	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6451643445"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6451643445"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6451643445"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6451643445"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6451643445"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6451643445"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide2"].TextureID = "rbxassetid://6451643445"
 end)
 --1/24
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton24_Frame.TabCustomSkinsButton24_Roundify.TabCustomSkinsButton24_Roundify_Frame.TabCustomSkinsButton24_Script.MouseButton1Down:Connect(function()
 	--AWP BloxFun Skin Committee
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6475019349"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6474929848"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6475019349"
-	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6475019349"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6475019349"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6475019349"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6475019349"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6475019349"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6475019349"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide2"].TextureID = "rbxassetid://6475019349"
 end)
 --1/25
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton25_Frame.TabCustomSkinsButton25_Roundify.TabCustomSkinsButton25_Roundify_Frame.TabCustomSkinsButton25_Script.MouseButton1Down:Connect(function()
 	--AWP Christmas
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6476855964"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6476856340"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6476855964"
-	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6476855964"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6476855964"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6476855964"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6476855964"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6476855964"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6476855964"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide2"].TextureID = "rbxassetid://6476855964"
 end)
 --1/26
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton26_Frame.TabCustomSkinsButton26_Roundify.TabCustomSkinsButton26_Roundify_Frame.TabCustomSkinsButton26_Script.MouseButton1Down:Connect(function()
 	--AWP Fairy
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6478556721"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6478558789"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6478556721"
-	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6478556721"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6478556721"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6478556721"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6478556721"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6478556721"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6478556721"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide2"].TextureID = "rbxassetid://6478556721"
 end)
 --1/27
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton27_Frame.TabCustomSkinsButton27_Roundify.TabCustomSkinsButton27_Roundify_Frame.TabCustomSkinsButton27_Script.MouseButton1Down:Connect(function()
 	--AWP G2
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6507359798"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6507360157"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6507359798"
-	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6507359798"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6507359798"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6507359798"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6507359798"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6507359798"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6507359798"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide2"].TextureID = "rbxassetid://6507359798"
 end)
 --1/28
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton28_Frame.TabCustomSkinsButton28_Roundify.TabCustomSkinsButton28_Roundify_Frame.TabCustomSkinsButton28_Script.MouseButton1Down:Connect(function()
 	--AWP Ice Obama
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6558575052"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6558665889"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6558575052"
-	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6558575052"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6558575052"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6558604477"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6558575052"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6558575052"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6558575052"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide2"].TextureID = "rbxassetid://6558604477"
 end)
 --1/29
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton29_Frame.TabCustomSkinsButton29_Roundify.TabCustomSkinsButton29_Roundify_Frame.TabCustomSkinsButton29_Script.MouseButton1Down:Connect(function()
 	--AWP Gungnir
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6559063434"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6561080965"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6559063434"
-	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6559063434"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6559063434"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6559063434"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6559063434"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6559063434"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6559063434"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide2"].TextureID = "rbxassetid://6559063434"
 end)
 --1/30
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton30_Frame.TabCustomSkinsButton30_Roundify.TabCustomSkinsButton30_Roundify_Frame.TabCustomSkinsButton30_Script.MouseButton1Down:Connect(function()
 	--AWP Cyber Nerf
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6561165602"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6561166890"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6561165602"
-	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6561165602"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6561165602"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6561165602"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6561165602"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6561165602"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6561165602"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide2"].TextureID = "rbxassetid://6561165602"
 end)
 --1/31
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton31_Frame.TabCustomSkinsButton31_Roundify.TabCustomSkinsButton31_Roundify_Frame.TabCustomSkinsButton31_Script.MouseButton1Down:Connect(function()
 	--AWP G2 Justin
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6561363492"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6561364214"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6561363492"
-	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6561363492"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6561363492"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6561363492"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6561363492"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6561363492"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6561363492"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide2"].TextureID = "rbxassetid://6561363492"
 end)
 --1/32
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton32_Frame.TabCustomSkinsButton32_Roundify.TabCustomSkinsButton32_Roundify_Frame.TabCustomSkinsButton32_Script.MouseButton1Down:Connect(function()
 	--AWP Hyper Beast
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6576205981"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6576207672"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6576205981"
-	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6576205981"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6576205981"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6576205981"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6576205981"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6576205981"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6576205981"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide2"].TextureID = "rbxassetid://6576205981"
 end)
 --1/33
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton33_Frame.TabCustomSkinsButton33_Roundify.TabCustomSkinsButton33_Roundify_Frame.TabCustomSkinsButton33_Script.MouseButton1Down:Connect(function()
 	--AWP Chromatic Aberration
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6585694311"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6585692708"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6585694311"
-	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6585694311"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6585694311"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6585694311"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6585694311"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6585694311"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6585694311"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide2"].TextureID = "rbxassetid://6585694311"
 end)
 --1/34
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton34_Frame.TabCustomSkinsButton34_Roundify.TabCustomSkinsButton34_Roundify_Frame.TabCustomSkinsButton34_Script.MouseButton1Down:Connect(function()
@@ -49272,20 +49271,20 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	--AWP Disco
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://7661852507"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://7661855561"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://7661852507"
-	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://7661852507"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://7661852507"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://7661852507"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://7661852507"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://7661852507"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://7661852507"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide2"].TextureID = "rbxassetid://7661852507"
 end)
 --1/42
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton42_Frame.TabCustomSkinsButton42_Roundify.TabCustomSkinsButton42_Roundify_Frame.TabCustomSkinsButton42_Script.MouseButton1Down:Connect(function()
 	--AWP Stardust
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://7661850914"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://7661851787"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://7661850914"
-	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://7661850914"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://7661850914"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://7661850914"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://7661850914"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://7661850914"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://7661850914"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide2"].TextureID = "rbxassetid://7661850914"
 end)
 --1/43
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton43_Frame.TabCustomSkinsButton43_Roundify.TabCustomSkinsButton43_Roundify_Frame.TabCustomSkinsButton43_Script.MouseButton1Down:Connect(function()
@@ -49309,20 +49308,20 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	--AWP Twitch
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://7826240654"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://7826242521"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://7826240654"
-	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://7826240654"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://7826240654"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://7826240654"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://7826240654"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://7826240654"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://7826240654"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide2"].TextureID = "rbxassetid://7826240654"
 end)
 --1/46
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton46_Frame.TabCustomSkinsButton46_Roundify.TabCustomSkinsButton46_Roundify_Frame.TabCustomSkinsButton46_Script.MouseButton1Down:Connect(function()
 	--AWP Tonight Halloween
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6698533624"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6698534178"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6698533624"
-	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6698533624"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6698533624"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6698533624"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6698533624"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6698533624"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6698533624"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide2"].TextureID = "rbxassetid://6698533624"
 end)
 --1/47
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton47_Frame.TabCustomSkinsButton47_Roundify.TabCustomSkinsButton47_Roundify_Frame.TabCustomSkinsButton47_Script.MouseButton1Down:Connect(function()
@@ -49477,10 +49476,10 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	--AWP Forest Monster
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6698335965"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6698336975"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6698335965"
-	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6698335965"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6698335965"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6698335965"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6698335965"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6698335965"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6698335965"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide2"].TextureID = "rbxassetid://6698335965"
 end)
 --1/53
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton53_Frame.TabCustomSkinsButton53_Roundify.TabCustomSkinsButton53_Roundify_Frame.TabCustomSkinsButton53_Script.MouseButton1Down:Connect(function()
@@ -49505,20 +49504,20 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	--AWP Blast
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6698293238"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6698295140"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6698293238"
-	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6698293238"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6698293238"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6698293238"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6698293238"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6698293238"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6698293238"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide2"].TextureID = "rbxassetid://6698293238"
 end)
 --1/56
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton56_Frame.TabCustomSkinsButton56_Roundify.TabCustomSkinsButton56_Roundify_Frame.TabCustomSkinsButton56_Script.MouseButton1Down:Connect(function()
 	--AWP Nerf
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://7701405678"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://7701407577"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://7701405678"
-	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://7701405678"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://7701405678"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://7701405678"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://7701405678"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://7701405678"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://7701405678"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide2"].TextureID = "rbxassetid://7701405678"
 end)
 --1/57
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton57_Frame.TabCustomSkinsButton57_Roundify.TabCustomSkinsButton57_Roundify_Frame.TabCustomSkinsButton57_Script.MouseButton1Down:Connect(function()
@@ -49600,10 +49599,10 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	--AWP Redline
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6657425659"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6657426143"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6657425659"
-	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6657425659"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6657425659"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6657425659"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6657425659"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6657425659"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6657425659"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide2"].TextureID = "rbxassetid://6657425659"
 end)
 --1/61
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton61_Frame.TabCustomSkinsButton61_Roundify.TabCustomSkinsButton61_Roundify_Frame.TabCustomSkinsButton61_Script.MouseButton1Down:Connect(function()
@@ -49982,10 +49981,10 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	--AWP Ancient Dragon
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6668821785"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6668822961"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6668821785"
-	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6668821785"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6668821785"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6668821785"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6668821785"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6668821785"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6668821785"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide2"].TextureID = "rbxassetid://6668821785"
 end)
 --1/72
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton72_Frame.TabCustomSkinsButton72_Roundify.TabCustomSkinsButton72_Roundify_Frame.TabCustomSkinsButton72_Script.MouseButton1Down:Connect(function()
@@ -50195,10 +50194,10 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	--AWP Heaven Demon
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6659479853"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6659480859"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6659479853"
-	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6659479853"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6659479853"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6659479853"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6659479853"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6659479853"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6659479853"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide2"].TextureID = "rbxassetid://6659479853"
 end)
 --1/81
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton81_Frame.TabCustomSkinsButton81_Roundify.TabCustomSkinsButton81_Roundify_Frame.TabCustomSkinsButton81_Script.MouseButton1Down:Connect(function()
@@ -50278,10 +50277,10 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	--AWP Printstream
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://6609674580"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://6598224637"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://6609674580"
-	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6609674580"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://6609674580"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://6609674580"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://6609674580"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://6609674580"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://6609674580"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide2"].TextureID = "rbxassetid://6609674580"
 end)
 --1/84
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton84_Frame.TabCustomSkinsButton84_Roundify.TabCustomSkinsButton84_Roundify_Frame.TabCustomSkinsButton84_Script.MouseButton1Down:Connect(function()
@@ -51403,10 +51402,10 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	--AWP Chan
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://9478416651"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://9478417089"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://9478416651"
-	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://9478416651"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://9478416651"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://9478416651"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://9478416651"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://9478416651"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://9478416651"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide2"].TextureID = "rbxassetid://9478416651"
 end)
 --1/124
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton124_Frame.TabCustomSkinsButton124_Roundify.TabCustomSkinsButton124_Roundify_Frame.TabCustomSkinsButton124_Script.MouseButton1Down:Connect(function()
@@ -51828,10 +51827,10 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	--AWP 1648 White
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://9640496908"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://9640497840"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://9640496908"
-	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://9640496908"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://9640496908"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://9640496908"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://9640496908"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://9640496908"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://9640496908"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide2"].TextureID = "rbxassetid://9640496908"
 end)
 --1/148
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton148_Frame.TabCustomSkinsButton148_Roundify.TabCustomSkinsButton148_Roundify_Frame.TabCustomSkinsButton148_Script.MouseButton1Down:Connect(function()
@@ -51853,10 +51852,10 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	--AWP Crimson Snake
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://9640707190"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://9640706204"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://9640707190"
-	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://9640707190"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://9640707190"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://9640707190"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://9640707190"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://9640707190"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://9640707190"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide2"].TextureID = "rbxassetid://9640707190"
 end)
 --1/151
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton151_Frame.TabCustomSkinsButton151_Roundify.TabCustomSkinsButton151_Roundify_Frame.TabCustomSkinsButton151_Script.MouseButton1Down:Connect(function()
@@ -52004,10 +52003,10 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButto
 	--AWP Cube
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://9777481233"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://9777481913"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://9777481233"
-	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://9777481233"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://9777481233"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://9777481233"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://9777481233"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://9777481233"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://9777481233"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide2"].TextureID = "rbxassetid://9777481233"
 end)
 --1/155
 CoreGui["BloxFunGui"].BaseFrame.TabCustomSkinsScrollingFrame.TabCustomSkinsButton155_Frame.TabCustomSkinsButton155_Roundify.TabCustomSkinsButton155_Roundify_Frame.TabCustomSkinsButton155_Script.MouseButton1Down:Connect(function()
@@ -54476,10 +54475,10 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomViewmodelsScrollingFrame.TabCustomViewm
 		if CoreGui["BF_Values"]:FindFirstChild("AWPsilencer_Handle", true) and CoreGui["BF_Values"]:FindFirstChild("AWPsilencer_Scope", true) and CoreGui["BF_Values"]:FindFirstChild("AWPsilencer_Mag", true) and CoreGui["BF_Values"]:FindFirstChild("AWPsilencer_Barrel", true) and CoreGui["BF_Values"]:FindFirstChild("AWPsilencer_Slide", true) and CoreGui["BF_Values"]:FindFirstChild("AWPsilencer_Slide 2", true) then
 			CoreGui["BF_Values"]["AWPsilencer_Handle"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID
 			CoreGui["BF_Values"]["AWPsilencer_Scope"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID
-			CoreGui["BF_Values"]["AWPsilencer_Mag"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID
+			CoreGui["BF_Values"]["AWPsilencer_Mag"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID
 			CoreGui["BF_Values"]["AWPsilencer_Barrel"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID
-			CoreGui["BF_Values"]["AWPsilencer_Slide"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID
-			CoreGui["BF_Values"]["AWPsilencer_Slide 2"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID
+			CoreGui["BF_Values"]["AWPsilencer_Slide"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID
+			CoreGui["BF_Values"]["AWPsilencer_Slide 2"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide2"].TextureID
 		else
 			local TEMPVALUE_AWPsilencer_Handle = Instance.new("StringValue")
 			TEMPVALUE_AWPsilencer_Handle.Parent = CoreGui["BF_Values"]
@@ -54502,10 +54501,10 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomViewmodelsScrollingFrame.TabCustomViewm
 			task.wait()
 			CoreGui["BF_Values"]["AWPsilencer_Handle"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID
 			CoreGui["BF_Values"]["AWPsilencer_Scope"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID
-			CoreGui["BF_Values"]["AWPsilencer_Mag"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID
+			CoreGui["BF_Values"]["AWPsilencer_Mag"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID
 			CoreGui["BF_Values"]["AWPsilencer_Barrel"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID
-			CoreGui["BF_Values"]["AWPsilencer_Slide"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID
-			CoreGui["BF_Values"]["AWPsilencer_Slide 2"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID
+			CoreGui["BF_Values"]["AWPsilencer_Slide"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID
+			CoreGui["BF_Values"]["AWPsilencer_Slide 2"].Value = game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide2"].TextureID
 		end
 	end
 	task.wait()
@@ -54525,10 +54524,10 @@ CoreGui["BloxFunGui"].BaseFrame.TabCustomViewmodelsScrollingFrame.TabCustomViewm
 		if CoreGui["BF_Values"]:FindFirstChild("AWPsilencer_Handle", true) and CoreGui["BF_Values"]:FindFirstChild("AWPsilencer_Scope", true) and CoreGui["BF_Values"]:FindFirstChild("AWPsilencer_Mag", true) and CoreGui["BF_Values"]:FindFirstChild("AWPsilencer_Barrel", true) and CoreGui["BF_Values"]:FindFirstChild("AWPsilencer_Slide", true) and CoreGui["BF_Values"]:FindFirstChild("AWPsilencer_Slide 2", true) then
 			game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = CoreGui["BF_Values"]["AWPsilencer_Handle"].Value
 			game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = CoreGui["BF_Values"]["AWPsilencer_Scope"].Value
-			game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = CoreGui["BF_Values"]["AWPsilencer_Mag"].Value
-			--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = CoreGui["BF_Values"]["AWPsilencer_Barrel"].Value
-			game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = CoreGui["BF_Values"]["AWPsilencer_Slide"].Value
-			game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = CoreGui["BF_Values"]["AWPsilencer_Slide 2"].Value
+			game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = CoreGui["BF_Values"]["AWPsilencer_Mag"].Value
+			game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = CoreGui["BF_Values"]["AWPsilencer_Barrel"].Value
+			game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = CoreGui["BF_Values"]["AWPsilencer_Slide"].Value
+			game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide2"].TextureID = CoreGui["BF_Values"]["AWPsilencer_Slide 2"].Value
 		end
 	end
 end)
@@ -57972,10 +57971,10 @@ CoreGui["BloxFunGui"].BaseFrame.TabExplicitContentScrollingFrame.TabExplicitCont
 	--AWP Hentai
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Handle2"].TextureID = "rbxassetid://7374031818"
 	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Part1"].TextureID = "rbxassetid://9472658926"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag2"].TextureID = "rbxassetid://7374031818"
-	--game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://7374031818"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Bolt2"].TextureID = "rbxassetid://7374031818"
-	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Lever2"].TextureID = "rbxassetid://7374031818"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Mag"].TextureID = "rbxassetid://7374031818"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Barrel"].TextureID = "rbxassetid://7374031818"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide"].TextureID = "rbxassetid://7374031818"
+	game:GetService("ReplicatedStorage")["Viewmodels"]["v_AWP"]["Slide2"].TextureID = "rbxassetid://7374031818"
 end)
 --9/5
 CoreGui["BloxFunGui"].BaseFrame.TabExplicitContentScrollingFrame.TabExplicitContentButton5_Frame.TabExplicitContentButton5_Roundify.TabExplicitContentButton5_Roundify_Frame.TabExplicitContentButton5_Script.MouseButton1Down:Connect(function()
@@ -60859,66 +60858,66 @@ end)
 --[[
 CreateTabButton("CustomViewmodels", "RANDOM", "New Bayonet Equip Animation", PLACEHOLDERICON, 0, function()
     if string.find(Viewmodels["v_CT Knife"]['Handle'].MeshId, "3023613758") then
-		Viewmodels["v_CT Knife"]["equip"].AnimationId= RID.."92007850419454"
+		Viewmodels["v_CT Knife"]["equip"].AnimationId= "rbxassetid://92007850419454"
 	end
 	if string.find(Viewmodels["v_CT Knife"]['Handle'].MeshId, "3023613758") then
-		Viewmodels["v_T Knife"]["equip"].AnimationId= RID.."92007850419454"
+		Viewmodels["v_T Knife"]["equip"].AnimationId= "rbxassetid://92007850419454"
 	end
 end)
 CreateTabButton("CustomViewmodels", "RANDOM", "Old Bayonet Equip Animation", PLACEHOLDERICON, 0, function()
     if string.find(Viewmodels["v_CT Knife"]['Handle'].MeshId, "3023613758") then
-		Viewmodels["v_CT Knife"]["equip"].AnimationId= RID.."2663455210"
+		Viewmodels["v_CT Knife"]["equip"].AnimationId= "rbxassetid://2663455210"
 	end
 	if string.find(Viewmodels["v_CT Knife"]['Handle'].MeshId, "3023613758") then
-		Viewmodels["v_T Knife"]["equip"].AnimationId= RID.."2663455210"
+		Viewmodels["v_T Knife"]["equip"].AnimationId= "rbxassetid://2663455210"
 	end
 end)
 CreateTabButton("CustomViewmodels", "RANDOM", "New Bayonet Inspect Animation", PLACEHOLDERICON, 0, function()
     if string.find(Viewmodels["v_CT Knife"]['Handle'].MeshId, "3023613758") then
-		Viewmodels["v_CT Knife"]["inspect"].AnimationId= RID.."98503935083963"
+		Viewmodels["v_CT Knife"]["inspect"].AnimationId= "rbxassetid://98503935083963"
 	end
 	if string.find(Viewmodels["v_CT Knife"]['Handle'].MeshId, "3023613758") then
-		Viewmodels["v_T Knife"]["inspect"].AnimationId= RID.."98503935083963"
+		Viewmodels["v_T Knife"]["inspect"].AnimationId= "rbxassetid://98503935083963"
 	end
 end)
 CreateTabButton("CustomViewmodels", "RANDOM", "Old Bayonet Inspect Animation", PLACEHOLDERICON, 0, function()
     if string.find(Viewmodels["v_CT Knife"]['Handle'].MeshId, "3023613758") then
-		Viewmodels["v_CT Knife"]["inspect"].AnimationId= RID.."2663479051"
+		Viewmodels["v_CT Knife"]["inspect"].AnimationId= "rbxassetid://2663479051"
 	end
 	if string.find(Viewmodels["v_CT Knife"]['Handle'].MeshId, "3023613758") then
-		Viewmodels["v_T Knife"]["inspect"].AnimationId= RID.."2663479051"
+		Viewmodels["v_T Knife"]["inspect"].AnimationId= "rbxassetid://2663479051"
 	end
 end)
 CreateTabButton("CustomViewmodels", "RANDOM", "Old Karambit Inspect Animation", PLACEHOLDERICON, 0, function()
     if string.find(Viewmodels["v_CT Knife"]['Handle2'].MeshId, "78668636044513") then
-		Viewmodels["v_CT Knife"]["inspect"].AnimationId= RID.."124386792040732"
+		Viewmodels["v_CT Knife"]["inspect"].AnimationId= "rbxassetid://124386792040732"
 	end
 	if string.find(Viewmodels["v_CT Knife"]['Handle2'].MeshId, "78668636044513") then
-		Viewmodels["v_T Knife"]["inspect"].AnimationId= RID.."124386792040732"
+		Viewmodels["v_T Knife"]["inspect"].AnimationId= "rbxassetid://124386792040732"
 	end
 end)
 CreateTabButton("CustomViewmodels", "RANDOM", "Old Falchion Equip Animation", PLACEHOLDERICON, 0, function()
     if string.find(Viewmodels["v_CT Knife"]['1Handle'].MeshId, "99526135984097") then
-		Viewmodels["v_CT Knife"]["equip"].AnimationId= RID.."2663528150"
+		Viewmodels["v_CT Knife"]["equip"].AnimationId= "rbxassetid://2663528150"
 	end
 	if string.find(Viewmodels["v_CT Knife"]['1Handle'].MeshId, "99526135984097") then
-		Viewmodels["v_T Knife"]["equip"].AnimationId= RID.."2663528150"
+		Viewmodels["v_T Knife"]["equip"].AnimationId= "rbxassetid://2663528150"
 	end
 end)
 CreateTabButton("CustomViewmodels", "RANDOM", "Old Falchion Inspect Animation", PLACEHOLDERICON, 0, function()
     if string.find(Viewmodels["v_CT Knife"]['1Handle'].MeshId, "99526135984097") then
-		Viewmodels["v_CT Knife"]["inspect"].AnimationId= RID.."2663526685"
+		Viewmodels["v_CT Knife"]["inspect"].AnimationId= "rbxassetid://2663526685"
 	end
 	if string.find(Viewmodels["v_CT Knife"]['1Handle'].MeshId, "99526135984097") then
-		Viewmodels["v_T Knife"]["inspect"].AnimationId= RID.."2663526685"
+		Viewmodels["v_T Knife"]["inspect"].AnimationId= "rbxassetid://2663526685"
 	end
 end)
 CreateTabButton("CustomViewmodels", "RANDOM", "Old Falchion Stab Animation", PLACEHOLDERICON, 0, function()
     if string.find(Viewmodels["v_CT Knife"]['1Handle'].MeshId, "99526135984097") then
-		Viewmodels["v_CT Knife"]["stab"].AnimationId= RID.."2663458484"
+		Viewmodels["v_CT Knife"]["stab"].AnimationId= "rbxassetid://2663458484"
 	end
 	if string.find(Viewmodels["v_CT Knife"]['1Handle'].MeshId, "99526135984097") then
-		Viewmodels["v_T Knife"]["stab"].AnimationId= RID.."2663458484"
+		Viewmodels["v_T Knife"]["stab"].AnimationId= "rbxassetid://2663458484"
 	end
 end)
 --]]
@@ -61068,22 +61067,22 @@ CreateTabButton('Skyboxes', 'RANDOM', '(Coming Soon)', PLACEHOLDERICON, 10, func
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Ace', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."1230497297"},
+			ColorMap = "rbxassetid://1230497297"},
 		["Handle"] = {
-			ColorMap = RID.."1230497297"},
+			ColorMap = "rbxassetid://1230497297"},
 		["Mag"] = {
-			ColorMap = RID.."1230497297"}
+			ColorMap = "rbxassetid://1230497297"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Bloodboom', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."2131925857"},
+			ColorMap = "rbxassetid://2131925857"},
 		["Handle"] = {
-			ColorMap = RID.."2131925857"},
+			ColorMap = "rbxassetid://2131925857"},
 		["Mag"] = {
-			ColorMap = RID.."2131926219"}
+			ColorMap = "rbxassetid://2131926219"}
 	})
 end)
 
@@ -61091,11 +61090,11 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | BloxersClub', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."17601209944"},
+			ColorMap = "rbxassetid://17601209944"},
 		["Handle"] = {
-			ColorMap = RID.."17601209944"},
+			ColorMap = "rbxassetid://17601209944"},
 		["Mag"] = {
-			ColorMap = RID.."17601209944"}
+			ColorMap = "rbxassetid://17601209944"}
 	})
 end)
 
@@ -61103,75 +61102,75 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Caroot', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			NormalMap = RID.."124291864338283",
-			ColorMap = RID.."124291864338283",
-			RoughnessMap = RID.."125929391356727",
-			MetalnessMap = RID.."137511777062146"},
+			NormalMap = "rbxassetid://124291864338283",
+			ColorMap = "rbxassetid://124291864338283",
+			RoughnessMap = "rbxassetid://125929391356727",
+			MetalnessMap = "rbxassetid://137511777062146"},
 		["Handle"] = {
-			ColorMap = RID.."87381490961343",
-			NormalMap = RID.."134118861595481",
-			RoughnessMap = RID.."71907116828883",
-			MetalnessMap = RID.."112291039938252"},
+			ColorMap = "rbxassetid://87381490961343",
+			NormalMap = "rbxassetid://134118861595481",
+			RoughnessMap = "rbxassetid://71907116828883",
+			MetalnessMap = "rbxassetid://112291039938252"},
 		["Mag"] = {
-			ColorMap = RID.."118649789010838",
-			NormalMap = RID.."137539207054778",
-			RoughnessMap = RID.."108402800389176",
-			MetalnessMap = RID.."103792259968266"}
+			ColorMap = "rbxassetid://118649789010838",
+			NormalMap = "rbxassetid://137539207054778",
+			RoughnessMap = "rbxassetid://108402800389176",
+			MetalnessMap = "rbxassetid://103792259968266"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Clown', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."1237361091"},
+			ColorMap = "rbxassetid://1237361091"},
 		["Handle"] = {
-			ColorMap = RID.."1237361091"},
+			ColorMap = "rbxassetid://1237361091"},
 		["Mag"] = {
-			ColorMap = RID.."1237361091"}
+			ColorMap = "rbxassetid://1237361091"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Code Orange', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."1233736160"},
+			ColorMap = "rbxassetid://1233736160"},
 		["Handle"] = {
-			ColorMap = RID.."1233736160"},
+			ColorMap = "rbxassetid://1233736160"},
 		["Mag"] = {
-			ColorMap = RID.."1233736160"}
+			ColorMap = "rbxassetid://1233736160"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Elf', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."80367280406118"},
+			ColorMap = "rbxassetid://80367280406118"},
 		["Handle"] = {
-			ColorMap = RID.."80367280406118"},
+			ColorMap = "rbxassetid://80367280406118"},
 		["Mag"] = {
-			ColorMap = RID.."80367280406118"}
+			ColorMap = "rbxassetid://80367280406118"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Eve', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."1761152207"},
+			ColorMap = "rbxassetid://1761152207"},
 		["Handle"] = {
-			ColorMap = RID.."1761152207"},
+			ColorMap = "rbxassetid://1761152207"},
 		["Mag"] = {
-			ColorMap = RID.."1761152207"}
+			ColorMap = "rbxassetid://1761152207"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Galaxy Corpse', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."7943809418"},
+			ColorMap = "rbxassetid://7943809418"},
 		["Handle"] = {
-			ColorMap = RID.."7943809418"},
+			ColorMap = "rbxassetid://7943809418"},
 		["Mag"] = {
-			ColorMap = RID.."7943809418"}
+			ColorMap = "rbxassetid://7943809418"}
 	})
 end)
 
@@ -61179,22 +61178,22 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Ghost', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."4186668302"},
+			ColorMap = "rbxassetid://4186668302"},
 		["Handle"] = {
-			ColorMap = RID.."4186668302"},
+			ColorMap = "rbxassetid://4186668302"},
 		["Mag"] = {
-			ColorMap = RID.."4186668302"}
+			ColorMap = "rbxassetid://4186668302"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Gifted', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."2674085303"},
+			ColorMap = "rbxassetid://2674085303"},
 		["Handle"] = {
-			ColorMap = RID.."2674085303"},
+			ColorMap = "rbxassetid://2674085303"},
 		["Mag"] = {
-			ColorMap = RID.."2674085303"}
+			ColorMap = "rbxassetid://2674085303"}
 	})
 end)
 
@@ -61202,328 +61201,328 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Glo', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."122392043964458"},
+			ColorMap = "rbxassetid://122392043964458"},
 		["Handle"] = {
-			ColorMap = RID.."122392043964458"},
+			ColorMap = "rbxassetid://122392043964458"},
 		["Mag"] = {
-			ColorMap = RID.."122392043964458"}
+			ColorMap = "rbxassetid://122392043964458"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Godess', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."3414429745"},
+			ColorMap = "rbxassetid://3414429745"},
 		["Handle"] = {
-			ColorMap = RID.."3414429745"},
+			ColorMap = "rbxassetid://3414429745"},
 		["Mag"] = {
-			ColorMap = RID.."3414429745"}
+			ColorMap = "rbxassetid://3414429745"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Hallows', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."1228382685"},
+			ColorMap = "rbxassetid://1228382685"},
 		["Handle"] = {
-			ColorMap = RID.."1228382685"},
+			ColorMap = "rbxassetid://1228382685"},
 		["Mag"] = {
-			ColorMap = RID.."1228382685"}
+			ColorMap = "rbxassetid://1228382685"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Halo', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."4428762117"},
+			ColorMap = "rbxassetid://4428762117"},
 		["Handle"] = {
-			ColorMap = RID.."4428762117"},
+			ColorMap = "rbxassetid://4428762117"},
 		["Mag"] = {
-			ColorMap = RID.."4428762117"}
+			ColorMap = "rbxassetid://4428762117"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Hypersonic', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."2535512221"},
+			ColorMap = "rbxassetid://2535512221"},
 		["Handle"] = {
-			ColorMap = RID.."2535512221"},
+			ColorMap = "rbxassetid://2535512221"},
 		["Mag"] = {
-			ColorMap = RID.."2535512221"}
+			ColorMap = "rbxassetid://2535512221"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Inversion', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."4429566329"},
+			ColorMap = "rbxassetid://4429566329"},
 		["Handle"] = {
-			ColorMap = RID.."4429566329"},
+			ColorMap = "rbxassetid://4429566329"},
 		["Mag"] = {
-			ColorMap = RID.."4429566329"}
+			ColorMap = "rbxassetid://4429566329"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Jester', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."4614565943"},
+			ColorMap = "rbxassetid://4614565943"},
 		["Handle"] = {
-			ColorMap = RID.."4614565943"},
+			ColorMap = "rbxassetid://4614565943"},
 		["Mag"] = {
-			ColorMap = RID.."4614565943"}
+			ColorMap = "rbxassetid://4614565943"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Lil Tim', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."122079702018204",
-			NormalMap = RID.."134114086261137",
-			RoughnessMap = RID.."123855495198355",
-			MetalnessMap = RID.."97134864476718"},
+			ColorMap = "rbxassetid://122079702018204",
+			NormalMap = "rbxassetid://134114086261137",
+			RoughnessMap = "rbxassetid://123855495198355",
+			MetalnessMap = "rbxassetid://97134864476718"},
 		["Handle"] = {
-			ColorMap = RID.."138204534535671",
-			NormalMap = RID.."138731933631797",
-			RoughnessMap = RID.."120755615517764",
-			MetalnessMap = RID.."131418816879077"},
+			ColorMap = "rbxassetid://138204534535671",
+			NormalMap = "rbxassetid://138731933631797",
+			RoughnessMap = "rbxassetid://120755615517764",
+			MetalnessMap = "rbxassetid://131418816879077"},
 		["Mag"] = {
-			ColorMap = RID.."80337144831493",
-			NormalMap = RID.."96084895165208",
-			RoughnessMap = RID.."99781135457452",
-			MetalnessMap = RID.."75072642622716"}
+			ColorMap = "rbxassetid://80337144831493",
+			NormalMap = "rbxassetid://96084895165208",
+			RoughnessMap = "rbxassetid://99781135457452",
+			MetalnessMap = "rbxassetid://75072642622716"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Maker', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."3801634190"},
+			ColorMap = "rbxassetid://3801634190"},
 		["Handle"] = {
-			ColorMap = RID.."3801634190"},
+			ColorMap = "rbxassetid://3801634190"},
 		["Mag"] = {
-			ColorMap = RID.."3801634190"}
+			ColorMap = "rbxassetid://3801634190"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Mean Green', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."3037064977"},
+			ColorMap = "rbxassetid://3037064977"},
 		["Handle"] = {
-			ColorMap = RID.."3037064977"},
+			ColorMap = "rbxassetid://3037064977"},
 		["Mag"] = {
-			ColorMap = RID.."3037064977"}
+			ColorMap = "rbxassetid://3037064977"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Moon', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."88103977503757"},
+			ColorMap = "rbxassetid://88103977503757"},
 		["Handle"] = {
-			ColorMap = RID.."135509063723033"},
+			ColorMap = "rbxassetid://135509063723033"},
 		["Mag"] = {
-			ColorMap = RID.."88695159864393"}
+			ColorMap = "rbxassetid://88695159864393"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Neonline', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."6802562883"},
+			ColorMap = "rbxassetid://6802562883"},
 		["Handle"] = {
-			ColorMap = RID.."6802562883"},
+			ColorMap = "rbxassetid://6802562883"},
 		["Mag"] = {
-			ColorMap = RID.."6802562883"}
+			ColorMap = "rbxassetid://6802562883"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Outlaws', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."2687973291"},
+			ColorMap = "rbxassetid://2687973291"},
 		["Handle"] = {
-			ColorMap = RID.."2687973291"},
+			ColorMap = "rbxassetid://2687973291"},
 		["Mag"] = {
-			ColorMap = RID.."2687973291"}
+			ColorMap = "rbxassetid://2687973291"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Outrunner', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."3180036472"},
+			ColorMap = "rbxassetid://3180036472"},
 		["Handle"] = {
-			ColorMap = RID.."3180036472"},
+			ColorMap = "rbxassetid://3180036472"},
 		["Mag"] = {
-			ColorMap = RID.."3180036472"}
+			ColorMap = "rbxassetid://3180036472"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Patch', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."2490654997"},
+			ColorMap = "rbxassetid://2490654997"},
 		["Handle"] = {
-			ColorMap = RID.."2490654997"},
+			ColorMap = "rbxassetid://2490654997"},
 		["Mag"] = {
-			ColorMap = RID.."2490654997"}
+			ColorMap = "rbxassetid://2490654997"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Plated', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."4432858323"},
+			ColorMap = "rbxassetid://4432858323"},
 		["Handle"] = {
-			ColorMap = RID.."4432858323"},
+			ColorMap = "rbxassetid://4432858323"},
 		["Mag"] = {
-			ColorMap = RID.."4432858323"}
+			ColorMap = "rbxassetid://4432858323"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Precision', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."2766659780"},
+			ColorMap = "rbxassetid://2766659780"},
 		["Handle"] = {
-			ColorMap = RID.."2766659780"},
+			ColorMap = "rbxassetid://2766659780"},
 		["Mag"] = {
-			ColorMap = RID.."2766659780"}
+			ColorMap = "rbxassetid://2766659780"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Quantum', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."1486587397"},
+			ColorMap = "rbxassetid://1486587397"},
 		["Handle"] = {
-			ColorMap = RID.."1486587397"},
+			ColorMap = "rbxassetid://1486587397"},
 		["Mag"] = {
-			ColorMap = RID.."1486587397"}
+			ColorMap = "rbxassetid://1486587397"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Quicktime', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."4471901482"},
+			ColorMap = "rbxassetid://4471901482"},
 		["Handle"] = {
-			ColorMap = RID.."4471901482"},
+			ColorMap = "rbxassetid://4471901482"},
 		["Mag"] = {
-			ColorMap = RID.."4471901482"}
+			ColorMap = "rbxassetid://4471901482"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Scapter', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."2214315787"},
+			ColorMap = "rbxassetid://2214315787"},
 		["Handle"] = {
-			ColorMap = RID.."2214315787"},
+			ColorMap = "rbxassetid://2214315787"},
 		["Mag"] = {
-			ColorMap = RID.."2214315787"}
+			ColorMap = "rbxassetid://2214315787"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Scythe', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."5860843190"},
+			ColorMap = "rbxassetid://5860843190"},
 		["Handle"] = {
-			ColorMap = RID.."5860843410"},
+			ColorMap = "rbxassetid://5860843410"},
 		["Mag"] = {
-			ColorMap = RID.."5860843292"}
+			ColorMap = "rbxassetid://5860843292"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Secret Santa', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."104275946599604"},
+			ColorMap = "rbxassetid://104275946599604"},
 		["Handle"] = {
-			ColorMap = RID.."104275946599604"},
+			ColorMap = "rbxassetid://104275946599604"},
 		["Mag"] = {
-			ColorMap = RID.."104275946599604"}
+			ColorMap = "rbxassetid://104275946599604"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Shooting Star', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."4420192040"},
+			ColorMap = "rbxassetid://4420192040"},
 		["Handle"] = {
-			ColorMap = RID.."4420192040"},
+			ColorMap = "rbxassetid://4420192040"},
 		["Mag"] = {
-			ColorMap = RID.."4420192040"}
+			ColorMap = "rbxassetid://4420192040"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Skin Committee', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."2218676526"},
+			ColorMap = "rbxassetid://2218676526"},
 		["Handle"] = {
-			ColorMap = RID.."2218676526"},
+			ColorMap = "rbxassetid://2218676526"},
 		["Mag"] = {
-			ColorMap = RID.."2218676526"}
+			ColorMap = "rbxassetid://2218676526"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Spooky', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."92421825217907"},
+			ColorMap = "rbxassetid://92421825217907"},
 		["Handle"] = {
-			ColorMap = RID.."92421825217907"},
+			ColorMap = "rbxassetid://92421825217907"},
 		["Mag"] = {
-			ColorMap = RID.."92421825217907"}
+			ColorMap = "rbxassetid://92421825217907"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."81142671876504"},
+			ColorMap = "rbxassetid://81142671876504"},
 		["Handle"] = {
-			ColorMap = RID.."81142671876504"},
+			ColorMap = "rbxassetid://81142671876504"},
 		["Mag"] = {
-			ColorMap = RID.."81142671876504"}
+			ColorMap = "rbxassetid://81142671876504"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Super Weeb', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."9939762397"},
+			ColorMap = "rbxassetid://9939762397"},
 		["Handle"] = {
-			ColorMap = RID.."9939760856"},
+			ColorMap = "rbxassetid://9939760856"},
 		["Mag"] = {
-			ColorMap = RID.."9939761623"}
+			ColorMap = "rbxassetid://9939761623"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Survivor', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."4204545219"},
+			ColorMap = "rbxassetid://4204545219"},
 		["Handle"] = {
-			ColorMap = RID.."4204545219"},
+			ColorMap = "rbxassetid://4204545219"},
 		["Mag"] = {
-			ColorMap = RID.."4204545219"}
+			ColorMap = "rbxassetid://4204545219"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Toxic Nitro', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."4680497450"},
+			ColorMap = "rbxassetid://4680497450"},
 		["Handle"] = {
-			ColorMap = RID.."4680497450"},
+			ColorMap = "rbxassetid://4680497450"},
 		["Mag"] = {
-			ColorMap = RID.."4680497450"}
+			ColorMap = "rbxassetid://4680497450"}
 	})
 end)
 
@@ -61531,66 +61530,66 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Trinity', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."17488520961"},
+			ColorMap = "rbxassetid://17488520961"},
 		["Handle"] = {
-			ColorMap = RID.."17488520961"},
+			ColorMap = "rbxassetid://17488520961"},
 		["Mag"] = {
-			ColorMap = RID.."17488520961"}
+			ColorMap = "rbxassetid://17488520961"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Ugly Sweater', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."2666303928"},
+			ColorMap = "rbxassetid://2666303928"},
 		["Handle"] = {
-			ColorMap = RID.."2666303928"},
+			ColorMap = "rbxassetid://2666303928"},
 		["Mag"] = {
-			ColorMap = RID.."2666303928"}
+			ColorMap = "rbxassetid://2666303928"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | VAV', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."3984665816"},
+			ColorMap = "rbxassetid://3984665816"},
 		["Handle"] = {
-			ColorMap = RID.."3984665816"},
+			ColorMap = "rbxassetid://3984665816"},
 		["Mag"] = {
-			ColorMap = RID.."3984665816"}
+			ColorMap = "rbxassetid://3984665816"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Variant Camo', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."1837902606"},
+			ColorMap = "rbxassetid://1837902606"},
 		["Handle"] = {
-			ColorMap = RID.."1837902606"},
+			ColorMap = "rbxassetid://1837902606"},
 		["Mag"] = {
-			ColorMap = RID.."1837902606"}
+			ColorMap = "rbxassetid://1837902606"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Weeb', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."11797902974"},
+			ColorMap = "rbxassetid://11797902974"},
 		["Handle"] = {
-			ColorMap = RID.."11797902684"},
+			ColorMap = "rbxassetid://11797902684"},
 		["Mag"] = {
-			ColorMap = RID.."11797902123"}
+			ColorMap = "rbxassetid://11797902123"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Yltude', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = RID.."4502750208"},
+			ColorMap = "rbxassetid://4502750208"},
 		["Handle"] = {
-			ColorMap = RID.."4502750208"},
+			ColorMap = "rbxassetid://4502750208"},
 		["Mag"] = {
-			ColorMap = RID.."4502750208"}
+			ColorMap = "rbxassetid://4502750208"}
 	})
 end)
 -- TODO: Stock skin
@@ -61598,15 +61597,15 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'AUG A3 | Chilly Night', PLACEHOLDERICON, 0, function()
 	EquipSkin("AUG", {
 		["Bolt2"] = {
-			ColorMap = RID.."4540748212"},
+			ColorMap = "rbxassetid://4540748212"},
 		["Handle2"] = {
-			ColorMap = RID.."4540748212"},
+			ColorMap = "rbxassetid://4540748212"},
 		["Mag2"] = {
-			ColorMap = RID.."4540748212"},
+			ColorMap = "rbxassetid://4540748212"},
 		["Part"] = {
-			ColorMap = RID.."4540748212"},
+			ColorMap = "rbxassetid://4540748212"},
 		["Scope"] = {
-			ColorMap = RID.."4540748212"}
+			ColorMap = "rbxassetid://4540748212"}
 	})
 end)
 
@@ -61614,804 +61613,962 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'AUG A3 | Dream Hound', PLACEHOLDERICON, 0, function()
 	EquipSkin("AUG", {
 		["Bolt2"] = {
-			ColorMap = RID.."1486572972"},
+			ColorMap = "rbxassetid://1486572972"},
 		["Handle2"] = {
-			ColorMap = RID.."1486572972"},
+			ColorMap = "rbxassetid://1486572972"},
 		["Mag2"] = {
-			ColorMap = RID.."1486572972"},
+			ColorMap = "rbxassetid://1486572972"},
 		["Part"] = {
-			ColorMap = RID.."1486572972"},
+			ColorMap = "rbxassetid://1486572972"},
 		["Scope"] = {
-			ColorMap = RID.."981402003"}
+			ColorMap = "rbxassetid://981402003"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AUG A3 | Enlisted', PLACEHOLDERICON, 0, function()
 	EquipSkin("AUG", {
 		["Bolt2"] = {
-			ColorMap = RID.."2445818853"},
+			ColorMap = "rbxassetid://2445818853"},
 		["Handle2"] = {
-			ColorMap = RID.."2445818853"},
+			ColorMap = "rbxassetid://2445818853"},
 		["Mag2"] = {
-			ColorMap = RID.."2445818853"},
+			ColorMap = "rbxassetid://2445818853"},
 		["Part"] = {
-			ColorMap = RID.."2445818853"},
+			ColorMap = "rbxassetid://2445818853"},
 		["Scope"] = {
-			ColorMap = RID.."2445833627"}
+			ColorMap = "rbxassetid://2445833627"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AUG A3 | Equalizer', PLACEHOLDERICON, 0, function()
 	EquipSkin("AUG", {
 		["Bolt2"] = {
-			ColorMap = RID.."83632488106302"},
+			ColorMap = "rbxassetid://83632488106302"},
 		["Handle2"] = {
-			ColorMap = RID.."83632488106302"},
+			ColorMap = "rbxassetid://83632488106302"},
 		["Mag2"] = {
-			ColorMap = RID.."83632488106302"},
+			ColorMap = "rbxassetid://83632488106302"},
 		["Part"] = {
-			ColorMap = RID.."83632488106302"},
+			ColorMap = "rbxassetid://83632488106302"},
 		["Scope"] = {
-			ColorMap = RID.."128882711919914"}
+			ColorMap = "rbxassetid://128882711919914"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AUG A3 | Graffiti', PLACEHOLDERICON, 0, function()
 	EquipSkin("AUG", {
 		["Bolt2"] = {
-			ColorMap = RID.."4502752740"},
+			ColorMap = "rbxassetid://4502752740"},
 		["Handle2"] = {
-			ColorMap = RID.."4502752740"},
+			ColorMap = "rbxassetid://4502752740"},
 		["Mag2"] = {
-			ColorMap = RID.."4502752740"},
+			ColorMap = "rbxassetid://4502752740"},
 		["Part"] = {
-			ColorMap = RID.."4502752740"},
+			ColorMap = "rbxassetid://4502752740"},
 		["Scope"] = {
-			ColorMap = RID.."4502752941"}
+			ColorMap = "rbxassetid://4502752941"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AUG A3 | Hollows', PLACEHOLDERICON, 0, function()
 	EquipSkin("AUG", {
 		["Bolt2"] = {
-			ColorMap = RID.."132612437207916"},
+			ColorMap = "rbxassetid://132612437207916"},
 		["Handle2"] = {
-			ColorMap = RID.."132612437207916"},
+			ColorMap = "rbxassetid://132612437207916"},
 		["Mag2"] = {
-			ColorMap = RID.."132612437207916"},
+			ColorMap = "rbxassetid://132612437207916"},
 		["Part"] = {
-			ColorMap = RID.."132612437207916"},
+			ColorMap = "rbxassetid://132612437207916"},
 		["Scope"] = {
-			ColorMap = RID.."113776776616533"}
+			ColorMap = "rbxassetid://113776776616533"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AUG A3 | Homestead', PLACEHOLDERICON, 0, function()
 	EquipSkin("AUG", {
 		["Bolt2"] = {
-			ColorMap = RID.."2666243945"},
+			ColorMap = "rbxassetid://2666243945"},
 		["Handle2"] = {
-			ColorMap = RID.."2666243945"},
+			ColorMap = "rbxassetid://2666243945"},
 		["Mag2"] = {
-			ColorMap = RID.."2666243945"},
+			ColorMap = "rbxassetid://2666243945"},
 		["Part"] = {
-			ColorMap = RID.."2666243945"},
+			ColorMap = "rbxassetid://2666243945"},
 		["Scope"] = {
-			ColorMap = RID.."2666243945"}
+			ColorMap = "rbxassetid://2666243945"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AUG A3 | Maker', PLACEHOLDERICON, 0, function()
 	EquipSkin("AUG", {
 		["Bolt2"] = {
-			ColorMap = RID.."3179790339"},
+			ColorMap = "rbxassetid://3179790339"},
 		["Handle2"] = {
-			ColorMap = RID.."3179790339"},
+			ColorMap = "rbxassetid://3179790339"},
 		["Mag2"] = {
-			ColorMap = RID.."3179790339"},
+			ColorMap = "rbxassetid://3179790339"},
 		["Part"] = {
-			ColorMap = RID.."3179790339"},
+			ColorMap = "rbxassetid://3179790339"},
 		["Scope"] = {
-			ColorMap = RID.."3179791960"}
+			ColorMap = "rbxassetid://3179791960"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AUG A3 | Mystique', PLACEHOLDERICON, 0, function()
 	EquipSkin("AUG", {
 		["Bolt2"] = {
-			ColorMap = RID.."5861164532"},
+			ColorMap = "rbxassetid://5861164532"},
 		["Handle2"] = {
-			ColorMap = RID.."5861164532"},
+			ColorMap = "rbxassetid://5861164532"},
 		["Mag2"] = {
-			ColorMap = RID.."5861164532"},
+			ColorMap = "rbxassetid://5861164532"},
 		["Part"] = {
-			ColorMap = RID.."5861164532"},
+			ColorMap = "rbxassetid://5861164532"},
 		["Scope"] = {
-			ColorMap = RID.."5861164663"}
+			ColorMap = "rbxassetid://5861164663"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AUG A3 | NightHawk', PLACEHOLDERICON, 0, function()
 	EquipSkin("AUG", {
 		["Bolt2"] = {
-			ColorMap = RID.."3074133376"},
+			ColorMap = "rbxassetid://3074133376"},
 		["Handle2"] = {
-			ColorMap = RID.."3074133376"},
+			ColorMap = "rbxassetid://3074133376"},
 		["Mag2"] = {
-			ColorMap = RID.."3074133376"},
+			ColorMap = "rbxassetid://3074133376"},
 		["Part"] = {
-			ColorMap = RID.."3074133376"},
+			ColorMap = "rbxassetid://3074133376"},
 		["Scope"] = {
-			ColorMap = RID.."3074132814"}
+			ColorMap = "rbxassetid://3074132814"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AUG A3 | Phoenix', PLACEHOLDERICON, 0, function()
 	EquipSkin("AUG", {
 		["Bolt2"] = {
-			ColorMap = RID.."1250147181"},
+			ColorMap = "rbxassetid://1250147181"},
 		["Handle2"] = {
-			ColorMap = RID.."1250147181"},
+			ColorMap = "rbxassetid://1250147181"},
 		["Mag2"] = {
-			ColorMap = RID.."1250147181"},
+			ColorMap = "rbxassetid://1250147181"},
 		["Part"] = {
-			ColorMap = RID.."1250147181"},
+			ColorMap = "rbxassetid://1250147181"},
 		["Scope"] = {
-			ColorMap = RID.."1250147441"}
+			ColorMap = "rbxassetid://1250147441"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AUG A3 | Soldier', PLACEHOLDERICON, 0, function()
 	EquipSkin("AUG", {
 		["Bolt2"] = {
-			ColorMap = RID.."6802564325"},
+			ColorMap = "rbxassetid://6802564325"},
 		["Handle2"] = {
-			ColorMap = RID.."6802564325"},
+			ColorMap = "rbxassetid://6802564325"},
 		["Mag2"] = {
-			ColorMap = RID.."6802564325"},
+			ColorMap = "rbxassetid://6802564325"},
 		["Part"] = {
-			ColorMap = RID.."6802564325"},
+			ColorMap = "rbxassetid://6802564325"},
 		["Scope"] = {
-			ColorMap = RID.."6803330823"}
+			ColorMap = "rbxassetid://6803330823"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AUG A3 | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("AUG", {
 		["Bolt2"] = {
-			ColorMap = RID.."2471930933"},
+			ColorMap = "rbxassetid://2471930933"},
 		["Handle2"] = {
-			ColorMap = RID.."2471930933"},
+			ColorMap = "rbxassetid://2471930933"},
 		["Mag2"] = {
-			ColorMap = RID.."2471930933"},
+			ColorMap = "rbxassetid://2471930933"},
 		["Part"] = {
-			ColorMap = RID.."2471930933"},
+			ColorMap = "rbxassetid://2471930933"},
 		["Scope"] = {
-			ColorMap = RID.."113475944462427"}
+			ColorMap = "rbxassetid://113475944462427"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AUG A3 | Sunsthetic', PLACEHOLDERICON, 0, function()
 	EquipSkin("AUG", {
 		["Bolt2"] = {
-			ColorMap = RID.."2916233669"},
+			ColorMap = "rbxassetid://2916233669"},
 		["Handle2"] = {
-			ColorMap = RID.."2916233669"},
+			ColorMap = "rbxassetid://2916233669"},
 		["Mag2"] = {
-			ColorMap = RID.."2916233669"},
+			ColorMap = "rbxassetid://2916233669"},
 		["Part"] = {
-			ColorMap = RID.."2916233669"},
+			ColorMap = "rbxassetid://2916233669"},
 		["Scope"] = {
-			ColorMap = RID.."2916233948"}
+			ColorMap = "rbxassetid://2916233948"}
 	})
 end)
 
--- Note: A-Z: Handle2, Part1, Mag2, Barrel (missing ingame for now), Bolt2, Lever2
+-- Note: Handle2, Part (basically Stock), Part1, Mag2, Barrel, Slide (previously Bolt2), Slide2 (previously Lever2)
+-- Note2: There's also the Part that's Stock
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Abaddon', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://2962046311"},
 		["Handle2"] = {
-			ColorMap = RID.."2961862202"},
-		["Mag2"] = {
-			ColorMap = RID.."2961862202"},
-		["Bolt2"] = {
-			ColorMap = RID.."2961862202"},
-		["Lever2"] = {
-			ColorMap = RID.."2961862202"},
+			ColorMap = "rbxassetid://2961862202"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://2961862202"},
+		["Part"] = {
+			ColorMap = "rbxassetid://2962046311"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://2961862202"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://2961862202"},
 		["Part1"] = {
-			ColorMap = RID.."2962046311"}
+			ColorMap = "rbxassetid://2962046311"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Autumness', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://1491912245"},
 		["Handle2"] = {
-			ColorMap = RID.."3801634838"},
-		["Mag2"] = {
-			ColorMap = RID.."3801634838"},
-		["Bolt2"] = {
-			ColorMap = RID.."3801634838"},
-		["Lever2"] = {
-			ColorMap = RID.."3801634838"},
+			ColorMap = "rbxassetid://3801634838"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://3801634838"},
+		["Part"] = {
+			ColorMap = "rbxassetid://1491912245"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://3801634838"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://3801634838"},
 		["Part1"] = {
-			ColorMap = RID.."1491912245"}
+			ColorMap = "rbxassetid://1491912245"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Blastech', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://2957203652"},
 		["Handle2"] = {
-			ColorMap = RID.."2957203652"},
-		["Mag2"] = {
-			ColorMap = RID.."2957203652"},
-		["Bolt2"] = {
-			ColorMap = RID.."2957203652"},
-		["Lever2"] = {
-			ColorMap = RID.."2957203652"},
+			ColorMap = "rbxassetid://2957203652"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://2957203652"},
+		["Part"] = {
+			ColorMap = "rbxassetid://2957203652"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://2957203652"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://2957203652"},
 		["Part1"] = {
-			ColorMap = RID.."2957205106"}
+			ColorMap = "rbxassetid://2957205106"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Bloodborne', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://3647877677"},
 		["Handle2"] = {
-			ColorMap = RID.."3647877677"},
-		["Mag2"] = {
-			ColorMap = RID.."3647877677"},
-		["Bolt2"] = {
-			ColorMap = RID.."3647877677"},
-		["Lever2"] = {
-			ColorMap = RID.."3647877677"},
+			ColorMap = "rbxassetid://3647877677"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://3647877677"},
+		["Part"] = {
+			ColorMap = "rbxassetid://3647877677"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://3647877677"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://3647877677"},
 		["Part1"] = {
-			ColorMap = RID.."1837907931"}
+			ColorMap = "rbxassetid://1837907931"}
 	})
 end)
 
 -- Note: Archived
 CreateTabButton('GameSkins', 'APPEND', 'AWP | BloxersClub', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://17657142770"},
 		["Handle2"] = {
-			ColorMap = RID.."17657142770"},
-		["Mag2"] = {
-			ColorMap = RID.."17657142770"},
-		["Bolt2"] = {
-			ColorMap = RID.."17657142770"},
-		["Lever2"] = {
-			ColorMap = RID.."17657142770"},
+			ColorMap = "rbxassetid://17657142770"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://17657142770"},
+		["Part"] = {
+			ColorMap = "rbxassetid://17657142770"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://17657142770"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://17657142770"},
 		["Part1"] = {
-			ColorMap = RID.."17626743177"}
+			ColorMap = "rbxassetid://17626743177"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Cemetery', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://91337114177674"},
 		["Handle2"] = {
-			ColorMap = RID.."74994980230858"},
-		["Mag2"] = {
-			ColorMap = RID.."74994980230858"},
-		["Bolt2"] = {
-			ColorMap = RID.."74994980230858"},
-		["Lever2"] = {
-			ColorMap = RID.."74994980230858"},
+			ColorMap = "rbxassetid://74994980230858"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://74994980230858"},
+		["Part"] = {
+			ColorMap = "rbxassetid://91337114177674"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://74994980230858"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://74994980230858"},
 		["Part1"] = {
-			ColorMap = RID.."121520139804573"}
+			ColorMap = "rbxassetid://121520139804573"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Coffin Biter', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://2490655179"},
 		["Handle2"] = {
-			ColorMap = RID.."2490655179"},
-		["Mag2"] = {
-			ColorMap = RID.."2490655179"},
-		["Bolt2"] = {
-			ColorMap = RID.."2490655179"},
-		["Lever2"] = {
-			ColorMap = RID.."2490655179"},
+			ColorMap = "rbxassetid://2490655179"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://2490655179"},
+		["Part"] = {
+			ColorMap = "rbxassetid://2490655179"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://2490655179"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://2490655179"},
 		["Part1"] = {
-			ColorMap = RID.."1837907931"}
+			ColorMap = "rbxassetid://1837907931"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Darkness', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://5861041299"},
 		["Handle2"] = {
-			ColorMap = RID.."5861041299"},
-		["Mag2"] = {
-			ColorMap = RID.."5861041299"},
-		["Bolt2"] = {
-			ColorMap = RID.."5861041299"},
-		["Lever2"] = {
-			ColorMap = RID.."5861041299"},
+			ColorMap = "rbxassetid://5861041299"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://5861041299"},
+		["Part"] = {
+			ColorMap = "rbxassetid://5861041299"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://5861041299"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://5861041299"},
 		["Part1"] = {
-			ColorMap = RID.."5861333677"}
+			ColorMap = "rbxassetid://5861333677"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Desert Camo', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://1630868906"},
 		["Handle2"] = {
-			ColorMap = RID.."1630868906"},
-		["Mag2"] = {
-			ColorMap = RID.."1630868906"},
-		["Bolt2"] = {
-			ColorMap = RID.."1630868906"},
-		["Lever2"] = {
-			ColorMap = RID.."1630868906"},
+			ColorMap = "rbxassetid://1630868906"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://1630868906"},
+		["Part"] = {
+			ColorMap = "rbxassetid://1630868906"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://1630868906"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://1630868906"},
 		["Part1"] = {
-			ColorMap = RID.."1630869364"}
+			ColorMap = "rbxassetid://1630869364"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Difference', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://1560854892"},
 		["Handle2"] = {
-			ColorMap = RID.."1560854892"},
-		["Mag2"] = {
-			ColorMap = RID.."1560854892"},
-		["Bolt2"] = {
-			ColorMap = RID.."1560854892"},
-		["Lever2"] = {
-			ColorMap = RID.."1560854892"},
+			ColorMap = "rbxassetid://1560854892"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://1560854892"},
+		["Part"] = {
+			ColorMap = "rbxassetid://1560854892"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://1560854892"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://1560854892"},
 		["Part1"] = {
-			ColorMap = RID.."1560854666"}
+			ColorMap = "rbxassetid://1560854666"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Dragon', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://4453843190"},
 		["Handle2"] = {
-			ColorMap = RID.."4453843190"},
-		["Mag2"] = {
-			ColorMap = RID.."4453843190"},
-		["Bolt2"] = {
-			ColorMap = RID.."4453843190"},
-		["Lever2"] = {
-			ColorMap = RID.."4453843190"},
+			ColorMap = "rbxassetid://4453843190"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://4453843190"},
+		["Part"] = {
+			ColorMap = "rbxassetid://4453843190"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://4453843190"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://4453843190"},
 		["Part1"] = {
-			ColorMap = RID.."4453843945"}
+			ColorMap = "rbxassetid://4453843945"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Cybertech', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
-		-- ["Barrel"] = {
-		-- 	ColorMap = RID.."94491101274985",
-		-- 	NormalMap = RID.."86079320669016",
-		-- 	RoughnessMap = RID.."136731322685929",
-		-- 	MetalnessMap = RID.."115959003478987"},
+		["Barrel"] = {
+			ColorMap = "rbxassetid://94491101274985",
+			NormalMap = "rbxassetid://86079320669016",
+			RoughnessMap = "rbxassetid://136731322685929",
+			MetalnessMap = "rbxassetid://115959003478987"},
 		["Handle2"] = {
-			ColorMap = RID.."90772588096821",
-			NormalMap = RID.."131220992987868",
-			RoughnessMap = RID.."138379340073117",
-			MetalnessMap = RID.."116257701110032"},
-		["Mag2"] = {
-			ColorMap = RID.."90772588096821",
-			NormalMap = RID.."131220992987868",
-			RoughnessMap = RID.."138379340073117",
-			MetalnessMap = RID.."116257701110032"},
-		["Bolt2"] = {
-			ColorMap = RID.."90772588096821",
-			NormalMap = RID.."131220992987868",
-			RoughnessMap = RID.."138379340073117",
-			MetalnessMap = RID.."116257701110032"},
-		["Lever2"] = {
-			ColorMap = RID.."90772588096821",
-			NormalMap = RID.."131220992987868",
-			RoughnessMap = RID.."138379340073117",
-			MetalnessMap = RID.."116257701110032"},
+			ColorMap = "rbxassetid://90772588096821",
+			NormalMap = "rbxassetid://131220992987868",
+			RoughnessMap = "rbxassetid://138379340073117",
+			MetalnessMap = "rbxassetid://116257701110032"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://90772588096821",
+			NormalMap = "rbxassetid://131220992987868",
+			RoughnessMap = "rbxassetid://138379340073117",
+			MetalnessMap = "rbxassetid://116257701110032"},
+		["Part"] = {
+			ColorMap = "rbxassetid://90772588096821",
+			NormalMap = "rbxassetid://131220992987868",
+			RoughnessMap = "rbxassetid://138379340073117",
+			MetalnessMap = "rbxassetid://116257701110032"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://90772588096821",
+			NormalMap = "rbxassetid://131220992987868",
+			RoughnessMap = "rbxassetid://138379340073117",
+			MetalnessMap = "rbxassetid://116257701110032"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://90772588096821",
+			NormalMap = "rbxassetid://131220992987868",
+			RoughnessMap = "rbxassetid://138379340073117",
+			MetalnessMap = "rbxassetid://116257701110032"},
 		["Part1"] = {
-			ColorMap = RID.."87926088735639",
-			NormalMap = RID.."96337851280552",
-			RoughnessMap = RID.."80315568171928",
-			MetalnessMap = RID.."106592880637945"}
+			ColorMap = "rbxassetid://87926088735639",
+			NormalMap = "rbxassetid://96337851280552",
+			RoughnessMap = "rbxassetid://80315568171928",
+			MetalnessMap = "rbxassetid://106592880637945"}
 	})
 end)
 
--- Note/TODO: Mag2 is now different in-game for some reason. Was "140099799357339"
+-- Note/TODO: Mag is now different in-game for some reason. Was "140099799357339"
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Elfspire', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://114231872126726"},
 		["Handle2"] = {
-			ColorMap = RID.."140099799357339"},
-		["Mag2"] = {
-			ColorMap = RID.."114231872126726"},
-		["Bolt2"] = {
-			ColorMap = RID.."114231872126726"},
-		["Lever2"] = {
-			ColorMap = RID.."114231872126726"},
+			ColorMap = "rbxassetid://140099799357339"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://114231872126726"},
+		["Part"] = {
+			ColorMap = "rbxassetid://114231872126726"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://114231872126726"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://114231872126726"},
 		["Part1"] = {
-			ColorMap = RID.."117420927136399"}
+			ColorMap = "rbxassetid://117420927136399"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Forever', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://2916241471"},
 		["Handle2"] = {
-			ColorMap = RID.."2916241471"},
-		["Mag2"] = {
-			ColorMap = RID.."2916241471"},
-		["Bolt2"] = {
-			ColorMap = RID.."2916241471"},
-		["Lever2"] = {
-			ColorMap = RID.."2916241471"},
+			ColorMap = "rbxassetid://2916241471"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://2916241471"},
+		["Part"] = {
+			ColorMap = "rbxassetid://2916241471"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://2916241471"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://2916241471"},
 		["Part1"] = {
-			ColorMap = RID.."2916240946"}
+			ColorMap = "rbxassetid://2916240946"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Grepkin', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://3037064717"},
 		["Handle2"] = {
-			ColorMap = RID.."3037064717"},
-		["Mag2"] = {
-			ColorMap = RID.."3037064717"},
-		["Bolt2"] = {
-			ColorMap = RID.."1598636032"},
-		["Lever2"] = {
-			ColorMap = RID.."1598636032"},
+			ColorMap = "rbxassetid://3037064717"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://3037064717"},
+		["Part"] = {
+			ColorMap = "rbxassetid://3037064717"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://1598636032"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://1598636032"},
 		["Part1"] = {
-			ColorMap = RID.."1598635820"}
+			ColorMap = "rbxassetid://1598635820"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Grim', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://7943837662"},
 		["Handle2"] = {
-			ColorMap = RID.."7943837662"},
-		["Mag2"] = {
-			ColorMap = RID.."7943837662"},
-		["Bolt2"] = {
-			ColorMap = RID.."7943837662"},
-		["Lever2"] = {
-			ColorMap = RID.."7943837662"},
+			ColorMap = "rbxassetid://7943837662"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://7943837662"},
+		["Part"] = {
+			ColorMap = "rbxassetid://1598635820"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://7943837662"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://7943837662"},
 		["Part1"] = {
-			ColorMap = RID.."5861139281"}
+			ColorMap = "rbxassetid://5861139281"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Hika', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://4229559558"},
 		["Handle2"] = {
-			ColorMap = RID.."4229559558"},
-		["Mag2"] = {
-			ColorMap = RID.."4229559558"},
-		["Bolt2"] = {
-			ColorMap = RID.."4229559558"},
-		["Lever2"] = {
-			ColorMap = RID.."4229559558"},
+			ColorMap = "rbxassetid://4229559558"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://4229559558"},
+		["Part"] = {
+			ColorMap = "rbxassetid://4229559558"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://4229559558"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://4229559558"},
 		["Part1"] = {
-			ColorMap = RID.."4229560278"}
+			ColorMap = "rbxassetid://4229560278"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Illusion', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://4471897868"},
 		["Handle2"] = {
-			ColorMap = RID.."4471897868"},
-		["Mag2"] = {
-			ColorMap = RID.."4471897868"},
-		["Bolt2"] = {
-			ColorMap = RID.."4471897868"},
-		["Lever2"] = {
-			ColorMap = RID.."4471897868"},
+			ColorMap = "rbxassetid://4471897868"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://4471897868"},
+		["Part"] = {
+			ColorMap = "rbxassetid://4471897868"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://4471897868"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://4471897868"},
 		["Part1"] = {
-			ColorMap = RID.."4471898355"}
+			ColorMap = "rbxassetid://4471898355"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Instinct', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://1712449698"},
 		["Handle2"] = {
-			ColorMap = RID.."1712449698"},
-		["Mag2"] = {
-			ColorMap = RID.."1712449698"},
-		["Bolt2"] = {
-			ColorMap = RID.."1712449698"},
-		["Lever2"] = {
-			ColorMap = RID.."1712449698"},
+			ColorMap = "rbxassetid://1712449698"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://1712449698"},
+		["Part"] = {
+			ColorMap = "rbxassetid://1712449698"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://1712449698"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://1712449698"},
 		["Part1"] = {
-			ColorMap = RID.."1712449463"}
+			ColorMap = "rbxassetid://1712449463"}
 	})
 end)
 
 -- Note: FLACKO's version
 CreateTabButton('GameSkins', 'APPEND', 'AWP | JTF2', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://108193534024900"},
 		["Handle2"] = {
-			ColorMap = RID.."108193534024900"},
-		["Mag2"] = {
-			ColorMap = RID.."108193534024900"},
-		["Bolt2"] = {
-			ColorMap = RID.."108193534024900"},
-		["Lever2"] = {
-			ColorMap = RID.."108193534024900"},
+			ColorMap = "rbxassetid://108193534024900"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://108193534024900"},
+		["Part"] = {
+			ColorMap = "rbxassetid://108193534024900"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://108193534024900"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://108193534024900"},
 		["Part1"] = {
-			ColorMap = RID.."125454516616667"}
+			ColorMap = "rbxassetid://125454516616667"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Kumanjayi', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://4428774837"},
 		["Handle2"] = {
-			ColorMap = RID.."4428774837"},
-		["Mag2"] = {
-			ColorMap = RID.."4428774837"},
-		["Bolt2"] = {
-			ColorMap = RID.."4428774837"},
-		["Lever2"] = {
-			ColorMap = RID.."4428774837"},
+			ColorMap = "rbxassetid://4428774837"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://4428774837"},
+		["Part"] = {
+			ColorMap = "rbxassetid://4428774837"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://4428774837"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://4428774837"},
 		["Part1"] = {
-			ColorMap = RID.."111206863367531"}
+			ColorMap = "rbxassetid://111206863367531"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Lunar', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://3037134715"},
 		["Handle2"] = {
-			ColorMap = RID.."3037134715"},
-		["Mag2"] = {
-			ColorMap = RID.."3037134715"},
-		["Bolt2"] = {
-			ColorMap = RID.."2131938218"},
-		["Lever2"] = {
-			ColorMap = RID.."2131938218"},
+			ColorMap = "rbxassetid://3037134715"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://3037134715"},
+		["Part"] = {
+			ColorMap = "rbxassetid://3037134715"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://2131938218"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://2131938218"},
 		["Part1"] = {
-			ColorMap = RID.."2131938407"}
+			ColorMap = "rbxassetid://2131938407"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Nerf', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://1598678379"},
 		["Handle2"] = {
-			ColorMap = RID.."1598678379"},
-		["Mag2"] = {
-			ColorMap = RID.."1598678379"},
-		["Bolt2"] = {
-			ColorMap = RID.."1598678227"},
-		["Lever2"] = {
-			ColorMap = RID.."1598678227"},
+			ColorMap = "rbxassetid://1598678379"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://1598678379"},
+		["Part"] = {
+			ColorMap = "rbxassetid://1598678379"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://1598678227"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://1598678227"},
 		["Part1"] = {
-			ColorMap = RID.."1598678227"}
+			ColorMap = "rbxassetid://1598678227"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Northern Lights', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://2666303932"},
 		["Handle2"] = {
-			ColorMap = RID.."2666303932"},
-		["Mag2"] = {
-			ColorMap = RID.."2666303932"},
-		["Bolt2"] = {
-			ColorMap = RID.."2666303932"},
-		["Lever2"] = {
-			ColorMap = RID.."2666303932"},
+			ColorMap = "rbxassetid://2666303932"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://2666303932"},
+		["Part"] = {
+			ColorMap = "rbxassetid://2666303932"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://2666303932"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://2666303932"},
 		["Part1"] = {
-			ColorMap = RID.."1491912245"}
+			ColorMap = "rbxassetid://1491912245"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Oriental', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://6802597895"},
 		["Handle2"] = {
-			ColorMap = RID.."6802597895"},
-		["Mag2"] = {
-			ColorMap = RID.."6802597773"},
-		["Bolt2"] = {
-			ColorMap = RID.."6802597895"},
-		["Lever2"] = {
-			ColorMap = RID.."6802597895"},
+			ColorMap = "rbxassetid://6802597895"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://6802597773"},
+		["Part"] = {
+			ColorMap = "rbxassetid://6802597895"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://6802597895"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://6802597895"},
 		["Part1"] = {
-			ColorMap = RID.."6802597773"}
+			ColorMap = "rbxassetid://6802597773"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Pear Tree', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://2666243936"},
 		["Handle2"] = {
-			ColorMap = RID.."2666243936"},
-		["Mag2"] = {
-			ColorMap = RID.."2666243936"},
-		["Bolt2"] = {
-			ColorMap = RID.."2666243936"},
-		["Lever2"] = {
-			ColorMap = RID.."2666243936"},
+			ColorMap = "rbxassetid://2666243936"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://2666243936"},
+		["Part"] = {
+			ColorMap = "rbxassetid://2666243936"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://2666243936"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://2666243936"},
 		["Part1"] = {
-			ColorMap = RID.."1491912245"}
+			ColorMap = "rbxassetid://1491912245"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Pink Vision', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://1630798820"},
 		["Handle2"] = {
-			ColorMap = RID.."1630798820"},
-		["Mag2"] = {
-			ColorMap = RID.."1630798820"},
-		["Bolt2"] = {
-			ColorMap = RID.."1630798820"},
-		["Lever2"] = {
-			ColorMap = RID.."1630798820"},
+			ColorMap = "rbxassetid://1630798820"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://1630798820"},
+		["Part"] = {
+			ColorMap = "rbxassetid://1630798820"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://1630798820"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://1630798820"},
 		["Part1"] = {
-			ColorMap = RID.."1491912245"}
+			ColorMap = "rbxassetid://1491912245"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Pinkie', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://3415157856"},
 		["Handle2"] = {
-			ColorMap = RID.."3414434507"},
-		["Mag2"] = {
-			ColorMap = RID.."3414434507"},
-		["Bolt2"] = {
-			ColorMap = RID.."3414434507"},
-		["Lever2"] = {
-			ColorMap = RID.."3414434507"},
+			ColorMap = "rbxassetid://3414434507"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://3414434507"},
+		["Part"] = {
+			ColorMap = "rbxassetid://3415157856"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://3414434507"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://3414434507"},
 		["Part1"] = {
-			ColorMap = RID.."3415157031"}
+			ColorMap = "rbxassetid://3415157031"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Pumpkin Piercer', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://130670250118773"},
 		["Handle2"] = {
-			ColorMap = RID.."130670250118773"},
-		["Mag2"] = {
-			ColorMap = RID.."130670250118773"},
-		["Bolt2"] = {
-			ColorMap = RID.."130670250118773"},
-		["Lever2"] = {
-			ColorMap = RID.."130670250118773"},
+			ColorMap = "rbxassetid://130670250118773"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://130670250118773"},
+		["Part"] = {
+			ColorMap = "rbxassetid://88463624447631"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://130670250118773"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://130670250118773"},
 		["Part1"] = {
-			ColorMap = RID.."138879012487537"}
+			ColorMap = "rbxassetid://138879012487537"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Quicktime', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://4595852800"},
 		["Handle2"] = {
-			ColorMap = RID.."4595852800"},
-		["Mag2"] = {
-			ColorMap = RID.."4595852800"},
-		["Bolt2"] = {
-			ColorMap = RID.."4595852800"},
-		["Lever2"] = {
-			ColorMap = RID.."4595852800"},
+			ColorMap = "rbxassetid://4595852800"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://4595852800"},
+		["Part"] = {
+			ColorMap = "rbxassetid://4595852800"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://4595852800"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://4595852800"},
 		["Part1"] = {
-			ColorMap = RID.."4595852931"}
+			ColorMap = "rbxassetid://4595852931"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Racer', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://117373118463157"},
 		["Handle2"] = {
-			ColorMap = RID.."117373118463157"},
-		["Mag2"] = {
-			ColorMap = RID.."117373118463157"},
-		["Bolt2"] = {
-			ColorMap = RID.."117373118463157"},
-		["Lever2"] = {
-			ColorMap = RID.."117373118463157"},
+			ColorMap = "rbxassetid://117373118463157"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://117373118463157"},
+		["Part"] = {
+			ColorMap = "rbxassetid://117373118463157"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://117373118463157"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://117373118463157"},
 		["Part1"] = {
-			ColorMap = RID.."2766660032"}
+			ColorMap = "rbxassetid://2766660032"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Regina', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://4502758453"},
 		["Handle2"] = {
-			ColorMap = RID.."4502758453"},
-		["Mag2"] = {
-			ColorMap = RID.."4502758453"},
-		["Bolt2"] = {
-			ColorMap = RID.."4502758453"},
-		["Lever2"] = {
-			ColorMap = RID.."4502758453"},
+			ColorMap = "rbxassetid://4502758453"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://4502758453"},
+		["Part"] = {
+			ColorMap = "rbxassetid://4502758453"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://4502758453"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://4502758453"},
 		["Part1"] = {
-			ColorMap = RID.."4502758601"}
+			ColorMap = "rbxassetid://4502758601"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Retroactive', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://3180036555"},
 		["Handle2"] = {
-			ColorMap = RID.."3180036555"},
-		["Mag2"] = {
-			ColorMap = RID.."3180036555"},
-		["Bolt2"] = {
-			ColorMap = RID.."3180036555"},
-		["Lever2"] = {
-			ColorMap = RID.."3180036555"},
+			ColorMap = "rbxassetid://3180036555"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://3180036555"},
+		["Part"] = {
+			ColorMap = "rbxassetid://3180036555"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://3180036555"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://3180036555"},
 		["Part1"] = {
-			ColorMap = RID.."3180036669"}
+			ColorMap = "rbxassetid://3180036669"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Scapter', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://2218460521"},
 		["Handle2"] = {
-			ColorMap = RID.."2218460521"},
-		["Mag2"] = {
-			ColorMap = RID.."2218460521"},
-		["Bolt2"] = {
-			ColorMap = RID.."2218460521"},
-		["Lever2"] = {
-			ColorMap = RID.."2218460521"},
+			ColorMap = "rbxassetid://2218460521"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://2218460521"},
+		["Part"] = {
+			ColorMap = "rbxassetid://2218460521"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://2218460521"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://2218460521"},
 		["Part1"] = {
-			ColorMap = RID.."2218460521"}
+			ColorMap = "rbxassetid://2218460521"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Silence', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://4420271799"},
 		["Handle2"] = {
-			ColorMap = RID.."4420271799"},
-		["Mag2"] = {
-			ColorMap = RID.."4420271799"},
-		["Bolt2"] = {
-			ColorMap = RID.."4420271799"},
-		["Lever2"] = {
-			ColorMap = RID.."4420271799"},
+			ColorMap = "rbxassetid://4420271799"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://4420271799"},
+		["Part"] = {
+			ColorMap = "rbxassetid://4420271799"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://4420271799"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://4420271799"},
 		["Part1"] = {
-			ColorMap = RID.."4420285022"}
+			ColorMap = "rbxassetid://4420285022"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
+        ["Barrel"] = {
+			ColorMap = "rbxassetid://104696227946192"},
 		["Handle2"] = {
-			ColorMap = RID.."104696227946192"},
-		["Mag2"] = {
-			ColorMap = RID.."104696227946192"},
-		["Bolt2"] = {
-			ColorMap = RID.."104696227946192"},
-		["Lever2"] = {
-			ColorMap = RID.."104696227946192"},
+			ColorMap = "rbxassetid://104696227946192"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://104696227946192"},
+        ["Part"] = {
+			ColorMap = "rbxassetid://104696227946192"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://104696227946192"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://104696227946192"},
 		["Part1"] = {
-			ColorMap = RID.."96530139249227"}
+			ColorMap = "rbxassetid://96530139249227"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Toxic Nitro', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://1598635820"},
 		["Handle2"] = {
-			ColorMap = RID.."4680494479"},
-		["Mag2"] = {
-			ColorMap = RID.."4680494479"},
-		["Bolt2"] = {
-			ColorMap = RID.."4680494479"},
-		["Lever2"] = {
-			ColorMap = RID.."4680494479"},
+			ColorMap = "rbxassetid://4680494479"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://4680494479"},
+		["Part"] = {
+			ColorMap = "rbxassetid://1598635820"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://4680494479"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://4680494479"},
 		["Part1"] = {
-			ColorMap = RID.."4680495091"}
+			ColorMap = "rbxassetid://4680495091"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Venomus', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://4204545710"},
 		["Handle2"] = {
-			ColorMap = RID.."4204545710"},
-		["Mag2"] = {
-			ColorMap = RID.."4204545710"},
-		["Bolt2"] = {
-			ColorMap = RID.."4204545710"},
-		["Lever2"] = {
-			ColorMap = RID.."4204545710"},
+			ColorMap = "rbxassetid://4204545710"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://4204545710"},
+		["Part"] = {
+			ColorMap = "rbxassetid://4204545710"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://4204545710"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://4204545710"},
 		["Part1"] = {
-			ColorMap = RID.."4204563281"}
+			ColorMap = "rbxassetid://4204563281"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Weeb', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://3099184540"},
 		["Handle2"] = {
-			ColorMap = RID.."3099184540"},
-		["Mag2"] = {
-			ColorMap = RID.."3099184540"},
-		["Bolt2"] = {
-			ColorMap = RID.."3099184540"},
-		["Lever2"] = {
-			ColorMap = RID.."3099184540"},
+			ColorMap = "rbxassetid://3099184540"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://3099184540"},
+		["Part"] = {
+			ColorMap = "rbxassetid://3099184540"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://3099184540"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://3099184540"},
 		["Part1"] = {
-			ColorMap = RID.."3055561941"}
+			ColorMap = "rbxassetid://3055561941"}
 	})
 end)
 
@@ -62419,21 +62576,21 @@ end)
 -- CreateTabButton('GameSkins', 'APPEND', 'Banana | Stock', PLACEHOLDERICON, 0, function()
 -- 	EquipSkin("Banana", {
 -- 		["Handle"] = {
--- 			ColorMap = RID.."64374853"}
+-- 			ColorMap = "rbxassetid://64374853"}
 -- 	})
 -- end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Aequalis', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."4471897374"}
+			ColorMap = "rbxassetid://4471897374"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Banner', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."3411671620"}
+			ColorMap = "rbxassetid://3411671620"}
 	})
 end)
 
@@ -62441,21 +62598,21 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | BloxersClub', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."17602812711"}
+			ColorMap = "rbxassetid://17602812711"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Boreal', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."108792975416659"}
+			ColorMap = "rbxassetid://108792975416659"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Candy Cane', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."3061633120"}
+			ColorMap = "rbxassetid://3061633120"}
 	})
 end)
 
@@ -62463,101 +62620,101 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Ciro', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."12723520663"}
+			ColorMap = "rbxassetid://12723520663"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Consumed', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."4204673536"}
+			ColorMap = "rbxassetid://4204673536"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Cosmos', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."3037403943"}
+			ColorMap = "rbxassetid://3037403943"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Crimson Tiger', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."3037407439"}
+			ColorMap = "rbxassetid://3037407439"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Crow', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."3037381136"}
+			ColorMap = "rbxassetid://3037381136"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Dark Damascus', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."105758320045606",
-			NormalMap = RID.."99273355161120",
-			RoughnessMap = RID.."77832857127267",
-			MetalnessMap = RID.."106396025107501"}
+			ColorMap = "rbxassetid://105758320045606",
+			NormalMap = "rbxassetid://99273355161120",
+			RoughnessMap = "rbxassetid://77832857127267",
+			MetalnessMap = "rbxassetid://106396025107501"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Decor', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."6102035529"}
+			ColorMap = "rbxassetid://6102035529"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Delinquent', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."4587065328"}
+			ColorMap = "rbxassetid://4587065328"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Digital', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."3037376419"}
+			ColorMap = "rbxassetid://3037376419"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Easy-Bake', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."2231157740"}
+			ColorMap = "rbxassetid://2231157740"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Egg Shell', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."3081426573"}
+			ColorMap = "rbxassetid://3081426573"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Festive', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."4563313888"}
+			ColorMap = "rbxassetid://4563313888"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Frozen Dream', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."3037412263"}
+			ColorMap = "rbxassetid://3037412263"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Geo Blade', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."3090787350"}
+			ColorMap = "rbxassetid://3090787350"}
 	})
 end)
 
@@ -62565,147 +62722,147 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Ghastly', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."4212704221"}
+			ColorMap = "rbxassetid://4212704221"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Goo', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."4229838546"}
+			ColorMap = "rbxassetid://4229838546"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Grim', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."107999126251161"}
+			ColorMap = "rbxassetid://107999126251161"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Hallows', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."3037384053"}
+			ColorMap = "rbxassetid://3037384053"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Haunted', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."7944234347"}
+			ColorMap = "rbxassetid://7944234347"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Intertwine', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."3148103638"}
+			ColorMap = "rbxassetid://3148103638"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Kill or Treat', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."133646407967136"}
+			ColorMap = "rbxassetid://133646407967136"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Kimura', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."6803334855"}
+			ColorMap = "rbxassetid://6803334855"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Marbleized', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."3081769152"}
+			ColorMap = "rbxassetid://3081769152"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Mariposa', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."4436005125"}
+			ColorMap = "rbxassetid://4436005125"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Naval', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."3037417813"}
+			ColorMap = "rbxassetid://3037417813"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Neonic', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."3037422447"}
+			ColorMap = "rbxassetid://3037422447"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | RSL', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."3366908735"}
+			ColorMap = "rbxassetid://3366908735"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Racer', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."139156984089130"}
+			ColorMap = "rbxassetid://139156984089130"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Sapphire', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."3086628858"}
+			ColorMap = "rbxassetid://3086628858"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Silent Night', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."3065143627"}
+			ColorMap = "rbxassetid://3065143627"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Splattered', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."3037389626"}
+			ColorMap = "rbxassetid://3037389626"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."3023650545"}
+			ColorMap = "rbxassetid://3023650545"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Topaz', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."3037434456"}
+			ColorMap = "rbxassetid://3037434456"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Tropical', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."3037437138"}
+			ColorMap = "rbxassetid://3037437138"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Twitch', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."3037442406"}
+			ColorMap = "rbxassetid://3037442406"}
 	})
 end)
 
@@ -62713,673 +62870,674 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | UFO', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."4275337663"}
+			ColorMap = "rbxassetid://4275337663"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Wetland', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."3037393594"}
+			ColorMap = "rbxassetid://3037393594"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Worn', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."3037444809"}
+			ColorMap = "rbxassetid://3037444809"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Wrapped', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."4563313743"}
+			ColorMap = "rbxassetid://4563313743"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bearded Axe | Beast', PLACEHOLDERICON, 0, function()
 	EquipSkin("Axe", {
 		["Axe"] = {
-			ColorMap = RID.."4197575292"},
+			ColorMap = "rbxassetid://4197575292"},
 		["Handle"] = {
-			ColorMap = RID.."4197575292"}
+			ColorMap = "rbxassetid://4197575292"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bearded Axe | Splattered', PLACEHOLDERICON, 0, function()
 	EquipSkin("Axe", {
 		["Axe"] = {
-			ColorMap = RID.."4197574069"},
+			ColorMap = "rbxassetid://4197574069"},
 		["Handle"] = {
-			ColorMap = RID.."4197574069"}
+			ColorMap = "rbxassetid://4197574069"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bearded Axe | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("Axe", {
 		["Axe"] = {
-			ColorMap = RID.."94546249359416"},
+			ColorMap = "rbxassetid://94546249359416"},
 		["Handle"] = {
-			ColorMap = RID.."94546249359416"}
+			ColorMap = "rbxassetid://94546249359416"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Thompson | Autumic', PLACEHOLDERICON, 0, function()
 	EquipSkin("Thompson", {
 		["Bolt2"] = {
-			ColorMap = RID.."3801640019"},
+			ColorMap = "rbxassetid://3801640019"},
 		["Handle2"] = {
-			ColorMap = RID.."3801640019"},
+			ColorMap = "rbxassetid://3801640019"},
 		["Mag2"] = {
-			ColorMap = RID.."3801640019"},
+			ColorMap = "rbxassetid://3801640019"},
 		["Part"] = {
-			ColorMap = RID.."3801640019"},
+			ColorMap = "rbxassetid://3801640019"},
 		["Part2"] = {
-			ColorMap = RID.."3801640019"}
+			ColorMap = "rbxassetid://3801640019"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Thompson | Festive', PLACEHOLDERICON, 0, function()
 	EquipSkin("Thompson", {
 		["Bolt2"] = {
-			ColorMap = RID.."1641878345"},
+			ColorMap = "rbxassetid://1641878345"},
 		["Handle2"] = {
-			ColorMap = RID.."1641878345"},
+			ColorMap = "rbxassetid://1641878345"},
 		["Mag2"] = {
-			ColorMap = RID.."1641878345"},
+			ColorMap = "rbxassetid://1641878345"},
 		["Part"] = {
-			ColorMap = RID.."1641878345"},
+			ColorMap = "rbxassetid://1641878345"},
 		["Part2"] = {
-			ColorMap = RID.."1641878345"}
+			ColorMap = "rbxassetid://1641878345"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Thompson | Oblivion', PLACEHOLDERICON, 0, function()
 	EquipSkin("Thompson", {
 		["Bolt2"] = {
-			ColorMap = RID.."2131975967"},
+			ColorMap = "rbxassetid://2131975967"},
 		["Handle2"] = {
-			ColorMap = RID.."2131975967"},
+			ColorMap = "rbxassetid://2131975967"},
 		["Mag2"] = {
-			ColorMap = RID.."2131975967"},
+			ColorMap = "rbxassetid://2131975967"},
 		["Part"] = {
-			ColorMap = RID.."2131975967"},
+			ColorMap = "rbxassetid://2131975967"},
 		["Part2"] = {
-			ColorMap = RID.."2131975967"}
+			ColorMap = "rbxassetid://2131975967"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Thompson | Saint Nick', PLACEHOLDERICON, 0, function()
 	EquipSkin("Thompson", {
 		["Bolt2"] = {
-			ColorMap = RID.."2666245975"},
+			ColorMap = "rbxassetid://2666245975"},
 		["Handle2"] = {
-			ColorMap = RID.."2666245975"},
+			ColorMap = "rbxassetid://2666245975"},
 		["Mag2"] = {
-			ColorMap = RID.."2666245975"},
+			ColorMap = "rbxassetid://2666245975"},
 		["Part"] = {
-			ColorMap = RID.."2666245975"},
+			ColorMap = "rbxassetid://2666245975"},
 		["Part2"] = {
-			ColorMap = RID.."2666245975"}
+			ColorMap = "rbxassetid://2666245975"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Thompson | Sergeant', PLACEHOLDERICON, 0, function()
 	EquipSkin("Thompson", {
 		["Bolt2"] = {
-			ColorMap = RID.."2445863936"},
+			ColorMap = "rbxassetid://2445863936"},
 		["Handle2"] = {
-			ColorMap = RID.."2445863936"},
+			ColorMap = "rbxassetid://2445863936"},
 		["Mag2"] = {
-			ColorMap = RID.."2445863936"},
+			ColorMap = "rbxassetid://2445863936"},
 		["Part"] = {
-			ColorMap = RID.."2445863936"},
+			ColorMap = "rbxassetid://2445863936"},
 		["Part2"] = {
-			ColorMap = RID.."2445863936"}
+			ColorMap = "rbxassetid://2445863936"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Thompson | Shattered', PLACEHOLDERICON, 0, function()
 	EquipSkin("Thompson", {
 		["Bolt2"] = {
-			ColorMap = RID.."1704831646"},
+			ColorMap = "rbxassetid://1704831646"},
 		["Handle2"] = {
-			ColorMap = RID.."1704831646"},
+			ColorMap = "rbxassetid://1704831646"},
 		["Mag2"] = {
-			ColorMap = RID.."1704831646"},
+			ColorMap = "rbxassetid://1704831646"},
 		["Part"] = {
-			ColorMap = RID.."1704831646"},
+			ColorMap = "rbxassetid://1704831646"},
 		["Part2"] = {
-			ColorMap = RID.."1704831646"}
+			ColorMap = "rbxassetid://1704831646"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Argus', PLACEHOLDERICON, 0, function()
 	EquipSkin("Butterfly", {
 		["Butterfly_Blade"] = {
-			ColorMap = RID.."5894408426"},
+			ColorMap = "rbxassetid://5894408426"},
 		["Butterfly_LHandle"] = {
-			ColorMap = RID.."5894408426"},
+			ColorMap = "rbxassetid://5894408426"},
 		["Butterfly_RHandle"] = {
-			ColorMap = RID.."5894408426"}
+			ColorMap = "rbxassetid://5894408426"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Aurora', PLACEHOLDERICON, 0, function()
 	EquipSkin("Butterfly", {
 		["Butterfly_Blade"] = {
-			ColorMap = RID.."4563314014"},
+			ColorMap = "rbxassetid://4563314014"},
 		["Butterfly_LHandle"] = {
-			ColorMap = RID.."4563314014"},
+			ColorMap = "rbxassetid://4563314014"},
 		["Butterfly_RHandle"] = {
-			ColorMap = RID.."4563314014"}
+			ColorMap = "rbxassetid://4563314014"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Bloodwidow', PLACEHOLDERICON, 0, function()
 	EquipSkin("Butterfly", {
 		["Butterfly_Blade"] = {
-			ColorMap = RID.."3037399970"},
+			ColorMap = "rbxassetid://3037399970"},
 		["Butterfly_LHandle"] = {
-			ColorMap = RID.."3037399970"},
+			ColorMap = "rbxassetid://3037399970"},
 		["Butterfly_RHandle"] = {
-			ColorMap = RID.."3037399970"}
+			ColorMap = "rbxassetid://3037399970"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Consumed', PLACEHOLDERICON, 0, function()
 	EquipSkin("Butterfly", {
 		["Butterfly_Blade"] = {
-			ColorMap = RID.."4204677303"},
+			ColorMap = "rbxassetid://4204677303"},
 		["Butterfly_LHandle"] = {
-			ColorMap = RID.."4204677303"},
+			ColorMap = "rbxassetid://4204677303"},
 		["Butterfly_RHandle"] = {
-			ColorMap = RID.."4204677303"}
+			ColorMap = "rbxassetid://4204677303"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Cosmos', PLACEHOLDERICON, 0, function()
 	EquipSkin("Butterfly", {
 		["Butterfly_Blade"] = {
-			ColorMap = RID.."3037402475"},
+			ColorMap = "rbxassetid://3037402475"},
 		["Butterfly_LHandle"] = {
-			ColorMap = RID.."3037402475"},
+			ColorMap = "rbxassetid://3037402475"},
 		["Butterfly_RHandle"] = {
-			ColorMap = RID.."3037402475"}
+			ColorMap = "rbxassetid://3037402475"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Crimson Tiger', PLACEHOLDERICON, 0, function()
 	EquipSkin("Butterfly", {
 		["Butterfly_Blade"] = {
-			ColorMap = RID.."3037405640"},
+			ColorMap = "rbxassetid://3037405640"},
 		["Butterfly_LHandle"] = {
-			ColorMap = RID.."3037405640"},
+			ColorMap = "rbxassetid://3037405640"},
 		["Butterfly_RHandle"] = {
-			ColorMap = RID.."3037405640"}
+			ColorMap = "rbxassetid://3037405640"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Crippled Fade', PLACEHOLDERICON, 0, function()
 	EquipSkin("Butterfly", {
 		["Butterfly_Blade"] = {
-			ColorMap = RID.."3037373011"},
+			ColorMap = "rbxassetid://3037373011"},
 		["Butterfly_LHandle"] = {
-			ColorMap = RID.."3037373011"},
+			ColorMap = "rbxassetid://3037373011"},
 		["Butterfly_RHandle"] = {
-			ColorMap = RID.."3037373011"}
+			ColorMap = "rbxassetid://3037373011"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Dark Damascus', PLACEHOLDERICON, 0, function()
 	EquipSkin("Butterfly", {
 		["Butterfly_Blade"] = {
-			ColorMap = RID.."125230643095767",
-			NormalMap = RID.."102624614562425",
-			RoughnessMap = RID.."83050191543333",
-			MetalnessMap = RID.."80870375154131"},
+			ColorMap = "rbxassetid://125230643095767",
+			NormalMap = "rbxassetid://102624614562425",
+			RoughnessMap = "rbxassetid://83050191543333",
+			MetalnessMap = "rbxassetid://80870375154131"},
 		["Butterfly_LHandle"] = {
-			ColorMap = RID.."125230643095767",
-			NormalMap = RID.."102624614562425",
-			RoughnessMap = RID.."83050191543333",
-			MetalnessMap = RID.."80870375154131"},
+			ColorMap = "rbxassetid://125230643095767",
+			NormalMap = "rbxassetid://102624614562425",
+			RoughnessMap = "rbxassetid://83050191543333",
+			MetalnessMap = "rbxassetid://80870375154131"},
 		["Butterfly_RHandle"] = {
-			ColorMap = RID.."125230643095767",
-			NormalMap = RID.."102624614562425",
-			RoughnessMap = RID.."83050191543333",
-			MetalnessMap = RID.."80870375154131"}
+			ColorMap = "rbxassetid://125230643095767",
+			NormalMap = "rbxassetid://102624614562425",
+			RoughnessMap = "rbxassetid://83050191543333",
+			MetalnessMap = "rbxassetid://80870375154131"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Digital', PLACEHOLDERICON, 0, function()
 	EquipSkin("Butterfly", {
 		["Butterfly_Blade"] = {
-			ColorMap = RID.."3037376657"},
+			ColorMap = "rbxassetid://3037376657"},
 		["Butterfly_LHandle"] = {
-			ColorMap = RID.."3037376657"},
+			ColorMap = "rbxassetid://3037376657"},
 		["Butterfly_RHandle"] = {
-			ColorMap = RID.."3037376657"}
+			ColorMap = "rbxassetid://3037376657"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Egg Shell', PLACEHOLDERICON, 0, function()
 	EquipSkin("Butterfly", {
 		["Butterfly_Blade"] = {
-			ColorMap = RID.."3081426745"},
+			ColorMap = "rbxassetid://3081426745"},
 		["Butterfly_LHandle"] = {
-			ColorMap = RID.."3081426745"},
+			ColorMap = "rbxassetid://3081426745"},
 		["Butterfly_RHandle"] = {
-			ColorMap = RID.."3081426745"}
+			ColorMap = "rbxassetid://3081426745"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Freedom', PLACEHOLDERICON, 0, function()
 	EquipSkin("Butterfly", {
 		["Butterfly_Blade"] = {
-			ColorMap = RID.."3411670349"},
+			ColorMap = "rbxassetid://3411670349"},
 		["Butterfly_LHandle"] = {
-			ColorMap = RID.."3411670349"},
+			ColorMap = "rbxassetid://3411670349"},
 		["Butterfly_RHandle"] = {
-			ColorMap = RID.."3411670349"}
+			ColorMap = "rbxassetid://3411670349"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Frozen Dream', PLACEHOLDERICON, 0, function()
 	EquipSkin("Butterfly", {
 		["Butterfly_Blade"] = {
-			ColorMap = RID.."3037410939"},
+			ColorMap = "rbxassetid://3037410939"},
 		["Butterfly_LHandle"] = {
-			ColorMap = RID.."3037410939"},
+			ColorMap = "rbxassetid://3037410939"},
 		["Butterfly_RHandle"] = {
-			ColorMap = RID.."3037410939"}
+			ColorMap = "rbxassetid://3037410939"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Frozen Gift', PLACEHOLDERICON, 0, function()
 	EquipSkin("Butterfly", {
 		["Butterfly_Blade"] = {
-			ColorMap = RID.."81766864397567"},
+			ColorMap = "rbxassetid://81766864397567"},
 		["Butterfly_LHandle"] = {
-			ColorMap = RID.."81766864397567"},
+			ColorMap = "rbxassetid://81766864397567"},
 		["Butterfly_RHandle"] = {
-			ColorMap = RID.."81766864397567"}
+			ColorMap = "rbxassetid://81766864397567"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Goo', PLACEHOLDERICON, 0, function()
 	EquipSkin("Butterfly", {
 		["Butterfly_Blade"] = {
-			ColorMap = RID.."4229839795"},
+			ColorMap = "rbxassetid://4229839795"},
 		["Butterfly_LHandle"] = {
-			ColorMap = RID.."4229839795"},
+			ColorMap = "rbxassetid://4229839795"},
 		["Butterfly_RHandle"] = {
-			ColorMap = RID.."4229839795"}
+			ColorMap = "rbxassetid://4229839795"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Grim', PLACEHOLDERICON, 0, function()
 	EquipSkin("Butterfly", {
 		["Butterfly_Blade"] = {
-			ColorMap = RID.."108158556596022"},
+			ColorMap = "rbxassetid://108158556596022"},
 		["Butterfly_LHandle"] = {
-			ColorMap = RID.."108158556596022"},
+			ColorMap = "rbxassetid://108158556596022"},
 		["Butterfly_RHandle"] = {
-			ColorMap = RID.."108158556596022"}
+			ColorMap = "rbxassetid://108158556596022"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Hallows', PLACEHOLDERICON, 0, function()
 	EquipSkin("Butterfly", {
 		["Butterfly_Blade"] = {
-			ColorMap = RID.."3037384236"},
+			ColorMap = "rbxassetid://3037384236"},
 		["Butterfly_LHandle"] = {
-			ColorMap = RID.."3037384236"},
+			ColorMap = "rbxassetid://3037384236"},
 		["Butterfly_RHandle"] = {
-			ColorMap = RID.."3037384236"}
+			ColorMap = "rbxassetid://3037384236"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Icicle', PLACEHOLDERICON, 0, function()
 	EquipSkin("Butterfly", {
 		["Butterfly_Blade"] = {
-			ColorMap = RID.."3065143953"},
+			ColorMap = "rbxassetid://3065143953"},
 		["Butterfly_LHandle"] = {
-			ColorMap = RID.."3065143953"},
+			ColorMap = "rbxassetid://3065143953"},
 		["Butterfly_RHandle"] = {
-			ColorMap = RID.."3065143953"}
+			ColorMap = "rbxassetid://3065143953"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Inversion', PLACEHOLDERICON, 0, function()
 	EquipSkin("Butterfly", {
 		["Butterfly_Blade"] = {
-			ColorMap = RID.."4429681923"},
+			ColorMap = "rbxassetid://4429681923"},
 		["Butterfly_LHandle"] = {
-			ColorMap = RID.."4429681923"},
+			ColorMap = "rbxassetid://4429681923"},
 		["Butterfly_RHandle"] = {
-			ColorMap = RID.."4429681923"}
+			ColorMap = "rbxassetid://4429681923"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Jade Dream', PLACEHOLDERICON, 0, function()
 	EquipSkin("Butterfly", {
 		["Butterfly_Blade"] = {
-			ColorMap = RID.."3655147906"},
+			ColorMap = "rbxassetid://3655147906"},
 		["Butterfly_LHandle"] = {
-			ColorMap = RID.."3655147906"},
+			ColorMap = "rbxassetid://3655147906"},
 		["Butterfly_RHandle"] = {
-			ColorMap = RID.."3655147906"}
+			ColorMap = "rbxassetid://3655147906"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Marbleized', PLACEHOLDERICON, 0, function()
 	EquipSkin("Butterfly", {
 		["Butterfly_Blade"] = {
-			ColorMap = RID.."3081769415"},
+			ColorMap = "rbxassetid://3081769415"},
 		["Butterfly_LHandle"] = {
-			ColorMap = RID.."3081769415"},
+			ColorMap = "rbxassetid://3081769415"},
 		["Butterfly_RHandle"] = {
-			ColorMap = RID.."3081769415"}
+			ColorMap = "rbxassetid://3081769415"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Naval', PLACEHOLDERICON, 0, function()
 	EquipSkin("Butterfly", {
 		["Butterfly_Blade"] = {
-			ColorMap = RID.."3037418763"},
+			ColorMap = "rbxassetid://3037418763"},
 		["Butterfly_LHandle"] = {
-			ColorMap = RID.."3037418763"},
+			ColorMap = "rbxassetid://3037418763"},
 		["Butterfly_RHandle"] = {
-			ColorMap = RID.."3037418763"}
+			ColorMap = "rbxassetid://3037418763"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Neonic', PLACEHOLDERICON, 0, function()
 	EquipSkin("Butterfly", {
 		["Butterfly_Blade"] = {
-			ColorMap = RID.."3037421428"},
+			ColorMap = "rbxassetid://3037421428"},
 		["Butterfly_LHandle"] = {
-			ColorMap = RID.."3037421428"},
+			ColorMap = "rbxassetid://3037421428"},
 		["Butterfly_RHandle"] = {
-			ColorMap = RID.."3037421428"}
+			ColorMap = "rbxassetid://3037421428"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Reaper', PLACEHOLDERICON, 0, function()
 	EquipSkin("Butterfly", {
 		["Butterfly_Blade"] = {
-			ColorMap = RID.."3037381432"},
+			ColorMap = "rbxassetid://3037381432"},
 		["Butterfly_LHandle"] = {
-			ColorMap = RID.."3037381432"},
+			ColorMap = "rbxassetid://3037381432"},
 		["Butterfly_RHandle"] = {
-			ColorMap = RID.."3037381432"}
+			ColorMap = "rbxassetid://3037381432"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Ruby', PLACEHOLDERICON, 0, function()
 	EquipSkin("Butterfly", {
 		["Butterfly_Blade"] = {
-			ColorMap = RID.."3037428703"},
+			ColorMap = "rbxassetid://3037428703"},
 		["Butterfly_LHandle"] = {
-			ColorMap = RID.."3037428703"},
+			ColorMap = "rbxassetid://3037428703"},
 		["Butterfly_RHandle"] = {
-			ColorMap = RID.."3037428703"}
+			ColorMap = "rbxassetid://3037428703"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Scapter', PLACEHOLDERICON, 0, function()
 	EquipSkin("Butterfly", {
 		["Butterfly_Blade"] = {
-			ColorMap = RID.."3220622680"},
+			ColorMap = "rbxassetid://3220622680"},
 		["Butterfly_LHandle"] = {
-			ColorMap = RID.."3220622680"},
+			ColorMap = "rbxassetid://3220622680"},
 		["Butterfly_RHandle"] = {
-			ColorMap = RID.."3220622680"}
+			ColorMap = "rbxassetid://3220622680"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Snowfall', PLACEHOLDERICON, 0, function()
 	EquipSkin("Butterfly", {
 		["Butterfly_Blade"] = {
-			ColorMap = RID.."6102035135"},
+			ColorMap = "rbxassetid://6102035135"},
 		["Butterfly_LHandle"] = {
-			ColorMap = RID.."6102035135"},
+			ColorMap = "rbxassetid://6102035135"},
 		["Butterfly_RHandle"] = {
-			ColorMap = RID.."6102035135"}
+			ColorMap = "rbxassetid://6102035135"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Splattered', PLACEHOLDERICON, 0, function()
 	EquipSkin("Butterfly", {
 		["Butterfly_Blade"] = {
-			ColorMap = RID.."3037389825"},
+			ColorMap = "rbxassetid://3037389825"},
 		["Butterfly_LHandle"] = {
-			ColorMap = RID.."3037389825"},
+			ColorMap = "rbxassetid://3037389825"},
 		["Butterfly_RHandle"] = {
-			ColorMap = RID.."3037389825"}
+			ColorMap = "rbxassetid://3037389825"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Spooky', PLACEHOLDERICON, 0, function()
 	EquipSkin("Butterfly", {
 		["Butterfly_Blade"] = {
-			ColorMap = RID.."7944238305"},
+			ColorMap = "rbxassetid://7944238305"},
 		["Butterfly_LHandle"] = {
-			ColorMap = RID.."7944238305"},
+			ColorMap = "rbxassetid://7944238305"},
 		["Butterfly_RHandle"] = {
-			ColorMap = RID.."7944238305"}
+			ColorMap = "rbxassetid://7944238305"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("Butterfly", {
 		["Butterfly_Blade"] = {
-			ColorMap = RID.."3023647348"},
+			ColorMap = "rbxassetid://3023647348"},
 		["Butterfly_LHandle"] = {
-			ColorMap = RID.."3023647348"},
+			ColorMap = "rbxassetid://3023647348"},
 		["Butterfly_RHandle"] = {
-			ColorMap = RID.."3023647348"}
+			ColorMap = "rbxassetid://3023647348"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Topaz', PLACEHOLDERICON, 0, function()
 	EquipSkin("Butterfly", {
 		["Butterfly_Blade"] = {
-			ColorMap = RID.."3037433260"},
+			ColorMap = "rbxassetid://3037433260"},
 		["Butterfly_LHandle"] = {
-			ColorMap = RID.."3037433260"},
+			ColorMap = "rbxassetid://3037433260"},
 		["Butterfly_RHandle"] = {
-			ColorMap = RID.."3037433260"}
+			ColorMap = "rbxassetid://3037433260"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Tropical', PLACEHOLDERICON, 0, function()
 	EquipSkin("Butterfly", {
 		["Butterfly_Blade"] = {
-			ColorMap = RID.."3037435841"},
+			ColorMap = "rbxassetid://3037435841"},
 		["Butterfly_LHandle"] = {
-			ColorMap = RID.."3037435841"},
+			ColorMap = "rbxassetid://3037435841"},
 		["Butterfly_RHandle"] = {
-			ColorMap = RID.."3037435841"}
+			ColorMap = "rbxassetid://3037435841"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Twitch', PLACEHOLDERICON, 0, function()
 	EquipSkin("Butterfly", {
 		["Butterfly_Blade"] = {
-			ColorMap = RID.."3037441861"},
+			ColorMap = "rbxassetid://3037441861"},
 		["Butterfly_LHandle"] = {
-			ColorMap = RID.."3037441861"},
+			ColorMap = "rbxassetid://3037441861"},
 		["Butterfly_RHandle"] = {
-			ColorMap = RID.."3037441861"}
+			ColorMap = "rbxassetid://3037441861"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Wetland', PLACEHOLDERICON, 0, function()
 	EquipSkin("Butterfly", {
 		["Butterfly_Blade"] = {
-			ColorMap = RID.."3037393787"},
+			ColorMap = "rbxassetid://3037393787"},
 		["Butterfly_LHandle"] = {
-			ColorMap = RID.."3037393787"},
+			ColorMap = "rbxassetid://3037393787"},
 		["Butterfly_RHandle"] = {
-			ColorMap = RID.."3037393787"}
+			ColorMap = "rbxassetid://3037393787"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Butterfly | White Boss', PLACEHOLDERICON, 0, function()
 	EquipSkin("Butterfly", {
 		["Butterfly_Blade"] = {
-			ColorMap = RID.."3087121322"},
+			ColorMap = "rbxassetid://3087121322"},
 		["Butterfly_LHandle"] = {
-			ColorMap = RID.."3087121322"},
+			ColorMap = "rbxassetid://3087121322"},
 		["Butterfly_RHandle"] = {
-			ColorMap = RID.."3087121322"}
+			ColorMap = "rbxassetid://3087121322"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Worn', PLACEHOLDERICON, 0, function()
 	EquipSkin("Butterfly", {
 		["Butterfly_Blade"] = {
-			ColorMap = RID.."3037443501"},
+			ColorMap = "rbxassetid://3037443501"},
 		["Butterfly_LHandle"] = {
-			ColorMap = RID.."3037443501"},
+			ColorMap = "rbxassetid://3037443501"},
 		["Butterfly_RHandle"] = {
-			ColorMap = RID.."3037443501"}
+			ColorMap = "rbxassetid://3037443501"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Wrapped', PLACEHOLDERICON, 0, function()
 	EquipSkin("Butterfly", {
 		["Butterfly_Blade"] = {
-			ColorMap = RID.."4563325372"},
+			ColorMap = "rbxassetid://4563325372"},
 		["Butterfly_LHandle"] = {
-			ColorMap = RID.."4563325372"},
+			ColorMap = "rbxassetid://4563325372"},
 		["Butterfly_RHandle"] = {
-			ColorMap = RID.."4563325372"}
+			ColorMap = "rbxassetid://4563325372"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'CZ75-Auto | Designed', PLACEHOLDERICON, 0, function()
 	EquipSkin("CZ", {
 		["Handle2"] = {
-			ColorMap = RID.."3180036934"},
+			ColorMap = "rbxassetid://3180036934"},
 		["Mag2"] = {
-			ColorMap = RID.."3180036934"},
+			ColorMap = "rbxassetid://3180036934"},
 		["Slide2"] = {
-			ColorMap = RID.."3180036934"}
+			ColorMap = "rbxassetid://3180036934"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'CZ75-Auto | Festive', PLACEHOLDERICON, 0, function()
 	EquipSkin("CZ", {
 		["Handle2"] = {
-			ColorMap = RID.."1712518422"},
+			ColorMap = "rbxassetid://1712518422"},
 		["Mag2"] = {
-			ColorMap = RID.."1712518422"},
+			ColorMap = "rbxassetid://1712518422"},
 		["Slide2"] = {
-			ColorMap = RID.."1712518422"}
+			ColorMap = "rbxassetid://1712518422"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'CZ75-Auto | Hallow', PLACEHOLDERICON, 0, function()
 	EquipSkin("CZ", {
 		["Handle2"] = {
-			ColorMap = RID.."5860430721"},
+			ColorMap = "rbxassetid://5860430721"},
 		["Mag2"] = {
-			ColorMap = RID.."5860430721"},
+			ColorMap = "rbxassetid://5860430721"},
 		["Slide2"] = {
-			ColorMap = RID.."5860430721"}
+			ColorMap = "rbxassetid://5860430721"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'CZ75-Auto | Holidays', PLACEHOLDERICON, 0, function()
 	EquipSkin("CZ", {
 		["Handle2"] = {
-			ColorMap = RID.."4502760694"},
+			ColorMap = "rbxassetid://4502760694"},
 		["Mag2"] = {
-			ColorMap = RID.."4502760694"},
+			ColorMap = "rbxassetid://4502760694"},
 		["Slide2"] = {
-			ColorMap = RID.."4502760694"}
+			ColorMap = "rbxassetid://4502760694"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'CZ75-Auto | Lightning', PLACEHOLDERICON, 0, function()
 	EquipSkin("CZ", {
 		["Handle2"] = {
-			ColorMap = RID.."1712519352"},
+			ColorMap = "rbxassetid://1712519352"},
 		["Mag2"] = {
-			ColorMap = RID.."1712519352"},
+			ColorMap = "rbxassetid://1712519352"},
 		["Slide2"] = {
-			ColorMap = RID.."1712519352"}
+			ColorMap = "rbxassetid://1712519352"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'CZ75-Auto | Orange Web', PLACEHOLDERICON, 0, function()
 	EquipSkin("CZ", {
 		["Handle2"] = {
-			ColorMap = RID.."1712518722"},
+			ColorMap = "rbxassetid://1712518722"},
 		["Mag2"] = {
-			ColorMap = RID.."1712518722"},
+			ColorMap = "rbxassetid://1712518722"},
 		["Slide2"] = {
-			ColorMap = RID.."1712518722"}
+			ColorMap = "rbxassetid://1712518722"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'CZ75-Auto | Spectre', PLACEHOLDERICON, 0, function()
 	EquipSkin("CZ", {
 		["Handle2"] = {
-			ColorMap = RID.."2766660211"},
+			ColorMap = "rbxassetid://2766660211"},
 		["Mag2"] = {
-			ColorMap = RID.."2766660211"},
+			ColorMap = "rbxassetid://2766660211"},
 		["Slide2"] = {
-			ColorMap = RID.."2766660211"}
+			ColorMap = "rbxassetid://2766660211"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'CZ75-Auto | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("CZ", {
 		["Handle2"] = {
-			ColorMap = RID.."126892697014670"},
+			ColorMap = "rbxassetid://126892697014670"},
 		["Mag2"] = {
-			ColorMap = RID.."126892697014670"},
+			ColorMap = "rbxassetid://126892697014670"},
 		["Slide2"] = {
-			ColorMap = RID.."126892697014670"}
+			ColorMap = "rbxassetid://126892697014670"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Cleaver | Spider', PLACEHOLDERICON, 0, function()
 	EquipSkin("Cleaver", {
 		["Handle"] = {
-			ColorMap = RID.."4197575672"}
+			ColorMap = "rbxassetid://4197575672"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Cleaver | Splattered', PLACEHOLDERICON, 0, function()
 	EquipSkin("Cleaver", {
 		["Handle"] = {
-			ColorMap = RID.."4197576043"}
+			ColorMap = "rbxassetid://4197576043"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Cleaver | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("Cleaver", {
 		["Handle"] = {
-			ColorMap = RID.."122153606522185"}
+			ColorMap = "rbxassetid://122153606522185"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'APPEND', 'Crowbar | Stock', PLACEHOLDERICON, 0, function()
-	EquipSkin("Crowbar", {
-		["Handle"] = {
-			ColorMap = RID.."475841524"}
-	})
-end)
+-- Note: Risky/Detected
+-- CreateTabButton('GameSkins', 'APPEND', 'Crowbar | Stock', PLACEHOLDERICON, 0, function()
+-- 	EquipSkin("Crowbar", {
+-- 		["Handle"] = {
+-- 			ColorMap = "rbxassetid://475841524"}
+-- 	})
+-- end)
 
 CreateTabButton('GameSkins', 'APPEND', 'CT Knife | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("CT Knife", {
 		["Handle"] = {
-			ColorMap = RID.."74279388322783"}
+			ColorMap = "rbxassetid://74279388322783"}
 	})
 end)
 
@@ -63387,22 +63545,22 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'Deagle | Ababa', PLACEHOLDERICON, 0, function()
 	EquipSkin("Deagle", {
 		["Handle2"] = {
-			ColorMap = RID.."17725119099"},
+			ColorMap = "rbxassetid://17725119099"},
 		["Mag2"] = {
-			ColorMap = RID.."17725119099"},
+			ColorMap = "rbxassetid://17725119099"},
 		["Slide2"] = {
-			ColorMap = RID.."17725119099"}
+			ColorMap = "rbxassetid://17725119099"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Deagle | Blossom', PLACEHOLDERICON, 0, function()
 	EquipSkin("Deagle", {
 		["Handle2"] = {
-			ColorMap = RID.."96680445633741"},
+			ColorMap = "rbxassetid://96680445633741"},
 		["Mag2"] = {
-			ColorMap = RID.."96680445633741"},
+			ColorMap = "rbxassetid://96680445633741"},
 		["Slide2"] = {
-			ColorMap = RID.."96680445633741"}
+			ColorMap = "rbxassetid://96680445633741"}
 	})
 end)
 
@@ -63410,273 +63568,273 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'Deagle | BloxersClub', PLACEHOLDERICON, 0, function()
 	EquipSkin("Deagle", {
 		["Handle2"] = {
-			ColorMap = RID.."17640138650"},
+			ColorMap = "rbxassetid://17640138650"},
 		["Mag2"] = {
-			ColorMap = RID.."17640138650"},
+			ColorMap = "rbxassetid://17640138650"},
 		["Slide2"] = {
-			ColorMap = RID.."17640138650"}
+			ColorMap = "rbxassetid://17640138650"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Deagle | Blue Fur', PLACEHOLDERICON, 0, function()
 	EquipSkin("Deagle", {
 		["Handle2"] = {
-			ColorMap = RID.."7943847905"},
+			ColorMap = "rbxassetid://7943847905"},
 		["Mag2"] = {
-			ColorMap = RID.."7943847905"},
+			ColorMap = "rbxassetid://7943847905"},
 		["Slide2"] = {
-			ColorMap = RID.."7943847905"}
+			ColorMap = "rbxassetid://7943847905"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Deagle | Cold Truth', PLACEHOLDERICON, 0, function()
 	EquipSkin("Deagle", {
 		["Handle2"] = {
-			ColorMap = RID.."2633859829"},
+			ColorMap = "rbxassetid://2633859829"},
 		["Mag2"] = {
-			ColorMap = RID.."2633859829"},
+			ColorMap = "rbxassetid://2633859829"},
 		["Slide2"] = {
-			ColorMap = RID.."2633859829"}
+			ColorMap = "rbxassetid://2633859829"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Deagle | Cool Blue', PLACEHOLDERICON, 0, function()
 	EquipSkin("Deagle", {
 		["Handle2"] = {
-			ColorMap = RID.."2445815061"},
+			ColorMap = "rbxassetid://2445815061"},
 		["Mag2"] = {
-			ColorMap = RID.."2445815061"},
+			ColorMap = "rbxassetid://2445815061"},
 		["Slide2"] = {
-			ColorMap = RID.."2445815061"}
+			ColorMap = "rbxassetid://2445815061"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Deagle | Crystal', PLACEHOLDERICON, 0, function()
 	EquipSkin("Deagle", {
 		["Handle2"] = {
-			ColorMap = RID.."6803335239"},
+			ColorMap = "rbxassetid://6803335239"},
 		["Mag2"] = {
-			ColorMap = RID.."6803335239"},
+			ColorMap = "rbxassetid://6803335239"},
 		["Slide2"] = {
-			ColorMap = RID.."6803335239"}
+			ColorMap = "rbxassetid://6803335239"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Deagle | Demon Eyes', PLACEHOLDERICON, 0, function()
 	EquipSkin("Deagle", {
 		["Handle2"] = {
-			ColorMap = RID.."132651327228890"},
+			ColorMap = "rbxassetid://132651327228890"},
 		["Mag2"] = {
-			ColorMap = RID.."132651327228890"},
+			ColorMap = "rbxassetid://132651327228890"},
 		["Slide2"] = {
-			ColorMap = RID.."132651327228890"}
+			ColorMap = "rbxassetid://132651327228890"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Deagle | DropX', PLACEHOLDERICON, 0, function()
 	EquipSkin("Deagle", {
 		["Handle2"] = {
-			ColorMap = RID.."2209401246"},
+			ColorMap = "rbxassetid://2209401246"},
 		["Mag2"] = {
-			ColorMap = RID.."2209401246"},
+			ColorMap = "rbxassetid://2209401246"},
 		["Slide2"] = {
-			ColorMap = RID.."2209401246"}
+			ColorMap = "rbxassetid://2209401246"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Deagle | Glittery', PLACEHOLDERICON, 0, function()
 	EquipSkin("Deagle", {
 		["Handle2"] = {
-			ColorMap = RID.."1229619847"},
+			ColorMap = "rbxassetid://1229619847"},
 		["Mag2"] = {
-			ColorMap = RID.."1229619847"},
+			ColorMap = "rbxassetid://1229619847"},
 		["Slide2"] = {
-			ColorMap = RID.."1229619847"}
+			ColorMap = "rbxassetid://1229619847"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Deagle | Grim', PLACEHOLDERICON, 0, function()
 	EquipSkin("Deagle", {
 		["Handle2"] = {
-			ColorMap = RID.."1230023014"},
+			ColorMap = "rbxassetid://1230023014"},
 		["Mag2"] = {
-			ColorMap = RID.."1230023014"},
+			ColorMap = "rbxassetid://1230023014"},
 		["Slide2"] = {
-			ColorMap = RID.."1230023014"}
+			ColorMap = "rbxassetid://1230023014"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Deagle | Guapo', PLACEHOLDERICON, 0, function()
 	EquipSkin("Deagle", {
 		["Handle2"] = {
-			ColorMap = RID.."134719009634165"},
+			ColorMap = "rbxassetid://134719009634165"},
 		["Mag2"] = {
-			ColorMap = RID.."134719009634165"},
+			ColorMap = "rbxassetid://134719009634165"},
 		["Slide2"] = {
-			ColorMap = RID.."134719009634165"}
+			ColorMap = "rbxassetid://134719009634165"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Deagle | Headwind', PLACEHOLDERICON, 0, function()
 	EquipSkin("Deagle", {
 		["Handle2"] = {
-			ColorMap = RID.."81350533595938"},
+			ColorMap = "rbxassetid://81350533595938"},
 		["Mag2"] = {
-			ColorMap = RID.."104519641700161"},
+			ColorMap = "rbxassetid://104519641700161"},
 		["Slide2"] = {
-			ColorMap = RID.."81350533595938"}
+			ColorMap = "rbxassetid://81350533595938"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Deagle | Heat', PLACEHOLDERICON, 0, function()
 	EquipSkin("Deagle", {
 		["Handle2"] = {
-			ColorMap = RID.."3179792112"},
+			ColorMap = "rbxassetid://3179792112"},
 		["Mag2"] = {
-			ColorMap = RID.."3179792112"},
+			ColorMap = "rbxassetid://3179792112"},
 		["Slide2"] = {
-			ColorMap = RID.."3179792112"}
+			ColorMap = "rbxassetid://3179792112"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Deagle | Honor-bound', PLACEHOLDERICON, 0, function()
 	EquipSkin("Deagle", {
 		["Handle2"] = {
-			ColorMap = RID.."3398984268"},
+			ColorMap = "rbxassetid://3398984268"},
 		["Mag2"] = {
-			ColorMap = RID.."3398984268"},
+			ColorMap = "rbxassetid://3398984268"},
 		["Slide2"] = {
-			ColorMap = RID.."3398984268"}
+			ColorMap = "rbxassetid://3398984268"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Deagle | Independence', PLACEHOLDERICON, 0, function()
 	EquipSkin("Deagle", {
 		["Handle2"] = {
-			ColorMap = RID.."3414426853"},
+			ColorMap = "rbxassetid://3414426853"},
 		["Mag2"] = {
-			ColorMap = RID.."3414426853"},
+			ColorMap = "rbxassetid://3414426853"},
 		["Slide2"] = {
-			ColorMap = RID.."3414426853"}
+			ColorMap = "rbxassetid://3414426853"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Deagle | Industrial', PLACEHOLDERICON, 0, function()
 	EquipSkin("Deagle", {
 		["Handle2"] = {
-			ColorMap = RID.."132712849149689",
-			NormalMap = RID.."79120607062213",
-			RoughnessMap = RID.."108938149309266",
-			MetalnessMap = RID.."135148192590783"},
+			ColorMap = "rbxassetid://132712849149689",
+			NormalMap = "rbxassetid://79120607062213",
+			RoughnessMap = "rbxassetid://108938149309266",
+			MetalnessMap = "rbxassetid://135148192590783"},
 		["Mag2"] = {
-			ColorMap = RID.."83870058011915",
-			NormalMap = RID.."131209014219431",
-			RoughnessMap = RID.."73257320929596",
-			MetalnessMap = RID.."132432564050365"},
+			ColorMap = "rbxassetid://83870058011915",
+			NormalMap = "rbxassetid://131209014219431",
+			RoughnessMap = "rbxassetid://73257320929596",
+			MetalnessMap = "rbxassetid://132432564050365"},
 		["Slide2"] = {
-			ColorMap = RID.."132712849149689",
-			NormalMap = RID.."79120607062213",
-			RoughnessMap = RID.."108938149309266",
-			MetalnessMap = RID.."135148192590783"}
+			ColorMap = "rbxassetid://132712849149689",
+			NormalMap = "rbxassetid://79120607062213",
+			RoughnessMap = "rbxassetid://108938149309266",
+			MetalnessMap = "rbxassetid://135148192590783"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Deagle | Krystallos', PLACEHOLDERICON, 0, function()
 	EquipSkin("Deagle", {
 		["Handle2"] = {
-			ColorMap = RID.."1238043289"},
+			ColorMap = "rbxassetid://1238043289"},
 		["Mag2"] = {
-			ColorMap = RID.."1238043289"},
+			ColorMap = "rbxassetid://1238043289"},
 		["Slide2"] = {
-			ColorMap = RID.."1238043289"}
+			ColorMap = "rbxassetid://1238043289"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Deagle | Pumpkin Buster', PLACEHOLDERICON, 0, function()
 	EquipSkin("Deagle", {
 		["Handle2"] = {
-			ColorMap = RID.."4204546147"},
+			ColorMap = "rbxassetid://4204546147"},
 		["Mag2"] = {
-			ColorMap = RID.."4204546147"},
+			ColorMap = "rbxassetid://4204546147"},
 		["Slide2"] = {
-			ColorMap = RID.."4204546147"}
+			ColorMap = "rbxassetid://4204546147"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Deagle | Racer', PLACEHOLDERICON, 0, function()
 	EquipSkin("Deagle", {
 		["Handle2"] = {
-			ColorMap = RID.."97669734945628"},
+			ColorMap = "rbxassetid://97669734945628"},
 		["Mag2"] = {
-			ColorMap = RID.."92755787647554"},
+			ColorMap = "rbxassetid://92755787647554"},
 		["Slide2"] = {
-			ColorMap = RID.."97669734945628"}
+			ColorMap = "rbxassetid://97669734945628"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Deagle | Regal Eclipse', PLACEHOLDERICON, 0, function()
 	EquipSkin("Deagle", {
 		["Handle2"] = {
-			ColorMap = RID.."108411891583049"},
+			ColorMap = "rbxassetid://108411891583049"},
 		["Mag2"] = {
-			ColorMap = RID.."108411891583049"},
+			ColorMap = "rbxassetid://108411891583049"},
 		["Slide2"] = {
-			ColorMap = RID.."108411891583049"}
+			ColorMap = "rbxassetid://108411891583049"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Deagle | Royal Guard', PLACEHOLDERICON, 0, function()
 	EquipSkin("Deagle", {
 		["Handle2"] = {
-			ColorMap = RID.."96412672530798"},
+			ColorMap = "rbxassetid://96412672530798"},
 		["Mag2"] = {
-			ColorMap = RID.."128139563762118"},
+			ColorMap = "rbxassetid://128139563762118"},
 		["Slide2"] = {
-			ColorMap = RID.."96412672530798"}
+			ColorMap = "rbxassetid://96412672530798"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Deagle | Scapter', PLACEHOLDERICON, 0, function()
 	EquipSkin("Deagle", {
 		["Handle2"] = {
-			ColorMap = RID.."2226675143"},
+			ColorMap = "rbxassetid://2226675143"},
 		["Mag2"] = {
-			ColorMap = RID.."2226675143"},
+			ColorMap = "rbxassetid://2226675143"},
 		["Slide2"] = {
-			ColorMap = RID.."2226675143"}
+			ColorMap = "rbxassetid://2226675143"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Deagle | Skin Committee', PLACEHOLDERICON, 0, function()
 	EquipSkin("Deagle", {
 		["Handle2"] = {
-			ColorMap = RID.."4587053979"},
+			ColorMap = "rbxassetid://4587053979"},
 		["Mag2"] = {
-			ColorMap = RID.."4587053979"},
+			ColorMap = "rbxassetid://4587053979"},
 		["Slide2"] = {
-			ColorMap = RID.."4587053979"}
+			ColorMap = "rbxassetid://4587053979"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Deagle | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("Deagle", {
 		["Handle2"] = {
-			ColorMap = RID.."77230695072608"},
+			ColorMap = "rbxassetid://77230695072608"},
 		["Mag2"] = {
-			ColorMap = RID.."77230695072608"},
+			ColorMap = "rbxassetid://77230695072608"},
 		["Slide2"] = {
-			ColorMap = RID.."77230695072608"}
+			ColorMap = "rbxassetid://77230695072608"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Deagle | Survivor', PLACEHOLDERICON, 0, function()
 	EquipSkin("Deagle", {
 		["Handle2"] = {
-			ColorMap = RID.."2490655609"},
+			ColorMap = "rbxassetid://2490655609"},
 		["Mag2"] = {
-			ColorMap = RID.."2490655609"},
+			ColorMap = "rbxassetid://2490655609"},
 		["Slide2"] = {
-			ColorMap = RID.."2490655609"}
+			ColorMap = "rbxassetid://2490655609"}
 	})
 end)
 
@@ -63684,186 +63842,186 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'Deagle | TC', PLACEHOLDERICON, 0, function()
 	EquipSkin("Deagle", {
 		["Handle2"] = {
-			ColorMap = RID.."5668469472"},
+			ColorMap = "rbxassetid://5668469472"},
 		["Mag2"] = {
-			ColorMap = RID.."5668469472"},
+			ColorMap = "rbxassetid://5668469472"},
 		["Slide2"] = {
-			ColorMap = RID.."5668469472"}
+			ColorMap = "rbxassetid://5668469472"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Deagle | Weeb', PLACEHOLDERICON, 0, function()
 	EquipSkin("Deagle", {
 		["Handle2"] = {
-			ColorMap = RID.."1761151907"},
+			ColorMap = "rbxassetid://1761151907"},
 		["Mag2"] = {
-			ColorMap = RID.."1761151907"},
+			ColorMap = "rbxassetid://1761151907"},
 		["Slide2"] = {
-			ColorMap = RID.."1761151907"}
+			ColorMap = "rbxassetid://1761151907"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Deagle | Xmas', PLACEHOLDERICON, 0, function()
 	EquipSkin("Deagle", {
 		["Handle2"] = {
-			ColorMap = RID.."1777612792"},
+			ColorMap = "rbxassetid://1777612792"},
 		["Mag2"] = {
-			ColorMap = RID.."1777612792"},
+			ColorMap = "rbxassetid://1777612792"},
 		["Slide2"] = {
-			ColorMap = RID.."1777612792"}
+			ColorMap = "rbxassetid://1777612792"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Dual Berettas | Bio-Hive', PLACEHOLDERICON, 0, function()
 	EquipSkin("Berettas", {
 		["2Handle2"] = {
-			ColorMap = RID.."90116253250131"},
+			ColorMap = "rbxassetid://90116253250131"},
 		["2Mag2"] = {
-			ColorMap = RID.."90116253250131"},
+			ColorMap = "rbxassetid://90116253250131"},
 		["2Slide2"] = {
-			ColorMap = RID.."90116253250131"},
+			ColorMap = "rbxassetid://90116253250131"},
 		["Handle2"] = {
-			ColorMap = RID.."90116253250131"},
+			ColorMap = "rbxassetid://90116253250131"},
 		["Mag2"] = {
-			ColorMap = RID.."90116253250131"},
+			ColorMap = "rbxassetid://90116253250131"},
 		["Slide2"] = {
-			ColorMap = RID.."90116253250131"}
+			ColorMap = "rbxassetid://90116253250131"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Dual Berettas | Carbonized', PLACEHOLDERICON, 0, function()
 	EquipSkin("Berettas", {
 		["2Handle2"] = {
-			ColorMap = RID.."3180037036"},
+			ColorMap = "rbxassetid://3180037036"},
 		["2Mag2"] = {
-			ColorMap = RID.."3180037036"},
+			ColorMap = "rbxassetid://3180037036"},
 		["2Slide2"] = {
-			ColorMap = RID.."3180037036"},
+			ColorMap = "rbxassetid://3180037036"},
 		["Handle2"] = {
-			ColorMap = RID.."3180037036"},
+			ColorMap = "rbxassetid://3180037036"},
 		["Mag2"] = {
-			ColorMap = RID.."3180037036"},
+			ColorMap = "rbxassetid://3180037036"},
 		["Slide2"] = {
-			ColorMap = RID.."3180037036"}
+			ColorMap = "rbxassetid://3180037036"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Dual Berettas | Dusty Manor', PLACEHOLDERICON, 0, function()
 	EquipSkin("Berettas", {
 		["2Handle2"] = {
-			ColorMap = RID.."4204547932"},
+			ColorMap = "rbxassetid://4204547932"},
 		["2Mag2"] = {
-			ColorMap = RID.."4204547932"},
+			ColorMap = "rbxassetid://4204547932"},
 		["2Slide2"] = {
-			ColorMap = RID.."4204547932"},
+			ColorMap = "rbxassetid://4204547932"},
 		["Handle2"] = {
-			ColorMap = RID.."4204547932"},
+			ColorMap = "rbxassetid://4204547932"},
 		["Mag2"] = {
-			ColorMap = RID.."4204547932"},
+			ColorMap = "rbxassetid://4204547932"},
 		["Slide2"] = {
-			ColorMap = RID.."4204547932"}
+			ColorMap = "rbxassetid://4204547932"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Dual Berettas | Floral', PLACEHOLDERICON, 0, function()
 	EquipSkin("Berettas", {
 		["2Handle2"] = {
-			ColorMap = RID.."1817822229"},
+			ColorMap = "rbxassetid://1817822229"},
 		["2Mag2"] = {
-			ColorMap = RID.."1817822229"},
+			ColorMap = "rbxassetid://1817822229"},
 		["2Slide2"] = {
-			ColorMap = RID.."1817822229"},
+			ColorMap = "rbxassetid://1817822229"},
 		["Handle2"] = {
-			ColorMap = RID.."1817822229"},
+			ColorMap = "rbxassetid://1817822229"},
 		["Mag2"] = {
-			ColorMap = RID.."1817822229"},
+			ColorMap = "rbxassetid://1817822229"},
 		["Slide2"] = {
-			ColorMap = RID.."1817822229"}
+			ColorMap = "rbxassetid://1817822229"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Dual Berettas | Hexline', PLACEHOLDERICON, 0, function()
 	EquipSkin("Berettas", {
 		["2Handle2"] = {
-			ColorMap = RID.."2131962930"},
+			ColorMap = "rbxassetid://2131962930"},
 		["2Mag2"] = {
-			ColorMap = RID.."2131962930"},
+			ColorMap = "rbxassetid://2131962930"},
 		["2Slide2"] = {
-			ColorMap = RID.."2131962930"},
+			ColorMap = "rbxassetid://2131962930"},
 		["Handle2"] = {
-			ColorMap = RID.."2131962930"},
+			ColorMap = "rbxassetid://2131962930"},
 		["Mag2"] = {
-			ColorMap = RID.."2131962930"},
+			ColorMap = "rbxassetid://2131962930"},
 		["Slide2"] = {
-			ColorMap = RID.."2131962930"}
+			ColorMap = "rbxassetid://2131962930"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Dual Berettas | Neon web', PLACEHOLDERICON, 0, function()
 	EquipSkin("Berettas", {
 		["2Handle2"] = {
-			ColorMap = RID.."1837963692"},
+			ColorMap = "rbxassetid://1837963692"},
 		["2Mag2"] = {
-			ColorMap = RID.."1837963692"},
+			ColorMap = "rbxassetid://1837963692"},
 		["2Slide2"] = {
-			ColorMap = RID.."1837963692"},
+			ColorMap = "rbxassetid://1837963692"},
 		["Handle2"] = {
-			ColorMap = RID.."1837963692"},
+			ColorMap = "rbxassetid://1837963692"},
 		["Mag2"] = {
-			ColorMap = RID.."1837963692"},
+			ColorMap = "rbxassetid://1837963692"},
 		["Slide2"] = {
-			ColorMap = RID.."1837963692"}
+			ColorMap = "rbxassetid://1837963692"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Dual Berettas | Old Fashioned', PLACEHOLDERICON, 0, function()
 	EquipSkin("Berettas", {
 		["2Handle2"] = {
-			ColorMap = RID.."3180126126"},
+			ColorMap = "rbxassetid://3180126126"},
 		["2Mag2"] = {
-			ColorMap = RID.."3180126126"},
+			ColorMap = "rbxassetid://3180126126"},
 		["2Slide2"] = {
-			ColorMap = RID.."3180126126"},
+			ColorMap = "rbxassetid://3180126126"},
 		["Handle2"] = {
-			ColorMap = RID.."3180126126"},
+			ColorMap = "rbxassetid://3180126126"},
 		["Mag2"] = {
-			ColorMap = RID.."3180126126"},
+			ColorMap = "rbxassetid://3180126126"},
 		["Slide2"] = {
-			ColorMap = RID.."3180126126"}
+			ColorMap = "rbxassetid://3180126126"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Dual Berettas | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("Berettas", {
 		["2Handle2"] = {
-			ColorMap = RID.."73838596035996"},
+			ColorMap = "rbxassetid://73838596035996"},
 		["2Mag2"] = {
-			ColorMap = RID.."73838596035996"},
+			ColorMap = "rbxassetid://73838596035996"},
 		["2Slide2"] = {
-			ColorMap = RID.."73838596035996"},
+			ColorMap = "rbxassetid://73838596035996"},
 		["Handle2"] = {
-			ColorMap = RID.."73838596035996"},
+			ColorMap = "rbxassetid://73838596035996"},
 		["Mag2"] = {
-			ColorMap = RID.."73838596035996"},
+			ColorMap = "rbxassetid://73838596035996"},
 		["Slide2"] = {
-			ColorMap = RID.."73838596035996"}
+			ColorMap = "rbxassetid://73838596035996"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Dual Berettas | Xmas', PLACEHOLDERICON, 0, function()
 	EquipSkin("Berettas", {
 		["2Handle2"] = {
-			ColorMap = RID.."1837955219"},
+			ColorMap = "rbxassetid://1837955219"},
 		["2Mag2"] = {
-			ColorMap = RID.."1837955219"},
+			ColorMap = "rbxassetid://1837955219"},
 		["2Slide2"] = {
-			ColorMap = RID.."1837955219"},
+			ColorMap = "rbxassetid://1837955219"},
 		["Handle2"] = {
-			ColorMap = RID.."1837955219"},
+			ColorMap = "rbxassetid://1837955219"},
 		["Mag2"] = {
-			ColorMap = RID.."1837955219"},
+			ColorMap = "rbxassetid://1837955219"},
 		["Slide2"] = {
-			ColorMap = RID.."1837955219"}
+			ColorMap = "rbxassetid://1837955219"}
 	})
 end)
 
@@ -63871,195 +64029,195 @@ end)
 -- CreateTabButton('GameSkins', 'APPEND', 'Falchion Classic | Late Night', PLACEHOLDERICON, 0, function()
 -- 	EquipSkin("Falchion Classic", {
 -- 		["Handle"] = {
--- 			ColorMap = RID.."2732153568"},
+-- 			ColorMap = "rbxassetid://2732153568"},
 -- 		["Blade"] = {
--- 			ColorMap = RID.."2732153568"}
+-- 			ColorMap = "rbxassetid://2732153568"}
 -- 	})
 -- end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Falchion | Bloodwidow', PLACEHOLDERICON, 0, function()
 	EquipSkin("Falchion", {
 		["1Handle"] = {
-			ColorMap = RID.."3037400311"},
+			ColorMap = "rbxassetid://3037400311"},
 		["Blade"] = {
-			ColorMap = RID.."3037400311"}
+			ColorMap = "rbxassetid://3037400311"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Falchion | Chosen', PLACEHOLDERICON, 0, function()
 	EquipSkin("Falchion", {
 		["1Handle"] = {
-			ColorMap = RID.."3271330774"},
+			ColorMap = "rbxassetid://3271330774"},
 		["Blade"] = {
-			ColorMap = RID.."3271330774"}
+			ColorMap = "rbxassetid://3271330774"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Falchion | Christmas Steel', PLACEHOLDERICON, 0, function()
 	EquipSkin("Falchion", {
 		["1Handle"] = {
-			ColorMap = RID.."82589200760214"},
+			ColorMap = "rbxassetid://82589200760214"},
 		["Blade"] = {
-			ColorMap = RID.."82589200760214"}
+			ColorMap = "rbxassetid://82589200760214"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Falchion | Coal', PLACEHOLDERICON, 0, function()
 	EquipSkin("Falchion", {
 		["1Handle"] = {
-			ColorMap = RID.."3065144441"},
+			ColorMap = "rbxassetid://3065144441"},
 		["Blade"] = {
-			ColorMap = RID.."3065144441"}
+			ColorMap = "rbxassetid://3065144441"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Falchion | Cocoa', PLACEHOLDERICON, 0, function()
 	EquipSkin("Falchion", {
 		["1Handle"] = {
-			ColorMap = RID.."6102035068"},
+			ColorMap = "rbxassetid://6102035068"},
 		["Blade"] = {
-			ColorMap = RID.."6102035068"}
+			ColorMap = "rbxassetid://6102035068"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Falchion | Consumed', PLACEHOLDERICON, 0, function()
 	EquipSkin("Falchion", {
 		["1Handle"] = {
-			ColorMap = RID.."4204681003"},
+			ColorMap = "rbxassetid://4204681003"},
 		["Blade"] = {
-			ColorMap = RID.."4204681003"}
+			ColorMap = "rbxassetid://4204681003"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Falchion | Cosmos', PLACEHOLDERICON, 0, function()
 	EquipSkin("Falchion", {
 		["1Handle"] = {
-			ColorMap = RID.."3037402801"},
+			ColorMap = "rbxassetid://3037402801"},
 		["Blade"] = {
-			ColorMap = RID.."3037402801"}
+			ColorMap = "rbxassetid://3037402801"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Falchion | Crimson Tiger', PLACEHOLDERICON, 0, function()
 	EquipSkin("Falchion", {
 		["1Handle"] = {
-			ColorMap = RID.."3037405921"},
+			ColorMap = "rbxassetid://3037405921"},
 		["Blade"] = {
-			ColorMap = RID.."3037405921"}
+			ColorMap = "rbxassetid://3037405921"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Falchion | Crippled Fade', PLACEHOLDERICON, 0, function()
 	EquipSkin("Falchion", {
 		["1Handle"] = {
-			ColorMap = RID.."3037373359"},
+			ColorMap = "rbxassetid://3037373359"},
 		["Blade"] = {
-			ColorMap = RID.."3037373359"}
+			ColorMap = "rbxassetid://3037373359"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Falchion | Dark Damascus', PLACEHOLDERICON, 0, function()
 	EquipSkin("Falchion", {
 		["1Handle"] = {
-			ColorMap = RID.."121780585569683",
-			NormalMap = RID.."74873087273369",
-			RoughnessMap = RID.."137414655258193",
-			MetalnessMap = RID.."126600553649986"},
+			ColorMap = "rbxassetid://121780585569683",
+			NormalMap = "rbxassetid://74873087273369",
+			RoughnessMap = "rbxassetid://137414655258193",
+			MetalnessMap = "rbxassetid://126600553649986"},
 		["Blade"] = {
-			ColorMap = RID.."121780585569683",
-			NormalMap = RID.."74873087273369",
-			RoughnessMap = RID.."137414655258193",
-			MetalnessMap = RID.."126600553649986"}
+			ColorMap = "rbxassetid://121780585569683",
+			NormalMap = "rbxassetid://74873087273369",
+			RoughnessMap = "rbxassetid://137414655258193",
+			MetalnessMap = "rbxassetid://126600553649986"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Falchion | Digital', PLACEHOLDERICON, 0, function()
 	EquipSkin("Falchion", {
 		["1Handle"] = {
-			ColorMap = RID.."3037376897"},
+			ColorMap = "rbxassetid://3037376897"},
 		["Blade"] = {
-			ColorMap = RID.."3037376897"}
+			ColorMap = "rbxassetid://3037376897"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Falchion | Egg Shell', PLACEHOLDERICON, 0, function()
 	EquipSkin("Falchion", {
 		["1Handle"] = {
-			ColorMap = RID.."3081426924"},
+			ColorMap = "rbxassetid://3081426924"},
 		["Blade"] = {
-			ColorMap = RID.."3081426924"}
+			ColorMap = "rbxassetid://3081426924"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Falchion | Festive', PLACEHOLDERICON, 0, function()
 	EquipSkin("Falchion", {
 		["1Handle"] = {
-			ColorMap = RID.."4563314211"},
+			ColorMap = "rbxassetid://4563314211"},
 		["Blade"] = {
-			ColorMap = RID.."4563314211"}
+			ColorMap = "rbxassetid://4563314211"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Falchion | Freedom', PLACEHOLDERICON, 0, function()
 	EquipSkin("Falchion", {
 		["1Handle"] = {
-			ColorMap = RID.."3411669590"},
+			ColorMap = "rbxassetid://3411669590"},
 		["Blade"] = {
-			ColorMap = RID.."3411669590"}
+			ColorMap = "rbxassetid://3411669590"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Falchion | Frozen Dream', PLACEHOLDERICON, 0, function()
 	EquipSkin("Falchion", {
 		["1Handle"] = {
-			ColorMap = RID.."3037411136"},
+			ColorMap = "rbxassetid://3037411136"},
 		["Blade"] = {
-			ColorMap = RID.."3037411136"}
+			ColorMap = "rbxassetid://3037411136"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Falchion | Goo', PLACEHOLDERICON, 0, function()
 	EquipSkin("Falchion", {
 		["1Handle"] = {
-			ColorMap = RID.."4229843387"},
+			ColorMap = "rbxassetid://4229843387"},
 		["Blade"] = {
-			ColorMap = RID.."4229843387"}
+			ColorMap = "rbxassetid://4229843387"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Falchion | Grim', PLACEHOLDERICON, 0, function()
 	EquipSkin("Falchion", {
 		["1Handle"] = {
-			ColorMap = RID.."122230193402941"},
+			ColorMap = "rbxassetid://122230193402941"},
 		["Blade"] = {
-			ColorMap = RID.."122230193402941"}
+			ColorMap = "rbxassetid://122230193402941"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Falchion | Hallows', PLACEHOLDERICON, 0, function()
 	EquipSkin("Falchion", {
 		["1Handle"] = {
-			ColorMap = RID.."3037384439"},
+			ColorMap = "rbxassetid://3037384439"},
 		["Blade"] = {
-			ColorMap = RID.."3037384439"}
+			ColorMap = "rbxassetid://3037384439"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Falchion | Inversion', PLACEHOLDERICON, 0, function()
 	EquipSkin("Falchion", {
 		["1Handle"] = {
-			ColorMap = RID.."4427331449"},
+			ColorMap = "rbxassetid://4427331449"},
 		["Blade"] = {
-			ColorMap = RID.."4427331449"}
+			ColorMap = "rbxassetid://4427331449"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Falchion | Kimura', PLACEHOLDERICON, 0, function()
 	EquipSkin("Falchion", {
 		["1Handle"] = {
-			ColorMap = RID.."6803335599"},
+			ColorMap = "rbxassetid://6803335599"},
 		["Blade"] = {
-			ColorMap = RID.."6803335599"}
+			ColorMap = "rbxassetid://6803335599"}
 	})
 end)
 
@@ -64067,481 +64225,481 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'Falchion | Late Night', PLACEHOLDERICON, 0, function()
 	EquipSkin("Falchion", {
 		["1Handle"] = {
-			ColorMap = RID.."3061638723"},
+			ColorMap = "rbxassetid://3061638723"},
 		["Blade"] = {
-			ColorMap = RID.."3061638723"}
+			ColorMap = "rbxassetid://3061638723"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Falchion | Marbleized', PLACEHOLDERICON, 0, function()
 	EquipSkin("Falchion", {
 		["1Handle"] = {
-			ColorMap = RID.."3081769570"},
+			ColorMap = "rbxassetid://3081769570"},
 		["Blade"] = {
-			ColorMap = RID.."3081769570"}
+			ColorMap = "rbxassetid://3081769570"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Falchion | Naval', PLACEHOLDERICON, 0, function()
 	EquipSkin("Falchion", {
 		["1Handle"] = {
-			ColorMap = RID.."3037419029"},
+			ColorMap = "rbxassetid://3037419029"},
 		["Blade"] = {
-			ColorMap = RID.."3037419029"}
+			ColorMap = "rbxassetid://3037419029"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Falchion | Neonic', PLACEHOLDERICON, 0, function()
 	EquipSkin("Falchion", {
 		["1Handle"] = {
-			ColorMap = RID.."3037421748"},
+			ColorMap = "rbxassetid://3037421748"},
 		["Blade"] = {
-			ColorMap = RID.."3037421748"}
+			ColorMap = "rbxassetid://3037421748"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Falchion | Pumpkin', PLACEHOLDERICON, 0, function()
 	EquipSkin("Falchion", {
 		["1Handle"] = {
-			ColorMap = RID.."5894416101"},
+			ColorMap = "rbxassetid://5894416101"},
 		["Blade"] = {
-			ColorMap = RID.."5894416101"}
+			ColorMap = "rbxassetid://5894416101"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Falchion | Racer', PLACEHOLDERICON, 0, function()
 	EquipSkin("Falchion", {
 		["1Handle"] = {
-			ColorMap = RID.."4614510041"},
+			ColorMap = "rbxassetid://4614510041"},
 		["Blade"] = {
-			ColorMap = RID.."4614510041"}
+			ColorMap = "rbxassetid://4614510041"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Falchion | Ruby', PLACEHOLDERICON, 0, function()
 	EquipSkin("Falchion", {
 		["1Handle"] = {
-			ColorMap = RID.."3037425891"},
+			ColorMap = "rbxassetid://3037425891"},
 		["Blade"] = {
-			ColorMap = RID.."3037425891"}
+			ColorMap = "rbxassetid://3037425891"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Falchion | Splattered', PLACEHOLDERICON, 0, function()
 	EquipSkin("Falchion", {
 		["1Handle"] = {
-			ColorMap = RID.."3037390225"},
+			ColorMap = "rbxassetid://3037390225"},
 		["Blade"] = {
-			ColorMap = RID.."3037390225"}
+			ColorMap = "rbxassetid://3037390225"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Falchion | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("Falchion", {
 		["1Handle"] = {
-			ColorMap = RID.."3023648212"},
+			ColorMap = "rbxassetid://3023648212"},
 		["Blade"] = {
-			ColorMap = RID.."3023648212"}
+			ColorMap = "rbxassetid://3023648212"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Falchion | Topaz', PLACEHOLDERICON, 0, function()
 	EquipSkin("Falchion", {
 		["1Handle"] = {
-			ColorMap = RID.."3037433679"},
+			ColorMap = "rbxassetid://3037433679"},
 		["Blade"] = {
-			ColorMap = RID.."3037433679"}
+			ColorMap = "rbxassetid://3037433679"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Falchion | Toxic Nitro', PLACEHOLDERICON, 0, function()
 	EquipSkin("Falchion", {
 		["1Handle"] = {
-			ColorMap = RID.."4680487656"},
+			ColorMap = "rbxassetid://4680487656"},
 		["Blade"] = {
-			ColorMap = RID.."4680487656"}
+			ColorMap = "rbxassetid://4680487656"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Falchion | Tropical', PLACEHOLDERICON, 0, function()
 	EquipSkin("Falchion", {
 		["1Handle"] = {
-			ColorMap = RID.."3037436095"},
+			ColorMap = "rbxassetid://3037436095"},
 		["Blade"] = {
-			ColorMap = RID.."3037436095"}
+			ColorMap = "rbxassetid://3037436095"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Falchion | Twilight', PLACEHOLDERICON, 0, function()
 	EquipSkin("Falchion", {
 		["1Handle"] = {
-			ColorMap = RID.."7944243371"},
+			ColorMap = "rbxassetid://7944243371"},
 		["Blade"] = {
-			ColorMap = RID.."7944243371"}
+			ColorMap = "rbxassetid://7944243371"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Falchion | Wetland', PLACEHOLDERICON, 0, function()
 	EquipSkin("Falchion", {
 		["1Handle"] = {
-			ColorMap = RID.."3037394000"},
+			ColorMap = "rbxassetid://3037394000"},
 		["Blade"] = {
-			ColorMap = RID.."3037394000"}
+			ColorMap = "rbxassetid://3037394000"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Falchion | Worn', PLACEHOLDERICON, 0, function()
 	EquipSkin("Falchion", {
 		["1Handle"] = {
-			ColorMap = RID.."3037443715"},
+			ColorMap = "rbxassetid://3037443715"},
 		["Blade"] = {
-			ColorMap = RID.."3037443715"}
+			ColorMap = "rbxassetid://3037443715"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Falchion | Wrapped', PLACEHOLDERICON, 0, function()
 	EquipSkin("Falchion", {
 		["1Handle"] = {
-			ColorMap = RID.."4563325432"},
+			ColorMap = "rbxassetid://4563325432"},
 		["Blade"] = {
-			ColorMap = RID.."4563325432"}
+			ColorMap = "rbxassetid://4563325432"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Falchion | Zombie', PLACEHOLDERICON, 0, function()
 	EquipSkin("Falchion", {
 		["1Handle"] = {
-			ColorMap = RID.."3037381639"},
+			ColorMap = "rbxassetid://3037381639"},
 		["Blade"] = {
-			ColorMap = RID.."3037381639"}
+			ColorMap = "rbxassetid://3037381639"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'FAMAS F1 | Abstract', PLACEHOLDERICON, 0, function()
 	EquipSkin("Famas", {
 		["Bolt"] = {
-			ColorMap = RID.."1425595804"},
+			ColorMap = "rbxassetid://1425595804"},
 		["Handle"] = {
-			ColorMap = RID.."1425595804"},
+			ColorMap = "rbxassetid://1425595804"},
 		["Mag"] = {
-			ColorMap = RID.."1425595804"}
+			ColorMap = "rbxassetid://1425595804"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'FAMAS F1 | Blossom', PLACEHOLDERICON, 0, function()
 	EquipSkin("Famas", {
 		["Bolt"] = {
-			ColorMap = RID.."138209869237071"},
+			ColorMap = "rbxassetid://138209869237071"},
 		["Handle"] = {
-			ColorMap = RID.."138209869237071"},
+			ColorMap = "rbxassetid://138209869237071"},
 		["Mag"] = {
-			ColorMap = RID.."138209869237071"}
+			ColorMap = "rbxassetid://138209869237071"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'FAMAS F1 | Catstellation', PLACEHOLDERICON, 0, function()
 	EquipSkin("Famas", {
 		["Bolt"] = {
-			ColorMap = RID.."110004204715750"},
+			ColorMap = "rbxassetid://110004204715750"},
 		["Handle"] = {
-			ColorMap = RID.."103181677585252"},
+			ColorMap = "rbxassetid://103181677585252"},
 		["Mag"] = {
-			ColorMap = RID.."103181677585252"}
+			ColorMap = "rbxassetid://103181677585252"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'FAMAS F1 | Centipede', PLACEHOLDERICON, 0, function()
 	EquipSkin("Famas", {
 		["Bolt"] = {
-			ColorMap = RID.."2916242058"},
+			ColorMap = "rbxassetid://2916242058"},
 		["Handle"] = {
-			ColorMap = RID.."2916242058"},
+			ColorMap = "rbxassetid://2916242058"},
 		["Mag"] = {
-			ColorMap = RID.."2916242058"}
+			ColorMap = "rbxassetid://2916242058"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'FAMAS F1 | Christmas Steel', PLACEHOLDERICON, 0, function()
 	EquipSkin("Famas", {
 		["Bolt"] = {
-			ColorMap = RID.."108643073490134"},
+			ColorMap = "rbxassetid://108643073490134"},
 		["Handle"] = {
-			ColorMap = RID.."108643073490134"},
+			ColorMap = "rbxassetid://108643073490134"},
 		["Mag"] = {
-			ColorMap = RID.."108643073490134"}
+			ColorMap = "rbxassetid://108643073490134"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'FAMAS F1 | Cogged', PLACEHOLDERICON, 0, function()
 	EquipSkin("Famas", {
 		["Bolt"] = {
-			ColorMap = RID.."3180126195"},
+			ColorMap = "rbxassetid://3180126195"},
 		["Handle"] = {
-			ColorMap = RID.."3180126195"},
+			ColorMap = "rbxassetid://3180126195"},
 		["Mag"] = {
-			ColorMap = RID.."3180126195"}
+			ColorMap = "rbxassetid://3180126195"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'FAMAS F1 | Goliath', PLACEHOLDERICON, 0, function()
 	EquipSkin("Famas", {
 		["Bolt"] = {
-			ColorMap = RID.."1630892130"},
+			ColorMap = "rbxassetid://1630892130"},
 		["Handle"] = {
-			ColorMap = RID.."1630892130"},
+			ColorMap = "rbxassetid://1630892130"},
 		["Mag"] = {
-			ColorMap = RID.."1630892130"}
+			ColorMap = "rbxassetid://1630892130"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'FAMAS F1 | Haunted Forest', PLACEHOLDERICON, 0, function()
 	EquipSkin("Famas", {
 		["Bolt"] = {
-			ColorMap = RID.."1425636187"},
+			ColorMap = "rbxassetid://1425636187"},
 		["Handle"] = {
-			ColorMap = RID.."1425636187"},
+			ColorMap = "rbxassetid://1425636187"},
 		["Mag"] = {
-			ColorMap = RID.."1425636187"}
+			ColorMap = "rbxassetid://1425636187"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'FAMAS F1 | Imprisioned', PLACEHOLDERICON, 0, function()
 	EquipSkin("Famas", {
 		["Bolt"] = {
-			ColorMap = RID.."5860606189"},
+			ColorMap = "rbxassetid://5860606189"},
 		["Handle"] = {
-			ColorMap = RID.."5860628039"},
+			ColorMap = "rbxassetid://5860628039"},
 		["Mag"] = {
-			ColorMap = RID.."5860627770"}
+			ColorMap = "rbxassetid://5860627770"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'FAMAS F1 | KugaX', PLACEHOLDERICON, 0, function()
 	EquipSkin("Famas", {
 		["Bolt"] = {
-			ColorMap = RID.."3801635669"},
+			ColorMap = "rbxassetid://3801635669"},
 		["Handle"] = {
-			ColorMap = RID.."3801635669"},
+			ColorMap = "rbxassetid://3801635669"},
 		["Mag"] = {
-			ColorMap = RID.."3801635669"}
+			ColorMap = "rbxassetid://3801635669"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'FAMAS F1 | MK11', PLACEHOLDERICON, 0, function()
 	EquipSkin("Famas", {
 		["Bolt"] = {
-			ColorMap = RID.."4229561863"},
+			ColorMap = "rbxassetid://4229561863"},
 		["Handle"] = {
-			ColorMap = RID.."4229561863"},
+			ColorMap = "rbxassetid://4229561863"},
 		["Mag"] = {
-			ColorMap = RID.."4229561863"}
+			ColorMap = "rbxassetid://4229561863"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'FAMAS F1 | Medic', PLACEHOLDERICON, 0, function()
 	EquipSkin("Famas", {
 		["Bolt"] = {
-			ColorMap = RID.."3179792212"},
+			ColorMap = "rbxassetid://3179792212"},
 		["Handle"] = {
-			ColorMap = RID.."3179792212"},
+			ColorMap = "rbxassetid://3179792212"},
 		["Mag"] = {
-			ColorMap = RID.."3179792212"}
+			ColorMap = "rbxassetid://3179792212"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'FAMAS F1 | RacerX', PLACEHOLDERICON, 0, function()
 	EquipSkin("Famas", {
 		["Bolt"] = {
-			ColorMap = RID.."104063611047428",
-			NormalMap = RID.."132854664211471",
-			RoughnessMap = RID.."135510501320654",
-			MetalnessMap = RID.."83219487275659"},
+			ColorMap = "rbxassetid://104063611047428",
+			NormalMap = "rbxassetid://132854664211471",
+			RoughnessMap = "rbxassetid://135510501320654",
+			MetalnessMap = "rbxassetid://83219487275659"},
 		["Handle"] = {
-			ColorMap = RID.."125216266815023",
-			NormalMap = RID.."102495834050267",
-			RoughnessMap = RID.."103891858604239",
-			MetalnessMap = RID.."134342207954456"},
+			ColorMap = "rbxassetid://125216266815023",
+			NormalMap = "rbxassetid://102495834050267",
+			RoughnessMap = "rbxassetid://103891858604239",
+			MetalnessMap = "rbxassetid://134342207954456"},
 		["Mag"] = {
-			ColorMap = RID.."125216266815023",
-			NormalMap = RID.."102495834050267",
-			RoughnessMap = RID.."103891858604239",
-			MetalnessMap = RID.."134342207954456"}
+			ColorMap = "rbxassetid://125216266815023",
+			NormalMap = "rbxassetid://102495834050267",
+			RoughnessMap = "rbxassetid://103891858604239",
+			MetalnessMap = "rbxassetid://134342207954456"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'FAMAS F1 | Redux', PLACEHOLDERICON, 0, function()
 	EquipSkin("Famas", {
 		["Bolt"] = {
-			ColorMap = RID.."2132009143"},
+			ColorMap = "rbxassetid://2132009143"},
 		["Handle"] = {
-			ColorMap = RID.."2132009143"},
+			ColorMap = "rbxassetid://2132009143"},
 		["Mag"] = {
-			ColorMap = RID.."2132009143"}
+			ColorMap = "rbxassetid://2132009143"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'FAMAS F1 | Shocker', PLACEHOLDERICON, 0, function()
 	EquipSkin("Famas", {
 		["Bolt"] = {
-			ColorMap = RID.."4204548349"},
+			ColorMap = "rbxassetid://4204548349"},
 		["Handle"] = {
-			ColorMap = RID.."4204548349"},
+			ColorMap = "rbxassetid://4204548349"},
 		["Mag"] = {
-			ColorMap = RID.."4204548349"}
+			ColorMap = "rbxassetid://4204548349"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'FAMAS F1 | Toxic Rain', PLACEHOLDERICON, 0, function()
 	EquipSkin("Famas", {
 		["Bolt"] = {
-			ColorMap = RID.."2445865921"},
+			ColorMap = "rbxassetid://2445865921"},
 		["Handle"] = {
-			ColorMap = RID.."2445865921"},
+			ColorMap = "rbxassetid://2445865921"},
 		["Mag"] = {
-			ColorMap = RID.."2445865921"}
+			ColorMap = "rbxassetid://2445865921"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Five-seveN | Accelerator', PLACEHOLDERICON, 0, function()
 	EquipSkin("FiveSeven", {
 		["Handle2"] = {
-			ColorMap = RID.."125835078369892"},
+			ColorMap = "rbxassetid://125835078369892"},
 		["Mag2"] = {
-			ColorMap = RID.."125835078369892"},
+			ColorMap = "rbxassetid://125835078369892"},
 		["Slide2"] = {
-			ColorMap = RID.."125835078369892"}
+			ColorMap = "rbxassetid://125835078369892"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Five-seveN | Autumn Fade', PLACEHOLDERICON, 0, function()
 	EquipSkin("FiveSeven", {
 		["Handle2"] = {
-			ColorMap = RID.."3801636301"},
+			ColorMap = "rbxassetid://3801636301"},
 		["Mag2"] = {
-			ColorMap = RID.."3801636301"},
+			ColorMap = "rbxassetid://3801636301"},
 		["Slide2"] = {
-			ColorMap = RID.."3801636301"}
+			ColorMap = "rbxassetid://3801636301"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', "Five-seveN | Creator's Eye", PLACEHOLDERICON, 0, function()
 	EquipSkin("FiveSeven", {
 		["Handle2"] = {
-			ColorMap = RID.."99892437172484"},
+			ColorMap = "rbxassetid://99892437172484"},
 		["Mag2"] = {
-			ColorMap = RID.."99892437172484"},
+			ColorMap = "rbxassetid://99892437172484"},
 		["Slide2"] = {
-			ColorMap = RID.."99892437172484"}
+			ColorMap = "rbxassetid://99892437172484"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Five-seveN | Danjo', PLACEHOLDERICON, 0, function()
 	EquipSkin("FiveSeven", {
 		["Handle2"] = {
-			ColorMap = RID.."1237357262"},
+			ColorMap = "rbxassetid://1237357262"},
 		["Mag2"] = {
-			ColorMap = RID.."1237357262"},
+			ColorMap = "rbxassetid://1237357262"},
 		["Slide2"] = {
-			ColorMap = RID.."1237357262"}
+			ColorMap = "rbxassetid://1237357262"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Five-seveN | Drifter', PLACEHOLDERICON, 0, function()
 	EquipSkin("FiveSeven", {
 		["Handle2"] = {
-			ColorMap = RID.."84754098523851"},
+			ColorMap = "rbxassetid://84754098523851"},
 		["Mag2"] = {
-			ColorMap = RID.."84754098523851"},
+			ColorMap = "rbxassetid://84754098523851"},
 		["Slide2"] = {
-			ColorMap = RID.."98178789828912"}
+			ColorMap = "rbxassetid://98178789828912"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Five-seveN | Fluid', PLACEHOLDERICON, 0, function()
 	EquipSkin("FiveSeven", {
 		["Handle2"] = {
-			ColorMap = RID.."3179792303"},
+			ColorMap = "rbxassetid://3179792303"},
 		["Mag2"] = {
-			ColorMap = RID.."3179792303"},
+			ColorMap = "rbxassetid://3179792303"},
 		["Slide2"] = {
-			ColorMap = RID.."3179792303"}
+			ColorMap = "rbxassetid://3179792303"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Five-seveN | Gifted', PLACEHOLDERICON, 0, function()
 	EquipSkin("FiveSeven", {
 		["Handle2"] = {
-			ColorMap = RID.."2666243949"},
+			ColorMap = "rbxassetid://2666243949"},
 		["Mag2"] = {
-			ColorMap = RID.."2666243949"},
+			ColorMap = "rbxassetid://2666243949"},
 		["Slide2"] = {
-			ColorMap = RID.."2666243949"}
+			ColorMap = "rbxassetid://2666243949"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Five-seveN | Midnight Ride', PLACEHOLDERICON, 0, function()
 	EquipSkin("FiveSeven", {
 		["Handle2"] = {
-			ColorMap = RID.."2666243949"},
+			ColorMap = "rbxassetid://2666243949"},
 		["Mag2"] = {
-			ColorMap = RID.."2666243949"},
+			ColorMap = "rbxassetid://2666243949"},
 		["Slide2"] = {
-			ColorMap = RID.."2666243949"}
+			ColorMap = "rbxassetid://2666243949"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Five-seveN | Mr. Anatomy', PLACEHOLDERICON, 0, function()
 	EquipSkin("FiveSeven", {
 		["Handle2"] = {
-			ColorMap = RID.."4204553743"},
+			ColorMap = "rbxassetid://4204553743"},
 		["Mag2"] = {
-			ColorMap = RID.."4204553743"},
+			ColorMap = "rbxassetid://4204553743"},
 		["Slide2"] = {
-			ColorMap = RID.."4204553743"}
+			ColorMap = "rbxassetid://4204553743"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Five-seveN | Stigma', PLACEHOLDERICON, 0, function()
 	EquipSkin("FiveSeven", {
 		["Handle2"] = {
-			ColorMap = RID.."1233749163"},
+			ColorMap = "rbxassetid://1233749163"},
 		["Mag2"] = {
-			ColorMap = RID.."1233749163"},
+			ColorMap = "rbxassetid://1233749163"},
 		["Slide2"] = {
-			ColorMap = RID.."1233749163"}
+			ColorMap = "rbxassetid://1233749163"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Five-seveN | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("FiveSeven", {
 		["Handle2"] = {
-			ColorMap = RID.."78729527204607"},
+			ColorMap = "rbxassetid://78729527204607"},
 		["Mag2"] = {
-			ColorMap = RID.."78729527204607"},
+			ColorMap = "rbxassetid://78729527204607"},
 		["Slide2"] = {
-			ColorMap = RID.."78729527204607"}
+			ColorMap = "rbxassetid://78729527204607"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Five-seveN | Sub Zero', PLACEHOLDERICON, 0, function()
 	EquipSkin("FiveSeven", {
 		["Handle2"] = {
-			ColorMap = RID.."3180037157"},
+			ColorMap = "rbxassetid://3180037157"},
 		["Mag2"] = {
-			ColorMap = RID.."3180037157"},
+			ColorMap = "rbxassetid://3180037157"},
 		["Slide2"] = {
-			ColorMap = RID.."3180037157"}
+			ColorMap = "rbxassetid://3180037157"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Five-seveN | Summer', PLACEHOLDERICON, 0, function()
 	EquipSkin("FiveSeven", {
 		["Handle2"] = {
-			ColorMap = RID.."2445864737"},
+			ColorMap = "rbxassetid://2445864737"},
 		["Mag2"] = {
-			ColorMap = RID.."2445864737"},
+			ColorMap = "rbxassetid://2445864737"},
 		["Slide2"] = {
-			ColorMap = RID.."2445864737"}
+			ColorMap = "rbxassetid://2445864737"}
 	})
 end)
 
@@ -64550,95 +64708,95 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'G3SG1 | Amethyst', PLACEHOLDERICON, 0, function()
 	EquipSkin("G3SG1", {
 		["Barrel"] = {
-			ColorMap = RID.."1777723095"},
+			ColorMap = "rbxassetid://1777723095"},
 		["Body"] = {
-			ColorMap = RID.."1777723095"},
+			ColorMap = "rbxassetid://1777723095"},
 		["Handle2"] = {
-			ColorMap = RID.."1777723095"},
+			ColorMap = "rbxassetid://1777723095"},
 		["Mag2"] = {
-			ColorMap = RID.."1777723095"},
+			ColorMap = "rbxassetid://1777723095"},
 		["Part"] = {
-			ColorMap = RID.."1777723095"},
+			ColorMap = "rbxassetid://1777723095"},
 		["Bolt2"] = {
-			ColorMap = RID.."1777723095"},
+			ColorMap = "rbxassetid://1777723095"},
 		["Bolt3"] = {
-			ColorMap = RID.."1777723095"}
+			ColorMap = "rbxassetid://1777723095"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'G3SG1 | Autumn', PLACEHOLDERICON, 0, function()
 	EquipSkin("G3SG1", {
 		["Barrel"] = {
-			ColorMap = RID.."1817778811"},
+			ColorMap = "rbxassetid://1817778811"},
 		["Body"] = {
-			ColorMap = RID.."1817778811"},
+			ColorMap = "rbxassetid://1817778811"},
 		["Handle2"] = {
-			ColorMap = RID.."1817778811"},
+			ColorMap = "rbxassetid://1817778811"},
 		["Mag2"] = {
-			ColorMap = RID.."1817778811"},
+			ColorMap = "rbxassetid://1817778811"},
 		["Part"] = {
-			ColorMap = RID.."1817779266"},
+			ColorMap = "rbxassetid://1817779266"},
 		["Bolt2"] = {
-			ColorMap = RID.."1817778811"},
+			ColorMap = "rbxassetid://1817778811"},
 		["Bolt3"] = {
-			ColorMap = RID.."1817778811"}
+			ColorMap = "rbxassetid://1817778811"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'G3SG1 | Foliage', PLACEHOLDERICON, 0, function()
 	EquipSkin("G3SG1", {
 		["Barrel"] = {
-			ColorMap = RID.."1817768590"},
+			ColorMap = "rbxassetid://1817768590"},
 		["Body"] = {
-			ColorMap = RID.."1817768590"},
+			ColorMap = "rbxassetid://1817768590"},
 		["Handle2"] = {
-			ColorMap = RID.."1817768590"},
+			ColorMap = "rbxassetid://1817768590"},
 		["Mag2"] = {
-			ColorMap = RID.."1817768590"},
+			ColorMap = "rbxassetid://1817768590"},
 		["Part"] = {
-			ColorMap = RID.."1817768590"},
+			ColorMap = "rbxassetid://1817768590"},
 		["Bolt2"] = {
-			ColorMap = RID.."1817768590"},
+			ColorMap = "rbxassetid://1817768590"},
 		["Bolt3"] = {
-			ColorMap = RID.."1817768590"}
+			ColorMap = "rbxassetid://1817768590"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'G3SG1 | Hex', PLACEHOLDERICON, 0, function()
 	EquipSkin("G3SG1", {
 		["Barrel"] = {
-			ColorMap = RID.."1777705300"},
+			ColorMap = "rbxassetid://1777705300"},
 		["Body"] = {
-			ColorMap = RID.."1777705300"},
+			ColorMap = "rbxassetid://1777705300"},
 		["Handle2"] = {
-			ColorMap = RID.."1777705300"},
+			ColorMap = "rbxassetid://1777705300"},
 		["Mag2"] = {
-			ColorMap = RID.."1777705300"},
+			ColorMap = "rbxassetid://1777705300"},
 		["Part"] = {
-			ColorMap = RID.."1777705300"},
+			ColorMap = "rbxassetid://1777705300"},
 		["Bolt2"] = {
-			ColorMap = RID.."1777705300"},
+			ColorMap = "rbxassetid://1777705300"},
 		["Bolt3"] = {
-			ColorMap = RID.."1777705300"}
+			ColorMap = "rbxassetid://1777705300"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'G3SG1 | Holly Bound', PLACEHOLDERICON, 0, function()
 	EquipSkin("G3SG1", {
 		["Barrel"] = {
-			ColorMap = RID.."4540740299"},
+			ColorMap = "rbxassetid://4540740299"},
 		["Body"] = {
-			ColorMap = RID.."4540740299"},
+			ColorMap = "rbxassetid://4540740299"},
 		["Handle2"] = {
-			ColorMap = RID.."4540740299"},
+			ColorMap = "rbxassetid://4540740299"},
 		["Mag2"] = {
-			ColorMap = RID.."4540740299"},
+			ColorMap = "rbxassetid://4540740299"},
 		["Part"] = {
-			ColorMap = RID.."4540740299"},
+			ColorMap = "rbxassetid://4540740299"},
 		["Bolt2"] = {
-			ColorMap = RID.."4540740299"},
+			ColorMap = "rbxassetid://4540740299"},
 		["Bolt3"] = {
-			ColorMap = RID.."4540740299"}
+			ColorMap = "rbxassetid://4540740299"}
 	})
 end)
 
@@ -64646,188 +64804,188 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'G3SG1 | Mahogany', PLACEHOLDERICON, 0, function()
 	EquipSkin("G3SG1", {
 		["Barrel"] = {
-			ColorMap = RID.."8245329738"},
+			ColorMap = "rbxassetid://8245329738"},
 		["Body"] = {
-			ColorMap = RID.."8245329738"},
+			ColorMap = "rbxassetid://8245329738"},
 		["Handle2"] = {
-			ColorMap = RID.."8245329738"},
+			ColorMap = "rbxassetid://8245329738"},
 		["Mag2"] = {
-			ColorMap = RID.."8245329738"},
+			ColorMap = "rbxassetid://8245329738"},
 		["Part"] = {
-			ColorMap = RID.."8245330673"},
+			ColorMap = "rbxassetid://8245330673"},
 		["Bolt2"] = {
-			ColorMap = RID.."8245329738"},
+			ColorMap = "rbxassetid://8245329738"},
 		["Bolt3"] = {
-			ColorMap = RID.."8245329738"}
+			ColorMap = "rbxassetid://8245329738"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'G3SG1 | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("G3SG1", {
 		["Barrel"] = {
-			ColorMap = RID.."83666705744708"},
+			ColorMap = "rbxassetid://83666705744708"},
 		["Body"] = {
-			ColorMap = RID.."83666705744708"},
+			ColorMap = "rbxassetid://83666705744708"},
 		["Handle2"] = {
-			ColorMap = RID.."83666705744708"},
+			ColorMap = "rbxassetid://83666705744708"},
 		["Mag2"] = {
-			ColorMap = RID.."83666705744708"},
+			ColorMap = "rbxassetid://83666705744708"},
 		["Part"] = {
-			ColorMap = RID.."85868149606510"},
+			ColorMap = "rbxassetid://85868149606510"},
 		["Bolt2"] = {
-			ColorMap = RID.."83666705744708"},
+			ColorMap = "rbxassetid://83666705744708"},
 		["Bolt3"] = {
-			ColorMap = RID.."83666705744708"}
+			ColorMap = "rbxassetid://83666705744708"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'G3SG1 | Yltude', PLACEHOLDERICON, 0, function()
 	EquipSkin("G3SG1", {
 		["Barrel"] = {
-			ColorMap = RID.."111173613602145"},
+			ColorMap = "rbxassetid://111173613602145"},
 		["Body"] = {
-			ColorMap = RID.."111173613602145"},
+			ColorMap = "rbxassetid://111173613602145"},
 		["Handle2"] = {
-			ColorMap = RID.."111173613602145"},
+			ColorMap = "rbxassetid://111173613602145"},
 		["Mag2"] = {
-			ColorMap = RID.."111173613602145"},
+			ColorMap = "rbxassetid://111173613602145"},
 		["Part"] = {
-			ColorMap = RID.."88037584387444"},
+			ColorMap = "rbxassetid://88037584387444"},
 		["Bolt2"] = {
-			ColorMap = RID.."111173613602145"},
+			ColorMap = "rbxassetid://111173613602145"},
 		["Bolt3"] = {
-			ColorMap = RID.."111173613602145"}
+			ColorMap = "rbxassetid://111173613602145"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Galil SAR | Christmas Spirit', PLACEHOLDERICON, 0, function()
 	EquipSkin("Galil", {
 		["Handle"] = {
-			ColorMap = RID.."116224077784769"},
+			ColorMap = "rbxassetid://116224077784769"},
 		["Mag"] = {
-			ColorMap = RID.."116224077784769"}
+			ColorMap = "rbxassetid://116224077784769"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Galil SAR | Frosted', PLACEHOLDERICON, 0, function()
 	EquipSkin("Galil", {
 		["Handle"] = {
-			ColorMap = RID.."3179792644"},
+			ColorMap = "rbxassetid://3179792644"},
 		["Mag"] = {
-			ColorMap = RID.."3179792644"}
+			ColorMap = "rbxassetid://3179792644"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Galil SAR | Hardware', PLACEHOLDERICON, 0, function()
 	EquipSkin("Galil", {
 		["Handle"] = {
-			ColorMap = RID.."1238018875"},
+			ColorMap = "rbxassetid://1238018875"},
 		["Mag"] = {
-			ColorMap = RID.."1238018875"}
+			ColorMap = "rbxassetid://1238018875"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Galil SAR | Hardware 2', PLACEHOLDERICON, 0, function()
 	EquipSkin("Galil", {
 		["Handle"] = {
-			ColorMap = RID.."1486568200"},
+			ColorMap = "rbxassetid://1486568200"},
 		["Mag"] = {
-			ColorMap = RID.."1486568200"}
+			ColorMap = "rbxassetid://1486568200"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Galil SAR | Pastel', PLACEHOLDERICON, 0, function()
 	EquipSkin("Galil", {
 		["Handle"] = {
-			ColorMap = RID.."79114627348635", -- First version: 90697649253364
-			NormalMap = RID.."72236360194547",
-			RoughnessMap = RID.."9582865028233",
-			MetalnessMap = RID.."132454643341934"},
+			ColorMap = "rbxassetid://79114627348635", -- First version: 90697649253364
+			NormalMap = "rbxassetid://72236360194547",
+			RoughnessMap = "rbxassetid://9582865028233",
+			MetalnessMap = "rbxassetid://132454643341934"},
 		["Mag"] = {
-			ColorMap = RID.."79114627348635",
-			NormalMap = RID.."72236360194547",
-			RoughnessMap = RID.."9582865028233",
-			MetalnessMap = RID.."132454643341934"}
+			ColorMap = "rbxassetid://79114627348635",
+			NormalMap = "rbxassetid://72236360194547",
+			RoughnessMap = "rbxassetid://9582865028233",
+			MetalnessMap = "rbxassetid://132454643341934"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Galil SAR | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("Galil", {
 		["Handle"] = {
-			ColorMap = RID.."124211298278767"},
+			ColorMap = "rbxassetid://124211298278767"},
 		["Mag"] = {
-			ColorMap = RID.."124211298278767"}
+			ColorMap = "rbxassetid://124211298278767"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Galil SAR | Toxicity', PLACEHOLDERICON, 0, function()
 	EquipSkin("Galil", {
 		["Handle"] = {
-			ColorMap = RID.."1568998711"},
+			ColorMap = "rbxassetid://1568998711"},
 		["Mag"] = {
-			ColorMap = RID.."1568998711"}
+			ColorMap = "rbxassetid://1568998711"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Galil SAR | Vortex', PLACEHOLDERICON, 0, function()
 	EquipSkin("Galil", {
 		["Handle"] = {
-			ColorMap = RID.."76954921837619"},
+			ColorMap = "rbxassetid://76954921837619"},
 		["Mag"] = {
-			ColorMap = RID.."76954921837619"}
+			ColorMap = "rbxassetid://76954921837619"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Glock-18 | Alpine', PLACEHOLDERICON, 0, function()
 	EquipSkin("Glock", {
 		["Handle2"] = {
-			ColorMap = RID.."116402070889658",
-			NormalMap = RID.."77833112167720",
-			RoughnessMap = RID.."108091233390763",
-			MetalnessMap = RID.."104245158996020"},
+			ColorMap = "rbxassetid://116402070889658",
+			NormalMap = "rbxassetid://77833112167720",
+			RoughnessMap = "rbxassetid://108091233390763",
+			MetalnessMap = "rbxassetid://104245158996020"},
 		["Mag2"] = {
-			ColorMap = RID.."116402070889658",
-			NormalMap = RID.."77833112167720",
-			RoughnessMap = RID.."108091233390763",
-			MetalnessMap = RID.."104245158996020"},
+			ColorMap = "rbxassetid://116402070889658",
+			NormalMap = "rbxassetid://77833112167720",
+			RoughnessMap = "rbxassetid://108091233390763",
+			MetalnessMap = "rbxassetid://104245158996020"},
 		["Slide2"] = {
-			ColorMap = RID.."116269230517570",
-			NormalMap = RID.."130770152449259",
-			RoughnessMap = RID.."116008860276079",
-			MetalnessMap = RID.."99383225219259"}
+			ColorMap = "rbxassetid://116269230517570",
+			NormalMap = "rbxassetid://130770152449259",
+			RoughnessMap = "rbxassetid://116008860276079",
+			MetalnessMap = "rbxassetid://99383225219259"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Glock-18 | Angler', PLACEHOLDERICON, 0, function()
 	EquipSkin("Glock", {
 		["Handle2"] = {
-			ColorMap = RID.."2916236268"},
+			ColorMap = "rbxassetid://2916236268"},
 		["Mag2"] = {
-			ColorMap = RID.."2916236268"},
+			ColorMap = "rbxassetid://2916236268"},
 		["Slide2"] = {
-			ColorMap = RID.."2916236268"}
+			ColorMap = "rbxassetid://2916236268"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Glock-18 | Anubis', PLACEHOLDERICON, 0, function()
 	EquipSkin("Glock", {
 		["Handle2"] = {
-			ColorMap = RID.."1817705323"},
+			ColorMap = "rbxassetid://1817705323"},
 		["Mag2"] = {
-			ColorMap = RID.."1817705323"},
+			ColorMap = "rbxassetid://1817705323"},
 		["Slide2"] = {
-			ColorMap = RID.."1817705323"}
+			ColorMap = "rbxassetid://1817705323"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Glock-18 | Biotrip', PLACEHOLDERICON, 0, function()
 	EquipSkin("Glock", {
 		["Handle2"] = {
-			ColorMap = RID.."4427338632"},
+			ColorMap = "rbxassetid://4427338632"},
 		["Mag2"] = {
-			ColorMap = RID.."4427338632"},
+			ColorMap = "rbxassetid://4427338632"},
 		["Slide2"] = {
-			ColorMap = RID.."4427338632"}
+			ColorMap = "rbxassetid://4427338632"}
 	})
 end)
 
@@ -64835,416 +64993,416 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'Glock-18 | BloxersClub', PLACEHOLDERICON, 0, function()
 	EquipSkin("Glock", {
 		["Handle2"] = {
-			ColorMap = RID.."17657143155"},
+			ColorMap = "rbxassetid://17657143155"},
 		["Mag2"] = {
-			ColorMap = RID.."17657143155"},
+			ColorMap = "rbxassetid://17657143155"},
 		["Slide2"] = {
-			ColorMap = RID.."17657143155"}
+			ColorMap = "rbxassetid://17657143155"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Glock-18 | Day Dreamer', PLACEHOLDERICON, 0, function()
 	EquipSkin("Glock", {
 		["Handle2"] = {
-			ColorMap = RID.."1233743486"},
+			ColorMap = "rbxassetid://1233743486"},
 		["Mag2"] = {
-			ColorMap = RID.."1233743486"},
+			ColorMap = "rbxassetid://1233743486"},
 		["Slide2"] = {
-			ColorMap = RID.."1233743486"}
+			ColorMap = "rbxassetid://1233743486"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Glock-18 | Desert Camo', PLACEHOLDERICON, 0, function()
 	EquipSkin("Glock", {
 		["Handle2"] = {
-			ColorMap = RID.."1230499795"},
+			ColorMap = "rbxassetid://1230499795"},
 		["Mag2"] = {
-			ColorMap = RID.."1230499795"},
+			ColorMap = "rbxassetid://1230499795"},
 		["Slide2"] = {
-			ColorMap = RID.."1230499795"}
+			ColorMap = "rbxassetid://1230499795"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Glock-18 | Exoskeleton', PLACEHOLDERICON, 0, function()
 	EquipSkin("Glock", {
 		["Handle2"] = {
-			ColorMap = RID.."82981380138919",
-			NormalMap = RID.."115653238977972",
-			RoughnessMap = RID.."71845029241208",
-			MetalnessMap = RID.."100004233854500"},
+			ColorMap = "rbxassetid://82981380138919",
+			NormalMap = "rbxassetid://115653238977972",
+			RoughnessMap = "rbxassetid://71845029241208",
+			MetalnessMap = "rbxassetid://100004233854500"},
 		["Mag2"] = {
-			ColorMap = RID.."82981380138919",
-			NormalMap = RID.."115653238977972",
-			RoughnessMap = RID.."71845029241208",
-			MetalnessMap = RID.."100004233854500"},
+			ColorMap = "rbxassetid://82981380138919",
+			NormalMap = "rbxassetid://115653238977972",
+			RoughnessMap = "rbxassetid://71845029241208",
+			MetalnessMap = "rbxassetid://100004233854500"},
 		["Slide2"] = {
-			ColorMap = RID.."82981380138919",
-			NormalMap = RID.."115653238977972",
-			RoughnessMap = RID.."71845029241208",
-			MetalnessMap = RID.."100004233854500"}
+			ColorMap = "rbxassetid://82981380138919",
+			NormalMap = "rbxassetid://115653238977972",
+			RoughnessMap = "rbxassetid://71845029241208",
+			MetalnessMap = "rbxassetid://100004233854500"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Glock-18 | Gravestomper', PLACEHOLDERICON, 0, function()
 	EquipSkin("Glock", {
 		["Handle2"] = {
-			ColorMap = RID.."2490655815"},
+			ColorMap = "rbxassetid://2490655815"},
 		["Mag2"] = {
-			ColorMap = RID.."2490655815"},
+			ColorMap = "rbxassetid://2490655815"},
 		["Slide2"] = {
-			ColorMap = RID.."2490655815"}
+			ColorMap = "rbxassetid://2490655815"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Glock-18 | Hallows', PLACEHOLDERICON, 0, function()
 	EquipSkin("Glock", {
 		["Handle2"] = {
-			ColorMap = RID.."7943856293"},
+			ColorMap = "rbxassetid://7943856293"},
 		["Mag2"] = {
-			ColorMap = RID.."7943856293"},
+			ColorMap = "rbxassetid://7943856293"},
 		["Slide2"] = {
-			ColorMap = RID.."7943856293"}
+			ColorMap = "rbxassetid://7943856293"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Glock-18 | Lantern', PLACEHOLDERICON, 0, function()
 	EquipSkin("Glock", {
 		["Handle2"] = {
-			ColorMap = RID.."102797173172962"},
+			ColorMap = "rbxassetid://102797173172962"},
 		["Mag2"] = {
-			ColorMap = RID.."102797173172962"},
+			ColorMap = "rbxassetid://102797173172962"},
 		["Slide2"] = {
-			ColorMap = RID.."102797173172962"}
+			ColorMap = "rbxassetid://102797173172962"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Glock-18 | Midnight Tiger', PLACEHOLDERICON, 0, function()
 	EquipSkin("Glock", {
 		["Handle2"] = {
-			ColorMap = RID.."1568986732"},
+			ColorMap = "rbxassetid://1568986732"},
 		["Mag2"] = {
-			ColorMap = RID.."1568986732"},
+			ColorMap = "rbxassetid://1568986732"},
 		["Slide2"] = {
-			ColorMap = RID.."1568986732"}
+			ColorMap = "rbxassetid://1568986732"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Glock-18 | Money Maker', PLACEHOLDERICON, 0, function()
 	EquipSkin("Glock", {
 		["Handle2"] = {
-			ColorMap = RID.."3180126340"},
+			ColorMap = "rbxassetid://3180126340"},
 		["Mag2"] = {
-			ColorMap = RID.."3180126340"},
+			ColorMap = "rbxassetid://3180126340"},
 		["Slide2"] = {
-			ColorMap = RID.."3180126340"}
+			ColorMap = "rbxassetid://3180126340"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Glock-18 | RSL', PLACEHOLDERICON, 0, function()
 	EquipSkin("Glock", {
 		["Handle2"] = {
-			ColorMap = RID.."3852351204"},
+			ColorMap = "rbxassetid://3852351204"},
 		["Mag2"] = {
-			ColorMap = RID.."3852351204"},
+			ColorMap = "rbxassetid://3852351204"},
 		["Slide2"] = {
-			ColorMap = RID.."3852351204"}
+			ColorMap = "rbxassetid://3852351204"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Glock-18 | Rush', PLACEHOLDERICON, 0, function()
 	EquipSkin("Glock", {
 		["Handle2"] = {
-			ColorMap = RID.."3852350558"},
+			ColorMap = "rbxassetid://3852350558"},
 		["Mag2"] = {
-			ColorMap = RID.."3852350558"},
+			ColorMap = "rbxassetid://3852350558"},
 		["Slide2"] = {
-			ColorMap = RID.."3852350558"}
+			ColorMap = "rbxassetid://3852350558"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Glock-18 | Scapter', PLACEHOLDERICON, 0, function()
 	EquipSkin("Glock", {
 		["Handle2"] = {
-			ColorMap = RID.."12547951862"},
+			ColorMap = "rbxassetid://12547951862"},
 		["Mag2"] = {
-			ColorMap = RID.."12547951862"},
+			ColorMap = "rbxassetid://12547951862"},
 		["Slide2"] = {
-			ColorMap = RID.."12547951862"}
+			ColorMap = "rbxassetid://12547951862"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Glock-18 | Spacedust', PLACEHOLDERICON, 0, function()
 	EquipSkin("Glock", {
 		["Handle2"] = {
-			ColorMap = RID.."3179793019"},
+			ColorMap = "rbxassetid://3179793019"},
 		["Mag2"] = {
-			ColorMap = RID.."3179793019"},
+			ColorMap = "rbxassetid://3179793019"},
 		["Slide2"] = {
-			ColorMap = RID.."3179793019"}
+			ColorMap = "rbxassetid://3179793019"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Glock-18 | Tarnish', PLACEHOLDERICON, 0, function()
 	EquipSkin("Glock", {
 		["Handle2"] = {
-			ColorMap = RID.."2666303926"},
+			ColorMap = "rbxassetid://2666303926"},
 		["Mag2"] = {
-			ColorMap = RID.."2666303926"},
+			ColorMap = "rbxassetid://2666303926"},
 		["Slide2"] = {
-			ColorMap = RID.."2666303926"}
+			ColorMap = "rbxassetid://2666303926"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Glock-18 | Underwater', PLACEHOLDERICON, 0, function()
 	EquipSkin("Glock", {
 		["Handle2"] = {
-			ColorMap = RID.."4502761808"},
+			ColorMap = "rbxassetid://4502761808"},
 		["Mag2"] = {
-			ColorMap = RID.."4502761808"},
+			ColorMap = "rbxassetid://4502761808"},
 		["Slide2"] = {
-			ColorMap = RID.."4502761808"}
+			ColorMap = "rbxassetid://4502761808"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Glock-18 | Wetland', PLACEHOLDERICON, 0, function()
 	EquipSkin("Glock", {
 		["Handle2"] = {
-			ColorMap = RID.."1233745998"},
+			ColorMap = "rbxassetid://1233745998"},
 		["Mag2"] = {
-			ColorMap = RID.."1233745998"},
+			ColorMap = "rbxassetid://1233745998"},
 		["Slide2"] = {
-			ColorMap = RID.."1233745998"}
+			ColorMap = "rbxassetid://1233745998"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Glock-18 | White Sauce', PLACEHOLDERICON, 0, function()
 	EquipSkin("Glock", {
 		["Handle2"] = {
-			ColorMap = RID.."4370133907"},
+			ColorMap = "rbxassetid://4370133907"},
 		["Mag2"] = {
-			ColorMap = RID.."4370133907"},
+			ColorMap = "rbxassetid://4370133907"},
 		["Slide2"] = {
-			ColorMap = RID.."4370133907"}
+			ColorMap = "rbxassetid://4370133907"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Gut | Banner', PLACEHOLDERICON, 0, function()
 	EquipSkin("Gut", {
 		["Handle"] = {
-			ColorMap = RID.."3419238449"}
+			ColorMap = "rbxassetid://3419238449"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Gut | Bloodwidow', PLACEHOLDERICON, 0, function()
 	EquipSkin("Gut", {
 		["Handle"] = {
-			ColorMap = RID.."3037400544"}
+			ColorMap = "rbxassetid://3037400544"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Gut | Cob Web', PLACEHOLDERICON, 0, function()
 	EquipSkin("Gut", {
 		["Handle"] = {
-			ColorMap = RID.."7944247025"}
+			ColorMap = "rbxassetid://7944247025"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Gut | Consumed', PLACEHOLDERICON, 0, function()
 	EquipSkin("Gut", {
 		["Handle"] = {
-			ColorMap = RID.."4204682371"}
+			ColorMap = "rbxassetid://4204682371"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Gut | Cosmos', PLACEHOLDERICON, 0, function()
 	EquipSkin("Gut", {
 		["Handle"] = {
-			ColorMap = RID.."3037403054"}
+			ColorMap = "rbxassetid://3037403054"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Gut | Crimson Tiger', PLACEHOLDERICON, 0, function()
 	EquipSkin("Gut", {
 		["Handle"] = {
-			ColorMap = RID.."3037406170"}
+			ColorMap = "rbxassetid://3037406170"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Gut | Crippled Fade', PLACEHOLDERICON, 0, function()
 	EquipSkin("Gut", {
 		["Handle"] = {
-			ColorMap = RID.."3037374167"}
+			ColorMap = "rbxassetid://3037374167"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Gut | Dark Damascus', PLACEHOLDERICON, 0, function()
 	EquipSkin("Gut", {
 		["Handle"] = {
-			ColorMap = RID.."96624088144940",
-			NormalMap = RID.."103903959156084",
-			RoughnessMap = RID.."128976189288307",
-			MetalnessMap = RID.."71143884450954"}
+			ColorMap = "rbxassetid://96624088144940",
+			NormalMap = "rbxassetid://103903959156084",
+			RoughnessMap = "rbxassetid://128976189288307",
+			MetalnessMap = "rbxassetid://71143884450954"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Gut | Digital', PLACEHOLDERICON, 0, function()
 	EquipSkin("Gut", {
 		["Handle"] = {
-			ColorMap = RID.."3037377180"}
+			ColorMap = "rbxassetid://3037377180"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Gut | Egg Shell', PLACEHOLDERICON, 0, function()
 	EquipSkin("Gut", {
 		["Handle"] = {
-			ColorMap = RID.."3081427140"}
+			ColorMap = "rbxassetid://3081427140"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Gut | Frozen Dream', PLACEHOLDERICON, 0, function()
 	EquipSkin("Gut", {
 		["Handle"] = {
-			ColorMap = RID.."3037411334"}
+			ColorMap = "rbxassetid://3037411334"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Gut | Geo Blade', PLACEHOLDERICON, 0, function()
 	EquipSkin("Gut", {
 		["Handle"] = {
-			ColorMap = RID.."3037379863"}
+			ColorMap = "rbxassetid://3037379863"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Gut | Goo', PLACEHOLDERICON, 0, function()
 	EquipSkin("Gut", {
 		["Handle"] = {
-			ColorMap = RID.."4229845434"}
+			ColorMap = "rbxassetid://4229845434"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Gut | Grim', PLACEHOLDERICON, 0, function()
 	EquipSkin("Gut", {
 		["Handle"] = {
-			ColorMap = RID.."97203620929360"}
+			ColorMap = "rbxassetid://97203620929360"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Gut | Hallows', PLACEHOLDERICON, 0, function()
 	EquipSkin("Gut", {
 		["Handle"] = {
-			ColorMap = RID.."3037384697"}
+			ColorMap = "rbxassetid://3037384697"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Gut | Holly', PLACEHOLDERICON, 0, function()
 	EquipSkin("Gut", {
 		["Handle"] = {
-			ColorMap = RID.."6102034988"}
+			ColorMap = "rbxassetid://6102034988"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Gut | Lurker', PLACEHOLDERICON, 0, function()
 	EquipSkin("Gut", {
 		["Handle"] = {
-			ColorMap = RID.."3037381881"}
+			ColorMap = "rbxassetid://3037381881"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Gut | Marbleized', PLACEHOLDERICON, 0, function()
 	EquipSkin("Gut", {
 		["Handle"] = {
-			ColorMap = RID.."3081769744"}
+			ColorMap = "rbxassetid://3081769744"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Gut | Naval', PLACEHOLDERICON, 0, function()
 	EquipSkin("Gut", {
 		["Handle"] = {
-			ColorMap = RID.."3037419265"}
+			ColorMap = "rbxassetid://3037419265"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Gut | Neonic', PLACEHOLDERICON, 0, function()
 	EquipSkin("Gut", {
 		["Handle"] = {
-			ColorMap = RID.."3037421988"}
+			ColorMap = "rbxassetid://3037421988"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Gut | Present', PLACEHOLDERICON, 0, function()
 	EquipSkin("Gut", {
 		["Handle"] = {
-			ColorMap = RID.."3065144834"}
+			ColorMap = "rbxassetid://3065144834"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Gut | Ruby', PLACEHOLDERICON, 0, function()
 	EquipSkin("Gut", {
 		["Handle"] = {
-			ColorMap = RID.."3037426247"}
+			ColorMap = "rbxassetid://3037426247"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Gut | Rusty', PLACEHOLDERICON, 0, function()
 	EquipSkin("Gut", {
 		["Handle"] = {
-			ColorMap = RID.."3037396912"}
+			ColorMap = "rbxassetid://3037396912"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Gut | Splattered', PLACEHOLDERICON, 0, function()
 	EquipSkin("Gut", {
 		["Handle"] = {
-			ColorMap = RID.."3037390447"}
+			ColorMap = "rbxassetid://3037390447"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Gut | Topaz', PLACEHOLDERICON, 0, function()
 	EquipSkin("Gut", {
 		["Handle"] = {
-			ColorMap = RID.."3037433913"}
+			ColorMap = "rbxassetid://3037433913"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Gut | Tropical', PLACEHOLDERICON, 0, function()
 	EquipSkin("Gut", {
 		["Handle"] = {
-			ColorMap = RID.."3037436403"}
+			ColorMap = "rbxassetid://3037436403"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Gut | Wetland', PLACEHOLDERICON, 0, function()
 	EquipSkin("Gut", {
 		["Handle"] = {
-			ColorMap = RID.."3037394224"}
+			ColorMap = "rbxassetid://3037394224"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Gut | Worn', PLACEHOLDERICON, 0, function()
 	EquipSkin("Gut", {
 		["Handle"] = {
-			ColorMap = RID.."3037443921"}
+			ColorMap = "rbxassetid://3037443921"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Gut | Wrapped', PLACEHOLDERICON, 0, function()
 	EquipSkin("Gut", {
 		["Handle"] = {
-			ColorMap = RID.."4563314521"}
+			ColorMap = "rbxassetid://4563314521"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Huntsman | Aurora', PLACEHOLDERICON, 0, function()
 	EquipSkin("Huntsman", {
 		["Handle"] = {
-			ColorMap = RID.."4563314732"}
+			ColorMap = "rbxassetid://4563314732"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Huntsman | Bloodwidow', PLACEHOLDERICON, 0, function()
 	EquipSkin("Huntsman", {
 		["Handle"] = {
-			ColorMap = RID.."3037400784"}
+			ColorMap = "rbxassetid://3037400784"}
 	})
 end)
 
@@ -65252,223 +65410,223 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'Huntsman | Ciro', PLACEHOLDERICON, 0, function()
 	EquipSkin("Huntsman", {
 		["Handle"] = {
-			ColorMap = RID.."4680521905"}
+			ColorMap = "rbxassetid://4680521905"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Huntsman | Consumed', PLACEHOLDERICON, 0, function()
 	EquipSkin("Huntsman", {
 		["Handle"] = {
-			ColorMap = RID.."4204684063"}
+			ColorMap = "rbxassetid://4204684063"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Huntsman | Cosmos', PLACEHOLDERICON, 0, function()
 	EquipSkin("Huntsman", {
 		["Handle"] = {
-			ColorMap = RID.."3037403290"}
+			ColorMap = "rbxassetid://3037403290"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Huntsman | Cozy', PLACEHOLDERICON, 0, function()
 	EquipSkin("Huntsman", {
 		["Handle"] = {
-			ColorMap = RID.."3065145108"}
+			ColorMap = "rbxassetid://3065145108"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Huntsman | Crimson Tiger', PLACEHOLDERICON, 0, function()
 	EquipSkin("Huntsman", {
 		["Handle"] = {
-			ColorMap = RID.."3037406422"}
+			ColorMap = "rbxassetid://3037406422"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Huntsman | Crippled Fade', PLACEHOLDERICON, 0, function()
 	EquipSkin("Huntsman", {
 		["Handle"] = {
-			ColorMap = RID.."3037374425"}
+			ColorMap = "rbxassetid://3037374425"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Huntsman | Dark Damascus', PLACEHOLDERICON, 0, function()
 	EquipSkin("Huntsman", {
 		["Handle"] = {
-			ColorMap = RID.."85051840246753",
-			NormalMap = RID.."91608915725497",
-			RoughnessMap = RID.."110713909501768",
-			MetalnessMap = RID.."74841749885749"}
+			ColorMap = "rbxassetid://85051840246753",
+			NormalMap = "rbxassetid://91608915725497",
+			RoughnessMap = "rbxassetid://110713909501768",
+			MetalnessMap = "rbxassetid://74841749885749"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Huntsman | Digital', PLACEHOLDERICON, 0, function()
 	EquipSkin("Huntsman", {
 		["Handle"] = {
-			ColorMap = RID.."3037377400"}
+			ColorMap = "rbxassetid://3037377400"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Huntsman | Drop-Out', PLACEHOLDERICON, 0, function()
 	EquipSkin("Huntsman", {
 		["Handle"] = {
-			ColorMap = RID.."5860517258"}
+			ColorMap = "rbxassetid://5860517258"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Huntsman | Egg Shell', PLACEHOLDERICON, 0, function()
 	EquipSkin("Huntsman", {
 		["Handle"] = {
-			ColorMap = RID.."3081427412"}
+			ColorMap = "rbxassetid://3081427412"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Huntsman | Frozen Dream', PLACEHOLDERICON, 0, function()
 	EquipSkin("Huntsman", {
 		["Handle"] = {
-			ColorMap = RID.."3037411585"}
+			ColorMap = "rbxassetid://3037411585"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Huntsman | Geo Blade', PLACEHOLDERICON, 0, function()
 	EquipSkin("Huntsman", {
 		["Handle"] = {
-			ColorMap = RID.."3037380099"}
+			ColorMap = "rbxassetid://3037380099"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Huntsman | Goo', PLACEHOLDERICON, 0, function()
 	EquipSkin("Huntsman", {
 		["Handle"] = {
-			ColorMap = RID.."4229846389"}
+			ColorMap = "rbxassetid://4229846389"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Huntsman | Grim', PLACEHOLDERICON, 0, function()
 	EquipSkin("Huntsman", {
 		["Handle"] = {
-			ColorMap = RID.."117348667980872"}
+			ColorMap = "rbxassetid://117348667980872"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Huntsman | Hallows', PLACEHOLDERICON, 0, function()
 	EquipSkin("Huntsman", {
 		["Handle"] = {
-			ColorMap = RID.."3037384909"}
+			ColorMap = "rbxassetid://3037384909"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Huntsman | Honor Fade', PLACEHOLDERICON, 0, function()
 	EquipSkin("Huntsman", {
 		["Handle"] = {
-			ColorMap = RID.."3411674511"}
+			ColorMap = "rbxassetid://3411674511"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Huntsman | Marbleized', PLACEHOLDERICON, 0, function()
 	EquipSkin("Huntsman", {
 		["Handle"] = {
-			ColorMap = RID.."3081769920"}
+			ColorMap = "rbxassetid://3081769920"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Huntsman | Monster', PLACEHOLDERICON, 0, function()
 	EquipSkin("Huntsman", {
 		["Handle"] = {
-			ColorMap = RID.."3037382100"}
+			ColorMap = "rbxassetid://3037382100"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Huntsman | Naval', PLACEHOLDERICON, 0, function()
 	EquipSkin("Huntsman", {
 		["Handle"] = {
-			ColorMap = RID.."3037419458"}
+			ColorMap = "rbxassetid://3037419458"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Huntsman | Ruby', PLACEHOLDERICON, 0, function()
 	EquipSkin("Huntsman", {
 		["Handle"] = {
-			ColorMap = RID.."3037428068"}
+			ColorMap = "rbxassetid://3037428068"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Huntsman | Spirit', PLACEHOLDERICON, 0, function()
 	EquipSkin("Huntsman", {
 		["Handle"] = {
-			ColorMap = RID.."6102034889"}
+			ColorMap = "rbxassetid://6102034889"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Huntsman | Splattered', PLACEHOLDERICON, 0, function()
 	EquipSkin("Huntsman", {
 		["Handle"] = {
-			ColorMap = RID.."3037390661"}
+			ColorMap = "rbxassetid://3037390661"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Huntsman | Spookiness', PLACEHOLDERICON, 0, function()
 	EquipSkin("Huntsman", {
 		["Handle"] = {
-			ColorMap = RID.."7944097132"}
+			ColorMap = "rbxassetid://7944097132"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Huntsman | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("Huntsman", {
 		["Handle"] = {
-			ColorMap = RID.."3023649319"}
+			ColorMap = "rbxassetid://3023649319"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Huntsman | Tropical', PLACEHOLDERICON, 0, function()
 	EquipSkin("Huntsman", {
 		["Handle"] = {
-			ColorMap = RID.."3037436617"}
+			ColorMap = "rbxassetid://3037436617"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Huntsman | Twitch', PLACEHOLDERICON, 0, function()
 	EquipSkin("Huntsman", {
 		["Handle"] = {
-			ColorMap = RID.."3238360274"}
+			ColorMap = "rbxassetid://3238360274"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Huntsman | Wetland', PLACEHOLDERICON, 0, function()
 	EquipSkin("Huntsman", {
 		["Handle"] = {
-			ColorMap = RID.."3037394606"}
+			ColorMap = "rbxassetid://3037394606"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Huntsman | Worn', PLACEHOLDERICON, 0, function()
 	EquipSkin("Huntsman", {
 		["Handle"] = {
-			ColorMap = RID.."3037444144"}
+			ColorMap = "rbxassetid://3037444144"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Huntsman | Wrapped', PLACEHOLDERICON, 0, function()
 	EquipSkin("Huntsman", {
 		["Handle"] = {
-			ColorMap = RID.."4563314802"}
+			ColorMap = "rbxassetid://4563314802"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Aflobdos', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."83137082137415",
-			NormalMap = RID.."131734108497406",
-			RoughnessMap = RID.."91059671530659",
-			MetalnessMap = RID.."82564612044487"}
+			ColorMap = "rbxassetid://83137082137415",
+			NormalMap = "rbxassetid://131734108497406",
+			RoughnessMap = "rbxassetid://91059671530659",
+			MetalnessMap = "rbxassetid://82564612044487"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Bloodwidow', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."3037401055"}
+			ColorMap = "rbxassetid://3037401055"}
 	})
 end)
 
@@ -65476,101 +65634,101 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Ciro', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."4680502646"}
+			ColorMap = "rbxassetid://4680502646"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Cob Web', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."7944099664"}
+			ColorMap = "rbxassetid://7944099664"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Consumed', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."4204685125"}
+			ColorMap = "rbxassetid://4204685125"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Cosmos', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."3037403576"}
+			ColorMap = "rbxassetid://3037403576"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Crimson Tiger', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."3037406684"}
+			ColorMap = "rbxassetid://3037406684"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Crippled Fade', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."3037374801"}
+			ColorMap = "rbxassetid://3037374801"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Dark Damascus', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."113986626994909",
-			NormalMap = RID.."102050289907172",
-			RoughnessMap = RID.."94087731588320",
-			MetalnessMap = RID.."88931909705167"}
+			ColorMap = "rbxassetid://113986626994909",
+			NormalMap = "rbxassetid://102050289907172",
+			RoughnessMap = "rbxassetid://94087731588320",
+			MetalnessMap = "rbxassetid://88931909705167"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Death Wish', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."4428764389"}
+			ColorMap = "rbxassetid://4428764389"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Digital', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."3037377788"}
+			ColorMap = "rbxassetid://3037377788"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Drop-Out', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."5857462745"}
+			ColorMap = "rbxassetid://5857462745"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Egg Shell', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."3081427573"}
+			ColorMap = "rbxassetid://3081427573"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Festive', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."4563314972"}
+			ColorMap = "rbxassetid://4563314972"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Frozen Dream', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."3037411977"}
+			ColorMap = "rbxassetid://3037411977"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Frozen Gift', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."139827478202023"}
+			ColorMap = "rbxassetid://139827478202023"}
 	})
 end)
 
@@ -65578,182 +65736,182 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Ghost', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."4186668302"}
+			ColorMap = "rbxassetid://4186668302"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Glossed', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."3065145421"}
+			ColorMap = "rbxassetid://3065145421"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Gold', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."3414427562"}
+			ColorMap = "rbxassetid://3414427562"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Goo', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."4229848753"}
+			ColorMap = "rbxassetid://4229848753"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Grim', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."131003977261359"}
+			ColorMap = "rbxassetid://131003977261359"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Hallows', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."3037385194"}
+			ColorMap = "rbxassetid://3037385194"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Jade Dream', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."3654400157"}
+			ColorMap = "rbxassetid://3654400157"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Jester', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."4614563586"}
+			ColorMap = "rbxassetid://4614563586"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Lantern', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."3037382373"}
+			ColorMap = "rbxassetid://3037382373"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Liberty Camo', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."3411673664"}
+			ColorMap = "rbxassetid://3411673664"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Marbleized', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."3081770162"}
+			ColorMap = "rbxassetid://3081770162"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Naval', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."3037419669"}
+			ColorMap = "rbxassetid://3037419669"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Neonic', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."3037422231"}
+			ColorMap = "rbxassetid://3037422231"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Peppermint', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."6102034764"}
+			ColorMap = "rbxassetid://6102034764"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Pizza', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."5902165519"}
+			ColorMap = "rbxassetid://5902165519"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Quicktime', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."4595853817"}
+			ColorMap = "rbxassetid://4595853817"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Racer', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."137421609478075"}
+			ColorMap = "rbxassetid://137421609478075"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Ruby', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."3037428363"}
+			ColorMap = "rbxassetid://3037428363"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Scapter', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."2227416644"}
+			ColorMap = "rbxassetid://2227416644"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Splattered', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."3037391672"}
+			ColorMap = "rbxassetid://3037391672"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."3023649997"}
+			ColorMap = "rbxassetid://3023649997"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Topaz', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."3037434205"}
+			ColorMap = "rbxassetid://3037434205"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Tropical', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."3037436866"}
+			ColorMap = "rbxassetid://3037436866"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Twitch', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."3645660367"}
+			ColorMap = "rbxassetid://3645660367"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Wetland', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."3090787711"}
+			ColorMap = "rbxassetid://3090787711"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Worn', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
-			ColorMap = RID.."3037444465"}
+			ColorMap = "rbxassetid://3037444465"}
 	})
 end)
 
@@ -65761,115 +65919,115 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'M249 | Aggressor', PLACEHOLDERICON, 0, function()
 	EquipSkin("M249", {
 		["Main"] = {
-			ColorMap = RID.."1630820938"},
+			ColorMap = "rbxassetid://1630820938"},
 		["Handle"] = {
-			ColorMap = RID.."1630820938"},
+			ColorMap = "rbxassetid://1630820938"},
 		["Lid"] = {
-			ColorMap = RID.."1630820938"},
+			ColorMap = "rbxassetid://1630820938"},
 		["Mag"] = {
-			ColorMap = RID.."1630820938"},
+			ColorMap = "rbxassetid://1630820938"},
 		["Part"] = {
-			ColorMap = RID.."1630820938"}
+			ColorMap = "rbxassetid://1630820938"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M249 | Halloween Treats', PLACEHOLDERICON, 0, function()
 	EquipSkin("M249", {
 		["Main"] = {
-			ColorMap = RID.."7960125139"},
+			ColorMap = "rbxassetid://7960125139"},
 		["Handle"] = {
-			ColorMap = RID.."7960125139"},
+			ColorMap = "rbxassetid://7960125139"},
 		["Lid"] = {
-			ColorMap = RID.."7960125139"},
+			ColorMap = "rbxassetid://7960125139"},
 		["Mag"] = {
-			ColorMap = RID.."7960125139"},
+			ColorMap = "rbxassetid://7960125139"},
 		["Part"] = {
-			ColorMap = RID.."7960125139"}
+			ColorMap = "rbxassetid://7960125139"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M249 | Lantern', PLACEHOLDERICON, 0, function()
 	EquipSkin("M249", {
 		["Main"] = {
-			ColorMap = RID.."5861111117"},
+			ColorMap = "rbxassetid://5861111117"},
 		["Handle"] = {
-			ColorMap = RID.."5861111117"},
+			ColorMap = "rbxassetid://5861111117"},
 		["Lid"] = {
-			ColorMap = RID.."5861111117"},
+			ColorMap = "rbxassetid://5861111117"},
 		["Mag"] = {
-			ColorMap = RID.."5861111117"},
+			ColorMap = "rbxassetid://5861111117"},
 		["Part"] = {
-			ColorMap = RID.."5861111117"}
+			ColorMap = "rbxassetid://5861111117"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M249 | P2020', PLACEHOLDERICON, 0, function()
 	EquipSkin("M249", {
 		["Main"] = {
-			ColorMap = RID.."2131984326"},
+			ColorMap = "rbxassetid://2131984326"},
 		["Handle"] = {
-			ColorMap = RID.."2131984326"},
+			ColorMap = "rbxassetid://2131984326"},
 		["Lid"] = {
-			ColorMap = RID.."2131984326"},
+			ColorMap = "rbxassetid://2131984326"},
 		["Mag"] = {
-			ColorMap = RID.."2131984326"},
+			ColorMap = "rbxassetid://2131984326"},
 		["Part"] = {
-			ColorMap = RID.."2131984326"}
+			ColorMap = "rbxassetid://2131984326"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M249 | Spooky', PLACEHOLDERICON, 0, function()
 	EquipSkin("M249", {
 		["Main"] = {
-			ColorMap = RID.."2498061971"},
+			ColorMap = "rbxassetid://2498061971"},
 		["Handle"] = {
-			ColorMap = RID.."2498061971"},
+			ColorMap = "rbxassetid://2498061971"},
 		["Lid"] = {
-			ColorMap = RID.."2498061971"},
+			ColorMap = "rbxassetid://2498061971"},
 		["Mag"] = {
-			ColorMap = RID.."2498061971"},
+			ColorMap = "rbxassetid://2498061971"},
 		["Part"] = {
-			ColorMap = RID.."2498061971"}
+			ColorMap = "rbxassetid://2498061971"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M249 | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("M249", {
 		["Bullets"] = {
-			ColorMap = RID.."114673511444984"},
+			ColorMap = "rbxassetid://114673511444984"},
 		["Bullets2"] = {
-			ColorMap = RID.."114673511444984"},
+			ColorMap = "rbxassetid://114673511444984"},
 		["Bullets3"] = {
-			ColorMap = RID.."114673511444984"},
+			ColorMap = "rbxassetid://114673511444984"},
 		["Bullets4"] = {
-			ColorMap = RID.."114673511444984"},
+			ColorMap = "rbxassetid://114673511444984"},
 		["Bullets5"] = {
-			ColorMap = RID.."114673511444984"},
+			ColorMap = "rbxassetid://114673511444984"},
 		["Main"] = {
-			ColorMap = RID.."123274168762565"},
+			ColorMap = "rbxassetid://123274168762565"},
 		["Handle"] = {
-			ColorMap = RID.."123274168762565"},
+			ColorMap = "rbxassetid://123274168762565"},
 		["Lid"] = {
-			ColorMap = RID.."123274168762565"},
+			ColorMap = "rbxassetid://123274168762565"},
 		["Mag"] = {
-			ColorMap = RID.."123274168762565"},
+			ColorMap = "rbxassetid://123274168762565"},
 		["Part"] = {
-			ColorMap = RID.."123274168762565"}
+			ColorMap = "rbxassetid://123274168762565"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M249 | Wolf', PLACEHOLDERICON, 0, function()
 	EquipSkin("M249", {
 		["Main"] = {
-			ColorMap = RID.."1837915592"},
+			ColorMap = "rbxassetid://1837915592"},
 		["Handle"] = {
-			ColorMap = RID.."1837915592"},
+			ColorMap = "rbxassetid://1837915592"},
 		["Lid"] = {
-			ColorMap = RID.."1837915592"},
+			ColorMap = "rbxassetid://1837915592"},
 		["Mag"] = {
-			ColorMap = RID.."1837915592"},
+			ColorMap = "rbxassetid://1837915592"},
 		["Part"] = {
-			ColorMap = RID.."1837915592"}
+			ColorMap = "rbxassetid://1837915592"}
 	})
 end)
 
@@ -65877,21 +66035,21 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'M4A1-S | Animatic', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A1", {
 		["Bolt2"] = {
-			ColorMap = RID.."1630969918"},
+			ColorMap = "rbxassetid://1630969918"},
 		["Handle2"] = {
-			ColorMap = RID.."1630969918"},
+			ColorMap = "rbxassetid://1630969918"},
 		["Part"] = {
-			ColorMap = RID.."1630969918"},
+			ColorMap = "rbxassetid://1630969918"},
 		["Part4"] = {
-			ColorMap = RID.."1630969918"},
+			ColorMap = "rbxassetid://1630969918"},
 		["Part3"] = {
-			ColorMap = RID.."1630969918"},
+			ColorMap = "rbxassetid://1630969918"},
 		["Part2"] = {
-			ColorMap = RID.."1630969918"},
+			ColorMap = "rbxassetid://1630969918"},
 		["Mag2"] = {
-			ColorMap = RID.."1232538589"},
+			ColorMap = "rbxassetid://1232538589"},
 		["Silencer2"] = {
-			ColorMap = RID.."1630969918"}
+			ColorMap = "rbxassetid://1630969918"}
 	})
 end)
 
@@ -65899,705 +66057,897 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'M4A1-S | BloxersClub', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A1", {
 		["Bolt2"] = {
-			ColorMap = RID.."17640127659"},
+			ColorMap = "rbxassetid://17640127659"},
 		["Handle2"] = {
-			ColorMap = RID.."17640127659"},
+			ColorMap = "rbxassetid://17640127659"},
 		["Part"] = {
-			ColorMap = RID.."17640127659"},
+			ColorMap = "rbxassetid://17640127659"},
 		["Part4"] = {
-			ColorMap = RID.."17640127659"},
+			ColorMap = "rbxassetid://17640127659"},
 		["Part3"] = {
-			ColorMap = RID.."17640127659"},
+			ColorMap = "rbxassetid://17640127659"},
 		["Part2"] = {
-			ColorMap = RID.."17640127659"},
+			ColorMap = "rbxassetid://17640127659"},
 		["Mag2"] = {
-			ColorMap = RID.."17640127953"},
+			ColorMap = "rbxassetid://17640127953"},
 		["Silencer2"] = {
-			ColorMap = RID.."17640127502"}
+			ColorMap = "rbxassetid://17640127502"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M4A1-S | Burning', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A1", {
 		["Bolt2"] = {
-			ColorMap = RID.."3180126408"},
+			ColorMap = "rbxassetid://3180126408"},
 		["Handle2"] = {
-			ColorMap = RID.."3180126408"},
+			ColorMap = "rbxassetid://3180126408"},
 		["Part"] = {
-			ColorMap = RID.."3180126408"},
+			ColorMap = "rbxassetid://3180126408"},
 		["Part4"] = {
-			ColorMap = RID.."3180126534"},
+			ColorMap = "rbxassetid://3180126534"},
 		["Part3"] = {
-			ColorMap = RID.."3180126408"},
+			ColorMap = "rbxassetid://3180126408"},
 		["Part2"] = {
-			ColorMap = RID.."3180126408"},
+			ColorMap = "rbxassetid://3180126408"},
 		["Mag2"] = {
-			ColorMap = RID.."3180126473"},
+			ColorMap = "rbxassetid://3180126473"},
 		["Silencer2"] = {
-			ColorMap = RID.."3180126534"}
+			ColorMap = "rbxassetid://3180126534"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M4A1-S | Desert Camo', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A1", {
 		["Bolt2"] = {
-			ColorMap = RID.."1837928952"},
+			ColorMap = "rbxassetid://1837928952"},
 		["Handle2"] = {
-			ColorMap = RID.."1837928952"},
+			ColorMap = "rbxassetid://1837928952"},
 		["Part"] = {
-			ColorMap = RID.."1837928952"},
+			ColorMap = "rbxassetid://1837928952"},
 		["Part4"] = {
-			ColorMap = RID.."1837928952"},
+			ColorMap = "rbxassetid://1837928952"},
 		["Part3"] = {
-			ColorMap = RID.."1837928952"},
+			ColorMap = "rbxassetid://1837928952"},
 		["Part2"] = {
-			ColorMap = RID.."1837928952"},
+			ColorMap = "rbxassetid://1837928952"},
 		["Mag2"] = {
-			ColorMap = RID.."1837929204"},
+			ColorMap = "rbxassetid://1837929204"},
 		["Silencer2"] = {
-			ColorMap = RID.."1837929501"}
+			ColorMap = "rbxassetid://1837929501"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M4A1-S | Heavens Gate', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A1", {
 		["Bolt2"] = {
-			ColorMap = RID.."2524142163"},
+			ColorMap = "rbxassetid://2524142163"},
 		["Handle2"] = {
-			ColorMap = RID.."2524142163"},
+			ColorMap = "rbxassetid://2524142163"},
 		["Part"] = {
-			ColorMap = RID.."2524142163"},
+			ColorMap = "rbxassetid://2524142163"},
 		["Part4"] = {
-			ColorMap = RID.."2524142163"},
+			ColorMap = "rbxassetid://2524142163"},
 		["Part3"] = {
-			ColorMap = RID.."2524142163"},
+			ColorMap = "rbxassetid://2524142163"},
 		["Part2"] = {
-			ColorMap = RID.."2524142163"},
+			ColorMap = "rbxassetid://2524142163"},
 		["Mag2"] = {
-			ColorMap = RID.."2524139960"},
+			ColorMap = "rbxassetid://2524139960"},
 		["Silencer2"] = {
-			ColorMap = RID.."2524141970"}
+			ColorMap = "rbxassetid://2524141970"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M4A1-S | Impulse', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A1", {
 		["Bolt2"] = {
-			ColorMap = RID.."2916242950"},
+			ColorMap = "rbxassetid://2916242950"},
 		["Handle2"] = {
-			ColorMap = RID.."2916242950"},
+			ColorMap = "rbxassetid://2916242950"},
 		["Part"] = {
-			ColorMap = RID.."2916242950"},
+			ColorMap = "rbxassetid://2916242950"},
 		["Part4"] = {
-			ColorMap = RID.."2916242950"},
+			ColorMap = "rbxassetid://2916242950"},
 		["Part3"] = {
-			ColorMap = RID.."3084393056"},
+			ColorMap = "rbxassetid://3084393056"},
 		["Part2"] = {
-			ColorMap = RID.."2916242950"},
+			ColorMap = "rbxassetid://2916242950"},
 		["Mag2"] = {
-			ColorMap = RID.."2916242482"},
+			ColorMap = "rbxassetid://2916242482"},
 		["Silencer2"] = {
-			ColorMap = RID.."3084393482"}
+			ColorMap = "rbxassetid://3084393482"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M4A1-S | Jester', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A1", {
 		["Bolt2"] = {
-			ColorMap = RID.."4435467841"},
+			ColorMap = "rbxassetid://4435467841"},
 		["Handle2"] = {
-			ColorMap = RID.."4435467841"},
+			ColorMap = "rbxassetid://4435467841"},
 		["Part"] = {
-			ColorMap = RID.."4435467841"},
+			ColorMap = "rbxassetid://4435467841"},
 		["Part4"] = {
-			ColorMap = RID.."4435467841"},
+			ColorMap = "rbxassetid://4435467841"},
 		["Part3"] = {
-			ColorMap = RID.."4435467841"},
+			ColorMap = "rbxassetid://4435467841"},
 		["Part2"] = {
-			ColorMap = RID.."4435467841"},
+			ColorMap = "rbxassetid://4435467841"},
 		["Mag2"] = {
-			ColorMap = RID.."4435466698"},
+			ColorMap = "rbxassetid://4435466698"},
 		["Silencer2"] = {
-			ColorMap = RID.."4435467291"}
+			ColorMap = "rbxassetid://4435467291"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M4A1-S | Lunar', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A1", {
 		["Bolt2"] = {
-			ColorMap = RID.."3414435472"},
+			ColorMap = "rbxassetid://3414435472"},
 		["Handle2"] = {
-			ColorMap = RID.."3414435472"},
+			ColorMap = "rbxassetid://3414435472"},
 		["Part"] = {
-			ColorMap = RID.."3414435472"},
+			ColorMap = "rbxassetid://3414435472"},
 		["Part4"] = {
-			ColorMap = RID.."3414435728"},
+			ColorMap = "rbxassetid://3414435728"},
 		["Part3"] = {
-			ColorMap = RID.."3414435472"},
+			ColorMap = "rbxassetid://3414435472"},
 		["Part2"] = {
-			ColorMap = RID.."3414435472"},
+			ColorMap = "rbxassetid://3414435472"},
 		["Mag2"] = {
-			ColorMap = RID.."3414435122"},
+			ColorMap = "rbxassetid://3414435122"},
 		["Silencer2"] = {
-			ColorMap = RID.."3414435728"}
+			ColorMap = "rbxassetid://3414435728"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M4A1-S | Necropolis', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A1", {
 		["Bolt2"] = {
-			ColorMap = RID.."3801636949"},
+			ColorMap = "rbxassetid://3801636949"},
 		["Handle2"] = {
-			ColorMap = RID.."3801636949"},
+			ColorMap = "rbxassetid://3801636949"},
 		["Part"] = {
-			ColorMap = RID.."3801636949"},
+			ColorMap = "rbxassetid://3801636949"},
 		["Part4"] = {
-			ColorMap = RID.."3801636672"},
+			ColorMap = "rbxassetid://3801636672"},
 		["Part3"] = {
-			ColorMap = RID.."3801636949"},
+			ColorMap = "rbxassetid://3801636949"},
 		["Part2"] = {
-			ColorMap = RID.."3801636949"},
+			ColorMap = "rbxassetid://3801636949"},
 		["Mag2"] = {
-			ColorMap = RID.."3801636534"},
+			ColorMap = "rbxassetid://3801636534"},
 		["Silencer2"] = {
-			ColorMap = RID.."3801636672"}
+			ColorMap = "rbxassetid://3801636672"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M4A1-S | Nightmare', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A1", {
 		["Bolt2"] = {
-			ColorMap = RID.."7943863401"},
+			ColorMap = "rbxassetid://7943863401"},
 		["Handle2"] = {
-			ColorMap = RID.."7943863401"},
+			ColorMap = "rbxassetid://7943863401"},
 		["Part"] = {
-			ColorMap = RID.."7943863401"},
+			ColorMap = "rbxassetid://7943863401"},
 		["Part4"] = {
-			ColorMap = RID.."7943862991"},
+			ColorMap = "rbxassetid://7943862991"},
 		["Part3"] = {
-			ColorMap = RID.."7943863401"},
+			ColorMap = "rbxassetid://7943863401"},
 		["Part2"] = {
-			ColorMap = RID.."7943863401"},
+			ColorMap = "rbxassetid://7943863401"},
 		["Mag2"] = {
-			ColorMap = RID.."7943863137"},
+			ColorMap = "rbxassetid://7943863137"},
 		["Silencer2"] = {
-			ColorMap = RID.."7943862991"}
+			ColorMap = "rbxassetid://7943862991"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M4A1-S | RacerX', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A1", {
 		["Bolt2"] = {
-			ColorMap = RID.."128830260423478",
-			NormalMap = RID.."80563970485007",
-			RoughnessMap = RID.."90480092092010",
-			MetalnessMap = RID.."118063607516420"},
+			ColorMap = "rbxassetid://128830260423478",
+			NormalMap = "rbxassetid://80563970485007",
+			RoughnessMap = "rbxassetid://90480092092010",
+			MetalnessMap = "rbxassetid://118063607516420"},
 		["Part4"] = {
-			ColorMap = RID.."128830260423478",
-			NormalMap = RID.."80563970485007",
-			RoughnessMap = RID.."90480092092010",
-			MetalnessMap = RID.."118063607516420"},
+			ColorMap = "rbxassetid://128830260423478",
+			NormalMap = "rbxassetid://80563970485007",
+			RoughnessMap = "rbxassetid://90480092092010",
+			MetalnessMap = "rbxassetid://118063607516420"},
 		["Part3"] = {
-			ColorMap = RID.."82128137183157",
-			NormalMap = RID.."130894126321951",
-			RoughnessMap = RID.."84311712473158",
-			MetalnessMap = RID.."92123390829146"},
+			ColorMap = "rbxassetid://82128137183157",
+			NormalMap = "rbxassetid://130894126321951",
+			RoughnessMap = "rbxassetid://84311712473158",
+			MetalnessMap = "rbxassetid://92123390829146"},
 		["Part2"] = {
-			ColorMap = RID.."82128137183157",
-			NormalMap = RID.."130894126321951",
-			RoughnessMap = RID.."84311712473158",
-			MetalnessMap = RID.."92123390829146"},
+			ColorMap = "rbxassetid://82128137183157",
+			NormalMap = "rbxassetid://130894126321951",
+			RoughnessMap = "rbxassetid://84311712473158",
+			MetalnessMap = "rbxassetid://92123390829146"},
 		["Part"] = {
-			ColorMap = RID.."82128137183157",
-			NormalMap = RID.."130894126321951",
-			RoughnessMap = RID.."84311712473158",
-			MetalnessMap = RID.."92123390829146"},
+			ColorMap = "rbxassetid://82128137183157",
+			NormalMap = "rbxassetid://130894126321951",
+			RoughnessMap = "rbxassetid://84311712473158",
+			MetalnessMap = "rbxassetid://92123390829146"},
 		["Mag2"] = {
-			ColorMap = RID.."77483089549303",
-			NormalMap = RID.."84592559397507",
-			RoughnessMap = RID.."90674213711025",
-			MetalnessMap = RID.."111638629331644"},
+			ColorMap = "rbxassetid://77483089549303",
+			NormalMap = "rbxassetid://84592559397507",
+			RoughnessMap = "rbxassetid://90674213711025",
+			MetalnessMap = "rbxassetid://111638629331644"},
 		["Silencer2"] = {
-			ColorMap = RID.."79805036321971",
-			NormalMap = RID.."140362212383466",
-			RoughnessMap = RID.."107495956508191",
-			MetalnessMap = RID.."84914544743966"}
+			ColorMap = "rbxassetid://79805036321971",
+			NormalMap = "rbxassetid://140362212383466",
+			RoughnessMap = "rbxassetid://107495956508191",
+			MetalnessMap = "rbxassetid://84914544743966"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M4A1-S | Snowman', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A1", {
 		["Bolt2"] = {
-			ColorMap = RID.."132682979893421"},
+			ColorMap = "rbxassetid://132682979893421"},
 		["Handle2"] = {
-			ColorMap = RID.."132682979893421"},
+			ColorMap = "rbxassetid://132682979893421"},
 		["Part"] = {
-			ColorMap = RID.."132682979893421"},
+			ColorMap = "rbxassetid://132682979893421"},
 		["Part4"] = {
-			ColorMap = RID.."132682979893421"},
+			ColorMap = "rbxassetid://132682979893421"},
 		["Part3"] = {
-			ColorMap = RID.."132682979893421"},
+			ColorMap = "rbxassetid://132682979893421"},
 		["Part2"] = {
-			ColorMap = RID.."132682979893421"},
+			ColorMap = "rbxassetid://132682979893421"},
 		["Mag2"] = {
-			ColorMap = RID.."132461349816227"},
+			ColorMap = "rbxassetid://132461349816227"},
 		["Silencer2"] = {
-			ColorMap = RID.."134192066023469"}
+			ColorMap = "rbxassetid://134192066023469"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M4A1-S | Star Camo', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A1", {
 		["Bolt2"] = {
-			ColorMap = RID.."93919612523562"},
+			ColorMap = "rbxassetid://93919612523562"},
 		["Handle2"] = {
-			ColorMap = RID.."93919612523562"},
+			ColorMap = "rbxassetid://93919612523562"},
 		["Part"] = {
-			ColorMap = RID.."93919612523562"},
+			ColorMap = "rbxassetid://93919612523562"},
 		["Part4"] = {
-			ColorMap = RID.."93919612523562"},
+			ColorMap = "rbxassetid://93919612523562"},
 		["Part3"] = {
-			ColorMap = RID.."93919612523562"},
+			ColorMap = "rbxassetid://93919612523562"},
 		["Part2"] = {
-			ColorMap = RID.."72865352293782"},
+			ColorMap = "rbxassetid://72865352293782"},
 		["Mag2"] = {
-			ColorMap = RID.."131642040421437"},
+			ColorMap = "rbxassetid://131642040421437"},
 		["Silencer2"] = {
-			ColorMap = RID.."72865352293782"}
+			ColorMap = "rbxassetid://72865352293782"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M4A1-S | Tecnician', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A1", {
 		["Bolt2"] = {
-			ColorMap = RID.."2766660538"},
+			ColorMap = "rbxassetid://2766660538"},
 		["Handle2"] = {
-			ColorMap = RID.."2766660538"},
+			ColorMap = "rbxassetid://2766660538"},
 		["Part"] = {
-			ColorMap = RID.."2766660538"},
+			ColorMap = "rbxassetid://2766660538"},
 		["Part4"] = {
-			ColorMap = RID.."2766660538"},
+			ColorMap = "rbxassetid://2766660538"},
 		["Part3"] = {
-			ColorMap = RID.."2766660538"},
+			ColorMap = "rbxassetid://2766660538"},
 		["Part2"] = {
-			ColorMap = RID.."2766660538"},
+			ColorMap = "rbxassetid://2766660538"},
 		["Mag2"] = {
-			ColorMap = RID.."2471947734"},
+			ColorMap = "rbxassetid://2471947734"},
 		["Silencer2"] = {
-			ColorMap = RID.."2766660691"}
+			ColorMap = "rbxassetid://2766660691"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M4A1-S | Toucan', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A1", {
 		["Bolt2"] = {
-			ColorMap = RID.."1510473137"},
+			ColorMap = "rbxassetid://1510473137"},
 		["Handle2"] = {
-			ColorMap = RID.."1510473137"},
+			ColorMap = "rbxassetid://1510473137"},
 		["Part"] = {
-			ColorMap = RID.."1510473137"},
+			ColorMap = "rbxassetid://1510473137"},
 		["Part4"] = {
-			ColorMap = RID.."1510473137"},
+			ColorMap = "rbxassetid://1510473137"},
 		["Part3"] = {
-			ColorMap = RID.."1232535326"},
+			ColorMap = "rbxassetid://1232535326"},
 		["Part2"] = {
-			ColorMap = RID.."1510473137"},
+			ColorMap = "rbxassetid://1510473137"},
 		["Mag2"] = {
-			ColorMap = RID.."1753962894"},
+			ColorMap = "rbxassetid://1753962894"},
 		["Silencer2"] = {
-			ColorMap = RID.."1510473137"}
+			ColorMap = "rbxassetid://1510473137"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M4A1-S | Wastelander', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A1", {
 		["Bolt2"] = {
-			ColorMap = RID.."2445868360"},
+			ColorMap = "rbxassetid://2445868360"},
 		["Handle2"] = {
-			ColorMap = RID.."2445868360"},
+			ColorMap = "rbxassetid://2445868360"},
 		["Part"] = {
-			ColorMap = RID.."2445868360"},
+			ColorMap = "rbxassetid://2445868360"},
 		["Part4"] = {
-			ColorMap = RID.."2445868360"},
+			ColorMap = "rbxassetid://2445868360"},
 		["Part3"] = {
-			ColorMap = RID.."2445868360"},
+			ColorMap = "rbxassetid://2445868360"},
 		["Part2"] = {
-			ColorMap = RID.."2445868360"},
+			ColorMap = "rbxassetid://2445868360"},
 		["Mag2"] = {
-			ColorMap = RID.."2445867778"},
+			ColorMap = "rbxassetid://2445867778"},
 		["Silencer2"] = {
-			ColorMap = RID.."2445870022"}
+			ColorMap = "rbxassetid://2445870022"}
 	})
 end)
 
 -- Note: Parts: Bolt2, Handle2, Mag2, Part (Sight), Chamber
 CreateTabButton('GameSkins', 'APPEND', 'M4A4 | Agony', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A4", {
+		["Back"] = {
+			ColorMap = "rbxassetid://108182173869538"},
+		["Barrel"] = {
+			ColorMap = "rbxassetid://108182173869538"},
 		["Bolt2"] = {
-			ColorMap = RID.."108182173869538"},
+			ColorMap = "rbxassetid://108182173869538"},
+		["Cover"] = {
+			ColorMap = "rbxassetid://108182173869538"},
 		["Handle2"] = {
-			ColorMap = RID.."108182173869538"},
+			ColorMap = "rbxassetid://108182173869538"},
 		["Mag2"] = {
-			ColorMap = RID.."108182173869538"},
-		["Part"] = {
-			ColorMap = RID.."91999955369085"},
+			ColorMap = "rbxassetid://108182173869538"},
+		["Part2"] = {
+			ColorMap = "rbxassetid://108182173869538"},
+		["Sight"] = {
+			ColorMap = "rbxassetid://91999955369085"},
 		["Chamber"] = {
-			ColorMap = RID.."108182173869538"}
+			ColorMap = "rbxassetid://108182173869538"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M4A4 | BOT[S]', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A4", {
+		["Back"] = {
+			ColorMap = "rbxassetid://3037283257"},
+		["Barrel"] = {
+			ColorMap = "rbxassetid://3037283257"},
 		["Bolt2"] = {
-			ColorMap = RID.."3037283257"},
+			ColorMap = "rbxassetid://3037283257"},
+		["Cover"] = {
+			ColorMap = "rbxassetid://3037283257"},
 		["Handle2"] = {
-			ColorMap = RID.."3037283257"},
+			ColorMap = "rbxassetid://3037283257"},
 		["Mag2"] = {
-			ColorMap = RID.."3037283257"},
-		["Part"] = {
-			ColorMap = RID.."3037304309"},
+			ColorMap = "rbxassetid://3037283257"},
+		["Part2"] = {
+			ColorMap = "rbxassetid://3037283257"},
+		["Sight"] = {
+			ColorMap = "rbxassetid://3037304309"},
 		["Chamber"] = {
-			ColorMap = RID.."3037283257"}
+			ColorMap = "rbxassetid://3037283257"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M4A4 | Candyskull', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A4", {
+		["Back"] = {
+			ColorMap = "rbxassetid://1837941332"},
+		["Barrel"] = {
+			ColorMap = "rbxassetid://1837941332"},
 		["Bolt2"] = {
-			ColorMap = RID.."1837941332"},
+			ColorMap = "rbxassetid://1837941332"},
+		["Cover"] = {
+			ColorMap = "rbxassetid://1837941332"},
 		["Handle2"] = {
-			ColorMap = RID.."1837941332"},
+			ColorMap = "rbxassetid://1837941332"},
 		["Mag2"] = {
-			ColorMap = RID.."1837941332"},
-		["Part"] = {
-			ColorMap = RID.."1837941332"},
+			ColorMap = "rbxassetid://1837941332"},
+		["Part2"] = {
+			ColorMap = "rbxassetid://1837941332"},
+		["Sight"] = {
+			ColorMap = "rbxassetid://1837941332"},
 		["Chamber"] = {
-			ColorMap = RID.."1837941332"}
+			ColorMap = "rbxassetid://1837941332"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M4A4 | Darkness', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A4", {
+		["Back"] = {
+			ColorMap = "rbxassetid://6816751414"},
+		["Barrel"] = {
+			ColorMap = "rbxassetid://6816751414"},
 		["Bolt2"] = {
-			ColorMap = RID.."6816751414"},
+			ColorMap = "rbxassetid://6816751414"},
+		["Cover"] = {
+			ColorMap = "rbxassetid://6816751414"},
 		["Handle2"] = {
-			ColorMap = RID.."6816751414"},
+			ColorMap = "rbxassetid://6816751414"},
 		["Mag2"] = {
-			ColorMap = RID.."6816751414"},
-		["Part"] = {
-			ColorMap = RID.."6816751314"},
+			ColorMap = "rbxassetid://6816751414"},
+		["Part2"] = {
+			ColorMap = "rbxassetid://6816751414"},
+		["Sight"] = {
+			ColorMap = "rbxassetid://6816751314"},
 		["Chamber"] = {
-			ColorMap = RID.."6816751414"}
+			ColorMap = "rbxassetid://6816751414"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M4A4 | Delinquent', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A4", {
+		["Back"] = {
+			ColorMap = "rbxassetid://4587060763"},
+		["Barrel"] = {
+			ColorMap = "rbxassetid://4587060763"},
 		["Bolt2"] = {
-			ColorMap = RID.."4587060763"},
+			ColorMap = "rbxassetid://4587060763"},
+		["Cover"] = {
+			ColorMap = "rbxassetid://4587060763"},
 		["Handle2"] = {
-			ColorMap = RID.."4587060763"},
+			ColorMap = "rbxassetid://4587060763"},
 		["Mag2"] = {
-			ColorMap = RID.."4587060763"},
-		["Part"] = {
-			ColorMap = RID.."4587060872"},
+			ColorMap = "rbxassetid://4587060763"},
+		["Part2"] = {
+			ColorMap = "rbxassetid://4587060763"},
+		["Sight"] = {
+			ColorMap = "rbxassetid://4587060872"},
 		["Chamber"] = {
-			ColorMap = RID.."4587060763"}
+			ColorMap = "rbxassetid://4587060763"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M4A4 | Desert Camo', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A4", {
+		["Back"] = {
+			ColorMap = "rbxassetid://1237362161"},
+		["Barrel"] = {
+			ColorMap = "rbxassetid://1237362161"},
 		["Bolt2"] = {
-			ColorMap = RID.."1237362161"},
+			ColorMap = "rbxassetid://1237362161"},
+		["Cover"] = {
+			ColorMap = "rbxassetid://1237362161"},
 		["Handle2"] = {
-			ColorMap = RID.."1237362161"},
+			ColorMap = "rbxassetid://1237362161"},
 		["Mag2"] = {
-			ColorMap = RID.."1237362161"},
-		["Part"] = {
-			ColorMap = RID.."977253237"},
+			ColorMap = "rbxassetid://1237362161"},
+		["Part2"] = {
+			ColorMap = "rbxassetid://1237362161"},
+		["Sight"] = {
+			ColorMap = "rbxassetid://977253237"},
 		["Chamber"] = {
-			ColorMap = RID.."1237362161"}
+			ColorMap = "rbxassetid://1237362161"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M4A4 | Devil', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A4", {
+		["Back"] = {
+			ColorMap = "rbxassetid://1229672746"},
+		["Barrel"] = {
+			ColorMap = "rbxassetid://1229672746"},
 		["Bolt2"] = {
-			ColorMap = RID.."1229672746"},
+			ColorMap = "rbxassetid://1229672746"},
+		["Cover"] = {
+			ColorMap = "rbxassetid://1229672746"},
 		["Handle2"] = {
-			ColorMap = RID.."1229672746"},
+			ColorMap = "rbxassetid://1229672746"},
 		["Mag2"] = {
-			ColorMap = RID.."1229672746"},
-		["Part"] = {
-			ColorMap = RID.."1229672892"},
+			ColorMap = "rbxassetid://1229672746"},
+		["Part2"] = {
+			ColorMap = "rbxassetid://1229672746"},
+		["Sight"] = {
+			ColorMap = "rbxassetid://1229672892"},
 		["Chamber"] = {
-			ColorMap = RID.."1229672746"}
+			ColorMap = "rbxassetid://1229672746"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M4A4 | Endline', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A4", {
+		["Back"] = {
+			ColorMap = "rbxassetid://3645642115"},
+		["Barrel"] = {
+			ColorMap = "rbxassetid://3645642115"},
 		["Bolt2"] = {
-			ColorMap = RID.."3645642115"},
+			ColorMap = "rbxassetid://3645642115"},
+		["Cover"] = {
+			ColorMap = "rbxassetid://3645642115"},
 		["Handle2"] = {
-			ColorMap = RID.."3645642115"},
+			ColorMap = "rbxassetid://3645642115"},
 		["Mag2"] = {
-			ColorMap = RID.."3645642115"},
-		["Part"] = {
-			ColorMap = RID.."3645642522"},
+			ColorMap = "rbxassetid://3645642115"},
+		["Part2"] = {
+			ColorMap = "rbxassetid://3645642115"},
+		["Sight"] = {
+			ColorMap = "rbxassetid://3645642522"},
 		["Chamber"] = {
-			ColorMap = RID.."3645642115"}
+			ColorMap = "rbxassetid://3645642115"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M4A4 | Flashy Ride', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A4", {
+		["Back"] = {
+			ColorMap = "rbxassetid://4464677812"},
+		["Barrel"] = {
+			ColorMap = "rbxassetid://4464677812"},
 		["Bolt2"] = {
-			ColorMap = RID.."4464677812"},
+			ColorMap = "rbxassetid://4464677812"},
+		["Cover"] = {
+			ColorMap = "rbxassetid://4464677812"},
 		["Handle2"] = {
-			ColorMap = RID.."4464677812"},
+			ColorMap = "rbxassetid://4464677812"},
 		["Mag2"] = {
-			ColorMap = RID.."4464677812"},
-		["Part"] = {
-			ColorMap = RID.."4464678709"},
+			ColorMap = "rbxassetid://4464677812"},
+		["Part2"] = {
+			ColorMap = "rbxassetid://4464677812"},
+		["Sight"] = {
+			ColorMap = "rbxassetid://4464678709"},
 		["Chamber"] = {
-			ColorMap = RID.."4464677812"}
+			ColorMap = "rbxassetid://4464677812"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M4A4 | Ice Cap', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A4", {
+		["Back"] = {
+			ColorMap = "rbxassetid://2666304426"},
+		["Barrel"] = {
+			ColorMap = "rbxassetid://2666304426"},
 		["Bolt2"] = {
-			ColorMap = RID.."2666304426"},
+			ColorMap = "rbxassetid://2666304426"},
+		["Cover"] = {
+			ColorMap = "rbxassetid://2666304426"},
 		["Handle2"] = {
-			ColorMap = RID.."2666304426"},
+			ColorMap = "rbxassetid://2666304426"},
 		["Mag2"] = {
-			ColorMap = RID.."2666304426"},
-		["Part"] = {
-			ColorMap = RID.."2666304419"},
+			ColorMap = "rbxassetid://2666304426"},
+		["Part2"] = {
+			ColorMap = "rbxassetid://2666304426"},
+		["Sight"] = {
+			ColorMap = "rbxassetid://2666304419"},
 		["Chamber"] = {
-			ColorMap = RID.."2666304426"}
+			ColorMap = "rbxassetid://2666304426"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M4A4 | Jester', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A4", {
+		["Back"] = {
+			ColorMap = "rbxassetid://4614562041"},
+		["Barrel"] = {
+			ColorMap = "rbxassetid://4614562041"},
 		["Bolt2"] = {
-			ColorMap = RID.."4614562041"},
+			ColorMap = "rbxassetid://4614562041"},
+		["Cover"] = {
+			ColorMap = "rbxassetid://4614562041"},
 		["Handle2"] = {
-			ColorMap = RID.."4614562041"},
+			ColorMap = "rbxassetid://4614562041"},
 		["Mag2"] = {
-			ColorMap = RID.."4614562041"},
-		["Part"] = {
-			ColorMap = RID.."4614562199"},
+			ColorMap = "rbxassetid://4614562041"},
+		["Part2"] = {
+			ColorMap = "rbxassetid://4614562041"},
+		["Sight"] = {
+			ColorMap = "rbxassetid://4614562199"},
 		["Chamber"] = {
-			ColorMap = RID.."4614562041"}
+			ColorMap = "rbxassetid://4614562041"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M4A4 | King', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A4", {
+		["Back"] = {
+			ColorMap = "rbxassetid://4229562713"},
+		["Barrel"] = {
+			ColorMap = "rbxassetid://4229562713"},
 		["Bolt2"] = {
-			ColorMap = RID.."4229562713"},
+			ColorMap = "rbxassetid://4229562713"},
+		["Cover"] = {
+			ColorMap = "rbxassetid://4229562713"},
 		["Handle2"] = {
-			ColorMap = RID.."4229562713"},
+			ColorMap = "rbxassetid://4229562713"},
 		["Mag2"] = {
-			ColorMap = RID.."4229562713"},
-		["Part"] = {
-			ColorMap = RID.."4229563583"},
+			ColorMap = "rbxassetid://4229562713"},
+		["Part2"] = {
+			ColorMap = "rbxassetid://4229562713"},
+		["Sight"] = {
+			ColorMap = "rbxassetid://4229563583"},
 		["Chamber"] = {
-			ColorMap = RID.."4229562713"}
+			ColorMap = "rbxassetid://4229562713"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M4A4 | Mistletoe', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A4", {
+		["Back"] = {
+			ColorMap = "rbxassetid://4540752127"},
+		["Barrel"] = {
+			ColorMap = "rbxassetid://4540752127"},
 		["Bolt2"] = {
-			ColorMap = RID.."4540752127"},
+			ColorMap = "rbxassetid://4540752127"},
+		["Cover"] = {
+			ColorMap = "rbxassetid://4540752127"},
 		["Handle2"] = {
-			ColorMap = RID.."4540752127"},
+			ColorMap = "rbxassetid://4540752127"},
 		["Mag2"] = {
-			ColorMap = RID.."4540752127"},
-		["Part"] = {
-			ColorMap = RID.."4540752127"},
+			ColorMap = "rbxassetid://4540752127"},
+		["Part2"] = {
+			ColorMap = "rbxassetid://4540752127"},
+		["Sight"] = {
+			ColorMap = "rbxassetid://4540752127"},
 		["Chamber"] = {
-			ColorMap = RID.."4540752127"}
+			ColorMap = "rbxassetid://4540752127"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M4A4 | Pinkie', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A4", {
+		["Back"] = {
+			ColorMap = "rbxassetid://2766660856"},
+		["Barrel"] = {
+			ColorMap = "rbxassetid://2766660856"},
 		["Bolt2"] = {
-			ColorMap = RID.."2766660856"},
+			ColorMap = "rbxassetid://2766660856"},
+		["Cover"] = {
+			ColorMap = "rbxassetid://2766660856"},
 		["Handle2"] = {
-			ColorMap = RID.."2766660856"},
+			ColorMap = "rbxassetid://2766660856"},
 		["Mag2"] = {
-			ColorMap = RID.."2766660856"},
-		["Part"] = {
-			ColorMap = RID.."2766660998"},
+			ColorMap = "rbxassetid://2766660856"},
+		["Part2"] = {
+			ColorMap = "rbxassetid://2766660856"},
+		["Sight"] = {
+			ColorMap = "rbxassetid://2766660998"},
 		["Chamber"] = {
-			ColorMap = RID.."2766660856"}
+			ColorMap = "rbxassetid://2766660856"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M4A4 | Pinkvision', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A4", {
+		["Back"] = {
+			ColorMap = "rbxassetid://1233756421"},
+		["Barrel"] = {
+			ColorMap = "rbxassetid://1233756421"},
 		["Bolt2"] = {
-			ColorMap = RID.."1233756421"},
+			ColorMap = "rbxassetid://1233756421"},
+		["Cover"] = {
+			ColorMap = "rbxassetid://1233756421"},
 		["Handle2"] = {
-			ColorMap = RID.."1233756421"},
+			ColorMap = "rbxassetid://1233756421"},
 		["Mag2"] = {
-			ColorMap = RID.."1233756421"},
-		["Part"] = {
-			ColorMap = RID.."977253237"},
+			ColorMap = "rbxassetid://1233756421"},
+		["Part2"] = {
+			ColorMap = "rbxassetid://1233756421"},
+		["Sight"] = {
+			ColorMap = "rbxassetid://977253237"},
 		["Chamber"] = {
-			ColorMap = RID.."1233756421"}
+			ColorMap = "rbxassetid://1233756421"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M4A4 | Pondside', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A4", {
+		["Back"] = {
+			ColorMap = "rbxassetid://2666244723"},
+		["Barrel"] = {
+			ColorMap = "rbxassetid://2666244723"},
 		["Bolt2"] = {
-			ColorMap = RID.."2666244723"},
+			ColorMap = "rbxassetid://2666244723"},
+		["Cover"] = {
+			ColorMap = "rbxassetid://2666244723"},
 		["Handle2"] = {
-			ColorMap = RID.."2666244723"},
+			ColorMap = "rbxassetid://2666244723"},
 		["Mag2"] = {
-			ColorMap = RID.."2666244723"},
-		["Part"] = {
-			ColorMap = RID.."2666244717"},
+			ColorMap = "rbxassetid://2666244723"},
+		["Part2"] = {
+			ColorMap = "rbxassetid://2666244723"},
+		["Sight"] = {
+			ColorMap = "rbxassetid://2666244717"},
 		["Chamber"] = {
-			ColorMap = RID.."2666244723"}
+			ColorMap = "rbxassetid://2666244723"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M4A4 | Precision', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A4", {
+		["Back"] = {
+			ColorMap = "rbxassetid://1569013602"},
+		["Barrel"] = {
+			ColorMap = "rbxassetid://1569013602"},
 		["Bolt2"] = {
-			ColorMap = RID.."1569013602"},
+			ColorMap = "rbxassetid://1569013602"},
+		["Cover"] = {
+			ColorMap = "rbxassetid://1569013602"},
 		["Handle2"] = {
-			ColorMap = RID.."1569013602"},
+			ColorMap = "rbxassetid://1569013602"},
 		["Mag2"] = {
-			ColorMap = RID.."1569013602"},
-		["Part"] = {
-			ColorMap = RID.."1569013739"},
+			ColorMap = "rbxassetid://1569013602"},
+		["Part2"] = {
+			ColorMap = "rbxassetid://1569013602"},
+		["Sight"] = {
+			ColorMap = "rbxassetid://1569013739"},
 		["Chamber"] = {
-			ColorMap = RID.."1569013602"}
+			ColorMap = "rbxassetid://1569013602"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M4A4 | Quicktime', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A4", {
+		["Back"] = {
+			ColorMap = "rbxassetid://4595854478"},
+		["Barrel"] = {
+			ColorMap = "rbxassetid://4595854478"},
 		["Bolt2"] = {
-			ColorMap = RID.."4595854478"},
+			ColorMap = "rbxassetid://4595854478"},
+		["Cover"] = {
+			ColorMap = "rbxassetid://4595854478"},
 		["Handle2"] = {
-			ColorMap = RID.."4595854478"},
+			ColorMap = "rbxassetid://4595854478"},
 		["Mag2"] = {
-			ColorMap = RID.."4595854478"},
-		["Part"] = {
-			ColorMap = RID.."4595854937"},
+			ColorMap = "rbxassetid://4595854478"},
+		["Part2"] = {
+			ColorMap = "rbxassetid://4595854478"},
+		["Sight"] = {
+			ColorMap = "rbxassetid://4595854937"},
 		["Chamber"] = {
-			ColorMap = RID.."4595854478"}
+			ColorMap = "rbxassetid://4595854478"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M4A4 | Racer', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A4", {
+		["Back"] = {
+			ColorMap = "rbxassetid://83541557280997"},
+		["Barrel"] = {
+			ColorMap = "rbxassetid://83541557280997"},
 		["Bolt2"] = {
-			ColorMap = RID.."83541557280997"},
+			ColorMap = "rbxassetid://83541557280997"},
+		["Cover"] = {
+			ColorMap = "rbxassetid://83541557280997"},
 		["Handle2"] = {
-			ColorMap = RID.."83541557280997"},
+			ColorMap = "rbxassetid://83541557280997"},
 		["Mag2"] = {
-			ColorMap = RID.."83541557280997"},
-		["Part"] = {
-			ColorMap = RID.."2962044858"},
+			ColorMap = "rbxassetid://83541557280997"},
+		["Part2"] = {
+			ColorMap = "rbxassetid://83541557280997"},
+		["Sight"] = {
+			ColorMap = "rbxassetid://2962044858"},
 		["Chamber"] = {
-			ColorMap = RID.."83541557280997"}
+			ColorMap = "rbxassetid://83541557280997"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M4A4 | RayTrack', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A4", {
+		["Back"] = {
+			ColorMap = "rbxassetid://4502763750"},
+		["Barrel"] = {
+			ColorMap = "rbxassetid://4502763750"},
 		["Bolt2"] = {
-			ColorMap = RID.."4502763750"},
+			ColorMap = "rbxassetid://4502763750"},
+		["Cover"] = {
+			ColorMap = "rbxassetid://4502763750"},
 		["Handle2"] = {
-			ColorMap = RID.."4502763750"},
+			ColorMap = "rbxassetid://4502763750"},
 		["Mag2"] = {
-			ColorMap = RID.."4502763750"},
-		["Part"] = {
-			ColorMap = RID.."4502763828"},
+			ColorMap = "rbxassetid://4502763750"},
+		["Part2"] = {
+			ColorMap = "rbxassetid://4502763750"},
+		["Sight"] = {
+			ColorMap = "rbxassetid://4502763828"},
 		["Chamber"] = {
-			ColorMap = RID.."4502763750"}
+			ColorMap = "rbxassetid://4502763750"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M4A4 | Scapter', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A4", {
+		["Back"] = {
+			ColorMap = "rbxassetid://12569981059"},
+		["Barrel"] = {
+			ColorMap = "rbxassetid://12569981059"},
 		["Bolt2"] = {
-			ColorMap = RID.."12569981059"},
+			ColorMap = "rbxassetid://12569981059"},
+		["Cover"] = {
+			ColorMap = "rbxassetid://12569981059"},
 		["Handle2"] = {
-			ColorMap = RID.."12569981059"},
+			ColorMap = "rbxassetid://12569981059"},
 		["Mag2"] = {
-			ColorMap = RID.."12569981059"},
-		["Part"] = {
-			ColorMap = RID.."12569982444"},
+			ColorMap = "rbxassetid://12569981059"},
+		["Part2"] = {
+			ColorMap = "rbxassetid://12569981059"},
+		["Sight"] = {
+			ColorMap = "rbxassetid://12569982444"},
 		["Chamber"] = {
-			ColorMap = RID.."12569981059"}
+			ColorMap = "rbxassetid://12569981059"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M4A4 | Sleigher', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A4", {
+		["Back"] = {
+			ColorMap = "rbxassetid://95060874181240"},
+		["Barrel"] = {
+			ColorMap = "rbxassetid://95060874181240"},
 		["Bolt2"] = {
-			ColorMap = RID.."95060874181240"},
+			ColorMap = "rbxassetid://95060874181240"},
+		["Cover"] = {
+			ColorMap = "rbxassetid://95060874181240"},
 		["Handle2"] = {
-			ColorMap = RID.."95060874181240"},
+			ColorMap = "rbxassetid://95060874181240"},
 		["Mag2"] = {
-			ColorMap = RID.."95060874181240"},
-		["Part"] = {
-			ColorMap = RID.."106495704413907"},
+			ColorMap = "rbxassetid://95060874181240"},
+		["Part2"] = {
+			ColorMap = "rbxassetid://95060874181240"},
+		["Sight"] = {
+			ColorMap = "rbxassetid://106495704413907"},
 		["Chamber"] = {
-			ColorMap = RID.."95060874181240"}
+			ColorMap = "rbxassetid://95060874181240"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M4A4 | Stardust', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A4", {
+		["Back"] = {
+			ColorMap = "rbxassetid://3034176397"},
+		["Barrel"] = {
+			ColorMap = "rbxassetid://3034176397"},
 		["Bolt2"] = {
-			ColorMap = RID.."3034176397"},
+			ColorMap = "rbxassetid://3034176397"},
+		["Cover"] = {
+			ColorMap = "rbxassetid://3034176397"},
 		["Handle2"] = {
-			ColorMap = RID.."3034176397"},
+			ColorMap = "rbxassetid://3034176397"},
 		["Mag2"] = {
-			ColorMap = RID.."3034176397"},
-		["Part"] = {
-			ColorMap = RID.."3034176744"},
+			ColorMap = "rbxassetid://3034176397"},
+		["Part2"] = {
+			ColorMap = "rbxassetid://3034176397"},
+		["Sight"] = {
+			ColorMap = "rbxassetid://3034176744"},
 		["Chamber"] = {
-			ColorMap = RID.."3034176397"}
+			ColorMap = "rbxassetid://3034176397"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M4A4 | Toy Soldier', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A4", {
+		["Back"] = {
+			ColorMap = "rbxassetid://2490656839"},
+		["Barrel"] = {
+			ColorMap = "rbxassetid://2490656839"},
 		["Bolt2"] = {
-			ColorMap = RID.."2490656839"},
+			ColorMap = "rbxassetid://2490656839"},
+		["Cover"] = {
+			ColorMap = "rbxassetid://2490656839"},
 		["Handle2"] = {
-			ColorMap = RID.."2490656839"},
+			ColorMap = "rbxassetid://2490656839"},
 		["Mag2"] = {
-			ColorMap = RID.."2490656839"},
-		["Part"] = {
-			ColorMap = RID.."2490656839"},
+			ColorMap = "rbxassetid://2490656839"},
+		["Part2"] = {
+			ColorMap = "rbxassetid://2490656839"},
+		["Sight"] = {
+			ColorMap = "rbxassetid://2490656839"},
 		["Chamber"] = {
-			ColorMap = RID.."2490656839"}
+			ColorMap = "rbxassetid://2490656839"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M9 Bayonet | Jade Dream', PLACEHOLDERICON, 0, function()
 	EquipSkin("M9 Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."76786547131743",
-			NormalMap = RID.."123417583904598",
-			RoughnessMap = RID.."82594307098883",
-			MetalnessMap = RID.."90197070712486"}
+			ColorMap = "rbxassetid://76786547131743",
+			NormalMap = "rbxassetid://123417583904598",
+			RoughnessMap = "rbxassetid://82594307098883",
+			MetalnessMap = "rbxassetid://90197070712486"}
 	})
 end)
 
@@ -66605,282 +66955,282 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'M9 Bayonet | Late Night', PLACEHOLDERICON, 0, function()
 	EquipSkin("M9 Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."118168456468751",
-			NormalMap = RID.."129937901582349",
-			RoughnessMap = RID.."133652158857212",
-			MetalnessMap = RID.."113661302473161"}
+			ColorMap = "rbxassetid://118168456468751",
+			NormalMap = "rbxassetid://129937901582349",
+			RoughnessMap = "rbxassetid://133652158857212",
+			MetalnessMap = "rbxassetid://113661302473161"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M9 Bayonet | RacerX', PLACEHOLDERICON, 0, function()
 	EquipSkin("M9 Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."93233392109126",
-			NormalMap = RID.."82225044634582",
-			RoughnessMap = RID.."98990269176109",
-			MetalnessMap = RID.."76340246672696"}
+			ColorMap = "rbxassetid://93233392109126",
+			NormalMap = "rbxassetid://82225044634582",
+			RoughnessMap = "rbxassetid://98990269176109",
+			MetalnessMap = "rbxassetid://76340246672696"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M9 Bayonet | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("M9 Bayonet", {
 		["Handle"] = {
-			ColorMap = RID.."90764301950808",
-			NormalMap = RID.."129937901582349",
-			RoughnessMap = RID.."133652158857212",
-			MetalnessMap = RID.."113661302473161"}
+			ColorMap = "rbxassetid://90764301950808",
+			NormalMap = "rbxassetid://129937901582349",
+			RoughnessMap = "rbxassetid://133652158857212",
+			MetalnessMap = "rbxassetid://113661302473161"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MAC-10 | Artists Intent', PLACEHOLDERICON, 0, function()
 	EquipSkin("MAC10", {
 		["Bolt"] = {
-			ColorMap = RID.."3180126605"},
+			ColorMap = "rbxassetid://3180126605"},
 		["Handle"] = {
-			ColorMap = RID.."3180126605"},
+			ColorMap = "rbxassetid://3180126605"},
 		["Mag"] = {
-			ColorMap = RID.."3180126605"},
+			ColorMap = "rbxassetid://3180126605"},
 		["Part"] = {
-			ColorMap = RID.."3180126605"}
+			ColorMap = "rbxassetid://3180126605"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MAC-10 | Blaze', PLACEHOLDERICON, 0, function()
 	EquipSkin("MAC10", {
 		["Bolt"] = {
-			ColorMap = RID.."4435997788"},
+			ColorMap = "rbxassetid://4435997788"},
 		["Handle"] = {
-			ColorMap = RID.."4435997788"},
+			ColorMap = "rbxassetid://4435997788"},
 		["Mag"] = {
-			ColorMap = RID.."4435997788"},
+			ColorMap = "rbxassetid://4435997788"},
 		["Part"] = {
-			ColorMap = RID.."4435997788"}
+			ColorMap = "rbxassetid://4435997788"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MAC-10 | Cursed Tree', PLACEHOLDERICON, 0, function()
 	EquipSkin("MAC10", {
 		["Bolt"] = {
-			ColorMap = RID.."94792365110913"},
+			ColorMap = "rbxassetid://94792365110913"},
 		["Handle"] = {
-			ColorMap = RID.."94792365110913"},
+			ColorMap = "rbxassetid://94792365110913"},
 		["Mag"] = {
-			ColorMap = RID.."94792365110913"},
+			ColorMap = "rbxassetid://94792365110913"},
 		["Part"] = {
-			ColorMap = RID.."94792365110913"}
+			ColorMap = "rbxassetid://94792365110913"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MAC-10 | Devil', PLACEHOLDERICON, 0, function()
 	EquipSkin("MAC10", {
 		["Bolt"] = {
-			ColorMap = RID.."7944208392"},
+			ColorMap = "rbxassetid://7944208392"},
 		["Handle"] = {
-			ColorMap = RID.."7944208392"},
+			ColorMap = "rbxassetid://7944208392"},
 		["Mag"] = {
-			ColorMap = RID.."7944208392"},
+			ColorMap = "rbxassetid://7944208392"},
 		["Part"] = {
-			ColorMap = RID.."7944208392"}
+			ColorMap = "rbxassetid://7944208392"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MAC-10 | Energy', PLACEHOLDERICON, 0, function()
 	EquipSkin("MAC10", {
 		["Bolt"] = {
-			ColorMap = RID.."79881862945950"},
+			ColorMap = "rbxassetid://79881862945950"},
 		["Handle"] = {
-			ColorMap = RID.."79881862945950"},
+			ColorMap = "rbxassetid://79881862945950"},
 		["Mag"] = {
-			ColorMap = RID.."79881862945950"},
+			ColorMap = "rbxassetid://79881862945950"},
 		["Part"] = {
-			ColorMap = RID.."79881862945950"}
+			ColorMap = "rbxassetid://79881862945950"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MAC-10 | Gift Wrapped', PLACEHOLDERICON, 0, function()
 	EquipSkin("MAC10", {
 		["Bolt"] = {
-			ColorMap = RID.."121012766478550"},
+			ColorMap = "rbxassetid://121012766478550"},
 		["Handle"] = {
-			ColorMap = RID.."121012766478550"},
+			ColorMap = "rbxassetid://121012766478550"},
 		["Mag"] = {
-			ColorMap = RID.."121012766478550"},
+			ColorMap = "rbxassetid://121012766478550"},
 		["Part"] = {
-			ColorMap = RID.."121012766478550"}
+			ColorMap = "rbxassetid://121012766478550"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MAC-10 | Glowball', PLACEHOLDERICON, 0, function()
 	EquipSkin("MAC10", {
 		["Bolt"] = {
-			ColorMap = RID.."97166456135311",
-			NormalMap = RID.."93932859212957",
-			RoughnessMap = RID.."118967840833351",
-			MetalnessMap = RID.."124426897574207"},
+			ColorMap = "rbxassetid://97166456135311",
+			NormalMap = "rbxassetid://93932859212957",
+			RoughnessMap = "rbxassetid://118967840833351",
+			MetalnessMap = "rbxassetid://124426897574207"},
 		["Handle"] = {
-			ColorMap = RID.."97166456135311",
-			NormalMap = RID.."93932859212957",
-			RoughnessMap = RID.."118967840833351",
-			MetalnessMap = RID.."124426897574207"},
+			ColorMap = "rbxassetid://97166456135311",
+			NormalMap = "rbxassetid://93932859212957",
+			RoughnessMap = "rbxassetid://118967840833351",
+			MetalnessMap = "rbxassetid://124426897574207"},
 		["Mag"] = {
-			ColorMap = RID.."97166456135311",
-			NormalMap = RID.."93932859212957",
-			RoughnessMap = RID.."118967840833351",
-			MetalnessMap = RID.."124426897574207"},
+			ColorMap = "rbxassetid://97166456135311",
+			NormalMap = "rbxassetid://93932859212957",
+			RoughnessMap = "rbxassetid://118967840833351",
+			MetalnessMap = "rbxassetid://124426897574207"},
 		["Part"] = {
-			ColorMap = RID.."97166456135311",
-			NormalMap = RID.."93932859212957",
-			RoughnessMap = RID.."118967840833351",
-			MetalnessMap = RID.."124426897574207"}
+			ColorMap = "rbxassetid://97166456135311",
+			NormalMap = "rbxassetid://93932859212957",
+			RoughnessMap = "rbxassetid://118967840833351",
+			MetalnessMap = "rbxassetid://124426897574207"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MAC-10 | Golden Rings', PLACEHOLDERICON, 0, function()
 	EquipSkin("MAC10", {
 		["Bolt"] = {
-			ColorMap = RID.."2666244721"},
+			ColorMap = "rbxassetid://2666244721"},
 		["Handle"] = {
-			ColorMap = RID.."2666244721"},
+			ColorMap = "rbxassetid://2666244721"},
 		["Mag"] = {
-			ColorMap = RID.."2666244721"},
+			ColorMap = "rbxassetid://2666244721"},
 		["Part"] = {
-			ColorMap = RID.."2666244721"}
+			ColorMap = "rbxassetid://2666244721"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MAC-10 | Pimpin', PLACEHOLDERICON, 0, function()
 	EquipSkin("MAC10", {
 		["Bolt"] = {
-			ColorMap = RID.."1652486273"},
+			ColorMap = "rbxassetid://1652486273"},
 		["Handle"] = {
-			ColorMap = RID.."1652486273"},
+			ColorMap = "rbxassetid://1652486273"},
 		["Mag"] = {
-			ColorMap = RID.."1652486273"},
+			ColorMap = "rbxassetid://1652486273"},
 		["Part"] = {
-			ColorMap = RID.."1652486273"}
+			ColorMap = "rbxassetid://1652486273"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MAC-10 | Scythe', PLACEHOLDERICON, 0, function()
 	EquipSkin("MAC10", {
 		["Bolt"] = {
-			ColorMap = RID.."5860430562"},
+			ColorMap = "rbxassetid://5860430562"},
 		["Handle"] = {
-			ColorMap = RID.."5860430562"},
+			ColorMap = "rbxassetid://5860430562"},
 		["Mag"] = {
-			ColorMap = RID.."5860430562"},
+			ColorMap = "rbxassetid://5860430562"},
 		["Part"] = {
-			ColorMap = RID.."5860430562"}
+			ColorMap = "rbxassetid://5860430562"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MAC-10 | Skeleboney', PLACEHOLDERICON, 0, function()
 	EquipSkin("MAC10", {
 		["Bolt"] = {
-			ColorMap = RID.."2916243771"},
+			ColorMap = "rbxassetid://2916243771"},
 		["Handle"] = {
-			ColorMap = RID.."2916243771"},
+			ColorMap = "rbxassetid://2916243771"},
 		["Mag"] = {
-			ColorMap = RID.."2916243771"},
+			ColorMap = "rbxassetid://2916243771"},
 		["Part"] = {
-			ColorMap = RID.."2916243771"}
+			ColorMap = "rbxassetid://2916243771"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MAC-10 | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("MAC10", {
 		["Bolt"] = {
-			ColorMap = RID.."70589544012720"},
+			ColorMap = "rbxassetid://70589544012720"},
 		["Handle"] = {
-			ColorMap = RID.."70589544012720"},
+			ColorMap = "rbxassetid://70589544012720"},
 		["Mag"] = {
-			ColorMap = RID.."70589544012720"},
+			ColorMap = "rbxassetid://70589544012720"},
 		["Part"] = {
-			ColorMap = RID.."70589544012720"}
+			ColorMap = "rbxassetid://70589544012720"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MAC-10 | Toxic', PLACEHOLDERICON, 0, function()
 	EquipSkin("MAC10", {
 		["Bolt"] = {
-			ColorMap = RID.."3801637958"},
+			ColorMap = "rbxassetid://3801637958"},
 		["Handle"] = {
-			ColorMap = RID.."3801637958"},
+			ColorMap = "rbxassetid://3801637958"},
 		["Mag"] = {
-			ColorMap = RID.."3801637958"},
+			ColorMap = "rbxassetid://3801637958"},
 		["Part"] = {
-			ColorMap = RID.."3801637958"}
+			ColorMap = "rbxassetid://3801637958"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MAC-10 | Turbo', PLACEHOLDERICON, 0, function()
 	EquipSkin("MAC10", {
 		["Bolt"] = {
-			ColorMap = RID.."2445866602"},
+			ColorMap = "rbxassetid://2445866602"},
 		["Handle"] = {
-			ColorMap = RID.."2445866602"},
+			ColorMap = "rbxassetid://2445866602"},
 		["Mag"] = {
-			ColorMap = RID.."2445866602"},
+			ColorMap = "rbxassetid://2445866602"},
 		["Part"] = {
-			ColorMap = RID.."2445866602"}
+			ColorMap = "rbxassetid://2445866602"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MAC-10 | Wetland', PLACEHOLDERICON, 0, function()
 	EquipSkin("MAC10", {
 		["Bolt"] = {
-			ColorMap = RID.."1838020512"},
+			ColorMap = "rbxassetid://1838020512"},
 		["Handle"] = {
-			ColorMap = RID.."1838020512"},
+			ColorMap = "rbxassetid://1838020512"},
 		["Mag"] = {
-			ColorMap = RID.."1838020512"},
+			ColorMap = "rbxassetid://1838020512"},
 		["Part"] = {
-			ColorMap = RID.."1838020512"}
+			ColorMap = "rbxassetid://1838020512"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MAG-7 | Bombshell', PLACEHOLDERICON, 0, function()
 	EquipSkin("MAG7", {
 		["Handle2"] = {
-			ColorMap = RID.."3034035933"},
+			ColorMap = "rbxassetid://3034035933"},
 		["Part"] = {
-			ColorMap = RID.."3034035933"},
+			ColorMap = "rbxassetid://3034035933"},
 		["Pump"] = {
-			ColorMap = RID.."3034035933"},
+			ColorMap = "rbxassetid://3034035933"},
 		["Slide1"] = {
-			ColorMap = RID.."3034035933"},
+			ColorMap = "rbxassetid://3034035933"},
 		["Slide2"] = {
-			ColorMap = RID.."3034035933"}
+			ColorMap = "rbxassetid://3034035933"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MAG-7 | Camouflage', PLACEHOLDERICON, 0, function()
 	EquipSkin("MAG7", {
 		["Handle2"] = {
-			ColorMap = RID.."78323833466193", -- First version: 103321329265359
-			NormalMap = RID.."92229005896800", -- First version: 88058599510417
-			RoughnessMap = RID.."92229005896800",
-			MetalnessMap = RID.."110437650090823"},
+			ColorMap = "rbxassetid://78323833466193", -- First version: 103321329265359
+			NormalMap = "rbxassetid://92229005896800", -- First version: 88058599510417
+			RoughnessMap = "rbxassetid://92229005896800",
+			MetalnessMap = "rbxassetid://110437650090823"},
 		["Part"] = {
-			ColorMap = RID.."78323833466193",
-			NormalMap = RID.."92229005896800",
-			RoughnessMap = RID.."92229005896800",
-			MetalnessMap = RID.."110437650090823"},
+			ColorMap = "rbxassetid://78323833466193",
+			NormalMap = "rbxassetid://92229005896800",
+			RoughnessMap = "rbxassetid://92229005896800",
+			MetalnessMap = "rbxassetid://110437650090823"},
 		["Pump"] = {
-			ColorMap = RID.."78323833466193",
-			NormalMap = RID.."92229005896800",
-			RoughnessMap = RID.."92229005896800",
-			MetalnessMap = RID.."110437650090823"},
+			ColorMap = "rbxassetid://78323833466193",
+			NormalMap = "rbxassetid://92229005896800",
+			RoughnessMap = "rbxassetid://92229005896800",
+			MetalnessMap = "rbxassetid://110437650090823"},
 		["Slide1"] = {
-			ColorMap = RID.."78323833466193",
-			NormalMap = RID.."92229005896800",
-			RoughnessMap = RID.."92229005896800",
-			MetalnessMap = RID.."110437650090823"},
+			ColorMap = "rbxassetid://78323833466193",
+			NormalMap = "rbxassetid://92229005896800",
+			RoughnessMap = "rbxassetid://92229005896800",
+			MetalnessMap = "rbxassetid://110437650090823"},
 		["Slide2"] = {
-			ColorMap = RID.."78323833466193",
-			NormalMap = RID.."92229005896800",
-			RoughnessMap = RID.."92229005896800",
-			MetalnessMap = RID.."110437650090823"}
+			ColorMap = "rbxassetid://78323833466193",
+			NormalMap = "rbxassetid://92229005896800",
+			RoughnessMap = "rbxassetid://92229005896800",
+			MetalnessMap = "rbxassetid://110437650090823"}
 	})
 end)
 
@@ -66888,421 +67238,421 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'MAG-7 | C4UTION', PLACEHOLDERICON, 0, function()
 	EquipSkin("MAG7", {
 		["Handle2"] = {
-			ColorMap = RID.."3801638549"},
+			ColorMap = "rbxassetid://3801638549"},
 		["Part"] = {
-			ColorMap = RID.."3801638549"},
+			ColorMap = "rbxassetid://3801638549"},
 		["Pump"] = {
-			ColorMap = RID.."3801638549"},
+			ColorMap = "rbxassetid://3801638549"},
 		["Slide1"] = {
-			ColorMap = RID.."3801638549"},
+			ColorMap = "rbxassetid://3801638549"},
 		["Slide2"] = {
-			ColorMap = RID.."3801638549"}
+			ColorMap = "rbxassetid://3801638549"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MAG-7 | Frosty', PLACEHOLDERICON, 0, function()
 	EquipSkin("MAG7", {
 		["Handle2"] = {
-			ColorMap = RID.."2666304434"},
+			ColorMap = "rbxassetid://2666304434"},
 		["Part"] = {
-			ColorMap = RID.."2666304434"},
+			ColorMap = "rbxassetid://2666304434"},
 		["Pump"] = {
-			ColorMap = RID.."2666304434"},
+			ColorMap = "rbxassetid://2666304434"},
 		["Slide1"] = {
-			ColorMap = RID.."2666304434"},
+			ColorMap = "rbxassetid://2666304434"},
 		["Slide2"] = {
-			ColorMap = RID.."2666304434"}
+			ColorMap = "rbxassetid://2666304434"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MAG-7 | Molten', PLACEHOLDERICON, 0, function()
 	EquipSkin("MAG7", {
 		["Handle2"] = {
-			ColorMap = RID.."1652613160"},
+			ColorMap = "rbxassetid://1652613160"},
 		["Part"] = {
-			ColorMap = RID.."1652613160"},
+			ColorMap = "rbxassetid://1652613160"},
 		["Pump"] = {
-			ColorMap = RID.."1652613160"},
+			ColorMap = "rbxassetid://1652613160"},
 		["Slide1"] = {
-			ColorMap = RID.."1652613160"},
+			ColorMap = "rbxassetid://1652613160"},
 		["Slide2"] = {
-			ColorMap = RID.."1652613160"}
+			ColorMap = "rbxassetid://1652613160"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MAG-7 | Outbreak', PLACEHOLDERICON, 0, function()
 	EquipSkin("MAG7", {
 		["Handle2"] = {
-			ColorMap = RID.."2766661143"},
+			ColorMap = "rbxassetid://2766661143"},
 		["Part"] = {
-			ColorMap = RID.."2766661143"},
+			ColorMap = "rbxassetid://2766661143"},
 		["Pump"] = {
-			ColorMap = RID.."2766661143"},
+			ColorMap = "rbxassetid://2766661143"},
 		["Slide1"] = {
-			ColorMap = RID.."2766661143"},
+			ColorMap = "rbxassetid://2766661143"},
 		["Slide2"] = {
-			ColorMap = RID.."2766661143"}
+			ColorMap = "rbxassetid://2766661143"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MAG-7 | RAD7', PLACEHOLDERICON, 0, function()
 	EquipSkin("MAG7", {
 		["Handle2"] = {
-			ColorMap = RID.."93008307445472",
-			NormalMap = RID.."128184248767914",
-			RoughnessMap = RID.."114919816685345",
-			MetalnessMap = RID.."123499648034090"},
+			ColorMap = "rbxassetid://93008307445472",
+			NormalMap = "rbxassetid://128184248767914",
+			RoughnessMap = "rbxassetid://114919816685345",
+			MetalnessMap = "rbxassetid://123499648034090"},
 		["Part"] = {
-			ColorMap = RID.."93008307445472",
-			NormalMap = RID.."128184248767914",
-			RoughnessMap = RID.."114919816685345",
-			MetalnessMap = RID.."123499648034090"},
+			ColorMap = "rbxassetid://93008307445472",
+			NormalMap = "rbxassetid://128184248767914",
+			RoughnessMap = "rbxassetid://114919816685345",
+			MetalnessMap = "rbxassetid://123499648034090"},
 		["Pump"] = {
-			ColorMap = RID.."112471445740368",
-			NormalMap = RID.."108742080155765",
-			RoughnessMap = RID.."121114952139704",
-			MetalnessMap = RID.."78536318007956"},
+			ColorMap = "rbxassetid://112471445740368",
+			NormalMap = "rbxassetid://108742080155765",
+			RoughnessMap = "rbxassetid://121114952139704",
+			MetalnessMap = "rbxassetid://78536318007956"},
 		["Slide1"] = {
-			ColorMap = RID.."93008307445472",
-			NormalMap = RID.."128184248767914",
-			RoughnessMap = RID.."114919816685345",
-			MetalnessMap = RID.."123499648034090"},
+			ColorMap = "rbxassetid://93008307445472",
+			NormalMap = "rbxassetid://128184248767914",
+			RoughnessMap = "rbxassetid://114919816685345",
+			MetalnessMap = "rbxassetid://123499648034090"},
 		["Slide2"] = {
-			ColorMap = RID.."93008307445472",
-			NormalMap = RID.."128184248767914",
-			RoughnessMap = RID.."114919816685345",
-			MetalnessMap = RID.."123499648034090"}
+			ColorMap = "rbxassetid://93008307445472",
+			NormalMap = "rbxassetid://128184248767914",
+			RoughnessMap = "rbxassetid://114919816685345",
+			MetalnessMap = "rbxassetid://123499648034090"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MAG-7 | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("MAG7", {
 		["Handle2"] = {
-			ColorMap = RID.."102841168486252"},
+			ColorMap = "rbxassetid://102841168486252"},
 		["Part"] = {
-			ColorMap = RID.."102841168486252"},
+			ColorMap = "rbxassetid://102841168486252"},
 		["Pump"] = {
-			ColorMap = RID.."102841168486252"},
+			ColorMap = "rbxassetid://102841168486252"},
 		["Slide1"] = {
-			ColorMap = RID.."102841168486252"},
+			ColorMap = "rbxassetid://102841168486252"},
 		["Slide2"] = {
-			ColorMap = RID.."102841168486252"}
+			ColorMap = "rbxassetid://102841168486252"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MAG-7 | Striped', PLACEHOLDERICON, 0, function()
 	EquipSkin("MAG7", {
 		["Handle2"] = {
-			ColorMap = RID.."1712448038"},
+			ColorMap = "rbxassetid://1712448038"},
 		["Part"] = {
-			ColorMap = RID.."1712448038"},
+			ColorMap = "rbxassetid://1712448038"},
 		["Pump"] = {
-			ColorMap = RID.."1712448038"},
+			ColorMap = "rbxassetid://1712448038"},
 		["Slide1"] = {
-			ColorMap = RID.."1712448038"},
+			ColorMap = "rbxassetid://1712448038"},
 		["Slide2"] = {
-			ColorMap = RID.."1712448038"}
+			ColorMap = "rbxassetid://1712448038"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MP5 | Calaxian', PLACEHOLDERICON, 0, function()
 	EquipSkin("MP5", {
 		["Handle2"] = {
-			ColorMap = RID.."1818001568"},
+			ColorMap = "rbxassetid://1818001568"},
 		["Mag2"] = {
-			ColorMap = RID.."1818001568"}
+			ColorMap = "rbxassetid://1818001568"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MP5 | Cogged', PLACEHOLDERICON, 0, function()
 	EquipSkin("MP5", {
 		["Handle2"] = {
-			ColorMap = RID.."4540749705"},
+			ColorMap = "rbxassetid://4540749705"},
 		["Mag2"] = {
-			ColorMap = RID.."4540749705"}
+			ColorMap = "rbxassetid://4540749705"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MP5 | Goo', PLACEHOLDERICON, 0, function()
 	EquipSkin("MP5", {
 		["Handle2"] = {
-			ColorMap = RID.."2498061896"},
+			ColorMap = "rbxassetid://2498061896"},
 		["Mag2"] = {
-			ColorMap = RID.."2498061896"}
+			ColorMap = "rbxassetid://2498061896"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MP5 | Holiday', PLACEHOLDERICON, 0, function()
 	EquipSkin("MP5", {
 		["Handle2"] = {
-			ColorMap = RID.."2622664398"},
+			ColorMap = "rbxassetid://2622664398"},
 		["Mag2"] = {
-			ColorMap = RID.."2622664398"}
+			ColorMap = "rbxassetid://2622664398"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MP5 | Industrial', PLACEHOLDERICON, 0, function()
 	EquipSkin("MP5", {
 		["Handle2"] = {
-			ColorMap = RID.."3179793534"},
+			ColorMap = "rbxassetid://3179793534"},
 		["Mag2"] = {
-			ColorMap = RID.."3179793534"}
+			ColorMap = "rbxassetid://3179793534"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MP5 | Reindeer', PLACEHOLDERICON, 0, function()
 	EquipSkin("MP5", {
 		["Handle2"] = {
-			ColorMap = RID.."4502765718"},
+			ColorMap = "rbxassetid://4502765718"},
 		["Mag2"] = {
-			ColorMap = RID.."4502765718"}
+			ColorMap = "rbxassetid://4502765718"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MP5 | Silent Ops', PLACEHOLDERICON, 0, function()
 	EquipSkin("MP5", {
 		["Handle2"] = {
-			ColorMap = RID.."2916244411"},
+			ColorMap = "rbxassetid://2916244411"},
 		["Mag2"] = {
-			ColorMap = RID.."2916244411"}
+			ColorMap = "rbxassetid://2916244411"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MP5 | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("MP5", {
 		["Handle2"] = {
-			ColorMap = RID.."120425248388400"},
+			ColorMap = "rbxassetid://120425248388400"},
 		["Mag2"] = {
-			ColorMap = RID.."120425248388400"}
+			ColorMap = "rbxassetid://120425248388400"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MP5 | Sunshot', PLACEHOLDERICON, 0, function()
 	EquipSkin("MP5", {
 		["Handle2"] = {
-			ColorMap = RID.."1712483856"},
+			ColorMap = "rbxassetid://1712483856"},
 		["Mag2"] = {
-			ColorMap = RID.."1712483856"}
+			ColorMap = "rbxassetid://1712483856"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MP5 | Trauma', PLACEHOLDERICON, 0, function()
 	EquipSkin("MP5", {
 		["Handle2"] = {
-			ColorMap = RID.."5860566899"},
+			ColorMap = "rbxassetid://5860566899"},
 		["Mag2"] = {
-			ColorMap = RID.."5860566899"}
+			ColorMap = "rbxassetid://5860566899"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MP5-SD | Equalizer', PLACEHOLDERICON, 0, function()
 	EquipSkin("MP5SD", {
 		["Bolt"] = {
-			ColorMap = RID.."81393520117006"},
+			ColorMap = "rbxassetid://81393520117006"},
 		["Handle"] = {
-			ColorMap = RID.."81393520117006"},
+			ColorMap = "rbxassetid://81393520117006"},
 		["Mag"] = {
-			ColorMap = RID.."81393520117006"},
+			ColorMap = "rbxassetid://81393520117006"},
 		["Part"] = {
-			ColorMap = RID.."81393520117006"},
+			ColorMap = "rbxassetid://81393520117006"},
 		["Suppressor"] = {
-			ColorMap = RID.."106238410938584"}
+			ColorMap = "rbxassetid://106238410938584"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MP5-SD | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("MP5SD", {
 		["Bolt"] = {
-			ColorMap = RID.."83607765939440"},
+			ColorMap = "rbxassetid://83607765939440"},
 		["Handle"] = {
-			ColorMap = RID.."83607765939440"},
+			ColorMap = "rbxassetid://83607765939440"},
 		["Mag"] = {
-			ColorMap = RID.."83607765939440"},
+			ColorMap = "rbxassetid://83607765939440"},
 		["Part"] = {
-			ColorMap = RID.."83607765939440"},
+			ColorMap = "rbxassetid://83607765939440"},
 		["Suppressor"] = {
-			ColorMap = RID.."138342314529579"}
+			ColorMap = "rbxassetid://138342314529579"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MP9 | Blueroyal', PLACEHOLDERICON, 0, function()
 	EquipSkin("MP9", {
 		["Handle2"] = {
-			ColorMap = RID.."1712434127"},
+			ColorMap = "rbxassetid://1712434127"},
 		["Mag2"] = {
-			ColorMap = RID.."1712434127"},
+			ColorMap = "rbxassetid://1712434127"},
 		["Bolt"] = {
-			ColorMap = RID.."1712434127"},
+			ColorMap = "rbxassetid://1712434127"},
 		["Stock"] = {
-			ColorMap = RID.."1712434127"}
+			ColorMap = "rbxassetid://1712434127"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MP9 | Cob Web', PLACEHOLDERICON, 0, function()
 	EquipSkin("MP9", {
 		["Handle2"] = {
-			ColorMap = RID.."4204555848"},
+			ColorMap = "rbxassetid://4204555848"},
 		["Mag2"] = {
-			ColorMap = RID.."4204555848"},
+			ColorMap = "rbxassetid://4204555848"},
 		["Bolt"] = {
-			ColorMap = RID.."4204555848"},
+			ColorMap = "rbxassetid://4204555848"},
 		["Stock"] = {
-			ColorMap = RID.."4204555848"}
+			ColorMap = "rbxassetid://4204555848"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MP9 | Control', PLACEHOLDERICON, 0, function()
 	EquipSkin("MP9", {
 		["Handle2"] = {
-			ColorMap = RID.."6816753433"},
+			ColorMap = "rbxassetid://6816753433"},
 		["Mag2"] = {
-			ColorMap = RID.."6816753433"},
+			ColorMap = "rbxassetid://6816753433"},
 		["Bolt"] = {
-			ColorMap = RID.."6816753433"},
+			ColorMap = "rbxassetid://6816753433"},
 		["Stock"] = {
-			ColorMap = RID.."6816753433"}
+			ColorMap = "rbxassetid://6816753433"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MP9 | Cookie Man', PLACEHOLDERICON, 0, function()
 	EquipSkin("MP9", {
 		["Handle2"] = {
-			ColorMap = RID.."2666304455"},
+			ColorMap = "rbxassetid://2666304455"},
 		["Mag2"] = {
-			ColorMap = RID.."2666304455"},
+			ColorMap = "rbxassetid://2666304455"},
 		["Bolt"] = {
-			ColorMap = RID.."2666304455"},
+			ColorMap = "rbxassetid://2666304455"},
 		["Stock"] = {
-			ColorMap = RID.."2666304455"}
+			ColorMap = "rbxassetid://2666304455"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MP9 | Curse', PLACEHOLDERICON, 0, function()
 	EquipSkin("MP9", {
 		["Handle2"] = {
-			ColorMap = RID.."81853141233601"},
+			ColorMap = "rbxassetid://81853141233601"},
 		["Mag2"] = {
-			ColorMap = RID.."81853141233601"},
+			ColorMap = "rbxassetid://81853141233601"},
 		["Bolt"] = {
-			ColorMap = RID.."81853141233601"},
+			ColorMap = "rbxassetid://81853141233601"},
 		["Stock"] = {
-			ColorMap = RID.."81853141233601"}
+			ColorMap = "rbxassetid://81853141233601"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MP9 | Decked Halls', PLACEHOLDERICON, 0, function()
 	EquipSkin("MP9", {
 		["Handle2"] = {
-			ColorMap = RID.."2666244725"},
+			ColorMap = "rbxassetid://2666244725"},
 		["Mag2"] = {
-			ColorMap = RID.."2666244725"},
+			ColorMap = "rbxassetid://2666244725"},
 		["Bolt"] = {
-			ColorMap = RID.."2666244725"},
+			ColorMap = "rbxassetid://2666244725"},
 		["Stock"] = {
-			ColorMap = RID.."2666244725"}
+			ColorMap = "rbxassetid://2666244725"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MP9 | Framepact', PLACEHOLDERICON, 0, function()
 	EquipSkin("MP9", {
 		["Handle2"] = {
-			ColorMap = RID.."120208712803262",
-			NormalMap = RID.."82707048904074",
-			RoughnessMap = RID.."96949480473799",
-			MetalnessMap = RID.."132554900491806"},
+			ColorMap = "rbxassetid://120208712803262",
+			NormalMap = "rbxassetid://82707048904074",
+			RoughnessMap = "rbxassetid://96949480473799",
+			MetalnessMap = "rbxassetid://132554900491806"},
 		["Mag2"] = {
-			ColorMap = RID.."120208712803262",
-			NormalMap = RID.."82707048904074",
-			RoughnessMap = RID.."96949480473799",
-			MetalnessMap = RID.."132554900491806"},
+			ColorMap = "rbxassetid://120208712803262",
+			NormalMap = "rbxassetid://82707048904074",
+			RoughnessMap = "rbxassetid://96949480473799",
+			MetalnessMap = "rbxassetid://132554900491806"},
 		["Bolt"] = {
-			ColorMap = RID.."120208712803262",
-			NormalMap = RID.."82707048904074",
-			RoughnessMap = RID.."96949480473799",
-			MetalnessMap = RID.."132554900491806"},
+			ColorMap = "rbxassetid://120208712803262",
+			NormalMap = "rbxassetid://82707048904074",
+			RoughnessMap = "rbxassetid://96949480473799",
+			MetalnessMap = "rbxassetid://132554900491806"},
 		["Stock"] = {
-			ColorMap = RID.."120208712803262",
-			NormalMap = RID.."82707048904074",
-			RoughnessMap = RID.."96949480473799",
-			MetalnessMap = RID.."132554900491806"}
+			ColorMap = "rbxassetid://120208712803262",
+			NormalMap = "rbxassetid://82707048904074",
+			RoughnessMap = "rbxassetid://96949480473799",
+			MetalnessMap = "rbxassetid://132554900491806"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MP9 | Gift Wrapped', PLACEHOLDERICON, 0, function()
 	EquipSkin("MP9", {
 		["Handle2"] = {
-			ColorMap = RID.."83748933266694"},
+			ColorMap = "rbxassetid://83748933266694"},
 		["Mag2"] = {
-			ColorMap = RID.."83748933266694"},
+			ColorMap = "rbxassetid://83748933266694"},
 		["Bolt"] = {
-			ColorMap = RID.."83748933266694"},
+			ColorMap = "rbxassetid://83748933266694"},
 		["Stock"] = {
-			ColorMap = RID.."83748933266694"}
+			ColorMap = "rbxassetid://83748933266694"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MP9 | SnowTime', PLACEHOLDERICON, 0, function()
 	EquipSkin("MP9", {
 		["Handle2"] = {
-			ColorMap = RID.."4502766875"},
+			ColorMap = "rbxassetid://4502766875"},
 		["Mag2"] = {
-			ColorMap = RID.."4502766875"},
+			ColorMap = "rbxassetid://4502766875"},
 		["Bolt"] = {
-			ColorMap = RID.."4502766875"},
+			ColorMap = "rbxassetid://4502766875"},
 		["Stock"] = {
-			ColorMap = RID.."4502766875"}
+			ColorMap = "rbxassetid://4502766875"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MP9 | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("MP9", {
 		["Handle2"] = {
-			ColorMap = RID.."139008585290422"},
+			ColorMap = "rbxassetid://139008585290422"},
 		["Mag2"] = {
-			ColorMap = RID.."139008585290422"},
+			ColorMap = "rbxassetid://139008585290422"},
 		["Bolt"] = {
-			ColorMap = RID.."139008585290422"},
+			ColorMap = "rbxassetid://139008585290422"},
 		["Stock"] = {
-			ColorMap = RID.."139008585290422"}
+			ColorMap = "rbxassetid://139008585290422"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MP9 | Vaporwave', PLACEHOLDERICON, 0, function()
 	EquipSkin("MP9", {
 		["Handle2"] = {
-			ColorMap = RID.."3180037276"},
+			ColorMap = "rbxassetid://3180037276"},
 		["Mag2"] = {
-			ColorMap = RID.."3180037276"},
+			ColorMap = "rbxassetid://3180037276"},
 		["Bolt"] = {
-			ColorMap = RID.."3180037276"},
+			ColorMap = "rbxassetid://3180037276"},
 		["Stock"] = {
-			ColorMap = RID.."3180037276"}
+			ColorMap = "rbxassetid://3180037276"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MP9 | Velvita', PLACEHOLDERICON, 0, function()
 	EquipSkin("MP9", {
 		["Handle2"] = {
-			ColorMap = RID.."1712433742"},
+			ColorMap = "rbxassetid://1712433742"},
 		["Mag2"] = {
-			ColorMap = RID.."1712433742"},
+			ColorMap = "rbxassetid://1712433742"},
 		["Bolt"] = {
-			ColorMap = RID.."1712433742"},
+			ColorMap = "rbxassetid://1712433742"},
 		["Stock"] = {
-			ColorMap = RID.."1712433742"}
+			ColorMap = "rbxassetid://1712433742"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MP9 | Wilderness', PLACEHOLDERICON, 0, function()
 	EquipSkin("MP9", {
 		["Handle2"] = {
-			ColorMap = RID.."2766662144"},
+			ColorMap = "rbxassetid://2766662144"},
 		["Mag2"] = {
-			ColorMap = RID.."2766662144"},
+			ColorMap = "rbxassetid://2766662144"},
 		["Bolt"] = {
-			ColorMap = RID.."2766662144"},
+			ColorMap = "rbxassetid://2766662144"},
 		["Stock"] = {
-			ColorMap = RID.."2766662144"}
+			ColorMap = "rbxassetid://2766662144"}
 	})
 end)
 
@@ -67310,147 +67660,147 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'MG42 | Default', PLACEHOLDERICON, 0, function()
 	EquipSkin("MG42", {
 		["Handle2"] = {
-			ColorMap = RID.."1229588725"},
+			ColorMap = "rbxassetid://1229588725"},
 		["Lid2"] = {
-			ColorMap = RID.."1229588725"},
+			ColorMap = "rbxassetid://1229588725"},
 		["Bolt2"] = {
-			ColorMap = RID.."1229588725"},
+			ColorMap = "rbxassetid://1229588725"},
 		["Mag2"] = {
-			ColorMap = RID.."1229588725"},
+			ColorMap = "rbxassetid://1229588725"},
 		["Part"] = {
-			ColorMap = RID.."1229588725"},
+			ColorMap = "rbxassetid://1229588725"},
 		["Part2"] = {
-			ColorMap = RID.."1229588725"},
+			ColorMap = "rbxassetid://1229588725"},
 		["Part3"] = {
-			ColorMap = RID.."1229588725"},
+			ColorMap = "rbxassetid://1229588725"},
 		["Part4"] = {
-			ColorMap = RID.."1229588725"}
+			ColorMap = "rbxassetid://1229588725"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MG42 | Midnightbones', PLACEHOLDERICON, 0, function()
 	EquipSkin("MG42", {
 		["Handle2"] = {
-			ColorMap = RID.."2498062106"},
+			ColorMap = "rbxassetid://2498062106"},
 		["Lid2"] = {
-			ColorMap = RID.."2498062106"},
+			ColorMap = "rbxassetid://2498062106"},
 		["Bolt2"] = {
-			ColorMap = RID.."2498062106"},
+			ColorMap = "rbxassetid://2498062106"},
 		["Mag2"] = {
-			ColorMap = RID.."2498062157"},
+			ColorMap = "rbxassetid://2498062157"},
 		["Part"] = {
-			ColorMap = RID.."2498062106"},
+			ColorMap = "rbxassetid://2498062106"},
 		["Part2"] = {
-			ColorMap = RID.."2498062106"},
+			ColorMap = "rbxassetid://2498062106"},
 		["Part3"] = {
-			ColorMap = RID.."2498062106"},
+			ColorMap = "rbxassetid://2498062106"},
 		["Part4"] = {
-			ColorMap = RID.."2498062106"}
+			ColorMap = "rbxassetid://2498062106"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MG42 | Quazar', PLACEHOLDERICON, 0, function()
 	EquipSkin("MG42", {
 		["Handle2"] = {
-			ColorMap = RID.."2445841275"},
+			ColorMap = "rbxassetid://2445841275"},
 		["Lid2"] = {
-			ColorMap = RID.."2445841275"},
+			ColorMap = "rbxassetid://2445841275"},
 		["Bolt2"] = {
-			ColorMap = RID.."2445841275"},
+			ColorMap = "rbxassetid://2445841275"},
 		["Mag2"] = {
-			ColorMap = RID.."2445842823"},
+			ColorMap = "rbxassetid://2445842823"},
 		["Part"] = {
-			ColorMap = RID.."2445841275"},
+			ColorMap = "rbxassetid://2445841275"},
 		["Part2"] = {
-			ColorMap = RID.."2445841275"},
+			ColorMap = "rbxassetid://2445841275"},
 		["Part3"] = {
-			ColorMap = RID.."2445841275"},
+			ColorMap = "rbxassetid://2445841275"},
 		["Part4"] = {
-			ColorMap = RID.."2445841275"}
+			ColorMap = "rbxassetid://2445841275"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MG42 | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("MG42", {
 		["Handle2"] = {
-			ColorMap = RID.."122029448354088"},
+			ColorMap = "rbxassetid://122029448354088"},
 		["Lid2"] = {
-			ColorMap = RID.."122029448354088"},
+			ColorMap = "rbxassetid://122029448354088"},
 		["Bolt2"] = {
-			ColorMap = RID.."122029448354088"},
+			ColorMap = "rbxassetid://122029448354088"},
 		["Mag2"] = {
-			ColorMap = RID.."75100735262481"},
+			ColorMap = "rbxassetid://75100735262481"},
 		["Part"] = {
-			ColorMap = RID.."122029448354088"},
+			ColorMap = "rbxassetid://122029448354088"},
 		["Part2"] = {
-			ColorMap = RID.."122029448354088"},
+			ColorMap = "rbxassetid://122029448354088"},
 		["Part3"] = {
-			ColorMap = RID.."122029448354088"},
+			ColorMap = "rbxassetid://122029448354088"},
 		["Part4"] = {
-			ColorMap = RID.."122029448354088"}
+			ColorMap = "rbxassetid://122029448354088"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MG42 | Striped', PLACEHOLDERICON, 0, function()
 	EquipSkin("MG42", {
 		["Handle2"] = {
-			ColorMap = RID.."4540742297"},
+			ColorMap = "rbxassetid://4540742297"},
 		["Lid2"] = {
-			ColorMap = RID.."4540742297"},
+			ColorMap = "rbxassetid://4540742297"},
 		["Bolt2"] = {
-			ColorMap = RID.."4540742297"},
+			ColorMap = "rbxassetid://4540742297"},
 		["Mag2"] = {
-			ColorMap = RID.."4540742297"},
+			ColorMap = "rbxassetid://4540742297"},
 		["Part"] = {
-			ColorMap = RID.."4540742297"},
+			ColorMap = "rbxassetid://4540742297"},
 		["Part2"] = {
-			ColorMap = RID.."4540742297"},
+			ColorMap = "rbxassetid://4540742297"},
 		["Part3"] = {
-			ColorMap = RID.."4540742297"},
+			ColorMap = "rbxassetid://4540742297"},
 		["Part4"] = {
-			ColorMap = RID.."4540742297"}
+			ColorMap = "rbxassetid://4540742297"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MG42 | Wetland', PLACEHOLDERICON, 0, function()
 	EquipSkin("MG42", {
 		["Handle2"] = {
-			ColorMap = RID.."2766662428"},
+			ColorMap = "rbxassetid://2766662428"},
 		["Lid2"] = {
-			ColorMap = RID.."2766662428"},
+			ColorMap = "rbxassetid://2766662428"},
 		["Bolt2"] = {
-			ColorMap = RID.."2766662428"},
+			ColorMap = "rbxassetid://2766662428"},
 		["Mag2"] = {
-			ColorMap = RID.."1352444107"},
+			ColorMap = "rbxassetid://1352444107"},
 		["Part"] = {
-			ColorMap = RID.."2766662428"},
+			ColorMap = "rbxassetid://2766662428"},
 		["Part2"] = {
-			ColorMap = RID.."2766662428"},
+			ColorMap = "rbxassetid://2766662428"},
 		["Part3"] = {
-			ColorMap = RID.."2766662428"},
+			ColorMap = "rbxassetid://2766662428"},
 		["Part4"] = {
-			ColorMap = RID.."2766662428"}
+			ColorMap = "rbxassetid://2766662428"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'MG42 | Winterfell', PLACEHOLDERICON, 0, function()
 	EquipSkin("MG42", {
 		["Handle2"] = {
-			ColorMap = RID.."1652622253"},
+			ColorMap = "rbxassetid://1652622253"},
 		["Lid2"] = {
-			ColorMap = RID.."1652622253"},
+			ColorMap = "rbxassetid://1652622253"},
 		["Bolt2"] = {
-			ColorMap = RID.."1652621962"},
+			ColorMap = "rbxassetid://1652621962"},
 		["Mag2"] = {
-			ColorMap = RID.."1652622517"},
+			ColorMap = "rbxassetid://1652622517"},
 		["Part"] = {
-			ColorMap = RID.."1652622253"},
+			ColorMap = "rbxassetid://1652622253"},
 		["Part2"] = {
-			ColorMap = RID.."1652622253"},
+			ColorMap = "rbxassetid://1652622253"},
 		["Part3"] = {
-			ColorMap = RID.."1652621962"},
+			ColorMap = "rbxassetid://1652621962"},
 		["Part4"] = {
-			ColorMap = RID.."1652622253"}
+			ColorMap = "rbxassetid://1652622253"}
 	})
 end)
 
@@ -67458,251 +67808,251 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'Nova | Black Ice', PLACEHOLDERICON, 0, function()
 	EquipSkin("Nova", {
 		["Handle"] = {
-			ColorMap = RID.."2666304445"},
+			ColorMap = "rbxassetid://2666304445"},
 		["Pump"] = {
-			ColorMap = RID.."2666304445"}
+			ColorMap = "rbxassetid://2666304445"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Nova | Cookie', PLACEHOLDERICON, 0, function()
 	EquipSkin("Nova", {
 		["Handle"] = {
-			ColorMap = RID.."4540754916"},
+			ColorMap = "rbxassetid://4540754916"},
 		["Pump"] = {
-			ColorMap = RID.."4540754916"}
+			ColorMap = "rbxassetid://4540754916"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Nova | Defective', PLACEHOLDERICON, 0, function()
 	EquipSkin("Nova", {
 		["Handle"] = {
-			ColorMap = RID.."6816756385"},
+			ColorMap = "rbxassetid://6816756385"},
 		["Pump"] = {
-			ColorMap = RID.."6816756385"}
+			ColorMap = "rbxassetid://6816756385"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Nova | Oath', PLACEHOLDERICON, 0, function()
 	EquipSkin("Nova", {
 		["Handle"] = {
-			ColorMap = RID.."7944212307"},
+			ColorMap = "rbxassetid://7944212307"},
 		["Pump"] = {
-			ColorMap = RID.."7944212307"}
+			ColorMap = "rbxassetid://7944212307"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Nova | Paradise', PLACEHOLDERICON, 0, function()
 	EquipSkin("Nova", {
 		["Handle"] = {
-			ColorMap = RID.."3180037341"},
+			ColorMap = "rbxassetid://3180037341"},
 		["Pump"] = {
-			ColorMap = RID.."3180037341"}
+			ColorMap = "rbxassetid://3180037341"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Nova | Sharkesh', PLACEHOLDERICON, 0, function()
 	EquipSkin("Nova", {
 		["Handle"] = {
-			ColorMap = RID.."2916255179"},
+			ColorMap = "rbxassetid://2916255179"},
 		["Pump"] = {
-			ColorMap = RID.."2916255179"}
+			ColorMap = "rbxassetid://2916255179"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Nova | Starry Night', PLACEHOLDERICON, 0, function()
 	EquipSkin("Nova", {
 		["Handle"] = {
-			ColorMap = RID.."3801638771"},
+			ColorMap = "rbxassetid://3801638771"},
 		["Pump"] = {
-			ColorMap = RID.."3801638771"}
+			ColorMap = "rbxassetid://3801638771"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Nova | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("Nova", {
 		["Handle"] = {
-			ColorMap = RID.."70845850678451"},
+			ColorMap = "rbxassetid://70845850678451"},
 		["Pump"] = {
-			ColorMap = RID.."70845850678451"},
+			ColorMap = "rbxassetid://70845850678451"},
 		["Shell"] = {
-			ColorMap = RID.."117742459621324"}
+			ColorMap = "rbxassetid://117742459621324"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Nova | Terraformer', PLACEHOLDERICON, 0, function()
 	EquipSkin("Nova", {
 		["Handle"] = {
-			ColorMap = RID.."1652517139"},
+			ColorMap = "rbxassetid://1652517139"},
 		["Pump"] = {
-			ColorMap = RID.."1652517139"}
+			ColorMap = "rbxassetid://1652517139"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Nova | Tiger', PLACEHOLDERICON, 0, function()
 	EquipSkin("Nova", {
 		["Handle"] = {
-			ColorMap = RID.."1777745984"},
+			ColorMap = "rbxassetid://1777745984"},
 		["Pump"] = {
-			ColorMap = RID.."1777745984"}
+			ColorMap = "rbxassetid://1777745984"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Nova | Tricked', PLACEHOLDERICON, 0, function()
 	EquipSkin("Nova", {
 		["Handle"] = {
-			ColorMap = RID.."5860597126"},
+			ColorMap = "rbxassetid://5860597126"},
 		["Pump"] = {
-			ColorMap = RID.."5860606189"}
+			ColorMap = "rbxassetid://5860606189"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'PX4 | Apathy', PLACEHOLDERICON, 0, function()
 	EquipSkin("PX4", {
 		["Handle2"] = {
-			ColorMap = RID.."1777745328"},
+			ColorMap = "rbxassetid://1777745328"},
 		["Mag2"] = {
-			ColorMap = RID.."1777745328"},
+			ColorMap = "rbxassetid://1777745328"},
 		["Slide2"] = {
-			ColorMap = RID.."1777745328"}
+			ColorMap = "rbxassetid://1777745328"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'PX4 | Camo Dipped', PLACEHOLDERICON, 0, function()
 	EquipSkin("PX4", {
 		["Handle2"] = {
-			ColorMap = RID.."3180126670"},
+			ColorMap = "rbxassetid://3180126670"},
 		["Mag2"] = {
-			ColorMap = RID.."3180126670"},
+			ColorMap = "rbxassetid://3180126670"},
 		["Slide2"] = {
-			ColorMap = RID.."3180126670"}
+			ColorMap = "rbxassetid://3180126670"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'PX4 | Candycorn', PLACEHOLDERICON, 0, function()
 	EquipSkin("PX4", {
 		["Handle2"] = {
-			ColorMap = RID.."2498070834"},
+			ColorMap = "rbxassetid://2498070834"},
 		["Mag2"] = {
-			ColorMap = RID.."2498070834"},
+			ColorMap = "rbxassetid://2498070834"},
 		["Slide2"] = {
-			ColorMap = RID.."2498070834"}
+			ColorMap = "rbxassetid://2498070834"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'PX4 | Comet', PLACEHOLDERICON, 0, function()
 	EquipSkin("PX4", {
 		["Handle2"] = {
-			ColorMap = RID.."1229588725"},
+			ColorMap = "rbxassetid://1229588725"},
 		["Mag2"] = {
-			ColorMap = RID.."1229588725"},
+			ColorMap = "rbxassetid://1229588725"},
 		["Slide2"] = {
-			ColorMap = RID.."1229588725"}
+			ColorMap = "rbxassetid://1229588725"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'PX4 | Dark Beast', PLACEHOLDERICON, 0, function()
 	EquipSkin("PX4", {
 		["Handle2"] = {
-			ColorMap = RID.."4204557171"},
+			ColorMap = "rbxassetid://4204557171"},
 		["Mag2"] = {
-			ColorMap = RID.."4204557171"},
+			ColorMap = "rbxassetid://4204557171"},
 		["Slide2"] = {
-			ColorMap = RID.."4204557171"}
+			ColorMap = "rbxassetid://4204557171"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'PX4 | Golden Age', PLACEHOLDERICON, 0, function()
 	EquipSkin("PX4", {
 		["Handle2"] = {
-			ColorMap = RID.."1486581558"},
+			ColorMap = "rbxassetid://1486581558"},
 		["Mag2"] = {
-			ColorMap = RID.."1486581558"},
+			ColorMap = "rbxassetid://1486581558"},
 		["Slide2"] = {
-			ColorMap = RID.."1486581558"}
+			ColorMap = "rbxassetid://1486581558"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'PX4 | Lunar', PLACEHOLDERICON, 0, function()
 	EquipSkin("PX4", {
 		["Handle2"] = {
-			ColorMap = RID.."2916263400"},
+			ColorMap = "rbxassetid://2916263400"},
 		["Mag2"] = {
-			ColorMap = RID.."2916263400"},
+			ColorMap = "rbxassetid://2916263400"},
 		["Slide2"] = {
-			ColorMap = RID.."2916263400"}
+			ColorMap = "rbxassetid://2916263400"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'PX4 | MGZN', PLACEHOLDERICON, 0, function()
 	EquipSkin("PX4", {
 		["Handle2"] = {
-			ColorMap = RID.."92612414876461",
-			NormalMap = RID.."88971677491924",
-			RoughnessMap = RID.."122297241627941",
-			MetalnessMap = RID.."108579811569115"},
+			ColorMap = "rbxassetid://92612414876461",
+			NormalMap = "rbxassetid://88971677491924",
+			RoughnessMap = "rbxassetid://122297241627941",
+			MetalnessMap = "rbxassetid://108579811569115"},
 		["Mag2"] = {
-			ColorMap = RID.."92612414876461",
-			NormalMap = RID.."88971677491924",
-			RoughnessMap = RID.."122297241627941",
-			MetalnessMap = RID.."108579811569115"},
+			ColorMap = "rbxassetid://92612414876461",
+			NormalMap = "rbxassetid://88971677491924",
+			RoughnessMap = "rbxassetid://122297241627941",
+			MetalnessMap = "rbxassetid://108579811569115"},
 		["Slide2"] = {
-			ColorMap = RID.."92612414876461",
-			NormalMap = RID.."88971677491924",
-			RoughnessMap = RID.."122297241627941",
-			MetalnessMap = RID.."108579811569115"}
+			ColorMap = "rbxassetid://92612414876461",
+			NormalMap = "rbxassetid://88971677491924",
+			RoughnessMap = "rbxassetid://122297241627941",
+			MetalnessMap = "rbxassetid://108579811569115"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'PX4 | Pinkie', PLACEHOLDERICON, 0, function()
 	EquipSkin("PX4", {
 		["Handle2"] = {
-			ColorMap = RID.."4502768751"},
+			ColorMap = "rbxassetid://4502768751"},
 		["Mag2"] = {
-			ColorMap = RID.."4502768751"},
+			ColorMap = "rbxassetid://4502768751"},
 		["Slide2"] = {
-			ColorMap = RID.."4502768751"}
+			ColorMap = "rbxassetid://4502768751"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'PX4 | RacerX', PLACEHOLDERICON, 0, function()
 	EquipSkin("PX4", {
 		["Handle2"] = {
-			ColorMap = RID.."130749631300205",
-			NormalMap = RID.."131441850151977",
-			RoughnessMap = RID.."138820732400744",
-			MetalnessMap = RID.."111166501922658"},
+			ColorMap = "rbxassetid://130749631300205",
+			NormalMap = "rbxassetid://131441850151977",
+			RoughnessMap = "rbxassetid://138820732400744",
+			MetalnessMap = "rbxassetid://111166501922658"},
 		["Mag2"] = {
-			ColorMap = RID.."130749631300205",
-			NormalMap = RID.."131441850151977",
-			RoughnessMap = RID.."138820732400744",
-			MetalnessMap = RID.."111166501922658"},
+			ColorMap = "rbxassetid://130749631300205",
+			NormalMap = "rbxassetid://131441850151977",
+			RoughnessMap = "rbxassetid://138820732400744",
+			MetalnessMap = "rbxassetid://111166501922658"},
 		["Slide2"] = {
-			ColorMap = RID.."91884144123990",
-			NormalMap = RID.."92537708304142",
-			RoughnessMap = RID.."80870772544127",
-			MetalnessMap = RID.."109038691459609"}
+			ColorMap = "rbxassetid://91884144123990",
+			NormalMap = "rbxassetid://92537708304142",
+			RoughnessMap = "rbxassetid://80870772544127",
+			MetalnessMap = "rbxassetid://109038691459609"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'PX4 | Ruby', PLACEHOLDERICON, 0, function()
 	EquipSkin("PX4", {
 		["Handle2"] = {
-			ColorMap = RID.."2916236794"},
+			ColorMap = "rbxassetid://2916236794"},
 		["Mag2"] = {
-			ColorMap = RID.."2916236794"},
+			ColorMap = "rbxassetid://2916236794"},
 		["Slide2"] = {
-			ColorMap = RID.."2916236794"}
+			ColorMap = "rbxassetid://2916236794"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'PX4 | Silence', PLACEHOLDERICON, 0, function()
 	EquipSkin("PX4", {
 		["Handle2"] = {
-			ColorMap = RID.."4540746232"},
+			ColorMap = "rbxassetid://4540746232"},
 		["Mag2"] = {
-			ColorMap = RID.."4540746232"},
+			ColorMap = "rbxassetid://4540746232"},
 		["Slide2"] = {
-			ColorMap = RID.."4540746232"}
+			ColorMap = "rbxassetid://4540746232"}
 	})
 end)
 
@@ -67710,33 +68060,33 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'PX4 | Spirit Box', PLACEHOLDERICON, 0, function()
 	EquipSkin("PX4", {
 		["Handle2"] = {
-			ColorMap = RID.."98523384101094"},
+			ColorMap = "rbxassetid://98523384101094"},
 		["Mag2"] = {
-			ColorMap = RID.."98523384101094"},
+			ColorMap = "rbxassetid://98523384101094"},
 		["Slide2"] = {
-			ColorMap = RID.."98523384101094"}
+			ColorMap = "rbxassetid://98523384101094"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'PX4 | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("PX4", {
 		["Handle2"] = {
-			ColorMap = RID.."120314052193936"},
+			ColorMap = "rbxassetid://120314052193936"},
 		["Mag2"] = {
-			ColorMap = RID.."120314052193936"},
+			ColorMap = "rbxassetid://120314052193936"},
 		["Slide2"] = {
-			ColorMap = RID.."120314052193936"}
+			ColorMap = "rbxassetid://120314052193936"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'P250 | Amber', PLACEHOLDERICON, 0, function()
 	EquipSkin("P250", {
 		["Handle2"] = {
-			ColorMap = RID.."1817877257"},
+			ColorMap = "rbxassetid://1817877257"},
 		["Mag2"] = {
-			ColorMap = RID.."1817877257"},
+			ColorMap = "rbxassetid://1817877257"},
 		["Slide2"] = {
-			ColorMap = RID.."1817877257"}
+			ColorMap = "rbxassetid://1817877257"}
 	})
 end)
 
@@ -67744,425 +68094,425 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'P250 | BloxersClub', PLACEHOLDERICON, 0, function()
 	EquipSkin("P250", {
 		["Handle2"] = {
-			ColorMap = RID.."17657143432"},
+			ColorMap = "rbxassetid://17657143432"},
 		["Mag2"] = {
-			ColorMap = RID.."17657143432"},
+			ColorMap = "rbxassetid://17657143432"},
 		["Slide2"] = {
-			ColorMap = RID.."17657143432"}
+			ColorMap = "rbxassetid://17657143432"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'P250 | Bomber', PLACEHOLDERICON, 0, function()
 	EquipSkin("P250", {
 		["Handle2"] = {
-			ColorMap = RID.."1494365621"},
+			ColorMap = "rbxassetid://1494365621"},
 		["Mag2"] = {
-			ColorMap = RID.."1494365621"},
+			ColorMap = "rbxassetid://1494365621"},
 		["Slide2"] = {
-			ColorMap = RID.."1494365621"}
+			ColorMap = "rbxassetid://1494365621"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'P250 | Equinox', PLACEHOLDERICON, 0, function()
 	EquipSkin("P250", {
 		["Handle2"] = {
-			ColorMap = RID.."2766661838"},
+			ColorMap = "rbxassetid://2766661838"},
 		["Mag2"] = {
-			ColorMap = RID.."2766661838"},
+			ColorMap = "rbxassetid://2766661838"},
 		["Slide2"] = {
-			ColorMap = RID.."2766661838"}
+			ColorMap = "rbxassetid://2766661838"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'P250 | Frosted', PLACEHOLDERICON, 0, function()
 	EquipSkin("P250", {
 		["Handle2"] = {
-			ColorMap = RID.."2666244737"},
+			ColorMap = "rbxassetid://2666244737"},
 		["Mag2"] = {
-			ColorMap = RID.."2666244737"},
+			ColorMap = "rbxassetid://2666244737"},
 		["Slide2"] = {
-			ColorMap = RID.."2666244737"}
+			ColorMap = "rbxassetid://2666244737"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'P250 | Glacier', PLACEHOLDERICON, 0, function()
 	EquipSkin("P250", {
 		["Handle2"] = {
-			ColorMap = RID.."74589413215407"},
+			ColorMap = "rbxassetid://74589413215407"},
 		["Mag2"] = {
-			ColorMap = RID.."74589413215407"},
+			ColorMap = "rbxassetid://74589413215407"},
 		["Slide2"] = {
-			ColorMap = RID.."74589413215407"}
+			ColorMap = "rbxassetid://74589413215407"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'P250 | Goldish', PLACEHOLDERICON, 0, function()
 	EquipSkin("P250", {
 		["Handle2"] = {
-			ColorMap = RID.."2973245884"},
+			ColorMap = "rbxassetid://2973245884"},
 		["Mag2"] = {
-			ColorMap = RID.."2973245884"},
+			ColorMap = "rbxassetid://2973245884"},
 		["Slide2"] = {
-			ColorMap = RID.."2973245884"}
+			ColorMap = "rbxassetid://2973245884"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'P250 | Green Web', PLACEHOLDERICON, 0, function()
 	EquipSkin("P250", {
 		["Handle2"] = {
-			ColorMap = RID.."1630913822"},
+			ColorMap = "rbxassetid://1630913822"},
 		["Mag2"] = {
-			ColorMap = RID.."1630913822"},
+			ColorMap = "rbxassetid://1630913822"},
 		["Slide2"] = {
-			ColorMap = RID.."1630913822"}
+			ColorMap = "rbxassetid://1630913822"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'P250 | Grim', PLACEHOLDERICON, 0, function()
 	EquipSkin("P250", {
 		["Handle2"] = {
-			ColorMap = RID.."72124461380404"},
+			ColorMap = "rbxassetid://72124461380404"},
 		["Mag2"] = {
-			ColorMap = RID.."72124461380404"},
+			ColorMap = "rbxassetid://72124461380404"},
 		["Slide2"] = {
-			ColorMap = RID.."72124461380404"}
+			ColorMap = "rbxassetid://72124461380404"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'P250 | Midnight', PLACEHOLDERICON, 0, function()
 	EquipSkin("P250", {
 		["Handle2"] = {
-			ColorMap = RID.."7944222610"},
+			ColorMap = "rbxassetid://7944222610"},
 		["Mag2"] = {
-			ColorMap = RID.."7944222610"},
+			ColorMap = "rbxassetid://7944222610"},
 		["Slide2"] = {
-			ColorMap = RID.."7944222610"}
+			ColorMap = "rbxassetid://7944222610"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'P250 | Shark', PLACEHOLDERICON, 0, function()
 	EquipSkin("P250", {
 		["Handle2"] = {
-			ColorMap = RID.."3179793675"},
+			ColorMap = "rbxassetid://3179793675"},
 		["Mag2"] = {
-			ColorMap = RID.."3179793675"},
+			ColorMap = "rbxassetid://3179793675"},
 		["Slide2"] = {
-			ColorMap = RID.."3179793675"}
+			ColorMap = "rbxassetid://3179793675"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'P250 | Solstice', PLACEHOLDERICON, 0, function()
 	EquipSkin("P250", {
 		["Handle2"] = {
-			ColorMap = RID.."2666306590"},
+			ColorMap = "rbxassetid://2666306590"},
 		["Mag2"] = {
-			ColorMap = RID.."2666306590"},
+			ColorMap = "rbxassetid://2666306590"},
 		["Slide2"] = {
-			ColorMap = RID.."2666306590"}
+			ColorMap = "rbxassetid://2666306590"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'P250 | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("P250", {
 		["Handle2"] = {
-			ColorMap = RID.."97780719790585"},
+			ColorMap = "rbxassetid://97780719790585"},
 		["Mag2"] = {
-			ColorMap = RID.."97780719790585"},
+			ColorMap = "rbxassetid://97780719790585"},
 		["Slide2"] = {
-			ColorMap = RID.."97780719790585"}
+			ColorMap = "rbxassetid://97780719790585"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'P250 | TC250', PLACEHOLDERICON, 0, function()
 	EquipSkin("P250", {
 		["Handle2"] = {
-			ColorMap = RID.."1761152506"},
+			ColorMap = "rbxassetid://1761152506"},
 		["Mag2"] = {
-			ColorMap = RID.."1761152506"},
+			ColorMap = "rbxassetid://1761152506"},
 		["Slide2"] = {
-			ColorMap = RID.."1761152506"}
+			ColorMap = "rbxassetid://1761152506"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'P90 | Argus', PLACEHOLDERICON, 0, function()
 	EquipSkin("P90", {
 		["Bolt2"] = {
-			ColorMap = RID.."5860867492"},
+			ColorMap = "rbxassetid://5860867492"},
 		["Handle2"] = {
-			ColorMap = RID.."5860867492"},
+			ColorMap = "rbxassetid://5860867492"},
 		["Mag2"] = {
-			ColorMap = RID.."5860867322"},
+			ColorMap = "rbxassetid://5860867322"},
 		["Part"] = {
-			ColorMap = RID.."5860867492"}
+			ColorMap = "rbxassetid://5860867492"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'P90 | Curse', PLACEHOLDERICON, 0, function()
 	EquipSkin("P90", {
 		["Bolt2"] = {
-			ColorMap = RID.."7944216051"},
+			ColorMap = "rbxassetid://7944216051"},
 		["Handle2"] = {
-			ColorMap = RID.."7944216051"},
+			ColorMap = "rbxassetid://7944216051"},
 		["Mag2"] = {
-			ColorMap = RID.."7944216051"},
+			ColorMap = "rbxassetid://7944216051"},
 		["Part"] = {
-			ColorMap = RID.."7944216051"}
+			ColorMap = "rbxassetid://7944216051"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'P90 | Demon Within', PLACEHOLDERICON, 0, function()
 	EquipSkin("P90", {
 		["Bolt2"] = {
-			ColorMap = RID.."1425611086"},
+			ColorMap = "rbxassetid://1425611086"},
 		["Handle2"] = {
-			ColorMap = RID.."1425611086"},
+			ColorMap = "rbxassetid://1425611086"},
 		["Mag2"] = {
-			ColorMap = RID.."1425611086"},
+			ColorMap = "rbxassetid://1425611086"},
 		["Part"] = {
-			ColorMap = RID.."1425611086"}
+			ColorMap = "rbxassetid://1425611086"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'P90 | Elegant', PLACEHOLDERICON, 0, function()
 	EquipSkin("P90", {
 		["Bolt2"] = {
-			ColorMap = RID.."3180037480"},
+			ColorMap = "rbxassetid://3180037480"},
 		["Handle2"] = {
-			ColorMap = RID.."3180037480"},
+			ColorMap = "rbxassetid://3180037480"},
 		["Mag2"] = {
-			ColorMap = RID.."3180037725"},
+			ColorMap = "rbxassetid://3180037725"},
 		["Part"] = {
-			ColorMap = RID.."3180037480"}
+			ColorMap = "rbxassetid://3180037480"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'P90 | Handcrafted', PLACEHOLDERICON, 0, function()
 	EquipSkin("P90", {
 		["Bolt2"] = {
-			ColorMap = RID.."106414144039424"},
+			ColorMap = "rbxassetid://106414144039424"},
 		["Handle2"] = {
-			ColorMap = RID.."106414144039424"},
+			ColorMap = "rbxassetid://106414144039424"},
 		["Mag2"] = {
-			ColorMap = RID.."106414144039424"},
+			ColorMap = "rbxassetid://106414144039424"},
 		["Part"] = {
-			ColorMap = RID.."106414144039424"}
+			ColorMap = "rbxassetid://106414144039424"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'P90 | Krampus', PLACEHOLDERICON, 0, function()
 	EquipSkin("P90", {
 		["Bolt2"] = {
-			ColorMap = RID.."2666244722"},
+			ColorMap = "rbxassetid://2666244722"},
 		["Handle2"] = {
-			ColorMap = RID.."2666244722"},
+			ColorMap = "rbxassetid://2666244722"},
 		["Mag2"] = {
-			ColorMap = RID.."2666244722"},
+			ColorMap = "rbxassetid://2666244722"},
 		["Part"] = {
-			ColorMap = RID.."2666244722"}
+			ColorMap = "rbxassetid://2666244722"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'P90 | Northern Lights', PLACEHOLDERICON, 0, function()
 	EquipSkin("P90", {
 		["Bolt2"] = {
-			ColorMap = RID.."4540744506"},
+			ColorMap = "rbxassetid://4540744506"},
 		["Handle2"] = {
-			ColorMap = RID.."4540744506"},
+			ColorMap = "rbxassetid://4540744506"},
 		["Mag2"] = {
-			ColorMap = RID.."4540744506"},
+			ColorMap = "rbxassetid://4540744506"},
 		["Part"] = {
-			ColorMap = RID.."4540744506"}
+			ColorMap = "rbxassetid://4540744506"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'P90 | P-Chan', PLACEHOLDERICON, 0, function()
 	EquipSkin("P90", {
 		["Bolt2"] = {
-			ColorMap = RID.."1720291159"},
+			ColorMap = "rbxassetid://1720291159"},
 		["Handle2"] = {
-			ColorMap = RID.."1720291159"},
+			ColorMap = "rbxassetid://1720291159"},
 		["Mag2"] = {
-			ColorMap = RID.."1720291159"},
+			ColorMap = "rbxassetid://1720291159"},
 		["Part"] = {
-			ColorMap = RID.."1720291159"}
+			ColorMap = "rbxassetid://1720291159"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'P90 | Pine', PLACEHOLDERICON, 0, function()
 	EquipSkin("P90", {
 		["Bolt2"] = {
-			ColorMap = RID.."2666306570"},
+			ColorMap = "rbxassetid://2666306570"},
 		["Handle2"] = {
-			ColorMap = RID.."2666306570"},
+			ColorMap = "rbxassetid://2666306570"},
 		["Mag2"] = {
-			ColorMap = RID.."2666306570"},
+			ColorMap = "rbxassetid://2666306570"},
 		["Part"] = {
-			ColorMap = RID.."2666306570"}
+			ColorMap = "rbxassetid://2666306570"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'P90 | Redcopy', PLACEHOLDERICON, 0, function()
 	EquipSkin("P90", {
 		["Bolt2"] = {
-			ColorMap = RID.."1229867593"},
+			ColorMap = "rbxassetid://1229867593"},
 		["Handle2"] = {
-			ColorMap = RID.."1229867593"},
+			ColorMap = "rbxassetid://1229867593"},
 		["Mag2"] = {
-			ColorMap = RID.."1229867777"},
+			ColorMap = "rbxassetid://1229867777"},
 		["Part"] = {
-			ColorMap = RID.."1229867593"}
+			ColorMap = "rbxassetid://1229867593"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'P90 | Skulls', PLACEHOLDERICON, 0, function()
 	EquipSkin("P90", {
 		["Bolt2"] = {
-			ColorMap = RID.."1229619972"},
+			ColorMap = "rbxassetid://1229619972"},
 		["Handle2"] = {
-			ColorMap = RID.."1229619972"},
+			ColorMap = "rbxassetid://1229619972"},
 		["Mag2"] = {
-			ColorMap = RID.."1229620110"},
+			ColorMap = "rbxassetid://1229620110"},
 		["Part"] = {
-			ColorMap = RID.."1229619972"}
+			ColorMap = "rbxassetid://1229619972"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'P90 | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("P90", {
 		["Bolt2"] = {
-			ColorMap = RID.."116993735342139"},
+			ColorMap = "rbxassetid://116993735342139"},
 		["Handle2"] = {
-			ColorMap = RID.."116993735342139"},
+			ColorMap = "rbxassetid://116993735342139"},
 		["Mag2"] = {
-			ColorMap = RID.."116993735342139"},
+			ColorMap = "rbxassetid://116993735342139"},
 		["Part"] = {
-			ColorMap = RID.."116993735342139"}
+			ColorMap = "rbxassetid://116993735342139"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', '44 Magnum | Exquisite', PLACEHOLDERICON, 0, function()
 	EquipSkin("R8", {
 		["Bullets"] = {
-			ColorMap = RID.."3179793213"},
+			ColorMap = "rbxassetid://3179793213"},
 		["Bolt"] = {
-			ColorMap = RID.."3179793213"},
+			ColorMap = "rbxassetid://3179793213"},
 		["Handle2"] = {
-			ColorMap = RID.."3179793213"},
+			ColorMap = "rbxassetid://3179793213"},
 		["Slide2"] = {
-			ColorMap = RID.."3179793213"},
+			ColorMap = "rbxassetid://3179793213"},
 		["BulletRelease"] = {
-			ColorMap = RID.."3179793213"},
+			ColorMap = "rbxassetid://3179793213"},
 		["Chamber"] = {
-			ColorMap = RID.."3179793213"},
+			ColorMap = "rbxassetid://3179793213"},
 		["Hammer"] = {
-			ColorMap = RID.."3179793213"},
+			ColorMap = "rbxassetid://3179793213"},
 		["Release"] = {
-			ColorMap = RID.."3179793213"}
+			ColorMap = "rbxassetid://3179793213"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', '44 Magnum | Hunter', PLACEHOLDERICON, 0, function()
 	EquipSkin("R8", {
 		["Bullets"] = {
-			ColorMap = RID.."2490656382"},
+			ColorMap = "rbxassetid://2490656382"},
 		["Bolt"] = {
-			ColorMap = RID.."2490656382"},
+			ColorMap = "rbxassetid://2490656382"},
 		["Handle2"] = {
-			ColorMap = RID.."2490656382"},
+			ColorMap = "rbxassetid://2490656382"},
 		["Slide2"] = {
-			ColorMap = RID.."2490656382"},
+			ColorMap = "rbxassetid://2490656382"},
 		["BulletRelease"] = {
-			ColorMap = RID.."2490656382"},
+			ColorMap = "rbxassetid://2490656382"},
 		["Chamber"] = {
-			ColorMap = RID.."2490656382"},
+			ColorMap = "rbxassetid://2490656382"},
 		["Hammer"] = {
-			ColorMap = RID.."2490656382"},
+			ColorMap = "rbxassetid://2490656382"},
 		["Release"] = {
-			ColorMap = RID.."2490656382"}
+			ColorMap = "rbxassetid://2490656382"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', '44 Magnum | Spades', PLACEHOLDERICON, 0, function()
 	EquipSkin("R8", {
 		["Bullets"] = {
-			ColorMap = RID.."2916237124"},
+			ColorMap = "rbxassetid://2916237124"},
 		["Bolt"] = {
-			ColorMap = RID.."2916237124"},
+			ColorMap = "rbxassetid://2916237124"},
 		["Handle2"] = {
-			ColorMap = RID.."2916237124"},
+			ColorMap = "rbxassetid://2916237124"},
 		["Slide2"] = {
-			ColorMap = RID.."2916237124"},
+			ColorMap = "rbxassetid://2916237124"},
 		["BulletRelease"] = {
-			ColorMap = RID.."2916237124"},
+			ColorMap = "rbxassetid://2916237124"},
 		["Chamber"] = {
-			ColorMap = RID.."2916237124"},
+			ColorMap = "rbxassetid://2916237124"},
 		["Hammer"] = {
-			ColorMap = RID.."2916237124"},
+			ColorMap = "rbxassetid://2916237124"},
 		["Release"] = {
-			ColorMap = RID.."2916237124"}
+			ColorMap = "rbxassetid://2916237124"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', '44 Magnum | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("R8", {
 		["Bullets"] = {
-			ColorMap = RID.."104560718952198"},
+			ColorMap = "rbxassetid://104560718952198"},
 		["Bolt"] = {
-			ColorMap = RID.."104560718952198"},
+			ColorMap = "rbxassetid://104560718952198"},
 		["Handle2"] = {
-			ColorMap = RID.."104560718952198"},
+			ColorMap = "rbxassetid://104560718952198"},
 		["Slide2"] = {
-			ColorMap = RID.."104560718952198"},
+			ColorMap = "rbxassetid://104560718952198"},
 		["BulletRelease"] = {
-			ColorMap = RID.."104560718952198"},
+			ColorMap = "rbxassetid://104560718952198"},
 		["Chamber"] = {
-			ColorMap = RID.."104560718952198"},
+			ColorMap = "rbxassetid://104560718952198"},
 		["Hammer"] = {
-			ColorMap = RID.."104560718952198"},
+			ColorMap = "rbxassetid://104560718952198"},
 		["Release"] = {
-			ColorMap = RID.."104560718952198"}
+			ColorMap = "rbxassetid://104560718952198"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', '44 Magnum | TG', PLACEHOLDERICON, 0, function()
 	EquipSkin("R8", {
 		["Bullets"] = {
-			ColorMap = RID.."3244221602"},
+			ColorMap = "rbxassetid://3244221602"},
 		["Bolt"] = {
-			ColorMap = RID.."3244221602"},
+			ColorMap = "rbxassetid://3244221602"},
 		["Handle2"] = {
-			ColorMap = RID.."3244221602"},
+			ColorMap = "rbxassetid://3244221602"},
 		["Slide2"] = {
-			ColorMap = RID.."3244221602"},
+			ColorMap = "rbxassetid://3244221602"},
 		["BulletRelease"] = {
-			ColorMap = RID.."3244221602"},
+			ColorMap = "rbxassetid://3244221602"},
 		["Chamber"] = {
-			ColorMap = RID.."3244221602"},
+			ColorMap = "rbxassetid://3244221602"},
 		["Hammer"] = {
-			ColorMap = RID.."3244221602"},
+			ColorMap = "rbxassetid://3244221602"},
 		["Release"] = {
-			ColorMap = RID.."3244221602"}
+			ColorMap = "rbxassetid://3244221602"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', '44 Magnum | Violet', PLACEHOLDERICON, 0, function()
 	EquipSkin("R8", {
 		["Bullets"] = {
-			ColorMap = RID.."2131984818"},
+			ColorMap = "rbxassetid://2131984818"},
 		["Bolt"] = {
-			ColorMap = RID.."2131984818"},
+			ColorMap = "rbxassetid://2131984818"},
 		["Handle2"] = {
-			ColorMap = RID.."2131984818"},
+			ColorMap = "rbxassetid://2131984818"},
 		["Slide2"] = {
-			ColorMap = RID.."2131984818"},
+			ColorMap = "rbxassetid://2131984818"},
 		["BulletRelease"] = {
-			ColorMap = RID.."2131984818"},
+			ColorMap = "rbxassetid://2131984818"},
 		["Chamber"] = {
-			ColorMap = RID.."2131984818"},
+			ColorMap = "rbxassetid://2131984818"},
 		["Hammer"] = {
-			ColorMap = RID.."2131984818"},
+			ColorMap = "rbxassetid://2131984818"},
 		["Release"] = {
-			ColorMap = RID.."2131984818"}
+			ColorMap = "rbxassetid://2131984818"}
 	})
 end)
 
@@ -68170,272 +68520,272 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'SG 553 | Control', PLACEHOLDERICON, 0, function()
 	EquipSkin("SG", {
 		["Mag2"] = {
-			ColorMap = RID.."6816626038"},
+			ColorMap = "rbxassetid://6816626038"},
 		["Part"] = {
-			ColorMap = RID.."6816626038"},
+			ColorMap = "rbxassetid://6816626038"},
 		["Handle"] = {
-			ColorMap = RID.."6816626038"},
+			ColorMap = "rbxassetid://6816626038"},
 		["Scope"] = {
-			ColorMap = RID.."6816651122"}
+			ColorMap = "rbxassetid://6816651122"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'SG 553 | Drop-Out', PLACEHOLDERICON, 0, function()
 	EquipSkin("SG", {
 		["Mag2"] = {
-			ColorMap = RID.."5894322696"},
+			ColorMap = "rbxassetid://5894322696"},
 		["Part"] = {
-			ColorMap = RID.."5894322696"},
+			ColorMap = "rbxassetid://5894322696"},
 		["Handle"] = {
-			ColorMap = RID.."5894322696"},
+			ColorMap = "rbxassetid://5894322696"},
 		["Scope"] = {
-			ColorMap = RID.."5894322792"}
+			ColorMap = "rbxassetid://5894322792"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'SG 553 | DropX', PLACEHOLDERICON, 0, function()
 	EquipSkin("SG", {
 		["Mag2"] = {
-			ColorMap = RID.."3777235873"},
+			ColorMap = "rbxassetid://3777235873"},
 		["Part"] = {
-			ColorMap = RID.."3777235873"},
+			ColorMap = "rbxassetid://3777235873"},
 		["Handle"] = {
-			ColorMap = RID.."3777235873"},
+			ColorMap = "rbxassetid://3777235873"},
 		["Scope"] = {
-			ColorMap = RID.."3777365309"}
+			ColorMap = "rbxassetid://3777365309"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'SG 553 | Dummy', PLACEHOLDERICON, 0, function()
 	EquipSkin("SG", {
 		["Mag2"] = {
-			ColorMap = RID.."3180126890"},
+			ColorMap = "rbxassetid://3180126890"},
 		["Part"] = {
-			ColorMap = RID.."3180126890"},
+			ColorMap = "rbxassetid://3180126890"},
 		["Handle"] = {
-			ColorMap = RID.."3180126890"},
+			ColorMap = "rbxassetid://3180126890"},
 		["Scope"] = {
-			ColorMap = RID.."3183426529"}
+			ColorMap = "rbxassetid://3183426529"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'SG 553 | Kitty Cat', PLACEHOLDERICON, 0, function()
 	EquipSkin("SG", {
 		["Mag2"] = {
-			ColorMap = RID.."4427346060"},
+			ColorMap = "rbxassetid://4427346060"},
 		["Part"] = {
-			ColorMap = RID.."4427346060"},
+			ColorMap = "rbxassetid://4427346060"},
 		["Handle"] = {
-			ColorMap = RID.."4427346060"},
+			ColorMap = "rbxassetid://4427346060"},
 		["Scope"] = {
-			ColorMap = RID.."4427345503"}
+			ColorMap = "rbxassetid://4427345503"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'SG 553 | Knighthood', PLACEHOLDERICON, 0, function()
 	EquipSkin("SG", {
 		["Mag2"] = {
-			ColorMap = RID.."1641901893"},
+			ColorMap = "rbxassetid://1641901893"},
 		["Part"] = {
-			ColorMap = RID.."1641901893"},
+			ColorMap = "rbxassetid://1641901893"},
 		["Handle"] = {
-			ColorMap = RID.."1641901893"},
+			ColorMap = "rbxassetid://1641901893"},
 		["Scope"] = {
-			ColorMap = RID.."1641902061"}
+			ColorMap = "rbxassetid://1641902061"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'SG 553 | Magma', PLACEHOLDERICON, 0, function()
 	EquipSkin("SG", {
 		["Mag2"] = {
-			ColorMap = RID.."3180037949"},
+			ColorMap = "rbxassetid://3180037949"},
 		["Part"] = {
-			ColorMap = RID.."3180037949"},
+			ColorMap = "rbxassetid://3180037949"},
 		["Handle"] = {
-			ColorMap = RID.."3180037949"},
+			ColorMap = "rbxassetid://3180037949"},
 		["Scope"] = {
-			ColorMap = RID.."3180037949"}
+			ColorMap = "rbxassetid://3180037949"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'SG 553 | NR8', PLACEHOLDERICON, 0, function()
 	EquipSkin("SG", {
 		["Mag2"] = {
-			ColorMap = RID.."90766264807536"},
+			ColorMap = "rbxassetid://90766264807536"},
 		["Part"] = {
-			ColorMap = RID.."90766264807536"},
+			ColorMap = "rbxassetid://90766264807536"},
 		["Handle"] = {
-			ColorMap = RID.."90766264807536"},
+			ColorMap = "rbxassetid://90766264807536"},
 		["Scope"] = {
-			ColorMap = RID.."78919530563619"}
+			ColorMap = "rbxassetid://78919530563619"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'SG 553 | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("SG", {
 		["Mag2"] = {
-			ColorMap = RID.."138074669950601"},
+			ColorMap = "rbxassetid://138074669950601"},
 		["Part"] = {
-			ColorMap = RID.."138074669950601"},
+			ColorMap = "rbxassetid://138074669950601"},
 		["Handle"] = {
-			ColorMap = RID.."138074669950601"},
+			ColorMap = "rbxassetid://138074669950601"},
 		["Scope"] = {
-			ColorMap = RID.."104834286062917"}
+			ColorMap = "rbxassetid://104834286062917"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'SG 553 | Variant Camo', PLACEHOLDERICON, 0, function()
 	EquipSkin("SG", {
 		["Mag2"] = {
-			ColorMap = RID.."1641905659"},
+			ColorMap = "rbxassetid://1641905659"},
 		["Part"] = {
-			ColorMap = RID.."1641905659"},
+			ColorMap = "rbxassetid://1641905659"},
 		["Handle"] = {
-			ColorMap = RID.."1641905659"},
+			ColorMap = "rbxassetid://1641905659"},
 		["Scope"] = {
-			ColorMap = RID.."1641905859"}
+			ColorMap = "rbxassetid://1641905859"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'SG 553 | Volcanis', PLACEHOLDERICON, 0, function()
 	EquipSkin("SG", {
 		["Mag2"] = {
-			ColorMap = RID.."109611048298070"},
+			ColorMap = "rbxassetid://109611048298070"},
 		["Part"] = {
-			ColorMap = RID.."95105066374167"},
+			ColorMap = "rbxassetid://95105066374167"},
 		["Handle"] = {
-			ColorMap = RID.."95105066374167"},
+			ColorMap = "rbxassetid://95105066374167"},
 		["Scope"] = {
-			ColorMap = RID.."83242486650727"}
+			ColorMap = "rbxassetid://83242486650727"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'SG 553 | Yltude', PLACEHOLDERICON, 0, function()
 	EquipSkin("SG", {
 		["Mag2"] = {
-			ColorMap = RID.."3270746596"},
+			ColorMap = "rbxassetid://3270746596"},
 		["Part"] = {
-			ColorMap = RID.."3270746596"},
+			ColorMap = "rbxassetid://3270746596"},
 		["Handle"] = {
-			ColorMap = RID.."3270746596"},
+			ColorMap = "rbxassetid://3270746596"},
 		["Scope"] = {
-			ColorMap = RID.."3270746686"}
+			ColorMap = "rbxassetid://3270746686"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Sawed Off | A-Data', PLACEHOLDERICON, 0, function()
 	EquipSkin("SawedOff", {
 		["Handle2"] = {
-			ColorMap = RID.."109001261503403",
-			NormalMap = RID.."138629670897280",
-			RoughnessMap = RID.."95327782632048",
-			MetalnessMap = RID.."81652337977658"},
+			ColorMap = "rbxassetid://109001261503403",
+			NormalMap = "rbxassetid://138629670897280",
+			RoughnessMap = "rbxassetid://95327782632048",
+			MetalnessMap = "rbxassetid://81652337977658"},
 		["Pump2"] = {
-			ColorMap = RID.."99887602199611",
-			NormalMap = RID.."78154536659511",
-			RoughnessMap = RID.."91994192702085",
-			MetalnessMap = RID.."137995462138587"},
+			ColorMap = "rbxassetid://99887602199611",
+			NormalMap = "rbxassetid://78154536659511",
+			RoughnessMap = "rbxassetid://91994192702085",
+			MetalnessMap = "rbxassetid://137995462138587"},
 		["Part"] = {
-			ColorMap = RID.."109756331447634",
-			NormalMap = RID.."101633436329528",
-			RoughnessMap = RID.."118746146644072",
-			MetalnessMap = RID.."133685696496798"},
+			ColorMap = "rbxassetid://109756331447634",
+			NormalMap = "rbxassetid://101633436329528",
+			RoughnessMap = "rbxassetid://118746146644072",
+			MetalnessMap = "rbxassetid://133685696496798"},
 		["Shell"] = {
-			ColorMap = RID.."96314923415603",
-			NormalMap = RID.."73572714872032",
-			RoughnessMap = RID.."103139580566093",
-			MetalnessMap = RID.."121502233694589"}
+			ColorMap = "rbxassetid://96314923415603",
+			NormalMap = "rbxassetid://73572714872032",
+			RoughnessMap = "rbxassetid://103139580566093",
+			MetalnessMap = "rbxassetid://121502233694589"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Sawed Off | Casino', PLACEHOLDERICON, 0, function()
 	EquipSkin("SawedOff", {
 		["Handle2"] = {
-			ColorMap = RID.."2445813186"},
+			ColorMap = "rbxassetid://2445813186"},
 		["Pump2"] = {
-			ColorMap = RID.."2445813186"},
+			ColorMap = "rbxassetid://2445813186"},
 		["Part"] = {
-			ColorMap = RID.."2445813186"},
+			ColorMap = "rbxassetid://2445813186"},
 		["Shell"] = {
-			ColorMap = RID.."2445813186"}
+			ColorMap = "rbxassetid://2445813186"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Sawed Off | Colorboom', PLACEHOLDERICON, 0, function()
 	EquipSkin("SawedOff", {
 		["Handle2"] = {
-			ColorMap = RID.."1598763999"},
+			ColorMap = "rbxassetid://1598763999"},
 		["Pump2"] = {
-			ColorMap = RID.."1598763999"},
+			ColorMap = "rbxassetid://1598763999"},
 		["Part"] = {
-			ColorMap = RID.."1307992154"},
+			ColorMap = "rbxassetid://1307992154"},
 		["Shell"] = {
-			ColorMap = RID.."1214969483"}
+			ColorMap = "rbxassetid://1214969483"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Sawed Off | Executioner', PLACEHOLDERICON, 0, function()
 	EquipSkin("SawedOff", {
 		["Handle2"] = {
-			ColorMap = RID.."3180126722"},
+			ColorMap = "rbxassetid://3180126722"},
 		["Pump2"] = {
-			ColorMap = RID.."3180126790"},
+			ColorMap = "rbxassetid://3180126790"},
 		["Part"] = {
-			ColorMap = RID.."3180126790"},
+			ColorMap = "rbxassetid://3180126790"},
 		["Shell"] = {
-			ColorMap = RID.."3180126722"}
+			ColorMap = "rbxassetid://3180126722"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Sawed Off | Opal', PLACEHOLDERICON, 0, function()
 	EquipSkin("SawedOff", {
 		["Handle2"] = {
-			ColorMap = RID.."3180460390"},
+			ColorMap = "rbxassetid://3180460390"},
 		["Pump2"] = {
-			ColorMap = RID.."2916238233"},
+			ColorMap = "rbxassetid://2916238233"},
 		["Part"] = {
-			ColorMap = RID.."3180460390"},
+			ColorMap = "rbxassetid://3180460390"},
 		["Shell"] = {
-			ColorMap = RID.."3180460390"}
+			ColorMap = "rbxassetid://3180460390"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Sawed Off | Spooky', PLACEHOLDERICON, 0, function()
 	EquipSkin("SawedOff", {
 		["Handle2"] = {
-			ColorMap = RID.."1598736779"},
+			ColorMap = "rbxassetid://1598736779"},
 		["Pump2"] = {
-			ColorMap = RID.."1598736779"},
+			ColorMap = "rbxassetid://1598736779"},
 		["Part"] = {
-			ColorMap = RID.."1598737016"},
+			ColorMap = "rbxassetid://1598737016"},
 		["Shell"] = {
-			ColorMap = RID.."1598736779"}
+			ColorMap = "rbxassetid://1598736779"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Sawed Off | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("SawedOff", {
 		["Handle2"] = {
-			ColorMap = RID.."88835320967998"},
+			ColorMap = "rbxassetid://88835320967998"},
 		["Pump2"] = {
-			ColorMap = RID.."117742459621324"},
+			ColorMap = "rbxassetid://117742459621324"},
 		["Part"] = {
-			ColorMap = RID.."117742459621324"},
+			ColorMap = "rbxassetid://117742459621324"},
 		["Shell"] = {
-			ColorMap = RID.."117742459621324"}
+			ColorMap = "rbxassetid://117742459621324"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Sawed Off | Sullys Blacklight', PLACEHOLDERICON, 0, function()
 	EquipSkin("SawedOff", {
 		["Handle2"] = {
-			ColorMap = RID.."4204602484"},
+			ColorMap = "rbxassetid://4204602484"},
 		["Pump2"] = {
-			ColorMap = RID.."4204558432"},
+			ColorMap = "rbxassetid://4204558432"},
 		["Part"] = {
-			ColorMap = RID.."4204558432"},
+			ColorMap = "rbxassetid://4204558432"},
 		["Shell"] = {
-			ColorMap = RID.."4204558432"}
+			ColorMap = "rbxassetid://4204558432"}
 	})
 end)
 
@@ -68443,253 +68793,253 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'Scout | Aurora', PLACEHOLDERICON, 0, function()
 	EquipSkin("Scout", {
 		["Handle2"] = {
-			ColorMap = RID.."112338645597242"},
+			ColorMap = "rbxassetid://112338645597242"},
 		["Mag2"] = {
-			ColorMap = RID.."112338645597242"},
+			ColorMap = "rbxassetid://112338645597242"},
 		["Bolt2"] = {
-			ColorMap = RID.."112338645597242"},
+			ColorMap = "rbxassetid://112338645597242"},
 		["Lever2"] = {
-			ColorMap = RID.."112338645597242"},
+			ColorMap = "rbxassetid://112338645597242"},
 		["Part"] = {
-			ColorMap = RID.."112338645597242"}
+			ColorMap = "rbxassetid://112338645597242"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Scout | Coffin Biter', PLACEHOLDERICON, 0, function()
 	EquipSkin("Scout", {
 		["Handle2"] = {
-			ColorMap = RID.."4204559869"},
+			ColorMap = "rbxassetid://4204559869"},
 		["Mag2"] = {
-			ColorMap = RID.."4204559869"},
+			ColorMap = "rbxassetid://4204559869"},
 		["Bolt2"] = {
-			ColorMap = RID.."4204559869"},
+			ColorMap = "rbxassetid://4204559869"},
 		["Lever2"] = {
-			ColorMap = RID.."4204559869"},
+			ColorMap = "rbxassetid://4204559869"},
 		["Part"] = {
-			ColorMap = RID.."4204559869"}
+			ColorMap = "rbxassetid://4204559869"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Scout | Darkness', PLACEHOLDERICON, 0, function()
 	EquipSkin("Scout", {
 		["Handle2"] = {
-			ColorMap = RID.."6816728099"},
+			ColorMap = "rbxassetid://6816728099"},
 		["Mag2"] = {
-			ColorMap = RID.."6816728099"},
+			ColorMap = "rbxassetid://6816728099"},
 		["Bolt2"] = {
-			ColorMap = RID.."6816728099"},
+			ColorMap = "rbxassetid://6816728099"},
 		["Lever2"] = {
-			ColorMap = RID.."6816728099"},
+			ColorMap = "rbxassetid://6816728099"},
 		["Part"] = {
-			ColorMap = RID.."6816728099"}
+			ColorMap = "rbxassetid://6816728099"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Scout | Flowing Mists', PLACEHOLDERICON, 0, function()
 	EquipSkin("Scout", {
 		["Handle2"] = {
-			ColorMap = RID.."1652583536"},
+			ColorMap = "rbxassetid://1652583536"},
 		["Mag2"] = {
-			ColorMap = RID.."1652583536"},
+			ColorMap = "rbxassetid://1652583536"},
 		["Bolt2"] = {
-			ColorMap = RID.."1652583536"},
+			ColorMap = "rbxassetid://1652583536"},
 		["Lever2"] = {
-			ColorMap = RID.."1652583536"},
+			ColorMap = "rbxassetid://1652583536"},
 		["Part"] = {
-			ColorMap = RID.."1652583536"}
+			ColorMap = "rbxassetid://1652583536"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Scout | Hellborn', PLACEHOLDERICON, 0, function()
 	EquipSkin("Scout", {
 		["Handle2"] = {
-			ColorMap = RID.."2490656082"},
+			ColorMap = "rbxassetid://2490656082"},
 		["Mag2"] = {
-			ColorMap = RID.."2490656082"},
+			ColorMap = "rbxassetid://2490656082"},
 		["Bolt2"] = {
-			ColorMap = RID.."2490656082"},
+			ColorMap = "rbxassetid://2490656082"},
 		["Lever2"] = {
-			ColorMap = RID.."2490656082"},
+			ColorMap = "rbxassetid://2490656082"},
 		["Part"] = {
-			ColorMap = RID.."2490656082"}
+			ColorMap = "rbxassetid://2490656082"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Scout | Hot Cocoa', PLACEHOLDERICON, 0, function()
 	EquipSkin("Scout", {
 		["Handle2"] = {
-			ColorMap = RID.."2666306599"},
+			ColorMap = "rbxassetid://2666306599"},
 		["Mag2"] = {
-			ColorMap = RID.."2666306599"},
+			ColorMap = "rbxassetid://2666306599"},
 		["Bolt2"] = {
-			ColorMap = RID.."2666306599"},
+			ColorMap = "rbxassetid://2666306599"},
 		["Lever2"] = {
-			ColorMap = RID.."2666306599"},
+			ColorMap = "rbxassetid://2666306599"},
 		["Part"] = {
-			ColorMap = RID.."2666306599"}
+			ColorMap = "rbxassetid://2666306599"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Scout | Lunar', PLACEHOLDERICON, 0, function()
 	EquipSkin("Scout", {
 		["Handle2"] = {
-			ColorMap = RID.."132787423311836"},
+			ColorMap = "rbxassetid://132787423311836"},
 		["Mag2"] = {
-			ColorMap = RID.."132787423311836"},
+			ColorMap = "rbxassetid://132787423311836"},
 		["Bolt2"] = {
-			ColorMap = RID.."132787423311836"},
+			ColorMap = "rbxassetid://132787423311836"},
 		["Lever2"] = {
-			ColorMap = RID.."132787423311836"},
+			ColorMap = "rbxassetid://132787423311836"},
 		["Part"] = {
-			ColorMap = RID.."132787423311836"}
+			ColorMap = "rbxassetid://132787423311836"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Scout | Monstruo', PLACEHOLDERICON, 0, function()
 	EquipSkin("Scout", {
 		["Handle2"] = {
-			ColorMap = RID.."3180037806"},
+			ColorMap = "rbxassetid://3180037806"},
 		["Mag2"] = {
-			ColorMap = RID.."3180037806"},
+			ColorMap = "rbxassetid://3180037806"},
 		["Bolt2"] = {
-			ColorMap = RID.."3180037806"},
+			ColorMap = "rbxassetid://3180037806"},
 		["Lever2"] = {
-			ColorMap = RID.."3180037806"},
+			ColorMap = "rbxassetid://3180037806"},
 		["Part"] = {
-			ColorMap = RID.."3180037806"}
+			ColorMap = "rbxassetid://3180037806"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Scout | Neon Regulation', PLACEHOLDERICON, 0, function()
 	EquipSkin("Scout", {
 		["Handle2"] = {
-			ColorMap = RID.."4433021226"},
+			ColorMap = "rbxassetid://4433021226"},
 		["Mag2"] = {
-			ColorMap = RID.."4433021226"},
+			ColorMap = "rbxassetid://4433021226"},
 		["Bolt2"] = {
-			ColorMap = RID.."4433021226"},
+			ColorMap = "rbxassetid://4433021226"},
 		["Lever2"] = {
-			ColorMap = RID.."4433021226"},
+			ColorMap = "rbxassetid://4433021226"},
 		["Part"] = {
-			ColorMap = RID.."4433021226"}
+			ColorMap = "rbxassetid://4433021226"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Scout | Posh', PLACEHOLDERICON, 0, function()
 	EquipSkin("Scout", {
 		["Handle2"] = {
-			ColorMap = RID.."4502769965"},
+			ColorMap = "rbxassetid://4502769965"},
 		["Mag2"] = {
-			ColorMap = RID.."4502769965"},
+			ColorMap = "rbxassetid://4502769965"},
 		["Bolt2"] = {
-			ColorMap = RID.."4502769965"},
+			ColorMap = "rbxassetid://4502769965"},
 		["Lever2"] = {
-			ColorMap = RID.."4502769965"},
+			ColorMap = "rbxassetid://4502769965"},
 		["Part"] = {
-			ColorMap = RID.."4502769965"}
+			ColorMap = "rbxassetid://4502769965"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Scout | Pulse', PLACEHOLDERICON, 0, function()
 	EquipSkin("Scout", {
 		["Handle2"] = {
-			ColorMap = RID.."2916215488"},
+			ColorMap = "rbxassetid://2916215488"},
 		["Mag2"] = {
-			ColorMap = RID.."2916215488"},
+			ColorMap = "rbxassetid://2916215488"},
 		["Bolt2"] = {
-			ColorMap = RID.."2916215488"},
+			ColorMap = "rbxassetid://2916215488"},
 		["Lever2"] = {
-			ColorMap = RID.."2916215488"},
+			ColorMap = "rbxassetid://2916215488"},
 		["Part"] = {
-			ColorMap = RID.."2916215488"}
+			ColorMap = "rbxassetid://2916215488"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Scout | Railgun', PLACEHOLDERICON, 0, function()
 	EquipSkin("Scout", {
 		["Handle2"] = {
-			ColorMap = RID.."2135472161"},
+			ColorMap = "rbxassetid://2135472161"},
 		["Mag2"] = {
-			ColorMap = RID.."2135472161"},
+			ColorMap = "rbxassetid://2135472161"},
 		["Bolt2"] = {
-			ColorMap = RID.."2135472161"},
+			ColorMap = "rbxassetid://2135472161"},
 		["Lever2"] = {
-			ColorMap = RID.."2135472161"},
+			ColorMap = "rbxassetid://2135472161"},
 		["Part"] = {
-			ColorMap = RID.."2135472161"}
+			ColorMap = "rbxassetid://2135472161"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Scout | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("Scout", {
 		["Handle2"] = {
-			ColorMap = RID.."75547994289578"},
+			ColorMap = "rbxassetid://75547994289578"},
 		["Mag2"] = {
-			ColorMap = RID.."75547994289578"},
+			ColorMap = "rbxassetid://75547994289578"},
 		["Bolt2"] = {
-			ColorMap = RID.."75547994289578"},
+			ColorMap = "rbxassetid://75547994289578"},
 		["Lever2"] = {
-			ColorMap = RID.."75547994289578"},
+			ColorMap = "rbxassetid://75547994289578"},
 		["Part"] = {
-			ColorMap = RID.."75547994289578"}
+			ColorMap = "rbxassetid://75547994289578"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Scout | Theory', PLACEHOLDERICON, 0, function()
 	EquipSkin("Scout", {
 		["Handle2"] = {
-			ColorMap = RID.."2766662647"},
+			ColorMap = "rbxassetid://2766662647"},
 		["Mag2"] = {
-			ColorMap = RID.."2766662647"},
+			ColorMap = "rbxassetid://2766662647"},
 		["Bolt2"] = {
-			ColorMap = RID.."2766662647"},
+			ColorMap = "rbxassetid://2766662647"},
 		["Lever2"] = {
-			ColorMap = RID.."2766662647"},
+			ColorMap = "rbxassetid://2766662647"},
 		["Part"] = {
-			ColorMap = RID.."2766662647"}
+			ColorMap = "rbxassetid://2766662647"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Scout | Xmas', PLACEHOLDERICON, 0, function()
 	EquipSkin("Scout", {
 		["Handle2"] = {
-			ColorMap = RID.."3037243593"},
+			ColorMap = "rbxassetid://3037243593"},
 		["Mag2"] = {
-			ColorMap = RID.."3037243593"},
+			ColorMap = "rbxassetid://3037243593"},
 		["Bolt2"] = {
-			ColorMap = RID.."3037243593"},
+			ColorMap = "rbxassetid://3037243593"},
 		["Lever2"] = {
-			ColorMap = RID.."3037243593"},
+			ColorMap = "rbxassetid://3037243593"},
 		["Part"] = {
-			ColorMap = RID.."3037243593"}
+			ColorMap = "rbxassetid://3037243593"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Sickle | Crimson', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sickle", {
 		["Handle"] = {
-			ColorMap = RID.."137679684785936"}
+			ColorMap = "rbxassetid://137679684785936"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Sickle | Hallows', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sickle", {
 		["Handle"] = {
-			ColorMap = RID.."102216957675552"}
+			ColorMap = "rbxassetid://102216957675552"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Sickle | Hieroglyphs', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sickle", {
 		["Handle"] = {
-			ColorMap = RID.."101972402616955"}
+			ColorMap = "rbxassetid://101972402616955"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Sickle | Mummy', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sickle", {
 		["Handle"] = {
-			ColorMap = RID.."4197576936"}
+			ColorMap = "rbxassetid://4197576936"}
 	})
 end)
 
@@ -68697,221 +69047,221 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'Sickle | Psychadelic', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sickle", {
 		["Handle"] = {
-			ColorMap = RID.."85849501060821"}
+			ColorMap = "rbxassetid://85849501060821"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Sickle | Reaper', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sickle", {
 		["Handle"] = {
-			ColorMap = RID.."102015380658587"}
+			ColorMap = "rbxassetid://102015380658587"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Sickle | Splattered', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sickle", {
 		["Handle"] = {
-			ColorMap = RID.."4197577332"}
+			ColorMap = "rbxassetid://4197577332"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Sickle | Static', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sickle", {
 		["Handle"] = {
-			ColorMap = RID.."95864987214119"}
+			ColorMap = "rbxassetid://95864987214119"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Sickle | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sickle", {
 		["Handle"] = {
-			ColorMap = RID.."97864574154286"}
+			ColorMap = "rbxassetid://97864574154286"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Sickle Classic | Mummy', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sickle Classic", {
 		["Handle"] = {
-			ColorMap = RID.."2504738911"}
+			ColorMap = "rbxassetid://2504738911"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Sickle Classic | Splattered', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sickle Classic", {
 		["Handle"] = {
-			ColorMap = RID.."2502599336"}
+			ColorMap = "rbxassetid://2502599336"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Sickle Classic | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sickle Classic", {
 		["Handle"] = {
-			ColorMap = RID.."2502522328"}
+			ColorMap = "rbxassetid://2502522328"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'TEC-9 | Charger', PLACEHOLDERICON, 0, function()
 	EquipSkin("TEC9", {
 		["Handle2"] = {
-			ColorMap = RID.."1652468990"},
+			ColorMap = "rbxassetid://1652468990"},
 		["Mag2"] = {
-			ColorMap = RID.."1652468990"},
+			ColorMap = "rbxassetid://1652468990"},
 		["Bolt2"] = {
-			ColorMap = RID.."1652468990"},
+			ColorMap = "rbxassetid://1652468990"},
 		["Part"] = {
-			ColorMap = RID.."1652468990"},
+			ColorMap = "rbxassetid://1652468990"},
 		["Part2"] = {
-			ColorMap = RID.."1652468990"}
+			ColorMap = "rbxassetid://1652468990"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'TEC-9 | Crescent', PLACEHOLDERICON, 0, function()
 	EquipSkin("TEC9", {
 		["Handle2"] = {
-			ColorMap = RID.."133327403341952"},
+			ColorMap = "rbxassetid://133327403341952"},
 		["Mag2"] = {
-			ColorMap = RID.."133327403341952"},
+			ColorMap = "rbxassetid://133327403341952"},
 		["Bolt2"] = {
-			ColorMap = RID.."133327403341952"},
+			ColorMap = "rbxassetid://133327403341952"},
 		["Part"] = {
-			ColorMap = RID.."133327403341952"},
+			ColorMap = "rbxassetid://133327403341952"},
 		["Part2"] = {
-			ColorMap = RID.."133327403341952"}
+			ColorMap = "rbxassetid://133327403341952"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'TEC-9 | Gift Wrapped', PLACEHOLDERICON, 0, function()
 	EquipSkin("TEC9", {
 		["Handle2"] = {
-			ColorMap = RID.."4540740822"},
+			ColorMap = "rbxassetid://4540740822"},
 		["Mag2"] = {
-			ColorMap = RID.."4540740822"},
+			ColorMap = "rbxassetid://4540740822"},
 		["Bolt2"] = {
-			ColorMap = RID.."4540740822"},
+			ColorMap = "rbxassetid://4540740822"},
 		["Part"] = {
-			ColorMap = RID.."4540740822"},
+			ColorMap = "rbxassetid://4540740822"},
 		["Part2"] = {
-			ColorMap = RID.."4540740822"}
+			ColorMap = "rbxassetid://4540740822"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'TEC-9 | Ironline', PLACEHOLDERICON, 0, function()
 	EquipSkin("TEC9", {
 		["Handle2"] = {
-			ColorMap = RID.."1837952224"},
+			ColorMap = "rbxassetid://1837952224"},
 		["Mag2"] = {
-			ColorMap = RID.."1837952224"},
+			ColorMap = "rbxassetid://1837952224"},
 		["Bolt2"] = {
-			ColorMap = RID.."1837952224"},
+			ColorMap = "rbxassetid://1837952224"},
 		["Part"] = {
-			ColorMap = RID.."1837952224"},
+			ColorMap = "rbxassetid://1837952224"},
 		["Part2"] = {
-			ColorMap = RID.."1837952224"}
+			ColorMap = "rbxassetid://1837952224"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'TEC-9 | Performer', PLACEHOLDERICON, 0, function()
 	EquipSkin("TEC9", {
 		["Handle2"] = {
-			ColorMap = RID.."4587056616"},
+			ColorMap = "rbxassetid://4587056616"},
 		["Mag2"] = {
-			ColorMap = RID.."4587056616"},
+			ColorMap = "rbxassetid://4587056616"},
 		["Bolt2"] = {
-			ColorMap = RID.."4587056616"},
+			ColorMap = "rbxassetid://4587056616"},
 		["Part"] = {
-			ColorMap = RID.."4587056616"},
+			ColorMap = "rbxassetid://4587056616"},
 		["Part2"] = {
-			ColorMap = RID.."4587056616"}
+			ColorMap = "rbxassetid://4587056616"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'TEC-9 | Phol', PLACEHOLDERICON, 0, function()
 	EquipSkin("TEC9", {
 		["Handle2"] = {
-			ColorMap = RID.."3180038087"},
+			ColorMap = "rbxassetid://3180038087"},
 		["Mag2"] = {
-			ColorMap = RID.."3180038087"},
+			ColorMap = "rbxassetid://3180038087"},
 		["Bolt2"] = {
-			ColorMap = RID.."3180038087"},
+			ColorMap = "rbxassetid://3180038087"},
 		["Part"] = {
-			ColorMap = RID.."3180038087"},
+			ColorMap = "rbxassetid://3180038087"},
 		["Part2"] = {
-			ColorMap = RID.."3180038087"}
+			ColorMap = "rbxassetid://3180038087"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'TEC-9 | Samurai', PLACEHOLDERICON, 0, function()
 	EquipSkin("TEC9", {
 		["Handle2"] = {
-			ColorMap = RID.."3179793769"},
+			ColorMap = "rbxassetid://3179793769"},
 		["Mag2"] = {
-			ColorMap = RID.."3179793769"},
+			ColorMap = "rbxassetid://3179793769"},
 		["Bolt2"] = {
-			ColorMap = RID.."3179793769"},
+			ColorMap = "rbxassetid://3179793769"},
 		["Part"] = {
-			ColorMap = RID.."3179793769"},
+			ColorMap = "rbxassetid://3179793769"},
 		["Part2"] = {
-			ColorMap = RID.."3179793769"}
+			ColorMap = "rbxassetid://3179793769"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'TEC-9 | Seasoned', PLACEHOLDERICON, 0, function()
 	EquipSkin("TEC9", {
 		["Handle2"] = {
-			ColorMap = RID.."6816758524"},
+			ColorMap = "rbxassetid://6816758524"},
 		["Mag2"] = {
-			ColorMap = RID.."6816758524"},
+			ColorMap = "rbxassetid://6816758524"},
 		["Bolt2"] = {
-			ColorMap = RID.."6816758524"},
+			ColorMap = "rbxassetid://6816758524"},
 		["Part"] = {
-			ColorMap = RID.."6816758524"},
+			ColorMap = "rbxassetid://6816758524"},
 		["Part2"] = {
-			ColorMap = RID.."6816758524"}
+			ColorMap = "rbxassetid://6816758524"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'TEC-9 | Skintech', PLACEHOLDERICON, 0, function()
 	EquipSkin("TEC9", {
 		["Handle2"] = {
-			ColorMap = RID.."2132009350"},
+			ColorMap = "rbxassetid://2132009350"},
 		["Mag2"] = {
-			ColorMap = RID.."2132009350"},
+			ColorMap = "rbxassetid://2132009350"},
 		["Bolt2"] = {
-			ColorMap = RID.."2132009350"},
+			ColorMap = "rbxassetid://2132009350"},
 		["Part"] = {
-			ColorMap = RID.."2132009350"},
+			ColorMap = "rbxassetid://2132009350"},
 		["Part2"] = {
-			ColorMap = RID.."2132009350"}
+			ColorMap = "rbxassetid://2132009350"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'TEC-9 | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("TEC9", {
 		["Handle2"] = {
-			ColorMap = RID.."105481641608015"},
+			ColorMap = "rbxassetid://105481641608015"},
 		["Mag2"] = {
-			ColorMap = RID.."105481641608015"},
+			ColorMap = "rbxassetid://105481641608015"},
 		["Bolt2"] = {
-			ColorMap = RID.."105481641608015"},
+			ColorMap = "rbxassetid://105481641608015"},
 		["Part"] = {
-			ColorMap = RID.."105481641608015"},
+			ColorMap = "rbxassetid://105481641608015"},
 		["Part2"] = {
-			ColorMap = RID.."105481641608015"}
+			ColorMap = "rbxassetid://105481641608015"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'TEC-9 | Stocking Stuffer', PLACEHOLDERICON, 0, function()
 	EquipSkin("TEC9", {
 		["Handle2"] = {
-			ColorMap = RID.."2666245988"},
+			ColorMap = "rbxassetid://2666245988"},
 		["Mag2"] = {
-			ColorMap = RID.."2666245988"},
+			ColorMap = "rbxassetid://2666245988"},
 		["Bolt2"] = {
-			ColorMap = RID.."2666245988"},
+			ColorMap = "rbxassetid://2666245988"},
 		["Part"] = {
-			ColorMap = RID.."2666245988"},
+			ColorMap = "rbxassetid://2666245988"},
 		["Part2"] = {
-			ColorMap = RID.."2666245988"}
+			ColorMap = "rbxassetid://2666245988"}
 	})
 end)
 
@@ -68919,15 +69269,15 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'TEC-9 | Whispers', PLACEHOLDERICON, 0, function()
 	EquipSkin("TEC9", {
 		["Handle2"] = {
-			ColorMap = RID.."71907503687246"},
+			ColorMap = "rbxassetid://71907503687246"},
 		["Mag2"] = {
-			ColorMap = RID.."71907503687246"},
+			ColorMap = "rbxassetid://71907503687246"},
 		["Bolt2"] = {
-			ColorMap = RID.."71907503687246"},
+			ColorMap = "rbxassetid://71907503687246"},
 		["Part"] = {
-			ColorMap = RID.."71907503687246"},
+			ColorMap = "rbxassetid://71907503687246"},
 		["Part2"] = {
-			ColorMap = RID.."71907503687246"}
+			ColorMap = "rbxassetid://71907503687246"}
 	})
 end)
 
@@ -68935,95 +69285,95 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'UMP-45 | Current', PLACEHOLDERICON, 0, function()
 	EquipSkin("UMP", {
 		["Bolt2"] = {
-			ColorMap = RID.."77498444844208"},
+			ColorMap = "rbxassetid://77498444844208"},
 		["Grip2"] = {
-			ColorMap = RID.."77498444844208"},
+			ColorMap = "rbxassetid://77498444844208"},
 		["Handle2"] = {
-			ColorMap = RID.."77498444844208"},
+			ColorMap = "rbxassetid://77498444844208"},
 		["Mag2"] = {
-			ColorMap = RID.."77498444844208"},
+			ColorMap = "rbxassetid://77498444844208"},
 		["Part"] = {
-			ColorMap = RID.."77498444844208"},
+			ColorMap = "rbxassetid://77498444844208"},
 		["Part2"] = {
-			ColorMap = RID.."77498444844208"},
+			ColorMap = "rbxassetid://77498444844208"},
 		["Part3"] = {
-			ColorMap = RID.."134557978828390"}
+			ColorMap = "rbxassetid://134557978828390"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'UMP-45 | Death Grip', PLACEHOLDERICON, 0, function()
 	EquipSkin("UMP", {
 		["Bolt2"] = {
-			ColorMap = RID.."2916238578"},
+			ColorMap = "rbxassetid://2916238578"},
 		["Grip2"] = {
-			ColorMap = RID.."2916238578"},
+			ColorMap = "rbxassetid://2916238578"},
 		["Handle2"] = {
-			ColorMap = RID.."2916238578"},
+			ColorMap = "rbxassetid://2916238578"},
 		["Mag2"] = {
-			ColorMap = RID.."2916238578"},
+			ColorMap = "rbxassetid://2916238578"},
 		["Part"] = {
-			ColorMap = RID.."2916238578"},
+			ColorMap = "rbxassetid://2916238578"},
 		["Part2"] = {
-			ColorMap = RID.."2916238578"},
+			ColorMap = "rbxassetid://2916238578"},
 		["Part3"] = {
-			ColorMap = RID.."2916238578"}
+			ColorMap = "rbxassetid://2916238578"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'UMP-45 | Gum Drop', PLACEHOLDERICON, 0, function()
 	EquipSkin("UMP", {
 		["Bolt2"] = {
-			ColorMap = RID.."4540743224"},
+			ColorMap = "rbxassetid://4540743224"},
 		["Grip2"] = {
-			ColorMap = RID.."4540743224"},
+			ColorMap = "rbxassetid://4540743224"},
 		["Handle2"] = {
-			ColorMap = RID.."4540743224"},
+			ColorMap = "rbxassetid://4540743224"},
 		["Mag2"] = {
-			ColorMap = RID.."4540743224"},
+			ColorMap = "rbxassetid://4540743224"},
 		["Part"] = {
-			ColorMap = RID.."4540743224"},
+			ColorMap = "rbxassetid://4540743224"},
 		["Part2"] = {
-			ColorMap = RID.."4540743224"},
+			ColorMap = "rbxassetid://4540743224"},
 		["Part3"] = {
-			ColorMap = RID.."4540743224"}
+			ColorMap = "rbxassetid://4540743224"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'UMP-45 | Magma', PLACEHOLDERICON, 0, function()
 	EquipSkin("UMP", {
 		["Bolt2"] = {
-			ColorMap = RID.."1712410006"},
+			ColorMap = "rbxassetid://1712410006"},
 		["Grip2"] = {
-			ColorMap = RID.."1712410006"},
+			ColorMap = "rbxassetid://1712410006"},
 		["Handle2"] = {
-			ColorMap = RID.."1712410006"},
+			ColorMap = "rbxassetid://1712410006"},
 		["Mag2"] = {
-			ColorMap = RID.."1712410006"},
+			ColorMap = "rbxassetid://1712410006"},
 		["Part"] = {
-			ColorMap = RID.."1712410006"},
+			ColorMap = "rbxassetid://1712410006"},
 		["Part2"] = {
-			ColorMap = RID.."1712410006"},
+			ColorMap = "rbxassetid://1712410006"},
 		["Part3"] = {
-			ColorMap = RID.."1712410006"}
+			ColorMap = "rbxassetid://1712410006"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'UMP-45 | Militia Camo', PLACEHOLDERICON, 0, function()
 	EquipSkin("UMP", {
 		["Bolt2"] = {
-			ColorMap = RID.."1704865122"},
+			ColorMap = "rbxassetid://1704865122"},
 		["Grip2"] = {
-			ColorMap = RID.."1704865122"},
+			ColorMap = "rbxassetid://1704865122"},
 		["Handle2"] = {
-			ColorMap = RID.."1704865122"},
+			ColorMap = "rbxassetid://1704865122"},
 		["Mag2"] = {
-			ColorMap = RID.."1704865122"},
+			ColorMap = "rbxassetid://1704865122"},
 		["Part"] = {
-			ColorMap = RID.."1704865122"},
+			ColorMap = "rbxassetid://1704865122"},
 		["Part2"] = {
-			ColorMap = RID.."1704865122"},
+			ColorMap = "rbxassetid://1704865122"},
 		["Part3"] = {
-			ColorMap = RID.."1704865122"}
+			ColorMap = "rbxassetid://1704865122"}
 	})
 end)
 
@@ -69031,89 +69381,89 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'UMP-45 | Molten', PLACEHOLDERICON, 0, function()
 	EquipSkin("UMP", {
 		["Bolt2"] = {
-			ColorMap = RID.."4212749496"},
+			ColorMap = "rbxassetid://4212749496"},
 		["Grip2"] = {
-			ColorMap = RID.."4212749496"},
+			ColorMap = "rbxassetid://4212749496"},
 		["Handle2"] = {
-			ColorMap = RID.."4212749496"},
+			ColorMap = "rbxassetid://4212749496"},
 		["Mag2"] = {
-			ColorMap = RID.."4212749496"},
+			ColorMap = "rbxassetid://4212749496"},
 		["Part"] = {
-			ColorMap = RID.."4212749496"},
+			ColorMap = "rbxassetid://4212749496"},
 		["Part2"] = {
-			ColorMap = RID.."4212749496"},
+			ColorMap = "rbxassetid://4212749496"},
 		["Part3"] = {
-			ColorMap = RID.."4212749496"}
+			ColorMap = "rbxassetid://4212749496"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'UMP-45 | Orbit', PLACEHOLDERICON, 0, function()
 	EquipSkin("UMP", {
 		["Bolt2"] = {
-			ColorMap = RID.."7944229297"},
+			ColorMap = "rbxassetid://7944229297"},
 		["Grip2"] = {
-			ColorMap = RID.."7944229297"},
+			ColorMap = "rbxassetid://7944229297"},
 		["Handle2"] = {
-			ColorMap = RID.."7944229297"},
+			ColorMap = "rbxassetid://7944229297"},
 		["Mag2"] = {
-			ColorMap = RID.."7944229297"},
+			ColorMap = "rbxassetid://7944229297"},
 		["Part"] = {
-			ColorMap = RID.."7944229297"},
+			ColorMap = "rbxassetid://7944229297"},
 		["Part2"] = {
-			ColorMap = RID.."7944229297"},
+			ColorMap = "rbxassetid://7944229297"},
 		["Part3"] = {
-			ColorMap = RID.."7944229297"}
+			ColorMap = "rbxassetid://7944229297"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'UMP-45 | Redline', PLACEHOLDERICON, 0, function()
 	EquipSkin("UMP", {
 		["Bolt2"] = {
-			ColorMap = RID.."2445858848"},
+			ColorMap = "rbxassetid://2445858848"},
 		["Grip2"] = {
-			ColorMap = RID.."2445858848"},
+			ColorMap = "rbxassetid://2445858848"},
 		["Handle2"] = {
-			ColorMap = RID.."2445858848"},
+			ColorMap = "rbxassetid://2445858848"},
 		["Mag2"] = {
-			ColorMap = RID.."2445858848"},
+			ColorMap = "rbxassetid://2445858848"},
 		["Part"] = {
-			ColorMap = RID.."2445858848"},
+			ColorMap = "rbxassetid://2445858848"},
 		["Part2"] = {
-			ColorMap = RID.."2445858848"},
+			ColorMap = "rbxassetid://2445858848"},
 		["Part3"] = {
-			ColorMap = RID.."2445858848"}
+			ColorMap = "rbxassetid://2445858848"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'UMP-45 | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("UMP", {
 		["Bolt2"] = {
-			ColorMap = RID.."107988444448707"},
+			ColorMap = "rbxassetid://107988444448707"},
 		["Grip2"] = {
-			ColorMap = RID.."107988444448707"},
+			ColorMap = "rbxassetid://107988444448707"},
 		["Handle2"] = {
-			ColorMap = RID.."107988444448707"},
+			ColorMap = "rbxassetid://107988444448707"},
 		["Mag2"] = {
-			ColorMap = RID.."107988444448707"},
+			ColorMap = "rbxassetid://107988444448707"},
 		["Part"] = {
-			ColorMap = RID.."107988444448707"},
+			ColorMap = "rbxassetid://107988444448707"},
 		["Part2"] = {
-			ColorMap = RID.."107988444448707"},
+			ColorMap = "rbxassetid://107988444448707"},
 		["Part3"] = {
-			ColorMap = RID.."107988444448707"}
+			ColorMap = "rbxassetid://107988444448707"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'USP-S | Blossom', PLACEHOLDERICON, 0, function()
 	EquipSkin("USP", {
 		["Handle2"] = {
-			ColorMap = RID.."72065349133804"},
+			ColorMap = "rbxassetid://72065349133804"},
 		["Mag2"] = {
-			ColorMap = RID.."72065349133804"},
+			ColorMap = "rbxassetid://72065349133804"},
 		["Silencer2"] = {
-			ColorMap = RID.."72065349133804"},
+			ColorMap = "rbxassetid://72065349133804"},
 		["Slide2"] = {
-			ColorMap = RID.."72065349133804"}
+			ColorMap = "rbxassetid://72065349133804"}
 	})
 end)
 
@@ -69121,739 +69471,739 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'USP-S | BloxersClub', PLACEHOLDERICON, 0, function()
 	EquipSkin("USP", {
 		["Handle2"] = {
-			ColorMap = RID.."17657142380"},
+			ColorMap = "rbxassetid://17657142380"},
 		["Mag2"] = {
-			ColorMap = RID.."17657142380"},
+			ColorMap = "rbxassetid://17657142380"},
 		["Silencer2"] = {
-			ColorMap = RID.."17657142380"},
+			ColorMap = "rbxassetid://17657142380"},
 		["Slide2"] = {
-			ColorMap = RID.."17657142380"}
+			ColorMap = "rbxassetid://17657142380"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'USP-S | Crimson', PLACEHOLDERICON, 0, function()
 	EquipSkin("USP", {
 		["Handle2"] = {
-			ColorMap = RID.."1630937974"},
+			ColorMap = "rbxassetid://1630937974"},
 		["Mag2"] = {
-			ColorMap = RID.."1630937974"},
+			ColorMap = "rbxassetid://1630937974"},
 		["Silencer2"] = {
-			ColorMap = RID.."1630937974"},
+			ColorMap = "rbxassetid://1630937974"},
 		["Slide2"] = {
-			ColorMap = RID.."1630937974"}
+			ColorMap = "rbxassetid://1630937974"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'USP-S | Dizzy', PLACEHOLDERICON, 0, function()
 	EquipSkin("USP", {
 		["Handle2"] = {
-			ColorMap = RID.."2916264330"},
+			ColorMap = "rbxassetid://2916264330"},
 		["Mag2"] = {
-			ColorMap = RID.."2916264330"},
+			ColorMap = "rbxassetid://2916264330"},
 		["Silencer2"] = {
-			ColorMap = RID.."2916264330"},
+			ColorMap = "rbxassetid://2916264330"},
 		["Slide2"] = {
-			ColorMap = RID.."2916264330"}
+			ColorMap = "rbxassetid://2916264330"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'USP-S | Frostbite', PLACEHOLDERICON, 0, function()
 	EquipSkin("USP", {
 		["Handle2"] = {
-			ColorMap = RID.."2644683854"},
+			ColorMap = "rbxassetid://2644683854"},
 		["Mag2"] = {
-			ColorMap = RID.."2644683854"},
+			ColorMap = "rbxassetid://2644683854"},
 		["Silencer2"] = {
-			ColorMap = RID.."2644683854"},
+			ColorMap = "rbxassetid://2644683854"},
 		["Slide2"] = {
-			ColorMap = RID.."2644683854"}
+			ColorMap = "rbxassetid://2644683854"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'USP-S | Gingerbread', PLACEHOLDERICON, 0, function()
 	EquipSkin("USP", {
 		["Handle2"] = {
-			ColorMap = RID.."97551382578877"},
+			ColorMap = "rbxassetid://97551382578877"},
 		["Mag2"] = {
-			ColorMap = RID.."97551382578877"},
+			ColorMap = "rbxassetid://97551382578877"},
 		["Silencer2"] = {
-			ColorMap = RID.."97551382578877"},
+			ColorMap = "rbxassetid://97551382578877"},
 		["Slide2"] = {
-			ColorMap = RID.."97551382578877"}
+			ColorMap = "rbxassetid://97551382578877"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'USP-S | Holiday', PLACEHOLDERICON, 0, function()
 	EquipSkin("USP", {
 		["Handle2"] = {
-			ColorMap = RID.."4540754549"},
+			ColorMap = "rbxassetid://4540754549"},
 		["Mag2"] = {
-			ColorMap = RID.."4540754549"},
+			ColorMap = "rbxassetid://4540754549"},
 		["Silencer2"] = {
-			ColorMap = RID.."4540754549"},
+			ColorMap = "rbxassetid://4540754549"},
 		["Slide2"] = {
-			ColorMap = RID.."4540754549"}
+			ColorMap = "rbxassetid://4540754549"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'USP-S | Jade Dream', PLACEHOLDERICON, 0, function()
 	EquipSkin("USP", {
 		["Handle2"] = {
-			ColorMap = RID.."1837988259"},
+			ColorMap = "rbxassetid://1837988259"},
 		["Mag2"] = {
-			ColorMap = RID.."1837988259"},
+			ColorMap = "rbxassetid://1837988259"},
 		["Silencer2"] = {
-			ColorMap = RID.."1837988259"},
+			ColorMap = "rbxassetid://1837988259"},
 		["Slide2"] = {
-			ColorMap = RID.."1837988259"}
+			ColorMap = "rbxassetid://1837988259"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'USP-S | Kraken', PLACEHOLDERICON, 0, function()
 	EquipSkin("USP", {
 		["Handle2"] = {
-			ColorMap = RID.."3801639212"},
+			ColorMap = "rbxassetid://3801639212"},
 		["Mag2"] = {
-			ColorMap = RID.."3801639212"},
+			ColorMap = "rbxassetid://3801639212"},
 		["Silencer2"] = {
-			ColorMap = RID.."3801639212"},
+			ColorMap = "rbxassetid://3801639212"},
 		["Slide2"] = {
-			ColorMap = RID.."3801639212"}
+			ColorMap = "rbxassetid://3801639212"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'USP-S | Nighttown', PLACEHOLDERICON, 0, function()
 	EquipSkin("USP", {
 		["Handle2"] = {
-			ColorMap = RID.."2666306565"},
+			ColorMap = "rbxassetid://2666306565"},
 		["Mag2"] = {
-			ColorMap = RID.."2666306565"},
+			ColorMap = "rbxassetid://2666306565"},
 		["Silencer2"] = {
-			ColorMap = RID.."2666306565"},
+			ColorMap = "rbxassetid://2666306565"},
 		["Slide2"] = {
-			ColorMap = RID.."2666306565"}
+			ColorMap = "rbxassetid://2666306565"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'USP-S | Paradise', PLACEHOLDERICON, 0, function()
 	EquipSkin("USP", {
 		["Handle2"] = {
-			ColorMap = RID.."2916238860"},
+			ColorMap = "rbxassetid://2916238860"},
 		["Mag2"] = {
-			ColorMap = RID.."2916238860"},
+			ColorMap = "rbxassetid://2916238860"},
 		["Silencer2"] = {
-			ColorMap = RID.."2916238860"},
+			ColorMap = "rbxassetid://2916238860"},
 		["Slide2"] = {
-			ColorMap = RID.."2916238860"}
+			ColorMap = "rbxassetid://2916238860"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'USP-S | Racing', PLACEHOLDERICON, 0, function()
 	EquipSkin("USP", {
 		["Handle2"] = {
-			ColorMap = RID.."128154362065174"},
+			ColorMap = "rbxassetid://128154362065174"},
 		["Mag2"] = {
-			ColorMap = RID.."128154362065174"},
+			ColorMap = "rbxassetid://128154362065174"},
 		["Silencer2"] = {
-			ColorMap = RID.."128154362065174"},
+			ColorMap = "rbxassetid://128154362065174"},
 		["Slide2"] = {
-			ColorMap = RID.."128154362065174"}
+			ColorMap = "rbxassetid://128154362065174"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'USP-S | Skull', PLACEHOLDERICON, 0, function()
 	EquipSkin("USP", {
 		["Handle2"] = {
-			ColorMap = RID.."1250183532"},
+			ColorMap = "rbxassetid://1250183532"},
 		["Mag2"] = {
-			ColorMap = RID.."1250183532"},
+			ColorMap = "rbxassetid://1250183532"},
 		["Silencer2"] = {
-			ColorMap = RID.."1250183532"},
+			ColorMap = "rbxassetid://1250183532"},
 		["Slide2"] = {
-			ColorMap = RID.."1250183532"}
+			ColorMap = "rbxassetid://1250183532"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'USP-S | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("USP", {
 		["Handle2"] = {
-			ColorMap = RID.."115947554379284"},
+			ColorMap = "rbxassetid://115947554379284"},
 		["Mag2"] = {
-			ColorMap = RID.."115947554379284"},
+			ColorMap = "rbxassetid://115947554379284"},
 		["Silencer2"] = {
-			ColorMap = RID.."115947554379284"},
+			ColorMap = "rbxassetid://115947554379284"},
 		["Slide2"] = {
-			ColorMap = RID.."115947554379284"}
+			ColorMap = "rbxassetid://115947554379284"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'USP-S | Survivor', PLACEHOLDERICON, 0, function()
 	EquipSkin("USP", {
 		["Handle2"] = {
-			ColorMap = RID.."89402043683434"},
+			ColorMap = "rbxassetid://89402043683434"},
 		["Mag2"] = {
-			ColorMap = RID.."89402043683434"},
+			ColorMap = "rbxassetid://89402043683434"},
 		["Silencer2"] = {
-			ColorMap = RID.."89402043683434"},
+			ColorMap = "rbxassetid://89402043683434"},
 		["Slide2"] = {
-			ColorMap = RID.."89402043683434"}
+			ColorMap = "rbxassetid://89402043683434"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'USP-S | Unseen', PLACEHOLDERICON, 0, function()
 	EquipSkin("USP", {
 		["Handle2"] = {
-			ColorMap = RID.."138321270610793"},
+			ColorMap = "rbxassetid://138321270610793"},
 		["Mag2"] = {
-			ColorMap = RID.."138321270610793"},
+			ColorMap = "rbxassetid://138321270610793"},
 		["Silencer2"] = {
-			ColorMap = RID.."138321270610793"},
+			ColorMap = "rbxassetid://138321270610793"},
 		["Slide2"] = {
-			ColorMap = RID.."138321270610793"}
+			ColorMap = "rbxassetid://138321270610793"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'USP-S | Worlds Away', PLACEHOLDERICON, 0, function()
 	EquipSkin("USP", {
 		["Handle2"] = {
-			ColorMap = RID.."4435999106"},
+			ColorMap = "rbxassetid://4435999106"},
 		["Mag2"] = {
-			ColorMap = RID.."4435999106"},
+			ColorMap = "rbxassetid://4435999106"},
 		["Silencer2"] = {
-			ColorMap = RID.."4435999106"},
+			ColorMap = "rbxassetid://4435999106"},
 		["Slide2"] = {
-			ColorMap = RID.."4435999106"}
+			ColorMap = "rbxassetid://4435999106"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'USP-S | Yellowbelly', PLACEHOLDERICON, 0, function()
 	EquipSkin("USP", {
 		["Handle2"] = {
-			ColorMap = RID.."2957556762"},
+			ColorMap = "rbxassetid://2957556762"},
 		["Mag2"] = {
-			ColorMap = RID.."2957556762"},
+			ColorMap = "rbxassetid://2957556762"},
 		["Silencer2"] = {
-			ColorMap = RID.."2957556762"},
+			ColorMap = "rbxassetid://2957556762"},
 		["Slide2"] = {
-			ColorMap = RID.."2957556762"}
+			ColorMap = "rbxassetid://2957556762"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'XM1014 | Artic', PLACEHOLDERICON, 0, function()
 	EquipSkin("XM", {
 		["Bolt2"] = {
-			ColorMap = RID.."2666306567"},
+			ColorMap = "rbxassetid://2666306567"},
 		["Handle2"] = {
-			ColorMap = RID.."2666306567"},
+			ColorMap = "rbxassetid://2666306567"},
 		["Part"] = {
-			ColorMap = RID.."2666306567"}
+			ColorMap = "rbxassetid://2666306567"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'XM1014 | Atomic', PLACEHOLDERICON, 0, function()
 	EquipSkin("XM", {
 		["Bolt2"] = {
-			ColorMap = RID.."2916239691"},
+			ColorMap = "rbxassetid://2916239691"},
 		["Handle2"] = {
-			ColorMap = RID.."2916239691"},
+			ColorMap = "rbxassetid://2916239691"},
 		["Part"] = {
-			ColorMap = RID.."2916239691"}
+			ColorMap = "rbxassetid://2916239691"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'XM1014 | Campfire', PLACEHOLDERICON, 0, function()
 	EquipSkin("XM", {
 		["Bolt2"] = {
-			ColorMap = RID.."2916264736"},
+			ColorMap = "rbxassetid://2916264736"},
 		["Handle2"] = {
-			ColorMap = RID.."2916264736"},
+			ColorMap = "rbxassetid://2916264736"},
 		["Part"] = {
-			ColorMap = RID.."2916264736"}
+			ColorMap = "rbxassetid://2916264736"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'XM1014 | Endless Night', PLACEHOLDERICON, 0, function()
 	EquipSkin("XM", {
 		["Bolt2"] = {
-			ColorMap = RID.."4204562310"},
+			ColorMap = "rbxassetid://4204562310"},
 		["Handle2"] = {
-			ColorMap = RID.."4204562310"},
+			ColorMap = "rbxassetid://4204562310"},
 		["Part"] = {
-			ColorMap = RID.."4204562310"}
+			ColorMap = "rbxassetid://4204562310"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'XM1014 | MK11', PLACEHOLDERICON, 0, function()
 	EquipSkin("XM", {
 		["Bolt2"] = {
-			ColorMap = RID.."3414436078"},
+			ColorMap = "rbxassetid://3414436078"},
 		["Handle2"] = {
-			ColorMap = RID.."3414436078"},
+			ColorMap = "rbxassetid://3414436078"},
 		["Part"] = {
-			ColorMap = RID.."3414436078"}
+			ColorMap = "rbxassetid://3414436078"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'XM1014 | Predator', PLACEHOLDERICON, 0, function()
 	EquipSkin("XM", {
 		["Bolt2"] = {
-			ColorMap = RID.."3179793860"},
+			ColorMap = "rbxassetid://3179793860"},
 		["Handle2"] = {
-			ColorMap = RID.."3179793860"},
+			ColorMap = "rbxassetid://3179793860"},
 		["Part"] = {
-			ColorMap = RID.."3179793860"}
+			ColorMap = "rbxassetid://3179793860"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'XM1014 | Red', PLACEHOLDERICON, 0, function()
 	EquipSkin("XM", {
 		["Bolt2"] = {
-			ColorMap = RID.."2722658161"},
+			ColorMap = "rbxassetid://2722658161"},
 		["Handle2"] = {
-			ColorMap = RID.."2722658161"},
+			ColorMap = "rbxassetid://2722658161"},
 		["Part"] = {
-			ColorMap = RID.."2722658161"}
+			ColorMap = "rbxassetid://2722658161"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'XM1014 | Resonate', PLACEHOLDERICON, 0, function()
 	EquipSkin("XM", {
 		["Bolt2"] = {
-			ColorMap = RID.."134193460715640",
-			NormalMap = RID.."103719155013149",
-			RoughnessMap = RID.."72788150283977",
-			MetalnessMap = RID.."116207789554453"},
+			ColorMap = "rbxassetid://134193460715640",
+			NormalMap = "rbxassetid://103719155013149",
+			RoughnessMap = "rbxassetid://72788150283977",
+			MetalnessMap = "rbxassetid://116207789554453"},
 		["Handle2"] = {
-			ColorMap = RID.."134193460715640",
-			NormalMap = RID.."103719155013149",
-			RoughnessMap = RID.."72788150283977",
-			MetalnessMap = RID.."116207789554453"},
+			ColorMap = "rbxassetid://134193460715640",
+			NormalMap = "rbxassetid://103719155013149",
+			RoughnessMap = "rbxassetid://72788150283977",
+			MetalnessMap = "rbxassetid://116207789554453"},
 		["Part"] = {
-			ColorMap = RID.."135949541801447",
-			NormalMap = RID.."78610958042379",
-			RoughnessMap = RID.."82902154526617",
-			MetalnessMap = RID.."75348531239367"}
+			ColorMap = "rbxassetid://135949541801447",
+			NormalMap = "rbxassetid://78610958042379",
+			RoughnessMap = "rbxassetid://82902154526617",
+			MetalnessMap = "rbxassetid://75348531239367"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'XM1014 | Spectrum', PLACEHOLDERICON, 0, function()
 	EquipSkin("XM", {
 		["Bolt2"] = {
-			ColorMap = RID.."2132010058"},
+			ColorMap = "rbxassetid://2132010058"},
 		["Handle2"] = {
-			ColorMap = RID.."2132010058"},
+			ColorMap = "rbxassetid://2132010058"},
 		["Part"] = {
-			ColorMap = RID.."2132010058"}
+			ColorMap = "rbxassetid://2132010058"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'XM1014 | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("XM", {
 		["Bolt2"] = {
-			ColorMap = RID.."103989931097598"},
+			ColorMap = "rbxassetid://103989931097598"},
 		["Handle2"] = {
-			ColorMap = RID.."103989931097598"},
+			ColorMap = "rbxassetid://103989931097598"},
 		["Part"] = {
-			ColorMap = RID.."103989931097598"},
+			ColorMap = "rbxassetid://103989931097598"},
 		["Shell"] = {
-			ColorMap = RID.."117742459621324"},
+			ColorMap = "rbxassetid://117742459621324"},
 		["Shell2"] = {
-			ColorMap = RID.."117742459621324"},
+			ColorMap = "rbxassetid://117742459621324"},
 		["Shell3"] = {
-			ColorMap = RID.."117742459621324"}
+			ColorMap = "rbxassetid://117742459621324"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Fingerless Gloves | Crystal', PLACEHOLDERICON, 0, function()
 	EquipSkin("Fingerless Gloves", {
 		["LeftGlove"] = {
-			ColorMap= RID.."2135973675"},
+			ColorMap= "rbxassetid://2135973675"},
 		["RightGlove"] = {
-			ColorMap= RID.."2135973675"}
+			ColorMap= "rbxassetid://2135973675"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Fingerless Gloves | Digital', PLACEHOLDERICON, 0, function()
 	EquipSkin("Fingerless Gloves", {
 		["LeftGlove"] = {
-			ColorMap= RID.."2135974031"},
+			ColorMap= "rbxassetid://2135974031"},
 		["RightGlove"] = {
-			ColorMap= RID.."2135974031"}
+			ColorMap= "rbxassetid://2135974031"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Fingerless Gloves | Kimura', PLACEHOLDERICON, 0, function()
 	EquipSkin("Fingerless Gloves", {
 		["LeftGlove"] = {
-			ColorMap= RID.."89041056640438"},
+			ColorMap= "rbxassetid://89041056640438"},
 		["RightGlove"] = {
-			ColorMap= RID.."89041056640438"}
+			ColorMap= "rbxassetid://89041056640438"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Fingerless Gloves | Patch', PLACEHOLDERICON, 0, function()
 	EquipSkin("Fingerless Gloves", {
 		["LeftGlove"] = {
-			ColorMap= RID.."2135974348"},
+			ColorMap= "rbxassetid://2135974348"},
 		["RightGlove"] = {
-			ColorMap= RID.."2135974348"}
+			ColorMap= "rbxassetid://2135974348"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Fingerless Gloves | Scapter', PLACEHOLDERICON, 0, function()
 	EquipSkin("Fingerless Gloves", {
 		["LeftGlove"] = {
-			ColorMap= RID.."2217790167"},
+			ColorMap= "rbxassetid://2217790167"},
 		["RightGlove"] = {
-			ColorMap= RID.."2217790167"}
+			ColorMap= "rbxassetid://2217790167"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Fingerless Gloves | Spookiness', PLACEHOLDERICON, 0, function()
 	EquipSkin("Fingerless Gloves", {
 		["LeftGlove"] = {
-			ColorMap= RID.."7944129369"},
+			ColorMap= "rbxassetid://7944129369"},
 		["RightGlove"] = {
-			ColorMap= RID.."7944129369"}
+			ColorMap= "rbxassetid://7944129369"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Fingerless Gloves | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("Fingerless Gloves", {
 		["LeftGlove"] = {
-			ColorMap= RID.."85625470681662"},
+			ColorMap= "rbxassetid://85625470681662"},
 		["RightGlove"] = {
-			ColorMap= RID.."85625470681662"}
+			ColorMap= "rbxassetid://85625470681662"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Dark Damascus', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
-			ColorMap= RID.."89766139472336"},
+			ColorMap= "rbxassetid://89766139472336"},
 		["RightGlove"] = {
-			ColorMap= RID.."89766139472336"}
+			ColorMap= "rbxassetid://89766139472336"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Ghoul Hex', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
-			ColorMap= RID.."4212660824"},
+			ColorMap= "rbxassetid://4212660824"},
 		["RightGlove"] = {
-			ColorMap= RID.."4212660824"}
+			ColorMap= "rbxassetid://4212660824"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Gilded', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
-			ColorMap= RID.."126795995401524"},
+			ColorMap= "rbxassetid://126795995401524"},
 		["RightGlove"] = {
-			ColorMap= RID.."126795995401524"}
+			ColorMap= "rbxassetid://126795995401524"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Green Hex', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
-			ColorMap= RID.."4212661339"},
+			ColorMap= "rbxassetid://4212661339"},
 		["RightGlove"] = {
-			ColorMap= RID.."4212661339"}
+			ColorMap= "rbxassetid://4212661339"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Guts', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
-			ColorMap= RID.."95496903700805"},
+			ColorMap= "rbxassetid://95496903700805"},
 		["RightGlove"] = {
-			ColorMap= RID.."95496903700805"}
+			ColorMap= "rbxassetid://95496903700805"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | MMA', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
-			ColorMap= RID.."114987738016404"},
+			ColorMap= "rbxassetid://114987738016404"},
 		["RightGlove"] = {
-			ColorMap= RID.."114987738016404"}
+			ColorMap= "rbxassetid://114987738016404"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Microbes', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
-			ColorMap= RID.."7944157395"},
+			ColorMap= "rbxassetid://7944157395"},
 		["RightGlove"] = {
-			ColorMap= RID.."7944157395"}
+			ColorMap= "rbxassetid://7944157395"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Mummy', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
-			ColorMap= RID.."5894322563"},
+			ColorMap= "rbxassetid://5894322563"},
 		["RightGlove"] = {
-			ColorMap= RID.."5894322563"}
+			ColorMap= "rbxassetid://5894322563"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Orange Hex', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
-			ColorMap= RID.."4212661898"},
+			ColorMap= "rbxassetid://4212661898"},
 		["RightGlove"] = {
-			ColorMap= RID.."4212661898"}
+			ColorMap= "rbxassetid://4212661898"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Phantom Hex', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
-			ColorMap= RID.."4212662590"},
+			ColorMap= "rbxassetid://4212662590"},
 		["RightGlove"] = {
-			ColorMap= RID.."4212662590"}
+			ColorMap= "rbxassetid://4212662590"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Purple Hex', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
-			ColorMap= RID.."4212663201"},
+			ColorMap= "rbxassetid://4212663201"},
 		["RightGlove"] = {
-			ColorMap= RID.."4212663201"}
+			ColorMap= "rbxassetid://4212663201"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Spector Hex', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
-			ColorMap= RID.."4212663733"},
+			ColorMap= "rbxassetid://4212663733"},
 		["RightGlove"] = {
-			ColorMap= RID.."4212663733"}
+			ColorMap= "rbxassetid://4212663733"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
-			ColorMap= RID.."115638307976493"},
+			ColorMap= "rbxassetid://115638307976493"},
 		["RightGlove"] = {
-			ColorMap= RID.."115638307976493"}
+			ColorMap= "rbxassetid://115638307976493"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Tape', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
-			ColorMap= RID.."110968161283312"},
+			ColorMap= "rbxassetid://110968161283312"},
 		["RightGlove"] = {
-			ColorMap= RID.."110968161283312"}
+			ColorMap= "rbxassetid://110968161283312"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Toxic Nitro', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
-			ColorMap= RID.."4680487306"},
+			ColorMap= "rbxassetid://4680487306"},
 		["RightGlove"] = {
-			ColorMap= RID.."4680487306"}
+			ColorMap= "rbxassetid://4680487306"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Wetland', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
-			ColorMap= RID.."112319150446072"},
+			ColorMap= "rbxassetid://112319150446072"},
 		["RightGlove"] = {
-			ColorMap= RID.."112319150446072"}
+			ColorMap= "rbxassetid://112319150446072"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Yellow Hazard', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
-			ColorMap= RID.."74108980847744",
-			NormalMap= RID.."121907918789945",
-			RoughnessMap= RID.."137511414861555",
-			MetalnessMap= RID.."135429296028655"},
+			ColorMap= "rbxassetid://74108980847744",
+			NormalMap= "rbxassetid://121907918789945",
+			RoughnessMap= "rbxassetid://137511414861555",
+			MetalnessMap= "rbxassetid://135429296028655"},
 		["RightGlove"] = {
-			ColorMap= RID.."74108980847744",
-			NormalMap= RID.."121907918789945",
-			RoughnessMap= RID.."137511414861555",
-			MetalnessMap= RID.."135429296028655"}
+			ColorMap= "rbxassetid://74108980847744",
+			NormalMap= "rbxassetid://121907918789945",
+			RoughnessMap= "rbxassetid://137511414861555",
+			MetalnessMap= "rbxassetid://135429296028655"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Amethyst', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap= RID.."137324499588396"},
+			ColorMap= "rbxassetid://137324499588396"},
 		["RightGlove"] = {
-			ColorMap= RID.."137324499588396"}
+			ColorMap= "rbxassetid://137324499588396"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Blood Web', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap= RID.."77696820441822"},
+			ColorMap= "rbxassetid://77696820441822"},
 		["RightGlove"] = {
-			ColorMap= RID.."77696820441822"}
+			ColorMap= "rbxassetid://77696820441822"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Calamity', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap= RID.."6891919220"},
+			ColorMap= "rbxassetid://6891919220"},
 		["RightGlove"] = {
-			ColorMap= RID.."6891919220"}
+			ColorMap= "rbxassetid://6891919220"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | CottonTail', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap= RID.."3096311966"},
+			ColorMap= "rbxassetid://3096311966"},
 		["RightGlove"] = {
-			ColorMap= RID.."3096311966"}
+			ColorMap= "rbxassetid://3096311966"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Dark Damascus', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap= RID.."127612234295604"},
+			ColorMap= "rbxassetid://127612234295604"},
 		["RightGlove"] = {
-			ColorMap= RID.."127612234295604"}
+			ColorMap= "rbxassetid://127612234295604"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Dead Prey', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap= RID.."7998990929"},
+			ColorMap= "rbxassetid://7998990929"},
 		["RightGlove"] = {
-			ColorMap= RID.."7998990929"}
+			ColorMap= "rbxassetid://7998990929"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Hallows', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap= RID.."2504760117"},
+			ColorMap= "rbxassetid://2504760117"},
 		["RightGlove"] = {
-			ColorMap= RID.."2504760117"}
+			ColorMap= "rbxassetid://2504760117"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Hazard', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap= RID.."2135535438"},
+			ColorMap= "rbxassetid://2135535438"},
 		["RightGlove"] = {
-			ColorMap= RID.."2135535438"}
+			ColorMap= "rbxassetid://2135535438"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Hellfire', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap= RID.."89763492782581"},
+			ColorMap= "rbxassetid://89763492782581"},
 		["RightGlove"] = {
-			ColorMap= RID.."89763492782581"}
+			ColorMap= "rbxassetid://89763492782581"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Majesty', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap= RID.."2135581144"},
+			ColorMap= "rbxassetid://2135581144"},
 		["RightGlove"] = {
-			ColorMap= RID.."2135581144"}
+			ColorMap= "rbxassetid://2135581144"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Mud Bath', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap= RID.."103317132588064"},
+			ColorMap= "rbxassetid://103317132588064"},
 		["RightGlove"] = {
-			ColorMap= RID.."103317132588064"}
+			ColorMap= "rbxassetid://103317132588064"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Pumpkin', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap= RID.."5861601404"},
+			ColorMap= "rbxassetid://5861601404"},
 		["RightGlove"] = {
-			ColorMap= RID.."5861601404"}
+			ColorMap= "rbxassetid://5861601404"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | RSL', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap= RID.."3367350589"},
+			ColorMap= "rbxassetid://3367350589"},
 		["RightGlove"] = {
-			ColorMap= RID.."3367350589"}
+			ColorMap= "rbxassetid://3367350589"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Reinforced', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap= RID.."71756736916558"},
+			ColorMap= "rbxassetid://71756736916558"},
 		["RightGlove"] = {
-			ColorMap= RID.."71756736916558"}
+			ColorMap= "rbxassetid://71756736916558"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Royal', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap= RID.."2135534686"},
+			ColorMap= "rbxassetid://2135534686"},
 		["RightGlove"] = {
-			ColorMap= RID.."2135534686"}
+			ColorMap= "rbxassetid://2135534686"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Skulls', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap= RID.."5861139281"},
+			ColorMap= "rbxassetid://5861139281"},
 		["RightGlove"] = {
-			ColorMap= RID.."5861139281"}
+			ColorMap= "rbxassetid://5861139281"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap= RID.."107664944433724"},
+			ColorMap= "rbxassetid://107664944433724"},
 		["RightGlove"] = {
-			ColorMap= RID.."107664944433724"}
+			ColorMap= "rbxassetid://107664944433724"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Twitch', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap= RID.."6899073614"},
+			ColorMap= "rbxassetid://6899073614"},
 		["RightGlove"] = {
-			ColorMap= RID.."6899073614"}
+			ColorMap= "rbxassetid://6899073614"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Weeb', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap= RID.."3055822171"},
+			ColorMap= "rbxassetid://3055822171"},
 		["RightGlove"] = {
-			ColorMap= RID.."3055822171"}
+			ColorMap= "rbxassetid://3055822171"}
 	})
 end)
 
@@ -69861,500 +70211,525 @@ end)
 CreateTabButton('GameSkins', 'RANDOM', 'Strapped Gloves | BloxersClub', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
 		["LeftGlove"] = {
-			ColorMap= RID.."17611821908"},
+			ColorMap= "rbxassetid://17611821908"},
 		["RightGlove"] = {
-			ColorMap= RID.."17611821908"}
+			ColorMap= "rbxassetid://17611821908"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Strapped Gloves | Caffeine', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
 		["LeftGlove"] = {
-			ColorMap= RID.."121078147459979"},
+			ColorMap= "rbxassetid://121078147459979"},
 		["RightGlove"] = {
-			ColorMap= RID.."121078147459979"}
+			ColorMap= "rbxassetid://121078147459979"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Strapped Gloves | Cob Web', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
 		["LeftGlove"] = {
-			ColorMap= RID.."7944168763"},
+			ColorMap= "rbxassetid://7944168763"},
 		["RightGlove"] = {
-			ColorMap= RID.."7944168763"}
+			ColorMap= "rbxassetid://7944168763"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Strapped Gloves | Drop-Out', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
 		["LeftGlove"] = {
-			ColorMap= RID.."5894322927"},
+			ColorMap= "rbxassetid://5894322927"},
 		["RightGlove"] = {
-			ColorMap= RID.."5894322927"}
+			ColorMap= "rbxassetid://5894322927"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Strapped Gloves | Grim', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
 		["LeftGlove"] = {
-			ColorMap= RID.."2132122442"},
+			ColorMap= "rbxassetid://2132122442"},
 		["RightGlove"] = {
-			ColorMap= RID.."2132122442"}
+			ColorMap= "rbxassetid://2132122442"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Strapped Gloves | Kringle', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
 		["LeftGlove"] = {
-			ColorMap= RID.."2664358019"},
+			ColorMap= "rbxassetid://2664358019"},
 		["RightGlove"] = {
-			ColorMap= RID.."2664358019"}
+			ColorMap= "rbxassetid://2664358019"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Strapped Gloves | Molten', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
 		["LeftGlove"] = {
-			ColorMap= RID.."2135909426"},
+			ColorMap= "rbxassetid://2135909426"},
 		["RightGlove"] = {
-			ColorMap= RID.."2135909426"}
+			ColorMap= "rbxassetid://2135909426"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Strapped Gloves | Racer', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
 		["LeftGlove"] = {
-			ColorMap= RID.."4614503547"},
+			ColorMap= "rbxassetid://4614503547"},
 		["RightGlove"] = {
-			ColorMap= RID.."4614503547"}
+			ColorMap= "rbxassetid://4614503547"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Strapped Gloves | Snow Leopard', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
 		["LeftGlove"] = {
-			ColorMap= RID.."81717979708040"},
+			ColorMap= "rbxassetid://81717979708040"},
 		["RightGlove"] = {
-			ColorMap= RID.."81717979708040"}
+			ColorMap= "rbxassetid://81717979708040"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Strapped Gloves | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
 		["LeftGlove"] = {
-			ColorMap= RID.."89172511600807"},
+			ColorMap= "rbxassetid://89172511600807"},
 		["RightGlove"] = {
-			ColorMap= RID.."89172511600807"}
+			ColorMap= "rbxassetid://89172511600807"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Strapped Gloves | Vesper', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
 		["LeftGlove"] = {
-			ColorMap= RID.."115852572279642"},
+			ColorMap= "rbxassetid://115852572279642"},
 		["RightGlove"] = {
-			ColorMap= RID.."115852572279642"}
+			ColorMap= "rbxassetid://115852572279642"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'RANDOM', 'Strapped Gloves | Wisk', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
 		["LeftGlove"] = {
-			ColorMap= RID.."2135910089"},
+			ColorMap= "rbxassetid://2135910089"},
 		["RightGlove"] = {
-			ColorMap= RID.."2135910089"}
+			ColorMap= "rbxassetid://2135910089"}
 	})
 end)
 
 --CustomPins
 CreateTabButton('CustomPins', 'APPEND', 'phantom4k', '105805038174838', 0, function()
-    EquipPin(RID..'105805038174838')
+    EquipPin('rbxassetid://105805038174838')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'blackcatisreal', '95110013185275', 0, function()
-    EquipPin(RID..'95110013185275') -- 139228406006616 (Decal)
+    EquipPin('rbxassetid://95110013185275') -- 139228406006616 (Decal)
 end)
 CreateTabButton('CustomPins', 'APPEND', 'Raceland', '11931138638', 0, function()
-    EquipPin(RID..'11931138638')
+    EquipPin('rbxassetid://11931138638')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'Seere', '11934213082', 0, function()
-    EquipPin(RID..'11934213082')
+    EquipPin('rbxassetid://11934213082')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'YT', '10393918561', 0, function()
-    EquipPin(RID..'10393918561')
+    EquipPin('rbxassetid://10393918561')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'BloxFun Xmas', '7826219987', 0, function()
-    EquipPin(RID..'7826219987')
+    EquipPin('rbxassetid://7826219987')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'Wicked Smug', '131196307735900', 0, function()
-    EquipPin(RID..'131196307735900')
+    EquipPin('rbxassetid://131196307735900')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'RobloxScripts', '9472647608', 0, function()
-    EquipPin(RID..'9472647608')
+    EquipPin('rbxassetid://9472647608')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'LMAO', '6417866153', 0, function()
-    EquipPin(RID..'6417866153')
+    EquipPin('rbxassetid://6417866153')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'Banana', '6417864839', 0, function()
-    EquipPin(RID..'6417864839')
+    EquipPin('rbxassetid://6417864839')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'Report Abuse', '12224053', 0, function()
-    EquipPin(RID..'12224053')
+    EquipPin('rbxassetid://12224053')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'No Cap', '7368988242', 0, function()
-    EquipPin(RID..'7368988242')
+    EquipPin('rbxassetid://7368988242')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'Cap', '7368989079', 0, function()
-    EquipPin(RID..'7368989079')
+    EquipPin('rbxassetid://7368989079')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'amogus', '7368996445', 0, function()
-    EquipPin(RID..'7368996445')
+    EquipPin('rbxassetid://7368996445')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'VacTaps Team', '7369007066', 0, function()
-    EquipPin(RID..'7369007066')
+    EquipPin('rbxassetid://7369007066')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'BloxFun', '105958378510243', 0, function()
-    EquipPin(RID..'105958378510243')
+    EquipPin('rbxassetid://105958378510243')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'Anim9r', '80357276761789', 0, function()
-    EquipPin(RID..'80357276761789')
+    EquipPin('rbxassetid://80357276761789')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'Troll Face', '7369010059', 0, function()
-    EquipPin(RID..'7369010059')
+    EquipPin('rbxassetid://7369010059')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'Stinky Battle Pass', '7369150051', 0, function()
-    EquipPin(RID..'7369150051')
+    EquipPin('rbxassetid://7369150051')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'Banana Cat', '7369030057', 0, function()
-    EquipPin(RID..'7369030057')
+    EquipPin('rbxassetid://7369030057')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'Came_btw', '7369042347', 0, function()
-    EquipPin(RID..'7369042347')
+    EquipPin('rbxassetid://7369042347')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'ofinite', '7369044910', 0, function()
-    EquipPin(RID..'7369044910')
+    EquipPin('rbxassetid://7369044910')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'Racer Cola', '7369118366', 0, function()
-    EquipPin(RID..'7369118366')
+    EquipPin('rbxassetid://7369118366')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'Racer (Old)', '7369141225', 0, function()
-    EquipPin(RID..'7369141225')
+    EquipPin('rbxassetid://7369141225')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'Skin Committee Approved', '7369137910', 0, function()
-    EquipPin(RID..'7369137910')
+    EquipPin('rbxassetid://7369137910')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'Skin Committee Default', '7369133263', 0, function()
-    EquipPin(RID..'7369133263')
+    EquipPin('rbxassetid://7369133263')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'Skin Committee Xmas', '7369136696', 0, function()
-    EquipPin(RID..'7369136696')
+    EquipPin('rbxassetid://7369136696')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'Wicked Smug', '7369145226', 0, function()
-    EquipPin(RID..'7369145226')
+    EquipPin('rbxassetid://7369145226')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'Arsenal Red Panda Art', '4515707984', 0, function()
-    EquipPin(RID..'4515707984')
+    EquipPin('rbxassetid://4515707984')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'Arsenal Red Panda Anime', '6417859142', 0, function()
-    EquipPin(RID..'6417859142')
+    EquipPin('rbxassetid://6417859142')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'Arsenal Monke', '6417858325', 0, function()
-    EquipPin(RID..'6417858325')
+    EquipPin('rbxassetid://6417858325')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'ROLVe Corp.', '6417867420', 0, function()
-    EquipPin(RID..'6417867420')
+    EquipPin('rbxassetid://6417867420')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'ROLVe (Black)', '2960678459', 0, function()
-    EquipPin(RID..'2960678459')
+    EquipPin('rbxassetid://2960678459')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'BloxersClub: World', '7882787132', 0, function()
-    EquipPin(RID..'7882787132')
+    EquipPin('rbxassetid://7882787132')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'Vapor eSports (2015)', '667239304', 0, function()
-    EquipPin(RID..'667239304')
+    EquipPin('rbxassetid://667239304')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'Purple Monkey', '6417866703', 0, function()
-    EquipPin(RID..'6417866703')
+    EquipPin('rbxassetid://6417866703')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'ROLVe', '7369127781', 0, function()
-    EquipPin(RID..'7369127781')
+    EquipPin('rbxassetid://7369127781')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'Cowboy', '6423553795', 0, function()
-    EquipPin(RID..'6423553795')
+    EquipPin('rbxassetid://6423553795')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'Poop Legion', '6500194240', 0, function()
-    EquipPin(RID..'6500194240')
+    EquipPin('rbxassetid://6500194240')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'Poop MM', '6500196395', 0, function()
-    EquipPin(RID..'6500196395')
+    EquipPin('rbxassetid://6500196395')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'Halloween 2020', '6634086502', 0, function()
-    EquipPin(RID..'6634086502')
+    EquipPin('rbxassetid://6634086502')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'Bluay Mario', '6423553315', 0, function()
-    EquipPin(RID..'6423553315')
+    EquipPin('rbxassetid://6423553315')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'Drip Megumin', '6452884914', 0, function()
-    EquipPin(RID..'6452884914')
+    EquipPin('rbxassetid://6452884914')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'BloxFun Classic', '9123157960', 0, function()
-    EquipPin(RID..'9123157960')
+    EquipPin('rbxassetid://9123157960')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'NOTENEMOSNADA Team (Old)', '9444829037', 0, function()
-    EquipPin(RID..'9444829037')
+    EquipPin('rbxassetid://9444829037')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'DIM-SIN Studios', '9444823405', 0, function()
-    EquipPin(RID..'9444823405')
+    EquipPin('rbxassetid://9444823405')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'Synapsia', '11933768597', 0, function()
-    EquipPin(RID..'11933768597')
+    EquipPin('rbxassetid://11933768597')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'Dragoncast League', '9580613657', 0, function()
-    EquipPin(RID..'9580613657')
+    EquipPin('rbxassetid://9580613657')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'CB:R International Pro League', '9580618899', 0, function()
-    EquipPin(RID..'9580618899')
+    EquipPin('rbxassetid://9580618899')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'CB:RO International Pro League', '9893944999', 0, function()
-    EquipPin(RID..'9893944999')
+    EquipPin('rbxassetid://9893944999')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'BloxFun', '9582063579', 0, function()
-    EquipPin(RID..'9582063579')
+    EquipPin('rbxassetid://9582063579')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'glo', '9903514594', 0, function()
-    EquipPin(RID..'9903514594')
+    EquipPin('rbxassetid://9903514594')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'CB Meme', '9948110917', 0, function()
-    EquipPin(RID..'9948110917')
+    EquipPin('rbxassetid://9948110917')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'BloxersClub Draft League', '9917505564', 0, function()
-    EquipPin(RID..'9917505564')
+    EquipPin('rbxassetid://9917505564')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'BloxFun cat meme', '9951814727', 0, function()
-    EquipPin(RID..'9951814727')
+    EquipPin('rbxassetid://9951814727')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'Flushed', '6500193992', 0, function()
-    EquipPin(RID..'6500193992')
+    EquipPin('rbxassetid://6500193992')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'Funswapper', '134545331907003', 0, function()
-    EquipPin(RID..'134545331907003')
+    EquipPin('rbxassetid://134545331907003')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'TC (Legacy)', '6944696401', 0, function()
-    EquipPin(RID..'6944696401') --6944696409 (Decal)
+    EquipPin('rbxassetid://6944696401') --6944696409 (Decal)
 end)
 CreateTabButton('CustomPins', 'APPEND', 'clown', '6945146800', 0, function()
-    EquipPin(RID..'6945146800') --6945146808 (Decal)
+    EquipPin('rbxassetid://6945146800') --6945146808 (Decal)
 end)
 CreateTabButton('CustomPins', 'APPEND', 'stronk', '6945147281', 0, function()
-    EquipPin(RID..'6945147281') --6945147287 (Decal)
+    EquipPin('rbxassetid://6945147281') --6945147287 (Decal)
 end)
 CreateTabButton('CustomPins', 'APPEND', 'unicorn', '6945151009', 0, function()
-    EquipPin(RID..'6945151009') --6945151016 (Decal)
+    EquipPin('rbxassetid://6945151009') --6945151016 (Decal)
 end)
 CreateTabButton('CustomPins', 'APPEND', 'Guapo Spanish Inquisition', '85937847528902', 0, function()
-    EquipPin(RID..'85937847528902')
+    EquipPin('rbxassetid://85937847528902')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'Stronk Ops', '6676549681', 0, function()
-    EquipPin(RID..'6676549681')
+    EquipPin('rbxassetid://6676549681')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'krispinko gang', '17319183394', 0, function()
-    EquipPin(RID..'17319183394')
+    EquipPin('rbxassetid://17319183394')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'BALA$', '12197678736', 0, function()
-    EquipPin(RID..'12197678736')
+    EquipPin('rbxassetid://12197678736')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'Fluorescent', '18971373140', 0, function()
-    EquipPin(RID..'18971373140')
+    EquipPin('rbxassetid://18971373140')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'KALIBRE', '9933568270', 0, function()
-    EquipPin(RID..'9933568270')
+    EquipPin('rbxassetid://9933568270')
 end)
 CreateTabButton('CustomPins', 'APPEND', 'ababa', '95811487076455', 0, function()
-    EquipPin(RID..'95811487076455') -- 17725118837 (Old, archived)
+    EquipPin('rbxassetid://95811487076455') -- 17725118837 (Old, archived)
+end)
+
+--skintest
+CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Lux', PLACEHOLDERICON, 0, function()
+			EquipSkin("AK47", {
+				["Bolt"] = {
+					ColorMap = GCA("SkinFolder/luxbolt.png")},
+				["Handle"] = {
+					ColorMap = GCA("SkinFolder/lux.png")},
+				["Mag"] = {
+					ColorMap = GCA("SkinFolder/luxmag.png")}
+			})
+		end)
+CreateTabButton('GameSkins', 'APPEND', 'Deagle | Lux', PLACEHOLDERICON, 0, function()
+	EquipSkin("Deagle", {
+		["Handle2"] = {
+			ColorMap = "rbxassetid://13833939128"},
+		["Mag2"] = {
+			ColorMap = "rbxassetid://13833939128"},
+		["Slide2"] = {
+			ColorMap = "rbxassetid://13833939128"}
+	})
 end)
 
 --GamePins
--- todo: add :snake:, flushed cowboy twemoji, old racer bundle, bloxersclub (blue & white logo, no background)
+-- todo: add :snake:, flushed cowboy twemoji, bloxersclub (blue & white logo, no background)
 CreateTabButton('GamePins', 'APPEND', 'Halloween 2019', '4257797755', 0, function()
-    EquipPin(RID..'4257797755')
+    EquipPin('rbxassetid://4257797755')
 end)
 CreateTabButton('GamePins', 'APPEND', 'Halloween 2020', '5894230059', 0, function()
-    EquipPin(RID..'5894230059')
+    EquipPin('rbxassetid://5894230059')
 end)
 CreateTabButton('GamePins', 'APPEND', 'SUPREME FIVE Team', '4316035394', 0, function()
-    EquipPin(RID..'4316035394')
+    EquipPin('rbxassetid://4316035394')
 end)
 CreateTabButton('GamePins', 'APPEND', 'CBCL S1 Champion', '734835644', 0, function()
-    EquipPin(RID..'734835644')
+    EquipPin('rbxassetid://734835644')
 end)
 CreateTabButton('GamePins', 'APPEND', 'CBCL S2 Champion', '734723378', 0, function()
-    EquipPin(RID..'734723378')
+    EquipPin('rbxassetid://734723378')
 end)
 CreateTabButton('GamePins', 'APPEND', 'CBCL S3 Champion', '853161120', 0, function()
-    EquipPin(RID..'853161120')
+    EquipPin('rbxassetid://853161120')
 end)
 CreateTabButton('GamePins', 'APPEND', 'CBCL S4 Champion', '2504850997', 0, function()
-    EquipPin(RID..'2504850997') -- 2504851011 (Decal)
+    EquipPin('rbxassetid://2504850997') -- 2504851011 (Decal)
 end)
 CreateTabButton('GamePins', 'APPEND', 'Xmas 2018', '2627834049', 0, function()
-    EquipPin(RID..'2627834049')
+    EquipPin('rbxassetid://2627834049')
 end)
 CreateTabButton('GamePins', 'APPEND', 'Snowflake 2018', '2656299034', 0, function()
-    EquipPin(RID..'2656299034')
+    EquipPin('rbxassetid://2656299034')
 end)
 CreateTabButton('GamePins', 'APPEND', 'Xmas 2019', '4540756250', 0, function()
-    EquipPin(RID..'4540756250')
+    EquipPin('rbxassetid://4540756250')
 end)
 CreateTabButton('GamePins', 'APPEND', 'Xmas 2020', '6111454171', 0, function()
-    EquipPin(RID..'6111454171')
+    EquipPin('rbxassetid://6111454171')
 end)
 CreateTabButton('GamePins', 'APPEND', 'Easter 2021', '6616945516', 0, function()
-    EquipPin(RID..'6616945516')
+    EquipPin('rbxassetid://6616945516')
 end)
 CreateTabButton('GamePins', 'APPEND', 'Nighthawk Draft League Winner', '6500037933', 0, function()
-    EquipPin(RID..'2695324138') --2695324146 (Decal), 6500037933 (Old)
+    EquipPin('rbxassetid://2695324138') --2695324146 (Decal), 6500037933 (Old)
 end)
 CreateTabButton('GamePins', 'APPEND', 'Outlaws RSL EU S2', '2634109760', 0, function()
-    EquipPin(RID..'2634109760') --6500069019 (Old), 2634109764 (Decal)
+    EquipPin('rbxassetid://2634109760') --6500069019 (Old), 2634109764 (Decal)
 end)
 CreateTabButton('GamePins', 'APPEND', 'ENDLINE RSL SA S1 2018', '2634132643', 0, function()
-    EquipPin(RID..'2634132643') --6500072428 (Old), 2634132647 (Decal)
+    EquipPin('rbxassetid://2634132643') --6500072428 (Old), 2634132647 (Decal)
 end)
 CreateTabButton('GamePins', 'APPEND', 'ENDLINE RSL SA S1 2018', '2659999559', 0, function()
-    EquipPin(RID..'2658305032') --2658305040 (Decal), 2659999559 (Previous version)
+    EquipPin('rbxassetid://2658305032') --2658305040 (Decal), 2659999559 (Previous version)
 end)
 CreateTabButton('GamePins', 'APPEND', 'New Project', '4309574520', 0, function()
-    EquipPin(RID..'4309574520') --4309574560 (Decal)
+    EquipPin('rbxassetid://4309574520') --4309574560 (Decal)
 end)
 CreateTabButton('GamePins', 'APPEND', 'CBCL S4 DropX Winner', '6500080612', 0, function()
-    EquipPin(RID..'6500080612')
+    EquipPin('rbxassetid://6500080612')
 end)
 CreateTabButton('GamePins', 'APPEND', 'CBCL S4 Qualifier', '919142867', 0, function()
-    EquipPin(RID..'919142867')
+    EquipPin('rbxassetid://919142867')
 end)
 CreateTabButton('GamePins', 'APPEND', 'ENDLINE Team', '2185559060', 0, function()
-    EquipPin(RID..'2185559060')
+    EquipPin('rbxassetid://2185559060')
 end)
 CreateTabButton('GamePins', 'APPEND', 'Brazil (Old)', '2606628002', 0, function()
-    EquipPin(RID..'2606628002')
+    EquipPin('rbxassetid://2606628002')
 end)
 CreateTabButton('GamePins', 'APPEND', 'Brazil (New)', '3346403735', 0, function()
-    EquipPin(RID..'3346403735')
+    EquipPin('rbxassetid://3346403735')
 end)
 CreateTabButton('GamePins', 'APPEND', 'Spring Invitational', '2868026918', 0, function()
-    EquipPin(RID..'2868026918') --6500054970 (Old), 2868026923 (Decal)
+    EquipPin('rbxassetid://2868026918') --6500054970 (Old), 2868026923 (Decal)
 end)
 CreateTabButton('GamePins', 'APPEND', 'Draft League Qualifier', '3026493410', 0, function()
-    EquipPin(RID..'3026493410') --6500061224 (Old),  3026493413 (Decal)
+    EquipPin('rbxassetid://3026493410') --6500061224 (Old),  3026493413 (Decal)
 end)
 CreateTabButton('GamePins', 'APPEND', 'Draft League', '3026657804', 0, function()
-    EquipPin(RID..'3026657804') --6500064070 (Old)
+    EquipPin('rbxassetid://3026657804') --6500064070 (Old)
 end)
 CreateTabButton('GamePins', 'APPEND', 'Draft League Qualifier', '3027001356', 0, function()
-    EquipPin(RID..'3027001356') -- 6500066077 (Old), 3027001364 (Decal)
+    EquipPin('rbxassetid://3027001356') -- 6500066077 (Old), 3027001364 (Decal)
 end)
 CreateTabButton('GamePins', 'APPEND', 'Developer', '6500478886', 0, function()
-    EquipPin(RID..'6500478886')
+    EquipPin('rbxassetid://6500478886')
 end)
 CreateTabButton('GamePins', 'APPEND', 'Quicktime', '4595842686', 0, function()
-    EquipPin(RID..'4595842686')
+    EquipPin('rbxassetid://4595842686')
 end)
 CreateTabButton('GamePins', 'APPEND', 'ROLVe (Old)', '331180718', 0, function()
-    EquipPin(RID..'331180718')
+    EquipPin('rbxassetid://331180718')
 end)
 CreateTabButton('GamePins', 'APPEND', "gymgoer's (Weeb pin)", '6500087783', 0, function()
-    EquipPin(RID..'6500087783')
+    EquipPin('rbxassetid://6500087783')
 end)
 CreateTabButton('GamePins', 'APPEND', 'ScapGar', '2194268977', 0, function()
-    EquipPin(RID..'2194268977')
+    EquipPin('rbxassetid://2194268977')
 end)
 CreateTabButton('GamePins', 'APPEND', 'Scuffed FrenchMan', '2435033449', 0, function()
-    EquipPin(RID..'2435033449') --2435033456 (Decal)
+    EquipPin('rbxassetid://2435033449') --2435033456 (Decal)
 end)
 CreateTabButton('GamePins', 'APPEND', 'Scuffed Bunny', '2434921112', 0, function()
-    EquipPin(RID..'2434921112') --2434921126 (Decal)
+    EquipPin('rbxassetid://2434921112') --2434921126 (Decal)
 end)
 CreateTabButton('GamePins', 'APPEND', 'Operation Bright', '3260336994', 0, function()
-    EquipPin(RID..'3260336994')
+    EquipPin('rbxassetid://3260336994')
 end)
 CreateTabButton('GamePins', 'APPEND', 'Halloween 2016', '1158104204', 0, function()
-    EquipPin(RID..'1158104204') --110461059267408 (Old)
+    EquipPin('rbxassetid://1158104204') --110461059267408 (Old)
 end)
 CreateTabButton('GamePins', 'APPEND', 'Delinquent Approves', '4587055734', 0, function()
-    EquipPin(RID..'4587055734') --7369120826 (Old, low res.)
+    EquipPin('rbxassetid://4587055734') --7369120826 (Old, low res.)
 end)
 CreateTabButton('GamePins', 'APPEND', 'Battlepass Season 1', '4434228836', 0, function()
-    EquipPin(RID..'4434228836')
+    EquipPin('rbxassetid://4434228836')
 end)
 CreateTabButton('GamePins', 'APPEND', 'Honk Honk', '6835204580', 0, function()
-    EquipPin(RID..'6835204580')
+    EquipPin('rbxassetid://6835204580')
 end)
 CreateTabButton('GamePins', 'APPEND', 'Halloween 2017', '1158104700', 0, function()
-    EquipPin(RID..'1158104700')
+    EquipPin('rbxassetid://1158104700')
 end)
 CreateTabButton('GamePins', 'APPEND', 'Halloween 2018', '98993444966478', 0, function()
-    EquipPin(RID..'98993444966478') --2566906953 (Old)
+    EquipPin('rbxassetid://98993444966478') --2566906953 (Old)
 end)
 CreateTabButton('GamePins', 'APPEND', 'Team Cringe', '4864433344', 0, function()
-    EquipPin(RID..'4864433344') --7369002608 (Old)
+    EquipPin('rbxassetid://4864433344') --7369002608 (Old)
 end)
 CreateTabButton('GamePins', 'APPEND', 'Halloween 2025', '85716687304908', 0, function()
-    EquipPin(RID..'85716687304908')
+    EquipPin('rbxassetid://85716687304908')
 end)
 CreateTabButton('GamePins', 'APPEND', 'Toxic Nitro (new)', '130405805750334', 0, function()
-    EquipPin(RID..'130405805750334')
+    EquipPin('rbxassetid://130405805750334')
 end)
 CreateTabButton('GamePins', 'APPEND', 'Skin Committee', '7369134917', 0, function()
-    EquipPin(RID..'7369134917')
+    EquipPin('rbxassetid://7369134917')
 end)
 CreateTabButton('GamePins', 'APPEND', 'RacNet Team', '9589644806', 0, function()
-    EquipPin(RID..'9589644806') --116020661623722 (Old)
+    EquipPin('rbxassetid://9589644806') --116020661623722 (Old)
 end)
 CreateTabButton('GamePins', 'APPEND', 'Halloween 2021', '95239479399983', 0, function()
-    EquipPin(RID..'95239479399983')
+    EquipPin('rbxassetid://95239479399983')
 end)
 CreateTabButton('GamePins', 'APPEND', 'Santahat 2018 (Old)', '71298729721576', 0, function()
-    EquipPin(RID..'71298729721576')
+    EquipPin('rbxassetid://71298729721576')
 end)
 CreateTabButton('GamePins', 'APPEND', 'Santahat 2018', '13631471140', 0, function()
-    EquipPin(RID..'13631471140')
+    EquipPin('rbxassetid://13631471140')
 end)
 CreateTabButton('GamePins', 'APPEND', 'BlasTech Team', '7826235613', 0, function()
-    EquipPin(RID..'7826235613')
+    EquipPin('rbxassetid://7826235613')
 end)
 CreateTabButton('GamePins', 'APPEND', "Heaven's Gate", '6500036008', 0, function()
-    EquipPin(RID..'6500036008')
+    EquipPin('rbxassetid://6500036008')
 end)
 CreateTabButton('GamePins', 'APPEND', 'Jester', '4614560259', 0, function()
-    EquipPin(RID..'4614560259')
+    EquipPin('rbxassetid://4614560259')
 end)
 CreateTabButton('GamePins', 'APPEND', 'Guapo', '18222477830', 0, function()
-    EquipPin(RID..'18222477830')
+    EquipPin('rbxassetid://18222477830')
 end)
 -- TODO: Replace with the other vartiant - this one isn't what it was
 -- CreateTabButton('GamePins', 'APPEND', 'ababa', '95811487076455', 0, function()
---     EquipPin(RID..'95811487076455') -- 17725118837 (Old, archived)
+--     EquipPin('rbxassetid://95811487076455') -- 17725118837 (Old, archived)
 -- end)
 CreateTabButton('GamePins', 'APPEND', 'Candy Cane 2025', '138256669494821', 0, function()
-    EquipPin(RID..'138256669494821')
+    EquipPin('rbxassetid://138256669494821')
 end)
 CreateTabButton('GamePins', 'APPEND', 'Xmas 2025', '104273144044014', 0, function()
-    EquipPin(RID..'104273144044014')
+    EquipPin('rbxassetid://104273144044014')
 end)
 CreateTabButton('GamePins', 'APPEND', 'RacerX', '102268080918984', 0, function()
-    EquipPin(RID..'102268080918984')
+    EquipPin('rbxassetid://102268080918984')
 end)
 CreateTabButton('GamePins', 'APPEND', 'Lil Tim', '97253283813447', 0, function()
-    EquipPin(RID..'97253283813447')
+    EquipPin('rbxassetid://97253283813447')
 end)
 CreateTabButton('GamePins', 'APPEND', 'Racer', '4614503358', 0, function()
-    EquipPin(RID..'4614503358')
+    EquipPin('rbxassetid://4614503358')
 end)
 CreateTabButton('GamePins', 'APPEND', 'Valentine 2025', '70569590204907', 0, function()
-    EquipPin(RID..'70569590204907')
+    EquipPin('rbxassetid://70569590204907')
+end)
+CreateTabButton('GamePins', 'APPEND', 'Spring 2026', '125729329877794', 0, function()
+    EquipPin('rbxassetid://125729329877794')
 end)
 -- Note: Animated
 CreateTabButton('GamePins', 'APPEND', 'Komaru', '71126846633032', 0, function()
-    EquipPin(RID..'71126846633032')
+    EquipPin('rbxassetid://71126846633032')
 	-- ["Data"] = {
 	-- 	"rbxassetid://71126846633032",
 	-- 	"rbxassetid://92592677880432",
@@ -70384,11 +70759,12 @@ CreateTabButton('GamePins', 'APPEND', 'Komaru', '71126846633032', 0, function()
 end)
 
 --SkinTest --skt
+local devmode = true
 pcall(function()
 	-- Old game UI:
 	-- if LocalPlayer.PlayerGui.Menew.MainFrame.PlayerCard.pName.Text=="Skin" then CoreGui["BloxFunGui"].BaseFrame.SideBarButtonsHolderFrame.SideBarButtonsHolderScrollingFrame.SideBar11_Frame.Visible=true;
 	local UIPlayerName= LocalPlayer["PlayerGui"]["Menew"]["Main"]["Pages"]["Home"]["Wrap"]["TopRight"]["Wrap"]["Profile"]["Wrap"]["Info"]["PlayerInfo"]["PlayerName"]
-	if UIPlayerName.Text=="Skin" or UIPlayerName.Text=="SkinTest" or UIPlayerName.Text=="Anim9r" then CoreGui["BloxFunGui"]["BaseFrame"]["SideBarButtonsHolderFrame"]["SideBarButtonsHolderScrollingFrame"]["SideBar11_Frame"].Visible=true;
+	if devmode == true or UIPlayerName.Text=="Skin" or UIPlayerName.Text=="SkinTest" or UIPlayerName.Text=="Anim9r" then CoreGui["BloxFunGui"]["BaseFrame"]["SideBarButtonsHolderFrame"]["SideBarButtonsHolderScrollingFrame"]["SideBar11_Frame"].Visible=true;
 		-- Template: CreateTabButton('11','RANDOM', 'Title', PLACEHOLDERICON,0,function() end)
 		CreateTabButton('11', 'RANDOM', 'USP-S | YellowBelly (Remake)', PLACEHOLDERICON, 0, function()
 			EquipSkin("USP", {
