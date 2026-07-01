@@ -1,7 +1,8 @@
 
 --[[ TODO:
 
-- Fix Handwraps viewmodel clipping through arms a bit;
+- Add missing & updated gloves;
+- Fix glove viewmodels clipping through arms;
 - Rewrite all Button-instancing code for the newly-created 'Library'; Skyboxes and Pins first, due to new rewritten systems;
 - Maybe a UI key rebind option;
 - Mouse unlocker doesn't work in first-person camera anymore (actually bugged, not completely broken);
@@ -34,9 +35,12 @@ ToggleKeybind = Enum.KeyCode.RightAlt
 -- if gethui then CoreGui = gethui() else CoreGui = game:GetService("CoreGui") end
 local CoreGui = gethui() or game:GetService("CoreGui")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Viewmodels = ReplicatedStorage["Viewmodels"]
 local Lighting = game:GetService("Lighting")
 local Workspace = game:GetService("Workspace")
-local Players = game:GetService("Players"); local LocalPlayer = Players.LocalPlayer
+local CurrentCamera = Workspace.CurrentCamera
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
 local UserInputService = game:GetService("UserInputService")
 local RunService = game:GetService("RunService")
 local HttpService = game:GetService("HttpService")
@@ -5758,23 +5762,25 @@ local BloxFunGui = {
 
 -- TODO: Replace old variables with these:
 local GCA; if getcustomasset then GCA=getcustomasset end -- LocalFile
--- local RID= "rbxassetid://" -- RbxAsset
-local RLID= "http://www.roblox.com/asset/?id=" -- RbxLink
-local RTID= "http://www.roblox.com/Game/Tools/ThumbnailAsset.ashx?fmt=png&wd=420&ht=420&aid=" -- RbxThumbnail
-local PHID= "9438528836" -- Placeholder
-local nilstr, blank, EMPTY_STRING = '', nilstr, nilstr;
-local anycase = string.lower; --local allcases, caseinsensitive = anycase, anycase;
-
---Old (in use):
+local RLID = "http://www.roblox.com/asset/?id=" -- RbxLink
+local RTID = "http://www.roblox.com/Game/Tools/ThumbnailAsset.ashx?fmt=png&wd=420&ht=420&aid=" -- RbxThumbnail
+local PLACEHOLDERICON = "9438528836" -- Default / Placeholder Icon ID || Todo: Try 112387648016894 
 local RBXAID = "rbxassetid://" -- Rbx Asset Prefix
 local THUMBNAILAID = "http://www.roblox.com/Game/Tools/ThumbnailAsset.ashx?fmt=png&wd=420&ht=420&aid=" -- Rbx Thumbnail Prefix --TODO: Try x1024
-local PLACEHOLDERICON = "9438528836" -- Default / Placeholder Icon ID || Todo: Try 112387648016894 
+local nilstr = ''
+local anycase = string.lower; --local allcases, caseinsensitive = anycase, anycase;
 
--- TODO: Replace all path with these:
-local Viewmodels= ReplicatedStorage["Viewmodels"]
-local Weapons= ReplicatedStorage["Weapons"]
+-- Note: Don't use this:
+-- local function log(logfunction, ...)
+--     local logprefix= "[BF]:"
+--     if anycase(logfunction)=="print" or anycase(logfunction)=="p" or anycase(logfunction)==nilstr then
+--         print(logprefix, ...)
+--     elseif anycase(logfunction)=='warn' or anycase(logfunction)=='w' then
+--         warn(logprefix, ...)
+--     else print(logprefix, ...) end
+-- end; local Output, output, Log = log,log,log;
 
--- TODO: Append new ones (with testing): GSG, PC, SP. 
+-- Skin equipping system
 local AllArms = {"Arms","BDSArms","ECArms","PTArms","GSGArms","PCArms","SPArms"}
 --[[
     {"GIGNArms", "ECArms", "SASArms", "IDFArms", "UTArms",
@@ -5782,262 +5788,756 @@ local AllArms = {"Arms","BDSArms","ECArms","PTArms","GSGArms","PCArms","SPArms"}
     "WDArms", "GTArms", "CSSArms", "PTArms", "AAArms", "Arms"}
 --]]
 
-local function log(logfunction, ...)
-    local logprefix= "[BF]:"
-    if anycase(logfunction)=="print" or anycase(logfunction)=="p" or anycase(logfunction)==nilstr then
-        print(logprefix, ...)
-    elseif anycase(logfunction)=='warn' or anycase(logfunction)=='w' then
-        warn(logprefix, ...)
-    else print(logprefix, ...) end
-end; local Output, output, Log =log,log,log;
-
-
-local function CreatePBR(Path, ColorMap, NormalMap, MetalnessMap, RoughnessMap, EmissiveMap)
-    local PBR = Instance.new("SurfaceAppearance", Path) --.Name="PBR_BF"  | TODO
-    PBR.ColorMap= ColorMap; PBR.NormalMap= NormalMap; PBR.MetalnessMap= MetalnessMap PBR.RoughnessMap= RoughnessMap;
-    if EmissiveMap and EmissiveMap~=nilstr then PBR.EmissiveMap= EmissiveMap end
+local function CreatePBR(Part, Maps)
+    if not Part or not Part:IsA("MeshPart") then return end
+    local Old = Part:FindFirstChildOfClass("SurfaceAppearance")
+    if Old then Old:Destroy() end
+    local PBR = Instance.new("SurfaceAppearance", Part)
+    PBR.ColorMap = Maps.ColorMap or nilstr
+    PBR.NormalMap = Maps.NormalMap or nilstr
+    PBR.MetalnessMap = Maps.MetalnessMap or nilstr
+    PBR.RoughnessMap = Maps.RoughnessMap or nilstr
+    if Maps.EmissiveMap and Maps.EmissiveMap ~= nilstr then
+        PBR.EmissiveMap = Maps.EmissiveMap
+    end
 end
 
-local function DestroyViewmodel(ViewmodelName)
-    if Viewmodels:FindFirstChild(ViewmodelName) then Viewmodels[ViewmodelName]:Destroy() end
-end
-local function DestroyArms()
-    for _, Arm in ipairs(AllArms) do DestroyViewmodel(Arm) end
+local function GetViewmodel(Weapon)
+    local Map = {
+        ["M9 Bayonet"]="v_M9 Bayonet", ["Bayonet M9"]="v_M9 Bayonet", ["M9B"]="v_M9 Bayonet",
+        ["Bayonet"]="v_Bayonet", ["Bay"]="v_Bayonet",
+        ["Karambit"]="v_Karambit", ["Kara"]="v_Karambit",
+        ["Butterfly Knife"]="v_Butterfly Knife", ["Butterfly"]="v_Butterfly Knife", ["Butter"]="v_Butterfly Knife",
+        ["Huntsman Knife"]="v_Huntsman Knife", ["Huntsman"]="v_Huntsman Knife", ["Hunts"]="v_Huntsman Knife",
+        ["Gut Knife"]="v_Gut Knife", ["Gut"]="v_Gut Knife",
+        ["Falchion Knife"]="v_Falchion Knife", ["Falchion"]="v_Falchion Knife", ["Falch"]="v_Falchion Knife",
+        ["Falchion Classic"]="v_Falchion Classic",
+        ["Banana"]="v_Banana", ["Crowbar"]="v_Crowbar",
+        ["Bearded Axe"]="v_Bearded Axe", ["Axe"]="v_Bearded Axe",
+        ["Cleaver"]="v_Cleaver", ["Sickle"]="v_Sickle", ["Sickle Classic"]="v_Sickle Classic",
+        ["M4A4"]="v_M4A4", ["M4"]="v_M4A4",
+        ["AK47"]="v_AK47", ["AK-47"]="v_AK47", ["AK"]="v_AK47",
+        ["AUG"]="v_AUG", ["AUG A3"]="v_AUG",
+        ["AWP"]="v_AWP",
+        ["Thompson"]="v_Bizon", ["Bizon"]="v_Bizon",
+        ["CZ75"]="v_CZ", ["CZ-75"]="v_CZ", ["CZ 75"]="v_CZ", ["CZ75-Auto"]="v_CZ", ["CZ 75-Auto"]="v_CZ", ["CZ-75-Auto"]="v_CZ", ["CZ"]="v_CZ",
+        ["DesertEagle"]="v_DesertEagle", ["Desert Eagle"]="v_DesertEagle", ["Deagle"]="v_DesertEagle",
+        ["DualBerettas"]="v_DualBerettas", ["Dual Berettas"]="v_DualBerettas", ["Berettas"]="v_DualBerettas",
+        ["Famas"]="v_Famas", ["Famas F1"]="v_Famas", ["FAMAS"]="v_Famas", ["FAMAS F1"]="v_Famas",
+        ["FiveSeveN"]="v_FiveSeven", ["FiveSeven"]="v_FiveSeven", ["Five-seveN"]="v_FiveSeven", ["Five-SeveN"]="v_FiveSeven", ["Five-Seven"]="v_FiveSeven",
+        ["G3SG1"]="v_G3SG1",
+        ["Galil"]="v_Galil", ["Galil SAR"]="v_Galil",
+        ["Glock"]="v_Glock", ["Glock-18"]="v_Glock",
+        ["M249"]="v_M249",
+        ["M4A1"]="v_M4A1", ["M4A1-S"]="v_M4A1",
+        ["MAC-10"]="v_MAC10", ["MAC10"]="v_MAC10", ["MAC"]="v_MAC10",
+        ["MAG-7"]="v_MAG7", ["MAG7"]="v_MAG7", ["MAG"]="v_MAG7",
+        ["MP7"]="v_MP7", ["MP-7"]="v_MP7", ["MP5"]="v_MP7", ["MP-5"]="v_MP7",
+        ["MP-7-SD"]="v_MP7-SD", ["MP7-SD"]="v_MP7-SD", ["MP7SD"]="v_MP7-SD", ["MP-5-SD"]="v_MP7-SD", ["MP5-SD"]="v_MP7-SD", ["MP5SD"]="v_MP7-SD",
+        ["MP9"]="v_MP9", ["MP-9"]="v_MP9",
+        ["Negev"]="v_Negev", ["MG42"]="v_Negev",
+        ["Nova"]="v_Nova",
+        ["P2000"]="v_P2000", ["PX4"]="v_P2000",
+        ["P250"]="v_P250",
+        ["P90"]="v_P90", ["P-90"]="v_P90",
+        ["R8"]="v_R8", ["Revolver"]="v_R8", ["44 Magnum"]="v_R8",
+        ["SG"]="v_SG", ["SG553"]="v_SG", ["SG 553"]="v_SG",
+        ["SawedOff"]="v_SawedOff", ["Sawed Off"]="v_SawedOff", ["Sawed-Off"]="v_SawedOff",
+        ["Scout"]="v_Scout",
+        ["TEC-9"]="v_Tec9", ["TEC9"]="v_Tec9",
+        ["UMP-45"]="v_UMP", ["UMP45"]="v_UMP", ["UMP"]="v_UMP",
+        ["USP-S"]="v_USP", ["USP"]="v_USP",
+        ["XM1014"]="v_XM", ["XM"]="v_XM",
+        ["CT Knife"]="v_CT Knife", ["T Knife"]="v_T Knife",
+    }
+    local Name = Map[Weapon] or "v_" .. Weapon
+    return Viewmodels:FindFirstChild(Name), Name
 end
 
-local function SwapViewmodel(Viewmodel, NewName, ToClone)
-    if ToClone then
-        local ClonedViewmodel = Viewmodels:FindFirstChild(Viewmodel):Clone()
-        ClonedViewmodel.Name = NewName; ClonedViewmodel.Parent = Viewmodels
-    else Viewmodels:FindFirstChild(Viewmodel).Name = NewName end
-end
-DestroyViewmodel("v_CT Knife_CB"); DestroyViewmodel("v_T Knife_CB")
-SwapViewmodel("v_CT Knife", "v_CT Knife_CB", true); SwapViewmodel("v_T Knife", "v_T Knife_CB", true)
+local function Delete(Name) if Viewmodels:FindFirstChild(Name) then Viewmodels[Name]:Destroy() end end
 
-local function ChangeKnife(ViewmodelName, WeaponParts)
-	-- TODO: Fix this swap logic
-	DestroyViewmodel("v_CT Knife_BF"); SwapViewmodel("v_CT Knife", "v_CT Knife_BF")
-    DestroyViewmodel("v_T Knife_BF"); SwapViewmodel("v_T Knife", "v_T Knife_BF"); task.wait()
-    SwapViewmodel(ViewmodelName, "v_CT Knife", true); SwapViewmodel(ViewmodelName, "v_T Knife", true); task.wait()
-    for PartName, Textures in pairs(WeaponParts) do 
-        if Viewmodels:FindFirstChild("v_CT Knife") then
-            CreatePBR(Viewmodels["v_CT Knife"][PartName], Textures.ColorMap or nilstr, Textures.NormalMap or nilstr, Textures.MetalnessMap or nilstr, Textures.RoughnessMap or nilstr, Textures.EmissiveMap or nilstr)
+local function CloneSwap(From, To)
+    local Source = Viewmodels:FindFirstChild(From)
+    if not Source then return end
+    local Clone = Source:Clone()
+    Clone.Name = To; Clone.Parent = Viewmodels
+end
+
+local function ApplyKnife(ViewmodelName, Parts)
+    Delete("v_CT Knife"); Delete("v_T Knife"); task.wait()
+    CloneSwap(ViewmodelName, "v_CT Knife"); CloneSwap(ViewmodelName, "v_T Knife"); task.wait()
+    for Name, Maps in pairs(Parts) do
+        if Viewmodels:FindFirstChild("v_CT Knife") and Viewmodels["v_CT Knife"]:FindFirstChild(Name) then
+            CreatePBR(Viewmodels["v_CT Knife"][Name], Maps)
         end
-        if Viewmodels:FindFirstChild("v_T Knife") then
-            CreatePBR(Viewmodels["v_T Knife"][PartName], Textures.ColorMap or nilstr, Textures.NormalMap or nilstr, Textures.MetalnessMap or nilstr, Textures.RoughnessMap or nilstr, Textures.EmissiveMap or nilstr)
+        if Viewmodels:FindFirstChild("v_T Knife") and Viewmodels["v_T Knife"]:FindFirstChild(Name) then
+            CreatePBR(Viewmodels["v_T Knife"][Name], Maps)
         end
     end
 end
-local function ChangeWeapon(ViewmodelName, WeaponParts)
-	-- TODO: Combine into ChangeKnife function
-    for PartName, Textures in pairs(WeaponParts) do 
-        if Viewmodels:FindFirstChild(ViewmodelName) then
-            CreatePBR(Viewmodels[ViewmodelName][PartName], Textures.ColorMap or nilstr, Textures.NormalMap or nilstr, Textures.MetalnessMap or nilstr, Textures.RoughnessMap or nilstr, Textures.EmissiveMap or nilstr)
-        end
+
+local function ApplyWeapon(ViewmodelName, Parts)
+    local Viewmodel = Viewmodels:FindFirstChild(ViewmodelName)
+    if not Viewmodel then return end
+    for Name, Maps in pairs(Parts) do
+        if Viewmodel:FindFirstChild(Name) then CreatePBR(Viewmodel[Name], Maps) end
     end
 end
-local function ChangeGlove(WeaponParts)
-	for _, Arm in pairs(AllArms) do
-        if Viewmodels:FindFirstChild(Arm) then
-            if Viewmodels[Arm]["Left Arm"]["Glove"]:FindFirstChild("SurfaceAppearance") then Viewmodels[Arm]["Left Arm"]["Glove"]["SurfaceAppearance"]:Destroy() end
-            if Viewmodels[Arm]["Right Arm"]["Glove"]:FindFirstChild("SurfaceAppearance") then Viewmodels[Arm]["Right Arm"]["Glove"]["SurfaceAppearance"]:Destroy() end
-            if WeaponParts["LeftGlove"] then
-                CreatePBR(Viewmodels[Arm]["Left Arm"]["Glove"], WeaponParts["LeftGlove"].ColorMap or nilstr, WeaponParts["LeftGlove"].NormalMap or nilstr, WeaponParts["LeftGlove"].MetalnessMap or nilstr, WeaponParts["LeftGlove"].RoughnessMap or nilstr, WeaponParts["LeftGlove"].EmissiveMap or nilstr)
+
+local function ApplyGloveToStorage(Parts)
+    for _, ArmName in pairs(AllArms) do
+        local StorageArm = Viewmodels:FindFirstChild(ArmName)
+        if StorageArm then
+            for _, Side in pairs({"Left", "Right"}) do
+                if Parts[Side .. "Glove"] then
+                    local Glove = StorageArm:FindFirstChild(Side .. " Arm")
+                    if Glove then
+                        Glove = Glove:FindFirstChild("Glove")
+                        if Glove and Glove:IsA("MeshPart") then
+                            local Old = Glove:FindFirstChildOfClass("SurfaceAppearance")
+                            if Old then Old:Destroy() end
+                            CreatePBR(Glove, Parts[Side .. "Glove"])
+                        end
+                    end
+                end
             end
-            if WeaponParts["RightGlove"] then
-                CreatePBR(Viewmodels[Arm]["Right Arm"]["Glove"], WeaponParts["RightGlove"].ColorMap or nilstr, WeaponParts["RightGlove"].NormalMap or nilstr, WeaponParts["RightGlove"].MetalnessMap or nilstr, WeaponParts["RightGlove"].RoughnessMap or nilstr, WeaponParts["RightGlove"].EmissiveMap or nilstr)
+        end
+    end
+end
+
+local function SyncGlovesToArms()
+    local Arms = CurrentCamera and CurrentCamera:FindFirstChild("Arms")
+    if not Arms then return end
+    
+    local CurrentArmType = nil
+    for _, ArmName in pairs(AllArms) do
+        if Arms:FindFirstChild(ArmName) then CurrentArmType = ArmName break end
+    end
+    
+    if not CurrentArmType then return end
+    
+    local StorageArm = Viewmodels:FindFirstChild(CurrentArmType)
+    if not StorageArm then return end
+    
+    local ArmsArm = Arms:FindFirstChild(CurrentArmType)
+    if not ArmsArm then return end
+    
+    for _, Side in pairs({"Left", "Right"}) do
+        local StorageGlove = StorageArm:FindFirstChild(Side .. " Arm")
+        if StorageGlove then
+            StorageGlove = StorageGlove:FindFirstChild("Glove")
+        end
+        if StorageGlove and StorageGlove:IsA("MeshPart") then
+            local ArmsGlove = ArmsArm:FindFirstChild(Side .. " Arm")
+            if ArmsGlove then
+                ArmsGlove = ArmsGlove:FindFirstChild("Glove")
+                if ArmsGlove and ArmsGlove:IsA("MeshPart") then
+                    local Old = ArmsGlove:FindFirstChildOfClass("SurfaceAppearance")
+                    if Old then Old:Destroy() end
+                    local PBR = StorageGlove:FindFirstChildOfClass("SurfaceAppearance")
+                    if PBR then PBR:Clone().Parent = ArmsGlove end
+                end
             end
         end
     end
 end
 
-local function EquipSkin(Weapon, WeaponParts)
-    if Weapon == "M9 Bayonet" or Weapon == "Bayonet M9" or Weapon == "M9B" then
-		ChangeKnife("v_M9 Bayonet", WeaponParts)
-	elseif Weapon == "Bayonet" or Weapon == "Bay" then
-		ChangeKnife("v_Bayonet", WeaponParts)
-	elseif Weapon == "Karambit" or Weapon == "Kara" then
-		ChangeKnife("v_Karambit", WeaponParts)
-	elseif Weapon == "Butterfly Knife" or Weapon == "Butterfly" or Weapon == "Butter" then
-		ChangeKnife("v_Butterfly Knife", WeaponParts)
-	elseif Weapon == "Huntsman Knife" or Weapon == "Huntsman" or Weapon == "Hunts" then
-		ChangeKnife("v_Huntsman Knife", WeaponParts)
-	elseif Weapon == "Gut Knife" or Weapon == "Gut" then
-		ChangeKnife("v_Gut Knife", WeaponParts)
-	elseif Weapon == "Falchion Knife" or Weapon == "Falchion" or Weapon == "Falch" then
-		ChangeKnife("v_Falchion Knife", WeaponParts)
-	elseif Weapon == "Falchion Classic" then
-		ChangeKnife("v_Falchion Classic", WeaponParts)
-	elseif Weapon == "Banana" then
-		ChangeKnife("v_Banana", WeaponParts)
-	elseif Weapon == "Crowbar" then
-		ChangeKnife("v_Crowbar", WeaponParts)
-	elseif Weapon == "Bearded Axe" or Weapon == "Axe" then
-		ChangeKnife("v_Bearded Axe", WeaponParts)
-	-- elseif Weapon == "Bearded Axe Classic" or Weapon == "Axe Classic" then
-	-- 	ChangeKnife("v_Bearded Axe Classic", WeaponParts)
-	elseif Weapon == "Cleaver" then
-		ChangeKnife("v_Cleaver", WeaponParts)
-	-- elseif Weapon == "Cleaver Classic" then
-	-- 	ChangeKnife("v_Cleaver Classic", WeaponParts)
-	elseif Weapon == "Sickle" then
-		ChangeKnife("v_Sickle", WeaponParts)
-	elseif Weapon == "Sickle Classic" then
-		ChangeKnife("v_Sickle Classic", WeaponParts)
-	elseif Weapon == "CT Knife" or Weapon == "T Knife" then
-		-- unfinished
-		DestroyViewmodel("v_CT Knife"); DestroyViewmodel("v_T Knife"); task.wait()
-		if Weapon == "CT Knife" then
-			SwapViewmodel("v_CT Knife_CB", "v_CT Knife", true)
-			SwapViewmodel("v_CT Knife_CB", "v_T Knife", true)
-		elseif Weapon == "T Knife" then
-			SwapViewmodel("v_T Knife_CB", "v_CT Knife", true)
-			SwapViewmodel("v_T Knife_CB", "v_T Knife", true)
+local function SyncToArms(StorageName)
+    local Arms = CurrentCamera and CurrentCamera:FindFirstChild("Arms")
+    if not Arms then return end
+    
+    local Storage = Viewmodels:FindFirstChild(StorageName)
+    if not Storage then return end
+    
+    for _, Part in pairs(Arms:GetChildren()) do
+        if Part:IsA("MeshPart") then
+            local Old = Part:FindFirstChildOfClass("SurfaceAppearance")
+            if Old then Old:Destroy() end
+        end
+    end
+    
+    for _, StoragePart in pairs(Storage:GetChildren()) do
+        if StoragePart:IsA("MeshPart") then
+            local ArmsPart = Arms:FindFirstChild(StoragePart.Name)
+            if ArmsPart and ArmsPart:IsA("MeshPart") then
+                local PBR = StoragePart:FindFirstChildOfClass("SurfaceAppearance")
+                if PBR then PBR:Clone().Parent = ArmsPart end
+            end
+        end
+    end
+end
+
+local AnimThreads = {}
+
+local function GetWeaponInCamera()
+    if not CurrentCamera then return nil end
+    local Arms = CurrentCamera:FindFirstChild("Arms")
+    if not Arms then return nil end
+    for _, Child in pairs(Arms:GetChildren()) do
+        if Child:IsA("Folder") and string.sub(Child.Name, 1, 2) == "v_" then return Child.Name end
+	end return nil
+end
+
+local function GetArmTypeInCamera()
+    local Arms = CurrentCamera and CurrentCamera:FindFirstChild("Arms")
+    if not Arms then return nil end
+    for _, ArmName in pairs(AllArms) do
+        if Arms:FindFirstChild(ArmName) then return ArmName end
+	end return nil
+end
+
+local function StoreAnim(Viewmodel, Frames)
+    local Old = Viewmodel:FindFirstChild("AnimData")
+    if Old then Old:Destroy() end
+    
+    local Folder = Instance.new("Folder", Viewmodel); Folder.Name = "AnimData"
+    
+    local Looped = true
+    local Delay = 0.1
+    
+    local Last = #Frames
+    if Last > 0 and type(Frames[Last]) == "table" and Frames[Last].Looped ~= nil then
+        Looped = Frames[Last].Looped
+        for i = 1, Last - 1 do Frames[i] = Frames[i] end
+        Frames[Last] = nil
+    end
+    
+    for i = 1, #Frames do
+        if Frames[i].Delay then Delay = Frames[i].Delay end
+        Frames[i].EffectiveDelay = Delay
+    end
+
+    local IsGloveAnim = false
+    for i = 1, #Frames do
+        for PartName, _ in pairs(Frames[i]) do
+            if PartName == "LeftGlove" or PartName == "RightGlove" then IsGloveAnim = true break end
+        end
+        if IsGloveAnim then break end
+    end
+    
+    for i = 1, #Frames do
+        for PartName, Maps in pairs(Frames[i]) do
+            if PartName ~= "Delay" and PartName ~= "EffectiveDelay" and type(Maps) == "table" then
+                local FolderName = PartName -- Note: Clarity
+                if IsGloveAnim and string.find(FolderName, "Glove") then
+                    FolderName = string.gsub(FolderName, "Glove", "")
+                end
+                
+                local PartFolder = Folder:FindFirstChild(FolderName)
+                if not PartFolder then PartFolder = Instance.new("Folder", Folder); PartFolder.Name = FolderName end
+                local PBR = Instance.new("SurfaceAppearance", PartFolder)
+                PBR.Name = "F" .. i
+                PBR.ColorMap = Maps.ColorMap or nilstr
+                PBR.NormalMap = Maps.NormalMap or nilstr
+                PBR.MetalnessMap = Maps.MetalnessMap or nilstr
+                PBR.RoughnessMap = Maps.RoughnessMap or nilstr
+                if Maps.EmissiveMap and Maps.EmissiveMap ~= nilstr then
+                    PBR.EmissiveMap = Maps.EmissiveMap
+                end
+            end
+        end
+    end
+    
+    Folder:SetAttribute("Count", #Frames); Folder:SetAttribute("Looped", Looped)
+    for i = 1, #Frames do
+        Folder:SetAttribute("D" .. i, Frames[i].EffectiveDelay)
+    end
+end
+
+local function ApplyFrame(Arms, Index)
+    if not GetWeaponInCamera() then return end
+    local Storage = Viewmodels:FindFirstChild(GetWeaponInCamera())
+    if not Storage then return end
+    local Data = Storage:FindFirstChild("AnimData")
+    if not Data then return end
+    
+    for _, PartFolder in pairs(Data:GetChildren()) do
+        if PartFolder:IsA("Folder") then
+            local PBR = PartFolder:FindFirstChild("F" .. Index)
+            if PBR then
+                local Part = Arms:FindFirstChild(PartFolder.Name)
+                if Part and Part:IsA("MeshPart") then
+                    if Part.Name ~= "Glove" and not string.find(Part.Name, "Glove") then
+                        local Old = Part:FindFirstChildOfClass("SurfaceAppearance")
+                        if Old then Old:Destroy() end
+                        PBR:Clone().Parent = Part
+                    end
+                end
+            end
+        end
+    end
+end
+
+local function ApplyGloveFrame(Arms, Index)
+    if not GetArmTypeInCamera() then return end
+    
+    local StorageArm = Viewmodels:FindFirstChild(GetArmTypeInCamera())
+    if not StorageArm then return end
+    
+    local Data = StorageArm:FindFirstChild("AnimData")
+    if not Data then return end
+    
+    local ArmsArm = Arms:FindFirstChild(GetArmTypeInCamera())
+    if not ArmsArm then return end
+    
+    for _, PartFolder in pairs(Data:GetChildren()) do
+        if PartFolder:IsA("Folder") then
+            local PBR = PartFolder:FindFirstChild("F" .. Index)
+            if PBR then
+                local Side = PartFolder.Name -- Note: Left or Right
+                local ArmsGlove = ArmsArm:FindFirstChild(Side .. " Arm")
+                if ArmsGlove then
+                    ArmsGlove = ArmsGlove:FindFirstChild("Glove")
+                    if ArmsGlove and ArmsGlove:IsA("MeshPart") then
+                        local Old = ArmsGlove:FindFirstChildOfClass("SurfaceAppearance")
+                        if Old then Old:Destroy() end
+                        PBR:Clone().Parent = ArmsGlove
+                    end
+                end
+            end
+        end
+    end
+end
+
+local function StartAnim(Arms)
+    if not GetWeaponInCamera() then return end
+    local Storage = Viewmodels:FindFirstChild(GetWeaponInCamera())
+    if not Storage then return end
+    local Data = Storage:FindFirstChild("AnimData")
+    if not Data then return end
+    
+    local Count = Data:GetAttribute("Count") or 0
+    if Count == 0 then return end
+    local Looped = Data:GetAttribute("Looped") or true
+    
+    if AnimThreads[Arms] then coroutine.close(AnimThreads[Arms]); AnimThreads[Arms] = nil end
+    
+    ApplyFrame(Arms, 1)
+    
+    AnimThreads[Arms] = coroutine.create(function()
+        local Frame = 1
+        while Arms and Arms.Parent do
+            task.wait(Data:GetAttribute("D" .. Frame) or 0.1) -- Note: Delay
+            Frame = Frame + 1
+            if Frame > Count then
+                if Looped then Frame = 1 else break end
+            end
+            if Arms and Arms.Parent then ApplyFrame(Arms, Frame) end
+        end; AnimThreads[Arms] = nil
+    end); coroutine.resume(AnimThreads[Arms])
+end
+
+local function StartGloveAnim(Arms)
+    if not GetArmTypeInCamera() then return end
+    
+    local StorageArm = Viewmodels:FindFirstChild(GetArmTypeInCamera())
+    if not StorageArm then return end
+    
+    local Data = StorageArm:FindFirstChild("AnimData")
+    if not Data then return end
+    
+    local Count = Data:GetAttribute("Count") or 0
+    if Count == 0 then return end
+    local Looped = Data:GetAttribute("Looped") or true
+    
+    local ThreadKey = tostring(Arms) .. "_Gloves"
+    if AnimThreads[ThreadKey] then coroutine.close(AnimThreads[ThreadKey]); AnimThreads[ThreadKey] = nil end
+    
+    ApplyGloveFrame(Arms, 1)
+    
+    AnimThreads[ThreadKey] = coroutine.create(function()
+        local Frame = 1
+        while Arms and Arms.Parent do
+            task.wait(Data:GetAttribute("D" .. Frame) or 0.1) -- Note: Delay
+            Frame = Frame + 1
+            if Frame > Count then if Looped then Frame = 1 else break end end
+            if Arms and Arms.Parent then ApplyGloveFrame(Arms, Frame) end
+        end; AnimThreads[ThreadKey] = nil
+    end); coroutine.resume(AnimThreads[ThreadKey])
+end
+
+coroutine.wrap(function()
+    while CurrentCamera and CurrentCamera.Parent do
+        local Arms = CurrentCamera:FindFirstChild("Arms")
+        if Arms then
+            if GetWeaponInCamera() then
+                local Storage = Viewmodels:FindFirstChild(GetWeaponInCamera())
+                if Storage and Storage:FindFirstChild("AnimData") and not AnimThreads[Arms] then StartAnim(Arms) end
+            end
+            if GetArmTypeInCamera() then
+                local StorageArm = Viewmodels:FindFirstChild(GetArmTypeInCamera())
+                local ThreadKey = tostring(Arms) .. "_Gloves"
+                if StorageArm and StorageArm:FindFirstChild("AnimData") and not AnimThreads[ThreadKey] then
+                    StartGloveAnim(Arms)
+                end
+            end
+        end; task.wait(0.1)
+    end
+end)()
+
+-- Note: Fallback
+if not Viewmodels:FindFirstChild("v_CT Knife") then
+    if Viewmodels:FindFirstChild("v_CT Knife_CB") then CloneSwap("v_CT Knife_CB", "v_CT Knife") end
+end
+if not Viewmodels:FindFirstChild("v_T Knife") then
+    if Viewmodels:FindFirstChild("v_T Knife_CB") then CloneSwap("v_T Knife_CB", "v_T Knife") end
+end
+
+function EquipSkin(Weapon, Parts)
+    if Weapon == "Sport Gloves" or Weapon == "Sport" or Weapon == "Sports" or
+       Weapon == "Handwraps" or Weapon == "Wraps" or
+       Weapon == "Strapped Gloves" or Weapon == "Strapped" or Weapon == "Strappeds" or
+       Weapon == "Fingerless Gloves" or Weapon == "Fingerless" then
+        
+        local Arms = CurrentCamera and CurrentCamera:FindFirstChild("Arms")
+        local ThreadKey = Arms and (tostring(Arms) .. "_Gloves")
+        
+        if ThreadKey and AnimThreads[ThreadKey] then coroutine.close(AnimThreads[ThreadKey]); AnimThreads[ThreadKey] = nil end
+        
+        for _, Arm in pairs(AllArms) do Delete(Arm) end; task.wait()
+        
+        local ID = Weapon == "Sport Gloves" and "74000991652640" or
+                   Weapon == "Handwraps" and "75904947076725" or
+                   Weapon == "Strapped Gloves" and "71520951825644" or
+                   "132938358346526"
+        local Model1 = Instance.new("Model", Viewmodels)
+        game:GetObjects("rbxassetid://" .. ID)[1].Parent = Model1
+        Model1 = Viewmodels.Model
+        for _, Child in pairs(Model1:GetChildren()) do Child.Parent = Model1.Parent end
+        Model1:Destroy(); task.wait()
+        
+        local Suffix = Weapon == "Sport Gloves" and "Sports_Models" or
+                       Weapon == "Handwraps" and "Handwraps_Models" or
+                       Weapon == "Strapped Gloves" and "Strapped_Models" or
+                       "Fingerless_Models"
+        local Model2 = Viewmodels[Suffix]
+        if Model2 then
+            for _, Child in pairs(Model2:GetChildren()) do Child.Parent = Model2.Parent end
+            Model2:Destroy()
+		end; task.wait()
+        
+        ApplyGloveToStorage(Parts); SyncGlovesToArms()
+        
+        if Parts.Animation and type(Parts.Animation) == "table" then
+            for _, ArmName in pairs(AllArms) do
+                local StorageArm = Viewmodels:FindFirstChild(ArmName)
+                if StorageArm then
+                    StoreAnim(StorageArm, Parts.Animation)
+                end
+            end
+            if Arms then StartGloveAnim(Arms) end
+        end return
+    end
+    
+    local Viewmodel, ViewmodelName = GetViewmodel(Weapon)
+    if not Viewmodel then warn("No viewmodel: " .. Weapon) return end
+    
+    if not Viewmodel:FindFirstChild(ViewmodelName) then
+        Instance.new("Folder", Viewmodel).Name = ViewmodelName
+    end
+    
+    local Arms = CurrentCamera and CurrentCamera:FindFirstChild("Arms")
+    if Arms and AnimThreads[Arms] then coroutine.close(AnimThreads[Arms]); AnimThreads[Arms] = nil end
+    
+	if Arms then
+		for _, Part in pairs(Arms:GetChildren()) do
+			if Part:IsA("MeshPart") then
+				local Old = Part:FindFirstChildOfClass("SurfaceAppearance")
+				if Old then Old:Destroy() end
+			end
 		end
-		for PartName, Textures in pairs(WeaponParts) do 
-			if Viewmodels:FindFirstChild("v_CT Knife") then
-				CreatePBR(Viewmodels["v_CT Knife"][PartName], Textures.ColorMap or nilstr, Textures.NormalMap or nilstr, Textures.MetalnessMap or nilstr, Textures.RoughnessMap or nilstr, Textures.EmissiveMap or nilstr)
-			end
-			if Viewmodels:FindFirstChild("v_T Knife") then
-				CreatePBR(Viewmodels["v_T Knife"][PartName], Textures.ColorMap or nilstr, Textures.NormalMap or nilstr, Textures.MetalnessMap or nilstr, Textures.RoughnessMap or nilstr, Textures.EmissiveMap or nilstr)
-			end
-    	end
-	elseif Weapon == "M4A4" or Weapon == "M4" then
-		ChangeWeapon("v_M4A4", WeaponParts)
-	elseif Weapon == "AK47" or Weapon == "AK-47" or Weapon == "AK" then
-		ChangeWeapon("v_AK47", WeaponParts)
-	elseif Weapon == "AUG" or Weapon == "AUG A3" then
-		ChangeWeapon("v_AUG", WeaponParts)
-	elseif Weapon == "AWP" then
-		ChangeWeapon("v_AWP", WeaponParts)
-	elseif Weapon == "Thompson" or Weapon == "Bizon" then
-		ChangeWeapon("v_Bizon", WeaponParts)
-	elseif Weapon == "CZ75" or Weapon == "CZ-75" or Weapon == "CZ 75" or Weapon == "CZ75-Auto" or Weapon == "CZ 75-Auto" or Weapon == "CZ-75-Auto" or Weapon == "CZ" then
-		ChangeWeapon("v_CZ", WeaponParts)
-	elseif Weapon == "DesertEagle" or Weapon == "Desert Eagle" or Weapon == "Deagle" then
-		ChangeWeapon("v_DesertEagle", WeaponParts)
-	elseif Weapon == "DualBerettas" or Weapon == "Dual Berettas" or Weapon == "Berettas" then
-		ChangeWeapon("v_DualBerettas", WeaponParts)
-	elseif Weapon == "Famas" or Weapon == "Famas F1" or Weapon == "FAMAS" or Weapon == "FAMAS F1" then
-		ChangeWeapon("v_Famas", WeaponParts)
-	elseif Weapon == "FiveSeveN" or Weapon == "FiveSeven" or Weapon == "Five-seveN" or Weapon == "Five-SeveN" or Weapon == "Five-Seven" then
-		ChangeWeapon("v_FiveSeven", WeaponParts)
-	elseif Weapon == "G3SG1" then
-		ChangeWeapon("v_G3SG1", WeaponParts)
-	elseif Weapon == "Galil" or Weapon == "Galil SAR" then
-		ChangeWeapon("v_Galil", WeaponParts)
-	elseif Weapon == "Glock" or Weapon == "Glock-18" then
-		ChangeWeapon("v_Glock", WeaponParts)
-	elseif Weapon == "M249" then
-		ChangeWeapon("v_M249", WeaponParts)
-	elseif Weapon == "M4A1" or Weapon == "M4A1-S" then
-		ChangeWeapon("v_M4A1", WeaponParts)
-	elseif Weapon == "MAC-10" or Weapon == "MAC10" or Weapon == "MAC" then
-		ChangeWeapon("v_MAC10", WeaponParts)
-	elseif Weapon == "MAG-7" or Weapon == "MAG7" or Weapon == "MAG" then
-		ChangeWeapon("v_MAG7", WeaponParts)
-	elseif Weapon == "MP7" or Weapon == "MP-7" or Weapon == "MP5" or Weapon == "MP-5" then
-		ChangeWeapon("v_MP7", WeaponParts)
-	elseif Weapon == "MP-7-SD" or Weapon == "MP7-SD" or Weapon == "MP7SD" or Weapon == "MP-5-SD" or Weapon == "MP5-SD" or Weapon == "MP5SD" then
-		ChangeWeapon("v_MP7-SD", WeaponParts)
-	elseif Weapon == "MP9" or Weapon == "MP-9" then
-		ChangeWeapon("v_MP9", WeaponParts)
-	elseif Weapon == "Negev" or Weapon == "MG42" then
-		ChangeWeapon("v_Negev", WeaponParts)
-	elseif Weapon == "Nova" then
-		ChangeWeapon("v_Nova", WeaponParts)
-	elseif Weapon == "P2000" or Weapon == "PX4" then
-		ChangeWeapon("v_P2000", WeaponParts)
-	elseif Weapon == "P250" then
-		ChangeWeapon("v_P250", WeaponParts)
-	elseif Weapon == "P90" or Weapon == "P-90" then
-		ChangeWeapon("v_P90", WeaponParts)
-	elseif Weapon == "R8" or Weapon == "Revolver" or Weapon == "44 Magnum" then
-		ChangeWeapon("v_R8", WeaponParts)
-	elseif Weapon == "SG" or Weapon == "SG553" or Weapon == "SG 553" then
-		ChangeWeapon("v_SG", WeaponParts)
-	elseif Weapon == "SawedOff" or Weapon == "Sawed Off" or Weapon == "Sawed-Off" then
-		ChangeWeapon("v_SawedOff", WeaponParts)
-	elseif Weapon == "Scout" then
-		ChangeWeapon("v_Scout", WeaponParts)
-	elseif Weapon == "TEC-9" or Weapon == "TEC9" then
-		ChangeWeapon("v_Tec9", WeaponParts)
-	elseif Weapon == "UMP-45" or Weapon == "UMP45" or Weapon == "UMP" then
-		ChangeWeapon("v_UMP", WeaponParts)
-	elseif Weapon == "USP-S" or Weapon == "USP" then
-		ChangeWeapon("v_USP", WeaponParts)
-	elseif Weapon == "XM1014" or Weapon == "XM" then
-		ChangeWeapon("v_XM", WeaponParts)
-    elseif Weapon == "Sport Gloves" or Weapon == "Sport" or Weapon == "Sports" then
-        DestroyArms(); task.wait()
-        local Model1 = Instance.new("Model", Viewmodels)
-        game:GetObjects("rbxassetid://74000991652640")[1].Parent = Model1
-        Model1 = Viewmodels.Model
-        for _, Child in pairs(Model1:GetChildren()) do
-            Child.Parent = Model1.Parent
+	end
+    
+    local IsKnife = false
+    for _, Name in pairs({"M9 Bayonet","Bayonet M9","M9B","Bayonet","Bay","Karambit","Kara",
+        "Butterfly Knife","Butterfly","Butter","Huntsman Knife","Huntsman","Hunts",
+        "Gut Knife","Gut","Falchion Knife","Falchion","Falch","Falchion Classic",
+        "Banana","Crowbar","Bearded Axe","Axe","Cleaver","Sickle","Sickle Classic"}) do
+        if Weapon == Name then IsKnife = true break end
+    end
+    
+    if IsKnife then
+        ApplyKnife(ViewmodelName, Parts)
+    elseif Weapon == "CT Knife" or Weapon == "T Knife" then
+        Delete("v_CT Knife"); Delete("v_T Knife"); task.wait()
+        local From = Weapon == "CT Knife" and "v_CT Knife_CB" or "v_T Knife_CB"
+        CloneSwap(From, "v_CT Knife"); CloneSwap(From, "v_T Knife")
+        for Name, Maps in pairs(Parts) do
+            if Viewmodels:FindFirstChild("v_CT Knife") and Viewmodels["v_CT Knife"]:FindFirstChild(Name) then
+                CreatePBR(Viewmodels["v_CT Knife"][Name], Maps)
+            end
+            if Viewmodels:FindFirstChild("v_T Knife") and Viewmodels["v_T Knife"]:FindFirstChild(Name) then
+                CreatePBR(Viewmodels["v_T Knife"][Name], Maps)
+            end
         end
-        Model1:Destroy()
-        task.wait()
-        local Model2 = Viewmodels["Sports_Models"]
-        for _, Child in pairs(Model2:GetChildren()) do
-            Child.Parent = Model2.Parent
+    else ApplyWeapon(ViewmodelName, Parts) end
+
+	if Arms then
+		if IsKnife or Weapon == "CT Knife" or Weapon == "T Knife" then
+			if Viewmodels:FindFirstChild("v_CT Knife") then SyncToArms("v_CT Knife") end
+		else SyncToArms(ViewmodelName) end
+	end
+    
+    if Parts.Animation and type(Parts.Animation) == "table" then
+        StoreAnim(Viewmodel, Parts.Animation)
+        if Arms and GetWeaponInCamera() == ViewmodelName then StartAnim(Arms) end
+    else
+        local AnimData = Viewmodel:FindFirstChild("AnimData")
+        if AnimData then AnimData:Destroy() end
+        if Arms then
+            local ArmsAnimData = Arms:FindFirstChild("AnimData")
+            if ArmsAnimData then ArmsAnimData:Destroy() end
         end
-        Model2:Destroy()
-        task.wait()
-        ChangeGlove(WeaponParts)
-    elseif Weapon == "Handwraps" or Weapon == "Wraps" then
-        DestroyArms(); task.wait()
-        local Model1 = Instance.new("Model", Viewmodels)
-        game:GetObjects("rbxassetid://75904947076725")[1].Parent = Model1
-        Model1 = Viewmodels.Model
-        for _, Child in pairs(Model1:GetChildren()) do
-            Child.Parent = Model1.Parent
-        end
-        Model1:Destroy()
-        task.wait()
-        local Model2 = Viewmodels["Handwraps_Models"]
-        for _, Child in pairs(Model2:GetChildren()) do
-            Child.Parent = Model2.Parent
-        end
-        Model2:Destroy()
-        task.wait()
-        ChangeGlove(WeaponParts)
-    elseif Weapon == "Strapped Gloves" or Weapon == "Strapped" or Weapon == "Strappeds" then
-        DestroyArms(); task.wait()
-        local Model1 = Instance.new("Model", Viewmodels)
-        game:GetObjects("rbxassetid://71520951825644")[1].Parent = Model1
-        Model1 = Viewmodels.Model
-        for _, Child in pairs(Model1:GetChildren()) do
-            Child.Parent = Model1.Parent
-        end
-        Model1:Destroy()
-        task.wait()
-        local Model2 = Viewmodels["Strapped_Models"]
-        for _, Child in pairs(Model2:GetChildren()) do
-            Child.Parent = Model2.Parent
-        end
-        Model2:Destroy()
-        task.wait()
-        ChangeGlove(WeaponParts)
-    elseif Weapon == "Fingerless Gloves" or Weapon == "Fingerless" then
-        DestroyArms(); task.wait()
-        local Model1 = Instance.new("Model", Viewmodels)
-        game:GetObjects("rbxassetid://132938358346526")[1].Parent = Model1
-        Model1 = Viewmodels.Model
-        for _, Child in pairs(Model1:GetChildren()) do
-            Child.Parent = Model1.Parent
-        end
-        Model1:Destroy()
-        task.wait()
-        local Model2 = Viewmodels["Fingerless_Models"]
-        for _, Child in pairs(Model2:GetChildren()) do
-            Child.Parent = Model2.Parent
-        end
-        Model2:Destroy()
-        task.wait()
-        ChangeGlove(WeaponParts)
     end
 end
+
+--Old skin equipping system:
+-- local function CreatePBR(Path, ColorMap, NormalMap, MetalnessMap, RoughnessMap, EmissiveMap)
+--     local PBR = Instance.new("SurfaceAppearance", Path) --.Name="PBR_BF"  | TODO
+--     PBR.ColorMap= ColorMap; PBR.NormalMap= NormalMap; PBR.MetalnessMap= MetalnessMap PBR.RoughnessMap= RoughnessMap;
+--     if EmissiveMap and EmissiveMap~=nilstr then PBR.EmissiveMap= EmissiveMap end
+-- end
+
+-- local function DestroyViewmodel(ViewmodelName)
+--     if Viewmodels:FindFirstChild(ViewmodelName) then Viewmodels[ViewmodelName]:Destroy() end
+-- end
+-- local function DestroyArms()
+--     for _, Arm in ipairs(AllArms) do DestroyViewmodel(Arm) end
+-- end
+
+-- local function SwapViewmodel(Viewmodel, NewName, ToClone)
+--     if ToClone then
+--         local ClonedViewmodel = Viewmodels:FindFirstChild(Viewmodel):Clone()
+--         ClonedViewmodel.Name = NewName; ClonedViewmodel.Parent = Viewmodels
+--     else Viewmodels:FindFirstChild(Viewmodel).Name = NewName end
+-- end
+-- DestroyViewmodel("v_CT Knife_CB"); DestroyViewmodel("v_T Knife_CB")
+-- SwapViewmodel("v_CT Knife", "v_CT Knife_CB", true); SwapViewmodel("v_T Knife", "v_T Knife_CB", true)
+
+-- local function ChangeKnife(ViewmodelName, WeaponParts)
+-- 	-- TODO: Fix this swap logic
+-- 	DestroyViewmodel("v_CT Knife_BF"); SwapViewmodel("v_CT Knife", "v_CT Knife_BF")
+--     DestroyViewmodel("v_T Knife_BF"); SwapViewmodel("v_T Knife", "v_T Knife_BF"); task.wait()
+--     SwapViewmodel(ViewmodelName, "v_CT Knife", true); SwapViewmodel(ViewmodelName, "v_T Knife", true); task.wait()
+--     for PartName, Textures in pairs(WeaponParts) do 
+--         if Viewmodels:FindFirstChild("v_CT Knife") then
+--             CreatePBR(Viewmodels["v_CT Knife"][PartName], Textures.ColorMap or nilstr, Textures.NormalMap or nilstr, Textures.MetalnessMap or nilstr, Textures.RoughnessMap or nilstr, Textures.EmissiveMap or nilstr)
+--         end
+--         if Viewmodels:FindFirstChild("v_T Knife") then
+--             CreatePBR(Viewmodels["v_T Knife"][PartName], Textures.ColorMap or nilstr, Textures.NormalMap or nilstr, Textures.MetalnessMap or nilstr, Textures.RoughnessMap or nilstr, Textures.EmissiveMap or nilstr)
+--         end
+--     end
+-- end
+-- local function ChangeWeapon(ViewmodelName, WeaponParts)
+-- 	-- TODO: Combine into ChangeKnife function
+--     for PartName, Textures in pairs(WeaponParts) do 
+--         if Viewmodels:FindFirstChild(ViewmodelName) then
+--             CreatePBR(Viewmodels[ViewmodelName][PartName], Textures.ColorMap or nilstr, Textures.NormalMap or nilstr, Textures.MetalnessMap or nilstr, Textures.RoughnessMap or nilstr, Textures.EmissiveMap or nilstr)
+--         end
+--     end
+-- end
+-- local function ChangeGlove(WeaponParts)
+-- 	for _, Arm in pairs(AllArms) do
+--         if Viewmodels:FindFirstChild(Arm) then
+--             if Viewmodels[Arm]["Left Arm"]["Glove"]:FindFirstChild("SurfaceAppearance") then Viewmodels[Arm]["Left Arm"]["Glove"]["SurfaceAppearance"]:Destroy() end
+--             if Viewmodels[Arm]["Right Arm"]["Glove"]:FindFirstChild("SurfaceAppearance") then Viewmodels[Arm]["Right Arm"]["Glove"]["SurfaceAppearance"]:Destroy() end
+--             if WeaponParts["LeftGlove"] then
+--                 CreatePBR(Viewmodels[Arm]["Left Arm"]["Glove"], WeaponParts["LeftGlove"].ColorMap or nilstr, WeaponParts["LeftGlove"].NormalMap or nilstr, WeaponParts["LeftGlove"].MetalnessMap or nilstr, WeaponParts["LeftGlove"].RoughnessMap or nilstr, WeaponParts["LeftGlove"].EmissiveMap or nilstr)
+--             end
+--             if WeaponParts["RightGlove"] then
+--                 CreatePBR(Viewmodels[Arm]["Right Arm"]["Glove"], WeaponParts["RightGlove"].ColorMap or nilstr, WeaponParts["RightGlove"].NormalMap or nilstr, WeaponParts["RightGlove"].MetalnessMap or nilstr, WeaponParts["RightGlove"].RoughnessMap or nilstr, WeaponParts["RightGlove"].EmissiveMap or nilstr)
+--             end
+--         end
+--     end
+-- end
+
+-- local function EquipSkin(Weapon, WeaponParts)
+--     if Weapon == "M9 Bayonet" or Weapon == "Bayonet M9" or Weapon == "M9B" then
+-- 		ChangeKnife("v_M9 Bayonet", WeaponParts)
+-- 	elseif Weapon == "Bayonet" or Weapon == "Bay" then
+-- 		ChangeKnife("v_Bayonet", WeaponParts)
+-- 	elseif Weapon == "Karambit" or Weapon == "Kara" then
+-- 		ChangeKnife("v_Karambit", WeaponParts)
+-- 	elseif Weapon == "Butterfly Knife" or Weapon == "Butterfly" or Weapon == "Butter" then
+-- 		ChangeKnife("v_Butterfly Knife", WeaponParts)
+-- 	elseif Weapon == "Huntsman Knife" or Weapon == "Huntsman" or Weapon == "Hunts" then
+-- 		ChangeKnife("v_Huntsman Knife", WeaponParts)
+-- 	elseif Weapon == "Gut Knife" or Weapon == "Gut" then
+-- 		ChangeKnife("v_Gut Knife", WeaponParts)
+-- 	elseif Weapon == "Falchion Knife" or Weapon == "Falchion" or Weapon == "Falch" then
+-- 		ChangeKnife("v_Falchion Knife", WeaponParts)
+-- 	elseif Weapon == "Falchion Classic" then
+-- 		ChangeKnife("v_Falchion Classic", WeaponParts)
+-- 	elseif Weapon == "Banana" then
+-- 		ChangeKnife("v_Banana", WeaponParts)
+-- 	elseif Weapon == "Crowbar" then
+-- 		ChangeKnife("v_Crowbar", WeaponParts)
+-- 	elseif Weapon == "Bearded Axe" or Weapon == "Axe" then
+-- 		ChangeKnife("v_Bearded Axe", WeaponParts)
+-- 	-- elseif Weapon == "Bearded Axe Classic" or Weapon == "Axe Classic" then
+-- 	-- 	ChangeKnife("v_Bearded Axe Classic", WeaponParts)
+-- 	elseif Weapon == "Cleaver" then
+-- 		ChangeKnife("v_Cleaver", WeaponParts)
+-- 	-- elseif Weapon == "Cleaver Classic" then
+-- 	-- 	ChangeKnife("v_Cleaver Classic", WeaponParts)
+-- 	elseif Weapon == "Sickle" then
+-- 		ChangeKnife("v_Sickle", WeaponParts)
+-- 	elseif Weapon == "Sickle Classic" then
+-- 		ChangeKnife("v_Sickle Classic", WeaponParts)
+-- 	elseif Weapon == "CT Knife" or Weapon == "T Knife" then
+-- 		-- unfinished
+-- 		DestroyViewmodel("v_CT Knife"); DestroyViewmodel("v_T Knife"); task.wait()
+-- 		if Weapon == "CT Knife" then
+-- 			SwapViewmodel("v_CT Knife_CB", "v_CT Knife", true)
+-- 			SwapViewmodel("v_CT Knife_CB", "v_T Knife", true)
+-- 		elseif Weapon == "T Knife" then
+-- 			SwapViewmodel("v_T Knife_CB", "v_CT Knife", true)
+-- 			SwapViewmodel("v_T Knife_CB", "v_T Knife", true)
+-- 		end
+-- 		for PartName, Textures in pairs(WeaponParts) do 
+-- 			if Viewmodels:FindFirstChild("v_CT Knife") then
+-- 				CreatePBR(Viewmodels["v_CT Knife"][PartName], Textures.ColorMap or nilstr, Textures.NormalMap or nilstr, Textures.MetalnessMap or nilstr, Textures.RoughnessMap or nilstr, Textures.EmissiveMap or nilstr)
+-- 			end
+-- 			if Viewmodels:FindFirstChild("v_T Knife") then
+-- 				CreatePBR(Viewmodels["v_T Knife"][PartName], Textures.ColorMap or nilstr, Textures.NormalMap or nilstr, Textures.MetalnessMap or nilstr, Textures.RoughnessMap or nilstr, Textures.EmissiveMap or nilstr)
+-- 			end
+--     	end
+-- 	elseif Weapon == "M4A4" or Weapon == "M4" then
+-- 		ChangeWeapon("v_M4A4", WeaponParts)
+-- 	elseif Weapon == "AK47" or Weapon == "AK-47" or Weapon == "AK" then
+-- 		ChangeWeapon("v_AK47", WeaponParts)
+-- 	elseif Weapon == "AUG" or Weapon == "AUG A3" then
+-- 		ChangeWeapon("v_AUG", WeaponParts)
+-- 	elseif Weapon == "AWP" then
+-- 		ChangeWeapon("v_AWP", WeaponParts)
+-- 	elseif Weapon == "Thompson" or Weapon == "Bizon" then
+-- 		ChangeWeapon("v_Bizon", WeaponParts)
+-- 	elseif Weapon == "CZ75" or Weapon == "CZ-75" or Weapon == "CZ 75" or Weapon == "CZ75-Auto" or Weapon == "CZ 75-Auto" or Weapon == "CZ-75-Auto" or Weapon == "CZ" then
+-- 		ChangeWeapon("v_CZ", WeaponParts)
+-- 	elseif Weapon == "DesertEagle" or Weapon == "Desert Eagle" or Weapon == "Deagle" then
+-- 		ChangeWeapon("v_DesertEagle", WeaponParts)
+-- 	elseif Weapon == "DualBerettas" or Weapon == "Dual Berettas" or Weapon == "Berettas" then
+-- 		ChangeWeapon("v_DualBerettas", WeaponParts)
+-- 	elseif Weapon == "Famas" or Weapon == "Famas F1" or Weapon == "FAMAS" or Weapon == "FAMAS F1" then
+-- 		ChangeWeapon("v_Famas", WeaponParts)
+-- 	elseif Weapon == "FiveSeveN" or Weapon == "FiveSeven" or Weapon == "Five-seveN" or Weapon == "Five-SeveN" or Weapon == "Five-Seven" then
+-- 		ChangeWeapon("v_FiveSeven", WeaponParts)
+-- 	elseif Weapon == "G3SG1" then
+-- 		ChangeWeapon("v_G3SG1", WeaponParts)
+-- 	elseif Weapon == "Galil" or Weapon == "Galil SAR" then
+-- 		ChangeWeapon("v_Galil", WeaponParts)
+-- 	elseif Weapon == "Glock" or Weapon == "Glock-18" then
+-- 		ChangeWeapon("v_Glock", WeaponParts)
+-- 	elseif Weapon == "M249" then
+-- 		ChangeWeapon("v_M249", WeaponParts)
+-- 	elseif Weapon == "M4A1" or Weapon == "M4A1-S" then
+-- 		ChangeWeapon("v_M4A1", WeaponParts)
+-- 	elseif Weapon == "MAC-10" or Weapon == "MAC10" or Weapon == "MAC" then
+-- 		ChangeWeapon("v_MAC10", WeaponParts)
+-- 	elseif Weapon == "MAG-7" or Weapon == "MAG7" or Weapon == "MAG" then
+-- 		ChangeWeapon("v_MAG7", WeaponParts)
+-- 	elseif Weapon == "MP7" or Weapon == "MP-7" or Weapon == "MP5" or Weapon == "MP-5" then
+-- 		ChangeWeapon("v_MP7", WeaponParts)
+-- 	elseif Weapon == "MP-7-SD" or Weapon == "MP7-SD" or Weapon == "MP7SD" or Weapon == "MP-5-SD" or Weapon == "MP5-SD" or Weapon == "MP5SD" then
+-- 		ChangeWeapon("v_MP7-SD", WeaponParts)
+-- 	elseif Weapon == "MP9" or Weapon == "MP-9" then
+-- 		ChangeWeapon("v_MP9", WeaponParts)
+-- 	elseif Weapon == "Negev" or Weapon == "MG42" then
+-- 		ChangeWeapon("v_Negev", WeaponParts)
+-- 	elseif Weapon == "Nova" then
+-- 		ChangeWeapon("v_Nova", WeaponParts)
+-- 	elseif Weapon == "P2000" or Weapon == "PX4" then
+-- 		ChangeWeapon("v_P2000", WeaponParts)
+-- 	elseif Weapon == "P250" then
+-- 		ChangeWeapon("v_P250", WeaponParts)
+-- 	elseif Weapon == "P90" or Weapon == "P-90" then
+-- 		ChangeWeapon("v_P90", WeaponParts)
+-- 	elseif Weapon == "R8" or Weapon == "Revolver" or Weapon == "44 Magnum" then
+-- 		ChangeWeapon("v_R8", WeaponParts)
+-- 	elseif Weapon == "SG" or Weapon == "SG553" or Weapon == "SG 553" then
+-- 		ChangeWeapon("v_SG", WeaponParts)
+-- 	elseif Weapon == "SawedOff" or Weapon == "Sawed Off" or Weapon == "Sawed-Off" then
+-- 		ChangeWeapon("v_SawedOff", WeaponParts)
+-- 	elseif Weapon == "Scout" then
+-- 		ChangeWeapon("v_Scout", WeaponParts)
+-- 	elseif Weapon == "TEC-9" or Weapon == "TEC9" then
+-- 		ChangeWeapon("v_Tec9", WeaponParts)
+-- 	elseif Weapon == "UMP-45" or Weapon == "UMP45" or Weapon == "UMP" then
+-- 		ChangeWeapon("v_UMP", WeaponParts)
+-- 	elseif Weapon == "USP-S" or Weapon == "USP" then
+-- 		ChangeWeapon("v_USP", WeaponParts)
+-- 	elseif Weapon == "XM1014" or Weapon == "XM" then
+-- 		ChangeWeapon("v_XM", WeaponParts)
+--     elseif Weapon == "Sport Gloves" or Weapon == "Sport" or Weapon == "Sports" then
+--         DestroyArms(); task.wait()
+--         local Model1 = Instance.new("Model", Viewmodels)
+--         game:GetObjects("rbxassetid://74000991652640")[1].Parent = Model1
+--         Model1 = Viewmodels.Model
+--         for _, Child in pairs(Model1:GetChildren()) do
+--             Child.Parent = Model1.Parent
+--         end
+--         Model1:Destroy()
+--         task.wait()
+--         local Model2 = Viewmodels["Sports_Models"]
+--         for _, Child in pairs(Model2:GetChildren()) do
+--             Child.Parent = Model2.Parent
+--         end
+--         Model2:Destroy()
+--         task.wait()
+--         ChangeGlove(WeaponParts)
+--     elseif Weapon == "Handwraps" or Weapon == "Wraps" then
+--         DestroyArms(); task.wait()
+--         local Model1 = Instance.new("Model", Viewmodels)
+--         game:GetObjects("rbxassetid://75904947076725")[1].Parent = Model1
+--         Model1 = Viewmodels.Model
+--         for _, Child in pairs(Model1:GetChildren()) do
+--             Child.Parent = Model1.Parent
+--         end
+--         Model1:Destroy()
+--         task.wait()
+--         local Model2 = Viewmodels["Handwraps_Models"]
+--         for _, Child in pairs(Model2:GetChildren()) do
+--             Child.Parent = Model2.Parent
+--         end
+--         Model2:Destroy()
+--         task.wait()
+--         ChangeGlove(WeaponParts)
+--     elseif Weapon == "Strapped Gloves" or Weapon == "Strapped" or Weapon == "Strappeds" then
+--         DestroyArms(); task.wait()
+--         local Model1 = Instance.new("Model", Viewmodels)
+--         game:GetObjects("rbxassetid://71520951825644")[1].Parent = Model1
+--         Model1 = Viewmodels.Model
+--         for _, Child in pairs(Model1:GetChildren()) do
+--             Child.Parent = Model1.Parent
+--         end
+--         Model1:Destroy()
+--         task.wait()
+--         local Model2 = Viewmodels["Strapped_Models"]
+--         for _, Child in pairs(Model2:GetChildren()) do
+--             Child.Parent = Model2.Parent
+--         end
+--         Model2:Destroy()
+--         task.wait()
+--         ChangeGlove(WeaponParts)
+--     elseif Weapon == "Fingerless Gloves" or Weapon == "Fingerless" then
+--         DestroyArms(); task.wait()
+--         local Model1 = Instance.new("Model", Viewmodels)
+--         game:GetObjects("rbxassetid://132938358346526")[1].Parent = Model1
+--         Model1 = Viewmodels.Model
+--         for _, Child in pairs(Model1:GetChildren()) do
+--             Child.Parent = Model1.Parent
+--         end
+--         Model1:Destroy()
+--         task.wait()
+--         local Model2 = Viewmodels["Fingerless_Models"]
+--         for _, Child in pairs(Model2:GetChildren()) do
+--             Child.Parent = Model2.Parent
+--         end
+--         Model2:Destroy()
+--         task.wait()
+--         ChangeGlove(WeaponParts)
+--     end
+-- end
 
 --Old:
 local function CBR_Animations(CBR_Weapon)
@@ -8178,7 +8678,7 @@ BloxFunGui.VersionText.BorderSizePixel = 0
 BloxFunGui.VersionText.Position = UDim2.new(0.150343642, 0, 0, 0)
 BloxFunGui.VersionText.Size = UDim2.new(0, 405, 0, 50)
 BloxFunGui.VersionText.Font = Enum.Font.Cartoon
-BloxFunGui.VersionText.Text = "Last Updated: 19/06ᴹ/2026"
+BloxFunGui.VersionText.Text = "Last Updated: 01/07ᴹ/2026"
 BloxFunGui.VersionText.TextColor3 = Color3.fromRGB(255, 255, 255)
 BloxFunGui.VersionText.TextScaled = true
 BloxFunGui.VersionText.TextSize = 50.000
@@ -61245,6 +61745,149 @@ CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Glo', PLACEHOLDERICON, 0, functi
 		["Handle"] = {
 			ColorMap = "rbxassetid://122392043964458"},
 		["Mag"] = {
+			ColorMap = "rbxassetid://122392043964458"},
+
+		Animation = {
+			{
+				Delay = 0.04,
+				["Bolt"] = {
+					ColorMap = "rbxassetid://122392043964458"},
+				["Handle"] = {
+					ColorMap = "rbxassetid://122392043964458"},
+				["Mag"] = {
+					ColorMap = "rbxassetid://122392043964458"},
+			},
+			{
+				["Bolt"] = {
+					ColorMap = "rbxassetid://140202889861266"},
+				["Handle"] = {
+					ColorMap = "rbxassetid://140202889861266"},
+				["Mag"] = {
+					ColorMap = "rbxassetid://140202889861266"},
+			},
+			{
+				["Bolt"] = {
+					ColorMap = "rbxassetid://138228992286339"},
+				["Handle"] = {
+					ColorMap = "rbxassetid://138228992286339"},
+				["Mag"] = {
+					ColorMap = "rbxassetid://138228992286339"},
+			},
+			{
+				["Bolt"] = {
+					ColorMap = "rbxassetid://113944956222303"},
+				["Handle"] = {
+					ColorMap = "rbxassetid://113944956222303"},
+				["Mag"] = {
+					ColorMap = "rbxassetid://113944956222303"},
+			},
+			{
+				["Bolt"] = {
+					ColorMap = "rbxassetid://87044411781312"},
+				["Handle"] = {
+					ColorMap = "rbxassetid://87044411781312"},
+				["Mag"] = {
+					ColorMap = "rbxassetid://87044411781312"},
+			},
+			{
+				["Bolt"] = {
+					ColorMap = "rbxassetid://85136439779604"},
+				["Handle"] = {
+					ColorMap = "rbxassetid://85136439779604"},
+				["Mag"] = {
+					ColorMap = "rbxassetid://85136439779604"},
+			},
+			{
+				["Bolt"] = {
+					ColorMap = "rbxassetid://129018299460877"},
+				["Handle"] = {
+					ColorMap = "rbxassetid://129018299460877"},
+				["Mag"] = {
+					ColorMap = "rbxassetid://129018299460877"},
+			},
+			{
+				["Bolt"] = {
+					ColorMap = "rbxassetid://128618736265280"},
+				["Handle"] = {
+					ColorMap = "rbxassetid://128618736265280"},
+				["Mag"] = {
+					ColorMap = "rbxassetid://128618736265280"},
+			},
+			{
+				["Bolt"] = {
+					ColorMap = "rbxassetid://122392043964458"},
+				["Handle"] = {
+					ColorMap = "rbxassetid://122392043964458"},
+				["Mag"] = {
+					ColorMap = "rbxassetid://122392043964458"},
+			},
+			{
+				["Bolt"] = {
+					ColorMap = "rbxassetid://121242368700235"},
+				["Handle"] = {
+					ColorMap = "rbxassetid://121242368700235"},
+				["Mag"] = {
+					ColorMap = "rbxassetid://121242368700235"},
+			},
+			{
+				["Bolt"] = {
+					ColorMap = "rbxassetid://86553678130162"},
+				["Handle"] = {
+					ColorMap = "rbxassetid://86553678130162"},
+				["Mag"] = {
+					ColorMap = "rbxassetid://86553678130162"},
+			},
+			{
+				["Bolt"] = {
+					ColorMap = "rbxassetid://80383152812897"},
+				["Handle"] = {
+					ColorMap = "rbxassetid://80383152812897"},
+				["Mag"] = {
+					ColorMap = "rbxassetid://80383152812897"},
+			},
+			{
+				["Bolt"] = {
+					ColorMap = "rbxassetid://78905430920365"},
+				["Handle"] = {
+					ColorMap = "rbxassetid://78905430920365"},
+				["Mag"] = {
+					ColorMap = "rbxassetid://78905430920365"},
+			},
+			{
+				["Bolt"] = {
+					ColorMap = "rbxassetid://80383152812897"},
+				["Handle"] = {
+					ColorMap = "rbxassetid://80383152812897"},
+				["Mag"] = {
+					ColorMap = "rbxassetid://80383152812897"},
+			},
+			{
+				["Bolt"] = {
+					ColorMap = "rbxassetid://86553678130162"},
+				["Handle"] = {
+					ColorMap = "rbxassetid://86553678130162"},
+				["Mag"] = {
+					ColorMap = "rbxassetid://86553678130162"},
+			},
+			{
+				["Bolt"] = {
+					ColorMap = "rbxassetid://121242368700235"},
+				["Handle"] = {
+					ColorMap = "rbxassetid://121242368700235"},
+				["Mag"] = {
+					ColorMap = "rbxassetid://121242368700235"}
+			}
+		}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Glo  (Non-Animated)', PLACEHOLDERICON, 0, function()
+	EquipSkin("AK47", {
+		["Bolt"] = {
+			ColorMap = "rbxassetid://122392043964458"},
+		["Handle"] = {
+			ColorMap = "rbxassetid://122392043964458"},
+		["Mag"] = {
 			ColorMap = "rbxassetid://122392043964458"}
 	})
 end)
@@ -61366,6 +62009,26 @@ CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Maker', PLACEHOLDERICON, 0, func
 	})
 end)
 
+CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Maxal', PLACEHOLDERICON, 0, function()
+	EquipSkin("AK47", {
+		["Bolt"] = {
+			ColorMap = "rbxassetid://74819983949921",
+			NormalMap = "rbxassetid://108257791891670",
+			RoughnessMap = "rbxassetid://112946165691700",
+			MetalnessMap = "rbxassetid://133714227630690"},
+		["Handle"] = {
+			ColorMap = "rbxassetid://87313756006799",
+			NormalMap = "rbxassetid://126676724965944",
+			RoughnessMap = "rbxassetid://91955377757331",
+			MetalnessMap = "rbxassetid://99190835114402"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://131874576979444",
+			NormalMap = "rbxassetid://80751713815869",
+			RoughnessMap = "rbxassetid://72166803421664",
+			MetalnessMap = "rbxassetid://94771836002326"}
+	})
+end)
+
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Mean Green', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
@@ -61474,11 +62137,11 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Plated', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
-			ColorMap = "rbxassetid://4432858323"},
+			ColorMap = "rbxassetid://107446111557406"}, --4432858323 (Old, lowres)
 		["Handle"] = {
-			ColorMap = "rbxassetid://4432858323"},
+			ColorMap = "rbxassetid://107446111557406"},
 		["Mag"] = {
-			ColorMap = "rbxassetid://4432858323"}
+			ColorMap = "rbxassetid://107446111557406"}
 	})
 end)
 
@@ -63024,6 +63687,33 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Candy Cane', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
+			ColorMap = "rbxassetid://3061633120"},
+
+		Animation = {
+			{
+				Delay = 0.035,
+				["Handle"] = {
+					ColorMap = "rbxassetid://3061633120"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://3061633399"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://3061633697"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://3061634090"}
+			}
+		}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Candy Cane (Non-Animated)', PLACEHOLDERICON, 0, function()
+	EquipSkin("Bayonet", {
+		["Handle"] = {
 			ColorMap = "rbxassetid://3061633120"}
 	})
 end)
@@ -63032,8 +63722,92 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Ciro', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
-			ColorMap = "rbxassetid://12723520663"}
+			ColorMap = "rbxassetid://12723520663"},
+		
+		Animation = {
+			{
+				Delay = 0.035,
+				["Handle"] = {
+					ColorMap = "rbxassetid://12723520663"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://12723527001"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://12723526695"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://12723526450"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://12723526268"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://12723526072"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://12723525821"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://12723525649"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://12723525505"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://12723525340"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://12723525340"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://12723525162"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://12723524990"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://12723524854"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://12723524678"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://12723524443"}
+			}
+		}
 	})
+	-- ["delays"] = 0.035,
+	-- "rbxassetid://12723520663",
+	-- "rbxassetid://12723527001",
+	-- "rbxassetid://12723526695",
+	-- "rbxassetid://12723526450",
+	-- "rbxassetid://12723526268",
+	-- "rbxassetid://12723526072",
+	-- "rbxassetid://12723525821",
+	-- "rbxassetid://12723525649",
+	-- "rbxassetid://12723525505",
+	-- "rbxassetid://12723525340",
+	-- "rbxassetid://12723525162",
+	-- "rbxassetid://12723524990",
+	-- "rbxassetid://12723524854",
+	-- "rbxassetid://12723524678",
+	-- "rbxassetid://12723524443"
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Consumed', PLACEHOLDERICON, 0, function()
@@ -63152,6 +63926,81 @@ end)
 
 -- Note: Animated, and ~half Transparent
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Ghastly', PLACEHOLDERICON, 0, function()
+	EquipSkin("Bayonet", {
+		["Handle"] = {
+			ColorMap = "rbxassetid://4212704221"},
+		
+		Animation = {
+			{
+				Delay = 0.06,
+				["Handle"] = {
+					ColorMap = "rbxassetid://4212704221"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4212704869"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4212705506"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4212706124"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4212706707"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4212707236"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4212707917"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4212708540"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4212709073"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4212708540"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4212707917"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4212707236"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4212706707"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4212706124"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4212705506"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4212704869"}
+			}
+		}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Ghastly (Non-Animated)', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
 			ColorMap = "rbxassetid://4212704221"}
@@ -63330,6 +64179,133 @@ end)
 
 -- Note: Animated
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | UFO', PLACEHOLDERICON, 0, function()
+	EquipSkin("Bayonet", {
+		["Handle"] = {
+			ColorMap = "rbxassetid://4275337663"},
+
+		Animation = {
+			{
+				Delay = 0.0425,
+				["Handle"] = {
+					ColorMap = "rbxassetid://4275337663"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4275338039"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4275343067"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4275344078"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4275359389"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4275359857"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4275360308"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4275360868"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4275361410"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4275362212"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4275363662"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4275366897"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4275367677"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4275369853"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4275370417"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4275369853"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4275367677"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4275366897"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4275363662"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4275362212"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4275361410"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4275360868"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4275360308"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4275360308"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4275359857"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4275359389"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4275344078"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4275343067"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4275338039"}
+			}
+		}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Bayonet | UFO (Non-Animated)', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
 			ColorMap = "rbxassetid://4275337663"}
@@ -63518,6 +64494,181 @@ end)
 
 -- Note: Animated
 CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Ciro', PLACEHOLDERICON, 0, function()
+	EquipSkin("Butterfly", {
+		["Butterfly_Blade"] = {
+			ColorMap = "rbxassetid://132062664413142"},
+		["Butterfly_LHandle"] = {
+			ColorMap = "rbxassetid://132062664413142"},
+		["Butterfly_RHandle"] = {
+			ColorMap = "rbxassetid://132062664413142"},
+
+		Animation = {
+			{
+				Delay = 0.035,
+				["Butterfly_Blade"] = {
+					ColorMap = "rbxassetid://132062664413142"},
+				["Butterfly_LHandle"] = {
+					ColorMap = "rbxassetid://132062664413142"},
+				["Butterfly_RHandle"] = {
+					ColorMap = "rbxassetid://132062664413142"}
+			},
+			{
+				["Butterfly_Blade"] = {
+					ColorMap = "rbxassetid://91294286009282"},
+				["Butterfly_LHandle"] = {
+					ColorMap = "rbxassetid://91294286009282"},
+				["Butterfly_RHandle"] = {
+					ColorMap = "rbxassetid://91294286009282"}
+			},
+			{
+				["Butterfly_Blade"] = {
+					ColorMap = "rbxassetid://107636178116143"},
+				["Butterfly_LHandle"] = {
+					ColorMap = "rbxassetid://107636178116143"},
+				["Butterfly_RHandle"] = {
+					ColorMap = "rbxassetid://107636178116143"}
+			},
+			{
+				["Butterfly_Blade"] = {
+					ColorMap = "rbxassetid://117410426339218"},
+				["Butterfly_LHandle"] = {
+					ColorMap = "rbxassetid://117410426339218"},
+				["Butterfly_RHandle"] = {
+					ColorMap = "rbxassetid://117410426339218"}
+			},
+			{
+				["Butterfly_Blade"] = {
+					ColorMap = "rbxassetid://98245800109493"},
+				["Butterfly_LHandle"] = {
+					ColorMap = "rbxassetid://98245800109493"},
+				["Butterfly_RHandle"] = {
+					ColorMap = "rbxassetid://98245800109493"}
+			},
+			{
+				["Butterfly_Blade"] = {
+					ColorMap = "rbxassetid://120770178745244"},
+				["Butterfly_LHandle"] = {
+					ColorMap = "rbxassetid://120770178745244"},
+				["Butterfly_RHandle"] = {
+					ColorMap = "rbxassetid://120770178745244"}
+			},
+			{
+				["Butterfly_Blade"] = {
+					ColorMap = "rbxassetid://124995408604289"},
+				["Butterfly_LHandle"] = {
+					ColorMap = "rbxassetid://124995408604289"},
+				["Butterfly_RHandle"] = {
+					ColorMap = "rbxassetid://124995408604289"}
+			},
+			{
+				["Butterfly_Blade"] = {
+					ColorMap = "rbxassetid://71596303819826"},
+				["Butterfly_LHandle"] = {
+					ColorMap = "rbxassetid://71596303819826"},
+				["Butterfly_RHandle"] = {
+					ColorMap = "rbxassetid://71596303819826"}
+			},
+			{
+				["Butterfly_Blade"] = {
+					ColorMap = "rbxassetid://75994625892906"},
+				["Butterfly_LHandle"] = {
+					ColorMap = "rbxassetid://75994625892906"},
+				["Butterfly_RHandle"] = {
+					ColorMap = "rbxassetid://75994625892906"}
+			},
+			{
+				["Butterfly_Blade"] = {
+					ColorMap = "rbxassetid://101705228543833"},
+				["Butterfly_LHandle"] = {
+					ColorMap = "rbxassetid://101705228543833"},
+				["Butterfly_RHandle"] = {
+					ColorMap = "rbxassetid://101705228543833"}
+			},
+			{
+				["Butterfly_Blade"] = {
+					ColorMap = "rbxassetid://118364912597540"},
+				["Butterfly_LHandle"] = {
+					ColorMap = "rbxassetid://118364912597540"},
+				["Butterfly_RHandle"] = {
+					ColorMap = "rbxassetid://118364912597540"}
+			},
+			{
+				["Butterfly_Blade"] = {
+					ColorMap = "rbxassetid://97026687441520"},
+				["Butterfly_LHandle"] = {
+					ColorMap = "rbxassetid://97026687441520"},
+				["Butterfly_RHandle"] = {
+					ColorMap = "rbxassetid://97026687441520"}
+			},
+			{
+				["Butterfly_Blade"] = {
+					ColorMap = "rbxassetid://75068803859542"},
+				["Butterfly_LHandle"] = {
+					ColorMap = "rbxassetid://75068803859542"},
+				["Butterfly_RHandle"] = {
+					ColorMap = "rbxassetid://75068803859542"}
+			},
+			{
+				["Butterfly_Blade"] = {
+					ColorMap = "rbxassetid://103377367075699"},
+				["Butterfly_LHandle"] = {
+					ColorMap = "rbxassetid://103377367075699"},
+				["Butterfly_RHandle"] = {
+					ColorMap = "rbxassetid://103377367075699"}
+			},
+			{
+				["Butterfly_Blade"] = {
+					ColorMap = "rbxassetid://103207648237926"},
+				["Butterfly_LHandle"] = {
+					ColorMap = "rbxassetid://103207648237926"},
+				["Butterfly_RHandle"] = {
+					ColorMap = "rbxassetid://103207648237926"}
+			},
+			{
+				["Butterfly_Blade"] = {
+					ColorMap = "rbxassetid://98510176602069"},
+				["Butterfly_LHandle"] = {
+					ColorMap = "rbxassetid://98510176602069"},
+				["Butterfly_RHandle"] = {
+					ColorMap = "rbxassetid://98510176602069"}
+			},
+			{
+				["Butterfly_Blade"] = {
+					ColorMap = "rbxassetid://130864358377052"},
+				["Butterfly_LHandle"] = {
+					ColorMap = "rbxassetid://130864358377052"},
+				["Butterfly_RHandle"] = {
+					ColorMap = "rbxassetid://130864358377052"}
+			},
+			{
+				["Butterfly_Blade"] = {
+					ColorMap = "rbxassetid://135244544229507"},
+				["Butterfly_LHandle"] = {
+					ColorMap = "rbxassetid://135244544229507"},
+				["Butterfly_RHandle"] = {
+					ColorMap = "rbxassetid://135244544229507"}
+			},
+			{
+				["Butterfly_Blade"] = {
+					ColorMap = "rbxassetid://112709461107622"},
+				["Butterfly_LHandle"] = {
+					ColorMap = "rbxassetid://112709461107622"},
+				["Butterfly_RHandle"] = {
+					ColorMap = "rbxassetid://112709461107622"}
+			},
+			{
+				["Butterfly_Blade"] = {
+					ColorMap = "rbxassetid://71353272127184"},
+				["Butterfly_LHandle"] = {
+					ColorMap = "rbxassetid://71353272127184"},
+				["Butterfly_RHandle"] = {
+					ColorMap = "rbxassetid://71353272127184"}
+			}
+		}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Ciro (Non-Animated)', PLACEHOLDERICON, 0, function()
 	EquipSkin("Butterfly", {
 		["Butterfly_Blade"] = {
 			ColorMap = "rbxassetid://132062664413142"},
@@ -63731,6 +64882,26 @@ CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Icicle', PLACEHOLDERICON, 0,
 	})
 end)
 
+CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Ignite', PLACEHOLDERICON, 0, function()
+	EquipSkin("Butterfly", {
+		["Butterfly_Blade"] = {
+			ColorMap = "rbxassetid://116311836700383",
+			NormalMap = "rbxassetid://79323982786945",
+			RoughnessMap = "rbxassetid://112710317541368",
+			MetalnessMap = "rbxassetid://91352899197885"},
+		["Butterfly_LHandle"] = {
+			ColorMap = "rbxassetid://116311836700383",
+			NormalMap = "rbxassetid://79323982786945",
+			RoughnessMap = "rbxassetid://112710317541368",
+			MetalnessMap = "rbxassetid://91352899197885"},
+		["Butterfly_RHandle"] = {
+			ColorMap = "rbxassetid://116311836700383",
+			NormalMap = "rbxassetid://79323982786945",
+			RoughnessMap = "rbxassetid://112710317541368",
+			MetalnessMap = "rbxassetid://91352899197885"}
+	})
+end)
+
 CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Inversion', PLACEHOLDERICON, 0, function()
 	EquipSkin("Butterfly", {
 		["Butterfly_Blade"] = {
@@ -63794,6 +64965,26 @@ CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Reaper', PLACEHOLDERICON, 0,
 			ColorMap = "rbxassetid://3037381432"},
 		["Butterfly_RHandle"] = {
 			ColorMap = "rbxassetid://3037381432"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Relic', PLACEHOLDERICON, 0, function()
+	EquipSkin("Butterfly", {
+		["Butterfly_Blade"] = {
+			ColorMap = "rbxassetid://134644197360850",
+			NormalMap = "rbxassetid://121160865516189",
+			RoughnessMap = "rbxassetid://136687399710018",
+			MetalnessMap = "rbxassetid://140728091787982"},
+		["Butterfly_LHandle"] = {
+			ColorMap = "rbxassetid://134644197360850",
+			NormalMap = "rbxassetid://121160865516189",
+			RoughnessMap = "rbxassetid://136687399710018",
+			MetalnessMap = "rbxassetid://140728091787982"},
+		["Butterfly_RHandle"] = {
+			ColorMap = "rbxassetid://134644197360850",
+			NormalMap = "rbxassetid://121160865516189",
+			RoughnessMap = "rbxassetid://136687399710018",
+			MetalnessMap = "rbxassetid://140728091787982"}
 	})
 end)
 
@@ -64110,6 +65301,26 @@ CreateTabButton('GameSkins', 'APPEND', 'Deagle | Blue Fur', PLACEHOLDERICON, 0, 
 	})
 end)
 
+CreateTabButton('GameSkins', 'APPEND', 'Deagle | Blue Rail', PLACEHOLDERICON, 0, function()
+	EquipSkin("Deagle", {
+		["Handle2"] = {
+			ColorMap = "rbxassetid://78017162321808",
+			NormalMap = "rbxassetid://134611191172642",
+			RoughnessMap = "rbxassetid://128370595274861",
+			MetalnessMap = "rbxassetid://111574199292088"},
+		["Mag2"] = {
+			ColorMap = "rbxassetid://78017162321808",
+			NormalMap = "rbxassetid://134611191172642",
+			RoughnessMap = "rbxassetid://128370595274861",
+			MetalnessMap = "rbxassetid://111574199292088"},
+		["Slide2"] = {
+			ColorMap = "rbxassetid://78017162321808",
+			NormalMap = "rbxassetid://134611191172642",
+			RoughnessMap = "rbxassetid://128370595274861",
+			MetalnessMap = "rbxassetid://111574199292088"}
+	})
+end)
+
 CreateTabButton('GameSkins', 'APPEND', 'Deagle | Cold Truth', PLACEHOLDERICON, 0, function()
 	EquipSkin("Deagle", {
 		["Handle2"] = {
@@ -64409,6 +65620,173 @@ CreateTabButton('GameSkins', 'APPEND', 'Deagle | TC', PLACEHOLDERICON, 0, functi
 		["Mag2"] = {
 			ColorMap = "rbxassetid://5668469472"},
 		["Slide2"] = {
+			ColorMap = "rbxassetid://5668469472"},
+		
+		Animation = {
+			{
+				Delay = 0.035,
+				["Handle2"] = {
+					ColorMap = "rbxassetid://12725291972"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://12725291972"},
+				["Slide2"] = {
+					ColorMap = "rbxassetid://12725291972"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://12725291830"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://12725291830"},
+				["Slide2"] = {
+					ColorMap = "rbxassetid://12725291830"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://12725291727"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://12725291727"},
+				["Slide2"] = {
+					ColorMap = "rbxassetid://12725291727"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://12725291628"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://12725291628"},
+				["Slide2"] = {
+					ColorMap = "rbxassetid://12725291628"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://12725291472"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://12725291472"},
+				["Slide2"] = {
+					ColorMap = "rbxassetid://12725291472"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://12725291346"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://12725291346"},
+				["Slide2"] = {
+					ColorMap = "rbxassetid://12725291346"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://12725291236"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://12725291236"},
+				["Slide2"] = {
+					ColorMap = "rbxassetid://12725291236"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://12725291155"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://12725291155"},
+				["Slide2"] = {
+					ColorMap = "rbxassetid://12725291155"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://12725291002"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://12725291002"},
+				["Slide2"] = {
+					ColorMap = "rbxassetid://12725291002"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://12725290889"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://12725290889"},
+				["Slide2"] = {
+					ColorMap = "rbxassetid://12725290889"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://12725290763"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://12725290763"},
+				["Slide2"] = {
+					ColorMap = "rbxassetid://12725290763"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://12725290640"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://12725290640"},
+				["Slide2"] = {
+					ColorMap = "rbxassetid://12725290640"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://12725290539"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://12725290539"},
+				["Slide2"] = {
+					ColorMap = "rbxassetid://12725290539"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://12725290391"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://12725290391"},
+				["Slide2"] = {
+					ColorMap = "rbxassetid://12725290391"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://12725290234"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://12725290234"},
+				["Slide2"] = {
+					ColorMap = "rbxassetid://12725290234"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://12725290073"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://12725290073"},
+				["Slide2"] = {
+					ColorMap = "rbxassetid://12725290073"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://12725289972"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://12725289972"},
+				["Slide2"] = {
+					ColorMap = "rbxassetid://12725289972"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://12725289861"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://12725289861"},
+				["Slide2"] = {
+					ColorMap = "rbxassetid://12725289861"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://12725289782"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://12725289782"},
+				["Slide2"] = {
+					ColorMap = "rbxassetid://12725289782"}
+			}
+		}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Deagle | TC (Non-Animated)', PLACEHOLDERICON, 0, function()
+	EquipSkin("Deagle", {
+		["Handle2"] = {
+			ColorMap = "rbxassetid://5668469472"},
+		["Mag2"] = {
+			ColorMap = "rbxassetid://5668469472"},
+		["Slide2"] = {
 			ColorMap = "rbxassetid://5668469472"}
 	})
 end)
@@ -64691,6 +66069,139 @@ CreateTabButton('GameSkins', 'APPEND', 'Falchion | Ciro', PLACEHOLDERICON, 0, fu
 		["1Handle"] = {
 			ColorMap = "rbxassetid://109954493321519"},
 		["Blade"] = {
+			ColorMap = "rbxassetid://109954493321519"},
+
+		Animation = {
+			{
+				Delay = 0.035,
+				["1Handle"] = {
+					ColorMap = "rbxassetid://109954493321519"},
+				["Blade"] = {
+					ColorMap = "rbxassetid://109954493321519"}
+			},
+			{
+				["1Handle"] = {
+					ColorMap = "rbxassetid://128014755877219"},
+				["Blade"] = {
+					ColorMap = "rbxassetid://128014755877219"}
+			},
+			{
+				["1Handle"] = {
+					ColorMap = "rbxassetid://135763808628018"},
+				["Blade"] = {
+					ColorMap = "rbxassetid://135763808628018"}
+			},
+			{
+				["1Handle"] = {
+					ColorMap = "rbxassetid://86446642523724"},
+				["Blade"] = {
+					ColorMap = "rbxassetid://86446642523724"}
+			},
+			{
+				["1Handle"] = {
+					ColorMap = "rbxassetid://125199752845997"},
+				["Blade"] = {
+					ColorMap = "rbxassetid://125199752845997"}
+			},
+			{
+				["1Handle"] = {
+					ColorMap = "rbxassetid://99811093702978"},
+				["Blade"] = {
+					ColorMap = "rbxassetid://99811093702978"}
+			},
+			{
+				["1Handle"] = {
+					ColorMap = "rbxassetid://103521323712641"},
+				["Blade"] = {
+					ColorMap = "rbxassetid://103521323712641"}
+			},
+			{
+				["1Handle"] = {
+					ColorMap = "rbxassetid://131163642346875"},
+				["Blade"] = {
+					ColorMap = "rbxassetid://131163642346875"}
+			},
+			{
+				["1Handle"] = {
+					ColorMap = "rbxassetid://86657298956767"},
+				["Blade"] = {
+					ColorMap = "rbxassetid://86657298956767"}
+			},
+			{
+				["1Handle"] = {
+					ColorMap = "rbxassetid://127498944093630"},
+				["Blade"] = {
+					ColorMap = "rbxassetid://127498944093630"}
+			},
+			{
+				["1Handle"] = {
+					ColorMap = "rbxassetid://112291234540074"},
+				["Blade"] = {
+					ColorMap = "rbxassetid://112291234540074"}
+			},
+			{
+				["1Handle"] = {
+					ColorMap = "rbxassetid://79490866644291"},
+				["Blade"] = {
+					ColorMap = "rbxassetid://79490866644291"}
+			},
+			{
+				["1Handle"] = {
+					ColorMap = "rbxassetid://127414591307769"},
+				["Blade"] = {
+					ColorMap = "rbxassetid://127414591307769"}
+			},
+			{
+				["1Handle"] = {
+					ColorMap = "rbxassetid://118210236362868"},
+				["Blade"] = {
+					ColorMap = "rbxassetid://118210236362868"}
+			},
+			{
+				["1Handle"] = {
+					ColorMap = "rbxassetid://120503544777337"},
+				["Blade"] = {
+					ColorMap = "rbxassetid://120503544777337"}
+			},
+			{
+				["1Handle"] = {
+					ColorMap = "rbxassetid://88526485626118"},
+				["Blade"] = {
+					ColorMap = "rbxassetid://88526485626118"}
+			},
+			{
+				["1Handle"] = {
+					ColorMap = "rbxassetid://127280709134879"},
+				["Blade"] = {
+					ColorMap = "rbxassetid://127280709134879"}
+			},
+			{
+				["1Handle"] = {
+					ColorMap = "rbxassetid://74601109596469"},
+				["Blade"] = {
+					ColorMap = "rbxassetid://74601109596469"}
+			},
+			{
+				["1Handle"] = {
+					ColorMap = "rbxassetid://115212680622919"},
+				["Blade"] = {
+					ColorMap = "rbxassetid://115212680622919"}
+			},
+			{
+				["1Handle"] = {
+					ColorMap = "rbxassetid://92967969108185"},
+				["Blade"] = {
+					ColorMap = "rbxassetid://92967969108185"}
+			}
+		}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Falchion | Ciro (Non-Animated)', PLACEHOLDERICON, 0, function()
+	EquipSkin("Falchion", {
+		["1Handle"] = {
+			ColorMap = "rbxassetid://109954493321519"},
+		["Blade"] = {
 			ColorMap = "rbxassetid://109954493321519"}
 	})
 end)
@@ -64851,6 +66362,21 @@ CreateTabButton('GameSkins', 'APPEND', 'Falchion | Hallows', PLACEHOLDERICON, 0,
 	})
 end)
 
+CreateTabButton('GameSkins', 'APPEND', 'Falchion | Ignite', PLACEHOLDERICON, 0, function()
+	EquipSkin("Falchion", {
+		["1Handle"] = {
+			ColorMap = "rbxassetid://86602912531468",
+			NormalMap = "rbxassetid://104158561907665",
+			RoughnessMap = "rbxassetid://107911435070290",
+			MetalnessMap = "rbxassetid://114993094383278"},
+		["Blade"] = {
+			ColorMap = "rbxassetid://86602912531468",
+			NormalMap = "rbxassetid://104158561907665",
+			RoughnessMap = "rbxassetid://107911435070290",
+			MetalnessMap = "rbxassetid://114993094383278"}
+	})
+end)
+
 CreateTabButton('GameSkins', 'APPEND', 'Falchion | Imperial', PLACEHOLDERICON, 0, function()
 	EquipSkin("Falchion", {
 		["1Handle"] = {
@@ -64905,6 +66431,103 @@ CreateTabButton('GameSkins', 'APPEND', 'Falchion | Late Night', PLACEHOLDERICON,
 		["1Handle"] = {
 			ColorMap = "rbxassetid://3061638723"},
 		["Blade"] = {
+			ColorMap = "rbxassetid://3061638723"},
+
+		Animation = {
+			{
+				Delay = 0.055,
+				["1Handle"] = {
+					ColorMap = "rbxassetid://3061636088"},
+				["Blade"] = {
+					ColorMap = "rbxassetid://3061636088"}
+			},
+			{
+				["1Handle"] = {
+					ColorMap = "rbxassetid://3061636399"},
+				["Blade"] = {
+					ColorMap = "rbxassetid://3061636399"}
+			},
+			{
+				["1Handle"] = {
+					ColorMap = "rbxassetid://3061636632"},
+				["Blade"] = {
+					ColorMap = "rbxassetid://3061636632"}
+			},
+			{
+				["1Handle"] = {
+					ColorMap = "rbxassetid://3061636857"},
+				["Blade"] = {
+					ColorMap = "rbxassetid://3061636857"}
+			},
+			{
+				["1Handle"] = {
+					ColorMap = "rbxassetid://3061637873"},
+				["Blade"] = {
+					ColorMap = "rbxassetid://3061637873"}
+			},
+			{
+				["1Handle"] = {
+					ColorMap = "rbxassetid://3061638169"},
+				["Blade"] = {
+					ColorMap = "rbxassetid://3061638169"}
+			},
+			{
+				["1Handle"] = {
+					ColorMap = "rbxassetid://3061638485"},
+				["Blade"] = {
+					ColorMap = "rbxassetid://3061638485"}
+			},
+			{
+				["1Handle"] = {
+					ColorMap = "rbxassetid://3061638723"},
+				["Blade"] = {
+					ColorMap = "rbxassetid://3061638723"}
+			},
+			{
+				["1Handle"] = {
+					ColorMap = "rbxassetid://3061639187"},
+				["Blade"] = {
+					ColorMap = "rbxassetid://3061639187"}
+			},
+			{
+				["1Handle"] = {
+					ColorMap = "rbxassetid://3061639578"},
+				["Blade"] = {
+					ColorMap = "rbxassetid://3061639578"}
+			},
+			{
+				["1Handle"] = {
+					ColorMap = "rbxassetid://3061640143"},
+				["Blade"] = {
+					ColorMap = "rbxassetid://3061640143"}
+			},
+			{
+				["1Handle"] = {
+					ColorMap = "rbxassetid://3061640472"},
+				["Blade"] = {
+					ColorMap = "rbxassetid://3061640472"}
+			},
+			{
+				["1Handle"] = {
+					ColorMap = "rbxassetid://3061640927"},
+				["Blade"] = {
+					ColorMap = "rbxassetid://3061640927"}
+			},
+			{
+				["1Handle"] = {
+					ColorMap = "rbxassetid://3061641237"},
+				["Blade"] = {
+					ColorMap = "rbxassetid://3061641237"}
+			}
+		}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Falchion | Late Night (Non-Animated)', PLACEHOLDERICON, 0, function()
+	EquipSkin("Falchion", {
+		["1Handle"] = {
+			ColorMap = "rbxassetid://3061638723"},
+		["Blade"] = {
 			ColorMap = "rbxassetid://3061638723"}
 	})
 end)
@@ -64951,6 +66574,21 @@ CreateTabButton('GameSkins', 'APPEND', 'Falchion | Racer', PLACEHOLDERICON, 0, f
 			ColorMap = "rbxassetid://4614510041"},
 		["Blade"] = {
 			ColorMap = "rbxassetid://4614510041"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Falchion | Relic', PLACEHOLDERICON, 0, function()
+	EquipSkin("Falchion", {
+		["1Handle"] = {
+			ColorMap = "rbxassetid://86602912531468",
+			NormalMap = "rbxassetid://104158561907665",
+			RoughnessMap = "rbxassetid://107911435070290",
+			MetalnessMap = "rbxassetid://114993094383278"},
+		["Blade"] = {
+			ColorMap = "rbxassetid://86602912531468",
+			NormalMap = "rbxassetid://104158561907665",
+			RoughnessMap = "rbxassetid://107911435070290",
+			MetalnessMap = "rbxassetid://114993094383278"}
 	})
 end)
 
@@ -65222,6 +66860,26 @@ CreateTabButton('GameSkins', 'APPEND', 'FAMAS F1 | Medic', PLACEHOLDERICON, 0, f
 	})
 end)
 
+CreateTabButton('GameSkins', 'APPEND', 'FAMAS F1 | Precision', PLACEHOLDERICON, 0, function()
+	EquipSkin("Famas", {
+		["Bolt"] = {
+			ColorMap = "rbxassetid://136887122672859",
+			NormalMap = "rbxassetid://101367923147692",
+			RoughnessMap = "rbxassetid://103684405861846",
+			MetalnessMap = "rbxassetid://133624255148284"},
+		["Handle"] = {
+			ColorMap = "rbxassetid://106949470278141",
+			NormalMap = "rbxassetid://129832345517492",
+			RoughnessMap = "rbxassetid://128811783376344",
+			MetalnessMap = "rbxassetid://139469592187058"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://106949470278141",
+			NormalMap = "rbxassetid://129832345517492",
+			RoughnessMap = "rbxassetid://128811783376344",
+			MetalnessMap = "rbxassetid://139469592187058"}
+	})
+end)
+
 CreateTabButton('GameSkins', 'APPEND', 'FAMAS F1 | RacerX', PLACEHOLDERICON, 0, function()
 	EquipSkin("Famas", {
 		["Bolt"] = {
@@ -65418,6 +67076,26 @@ CreateTabButton('GameSkins', 'APPEND', 'Five-seveN | Summer', PLACEHOLDERICON, 0
 	})
 end)
 
+CreateTabButton('GameSkins', 'APPEND', 'Five-seveN | Volt Rush', PLACEHOLDERICON, 0, function()
+	EquipSkin("FiveSeven", {
+		["Handle2"] = {
+			ColorMap = "rbxassetid://105089556799381",
+			NormalMap = "rbxassetid://115074350861786",
+			RoughnessMap = "rbxassetid://86987859135174",
+			MetalnessMap = "rbxassetid://135287415087553"},
+		["Mag2"] = {
+			ColorMap = "rbxassetid://105089556799381",
+			NormalMap = "rbxassetid://115074350861786",
+			RoughnessMap = "rbxassetid://86987859135174",
+			MetalnessMap = "rbxassetid://135287415087553"},
+		["Slide2"] = {
+			ColorMap = "rbxassetid://105089556799381",
+			NormalMap = "rbxassetid://115074350861786",
+			RoughnessMap = "rbxassetid://86987859135174",
+			MetalnessMap = "rbxassetid://135287415087553"}
+	})
+end)
+
 -- TODO: Flip Knife
 
 CreateTabButton('GameSkins', 'APPEND', 'G3SG1 | Amethyst', PLACEHOLDERICON, 0, function()
@@ -65554,6 +67232,46 @@ CreateTabButton('GameSkins', 'APPEND', 'G3SG1 | Stock', PLACEHOLDERICON, 0, func
 	})
 end)
 
+CreateTabButton('GameSkins', 'APPEND', 'G3SG1 | Teco-Teco', PLACEHOLDERICON, 0, function()
+	EquipSkin("G3SG1", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://106646074603294",
+			NormalMap = "rbxassetid://119991717602996",
+			RoughnessMap = "rbxassetid://74819983949921",
+			MetalnessMap = "rbxassetid://90871519250502"},
+		["Body"] = {
+			ColorMap = "rbxassetid://92958325276670",
+			NormalMap = "rbxassetid://86039342877173",
+			RoughnessMap = "rbxassetid://107092656663692",
+			MetalnessMap = "rbxassetid://126736854253493"},
+		["Handle2"] = {
+			ColorMap = "rbxassetid://106646074603294",
+			NormalMap = "rbxassetid://119991717602996",
+			RoughnessMap = "rbxassetid://74819983949921",
+			MetalnessMap = "rbxassetid://90871519250502"},
+		["Mag2"] = {
+			ColorMap = "rbxassetid://106646074603294",
+			NormalMap = "rbxassetid://119991717602996",
+			RoughnessMap = "rbxassetid://74819983949921",
+			MetalnessMap = "rbxassetid://90871519250502"},
+		["Part"] = {
+			ColorMap = "rbxassetid://76735437425414",
+			NormalMap = "rbxassetid://125846006088210",
+			RoughnessMap = "rbxassetid://123560824058696",
+			MetalnessMap = "rbxassetid://107575258162643"},
+		["Bolt2"] = {
+			ColorMap = "rbxassetid://92958325276670",
+			NormalMap = "rbxassetid://86039342877173",
+			RoughnessMap = "rbxassetid://107092656663692",
+			MetalnessMap = "rbxassetid://126736854253493"},
+		["Bolt3"] = {
+			ColorMap = "rbxassetid://76735437425414",
+			NormalMap = "rbxassetid://125846006088210",
+			RoughnessMap = "rbxassetid://123560824058696",
+			MetalnessMap = "rbxassetid://107575258162643"}
+	})
+end)
+
 CreateTabButton('GameSkins', 'APPEND', 'G3SG1 | Yltude', PLACEHOLDERICON, 0, function()
 	EquipSkin("G3SG1", {
 		["Barrel"] = {
@@ -65607,6 +67325,21 @@ CreateTabButton('GameSkins', 'APPEND', 'Galil SAR | Hardware 2', PLACEHOLDERICON
 			ColorMap = "rbxassetid://1486568200"},
 		["Mag"] = {
 			ColorMap = "rbxassetid://1486568200"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Galil SAR | Orochi', PLACEHOLDERICON, 0, function()
+	EquipSkin("Galil", {
+		["Handle"] = {
+			ColorMap = "rbxassetid://80152612461845",
+			NormalMap = "rbxassetid://136886087222215",
+			RoughnessMap = "rbxassetid://114290039454464",
+			MetalnessMap = "rbxassetid://82746831587856"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://80152612461845",
+			NormalMap = "rbxassetid://136886087222215",
+			RoughnessMap = "rbxassetid://114290039454464",
+			MetalnessMap = "rbxassetid://82746831587856"}
 	})
 end)
 
@@ -65717,7 +67450,7 @@ CreateTabButton('GameSkins', 'APPEND', 'Glock-18 | BloxersClub', PLACEHOLDERICON
 	})
 end)
 
-CreateTabButton('GameSkins', 'APPEND', 'Glock-18 | Chocolatier', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Glock-18 | Chocolatier (Old)', PLACEHOLDERICON, 0, function()
 	EquipSkin("Glock", {
 		["Handle2"] = {
 			ColorMap = "rbxassetid://125227083364536",
@@ -65734,6 +67467,26 @@ CreateTabButton('GameSkins', 'APPEND', 'Glock-18 | Chocolatier', PLACEHOLDERICON
 			NormalMap = "rbxassetid://130008254420416",
 			RoughnessMap = "rbxassetid://98998201036235",
 			MetalnessMap = "rbxassetid://105078622092320"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Glock-18 | Chocolatier', PLACEHOLDERICON, 0, function()
+	EquipSkin("Glock", {
+		["Handle2"] = {
+			ColorMap = "rbxassetid://114165652394208",
+			NormalMap = "rbxassetid://73855880210191",
+			RoughnessMap = "rbxassetid://84776353532834",
+			MetalnessMap = "rbxassetid://116919727851148"},
+		["Mag2"] = {
+			ColorMap = "rbxassetid://114165652394208",
+			NormalMap = "rbxassetid://73855880210191",
+			RoughnessMap = "rbxassetid://84776353532834",
+			MetalnessMap = "rbxassetid://116919727851148"},
+		["Slide2"] = {
+			ColorMap = "rbxassetid://114165652394208",
+			NormalMap = "rbxassetid://73855880210191",
+			RoughnessMap = "rbxassetid://84776353532834",
+			MetalnessMap = "rbxassetid://116919727851148"}
 	})
 end)
 
@@ -65976,7 +67729,99 @@ CreateTabButton('GameSkins', 'APPEND', 'Gut | Bloodwidow', PLACEHOLDERICON, 0, f
 	})
 end)
 
+-- Note: Animated
 CreateTabButton('GameSkins', 'APPEND', 'Gut | Ciro', PLACEHOLDERICON, 0, function()
+	EquipSkin("Gut", {
+		["Handle"] = {
+			ColorMap = "rbxassetid://125609042376347"},
+
+		Animation = {
+			{
+				Delay = 0.035,
+				["Handle"] = {
+					ColorMap = "rbxassetid://125609042376347"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://106515793224584"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://134830667632069"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://121886148211642"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://95471826412876"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://127901243183939"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://83127397424491"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://107180602060249"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://133349861681343"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://129039691232191"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://95307287900071"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://75616850903442"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://77424529572428"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://92018568984460"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://86433264505639"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://112388211633277"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://87987688706461"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://78905146239469"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://87997794831617"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://140434782995713"}
+			}
+		}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Gut | Ciro (Non-Animated)', PLACEHOLDERICON, 0, function()
 	EquipSkin("Gut", {
 		["Handle"] = {
 			ColorMap = "rbxassetid://125609042376347"}
@@ -66202,6 +68047,97 @@ end)
 
 -- Note: Animated
 CreateTabButton('GameSkins', 'APPEND', 'Huntsman | Ciro', PLACEHOLDERICON, 0, function()
+	EquipSkin("Huntsman", {
+		["Handle"] = {
+			ColorMap = "rbxassetid://4680521905"},
+
+		Animation = {
+			{
+				Delay = 0.035,
+				["Handle"] = {
+					ColorMap = "rbxassetid://4680521905"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4680523377"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4680524140"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4680524268"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4680526348"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4680526533"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4680526710"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4680526828"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4680527851"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4680528495"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://5573439663"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4680531093"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4680531231"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4680531446"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4680531549"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4680531721"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4680533363"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4680533523"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4680534378"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://4680535624"}
+			}
+		}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Huntsman | Ciro (Non-Animated)', PLACEHOLDERICON, 0, function()
 	EquipSkin("Huntsman", {
 		["Handle"] = {
 			ColorMap = "rbxassetid://4680521905"}
@@ -66438,6 +68374,97 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Ciro', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
+			ColorMap = "rbxassetid://4680502646"},
+		
+		Animation = {
+			{
+				Delay = 0.035,
+				["Handle2"] = {
+					ColorMap = "rbxassetid://4680502646"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://4680505418"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://4680505610"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://4680505791"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://4680505986"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://4680506199"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://4680508334"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://4680508570"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://4680508717"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://4680515082"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://4680515229"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://4680515402"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://4680515554"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://4680515767"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://4680518070"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://4680518189"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://4680518428"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://4680518541"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://4680518760"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://4680520751"}
+			}
+		}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Karambit | Ciro (Non-Animated)', PLACEHOLDERICON, 0, function()
+	EquipSkin("Karambit", {
+		["Handle2"] = {
 			ColorMap = "rbxassetid://4680502646"}
 	})
 end)
@@ -66589,6 +68616,16 @@ CreateTabButton('GameSkins', 'APPEND', 'Karambit | Hallows', PLACEHOLDERICON, 0,
 	})
 end)
 
+CreateTabButton('GameSkins', 'APPEND', 'Karambit | Ignite', PLACEHOLDERICON, 0, function()
+	EquipSkin("Karambit", {
+		["Handle2"] = {
+			ColorMap = "rbxassetid://110617102803716",
+			NormalMap = "rbxassetid://138043198209811",
+			RoughnessMap = "rbxassetid://106566759579082",
+			MetalnessMap = "rbxassetid://110401062955575"}
+	})
+end)
+
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Jade Dream', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
@@ -66663,6 +68700,16 @@ CreateTabButton('GameSkins', 'APPEND', 'Karambit | Racer', PLACEHOLDERICON, 0, f
 	EquipSkin("Karambit", {
 		["Handle2"] = {
 			ColorMap = "rbxassetid://137421609478075"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Karambit | Relic', PLACEHOLDERICON, 0, function()
+	EquipSkin("Karambit", {
+		["Handle2"] = {
+			ColorMap = "rbxassetid://79644991519981",
+			NormalMap = "rbxassetid://94771476449651",
+			RoughnessMap = "rbxassetid://84398111290222",
+			MetalnessMap = "rbxassetid://131370025747432"}
 	})
 end)
 
@@ -67050,7 +69097,7 @@ CreateTabButton('GameSkins', 'APPEND', 'M4A1-S | Kimura', PLACEHOLDERICON, 0, fu
 	})
 end)
 
-CreateTabButton('GameSkins', 'APPEND', 'M4A1-S | Lunar', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'M4A1-S | Lunar (Old)', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A1", {
 		["Bolt2"] = {
 			ColorMap = "rbxassetid://3414435472"},
@@ -67060,6 +69107,27 @@ CreateTabButton('GameSkins', 'APPEND', 'M4A1-S | Lunar', PLACEHOLDERICON, 0, fun
 			ColorMap = "rbxassetid://3414435472"},
 		["Part4"] = {
 			ColorMap = "rbxassetid://3414435728"},
+		["Part3"] = {
+			ColorMap = "rbxassetid://3414435472"},
+		["Part2"] = {
+			ColorMap = "rbxassetid://3414435472"},
+		["Mag2"] = {
+			ColorMap = "rbxassetid://3414435122"},
+		["Silencer2"] = {
+			ColorMap = "rbxassetid://3414435728"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'M4A1-S | Lunar', PLACEHOLDERICON, 0, function()
+	EquipSkin("M4A1", {
+		["Bolt2"] = {
+			ColorMap = "rbxassetid://3414435728"},
+		["Handle2"] = {
+			ColorMap = "rbxassetid://3414435472"},
+		["Part"] = {
+			ColorMap = "rbxassetid://3414435472"},
+		["Part4"] = {
+			ColorMap = "rbxassetid://3414435472"},
 		["Part3"] = {
 			ColorMap = "rbxassetid://3414435472"},
 		["Part2"] = {
@@ -67324,6 +69392,51 @@ CreateTabButton('GameSkins', 'APPEND', 'M4A1-S | Violet Circuits', PLACEHOLDERIC
 			NormalMap = "rbxassetid://79127949293692",
 			RoughnessMap = "rbxassetid://111681926522487",
 			MetalnessMap = "rbxassetid://121798468093450"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'M4A1-S | Warped', PLACEHOLDERICON, 0, function()
+	EquipSkin("M4A1", {
+		["Bolt2"] = {
+			ColorMap = "rbxassetid://119352914439826",
+			NormalMap = "rbxassetid://111413130832210",
+			RoughnessMap = "rbxassetid://75265579772904",
+			MetalnessMap = "rbxassetid://81584908841752"},
+		["Handle2"] = {
+			ColorMap = "rbxassetid://119352914439826",
+			NormalMap = "rbxassetid://111413130832210",
+			RoughnessMap = "rbxassetid://75265579772904",
+			MetalnessMap = "rbxassetid://81584908841752"},
+		["Part"] = {
+			ColorMap = "rbxassetid://119352914439826",
+			NormalMap = "rbxassetid://111413130832210",
+			RoughnessMap = "rbxassetid://75265579772904",
+			MetalnessMap = "rbxassetid://81584908841752"},
+		["Part4"] = {
+			ColorMap = "rbxassetid://119352914439826",
+			NormalMap = "rbxassetid://111413130832210",
+			RoughnessMap = "rbxassetid://75265579772904",
+			MetalnessMap = "rbxassetid://81584908841752"},
+		["Part3"] = {
+			ColorMap = "rbxassetid://119352914439826",
+			NormalMap = "rbxassetid://111413130832210",
+			RoughnessMap = "rbxassetid://75265579772904",
+			MetalnessMap = "rbxassetid://81584908841752"},
+		["Part2"] = {
+			ColorMap = "rbxassetid://119352914439826",
+			NormalMap = "rbxassetid://111413130832210",
+			RoughnessMap = "rbxassetid://75265579772904",
+			MetalnessMap = "rbxassetid://81584908841752"},
+		["Mag2"] = {
+			ColorMap = "rbxassetid://72132362393830",
+			NormalMap = "rbxassetid://91626079688280",
+			RoughnessMap = "rbxassetid://99867666533041",
+			MetalnessMap = "rbxassetid://74819983949921"},
+		["Silencer2"] = {
+			ColorMap = "rbxassetid://106358212066996",
+			NormalMap = "rbxassetid://115200813345186",
+			RoughnessMap = "rbxassetid://88331131547218",
+			MetalnessMap = "rbxassetid://84592617215855"}
 	})
 end)
 
@@ -68101,6 +70214,26 @@ CreateTabButton('GameSkins', 'APPEND', 'M4A4 | Toy Soldier', PLACEHOLDERICON, 0,
 	})
 end)
 
+CreateTabButton('GameSkins', 'APPEND', 'M9 Bayonet | Bloodwidow', PLACEHOLDERICON, 0, function()
+	EquipSkin("M9 Bayonet", {
+		["Handle"] = {
+			ColorMap = "rbxassetid://101440523124712",
+			NormalMap = "rbxassetid://77091567669812",
+			RoughnessMap = "rbxassetid://113287064047825",
+			MetalnessMap = "rbxassetid://104998332675550"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'M9 Bayonet | Cosmos', PLACEHOLDERICON, 0, function()
+	EquipSkin("M9 Bayonet", {
+		["Handle"] = {
+			ColorMap = "rbxassetid://96400529731097",
+			NormalMap = "rbxassetid://138962290699910",
+			RoughnessMap = "rbxassetid://81736290700528",
+			MetalnessMap = "rbxassetid://109648538085688"}
+	})
+end)
+
 CreateTabButton('GameSkins', 'APPEND', 'M9 Bayonet | CottonTail', PLACEHOLDERICON, 0, function()
 	EquipSkin("M9 Bayonet", {
 		["Handle"] = {
@@ -68108,6 +70241,16 @@ CreateTabButton('GameSkins', 'APPEND', 'M9 Bayonet | CottonTail', PLACEHOLDERICO
 			NormalMap = "rbxassetid://138074307277793",
 			RoughnessMap = "rbxassetid://98734566814353",
 			MetalnessMap = "rbxassetid://108970425307123"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'M9 Bayonet | Crippled Fade', PLACEHOLDERICON, 0, function()
+	EquipSkin("M9 Bayonet", {
+		["Handle"] = {
+			ColorMap = "rbxassetid://82872045009733",
+			NormalMap = "rbxassetid://81896424342386",
+			RoughnessMap = "rbxassetid://102056171834221",
+			MetalnessMap = "rbxassetid://87287628986061"}
 	})
 end)
 
@@ -68231,6 +70374,16 @@ CreateTabButton('GameSkins', 'APPEND', 'M9 Bayonet | Gamma Doppler P4', PLACEHOL
 	})
 end)
 
+CreateTabButton('GameSkins', 'APPEND', 'M9 Bayonet | Ignite', PLACEHOLDERICON, 0, function()
+	EquipSkin("M9 Bayonet", {
+		["Handle"] = {
+			ColorMap = "rbxassetid://130034735089012",
+			NormalMap = "rbxassetid://77044011524846",
+			RoughnessMap = "rbxassetid://122849328011307",
+			MetalnessMap = "rbxassetid://115238948044748"}
+	})
+end)
+
 CreateTabButton('GameSkins', 'APPEND', 'M9 Bayonet | Jade Dream', PLACEHOLDERICON, 0, function()
 	EquipSkin("M9 Bayonet", {
 		["Handle"] = {
@@ -68248,23 +70401,127 @@ CreateTabButton('GameSkins', 'APPEND', 'M9 Bayonet | Late Night', PLACEHOLDERICO
 			ColorMap = "rbxassetid://118168456468751",
 			NormalMap = "rbxassetid://129937901582349",
 			RoughnessMap = "rbxassetid://133652158857212",
+			MetalnessMap = "rbxassetid://113661302473161"},
+
+		Animation = {
+			{
+				Delay = 0.08,
+				["Handle"] = {
+					ColorMap = "rbxassetid://123137995114972",
+					NormalMap = "rbxassetid://129937901582349",
+					RoughnessMap = "rbxassetid://133652158857212",
+					MetalnessMap = "rbxassetid://113661302473161"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://99016793236126",
+					NormalMap = "rbxassetid://129937901582349",
+					RoughnessMap = "rbxassetid://133652158857212",
+					MetalnessMap = "rbxassetid://113661302473161"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://128863721099462",
+					NormalMap = "rbxassetid://129937901582349",
+					RoughnessMap = "rbxassetid://133652158857212",
+					MetalnessMap = "rbxassetid://113661302473161"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://127085050324891",
+					NormalMap = "rbxassetid://129937901582349",
+					RoughnessMap = "rbxassetid://133652158857212",
+					MetalnessMap = "rbxassetid://113661302473161"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://70950896506045",
+					NormalMap = "rbxassetid://129937901582349",
+					RoughnessMap = "rbxassetid://133652158857212",
+					MetalnessMap = "rbxassetid://113661302473161"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://134907458519938",
+					NormalMap = "rbxassetid://129937901582349",
+					RoughnessMap = "rbxassetid://133652158857212",
+					MetalnessMap = "rbxassetid://113661302473161"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://120426739855837",
+					NormalMap = "rbxassetid://129937901582349",
+					RoughnessMap = "rbxassetid://133652158857212",
+					MetalnessMap = "rbxassetid://113661302473161"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://76711544015419",
+					NormalMap = "rbxassetid://129937901582349",
+					RoughnessMap = "rbxassetid://133652158857212",
+					MetalnessMap = "rbxassetid://113661302473161"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://106405893707937",
+					NormalMap = "rbxassetid://129937901582349",
+					RoughnessMap = "rbxassetid://133652158857212",
+					MetalnessMap = "rbxassetid://113661302473161"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://101926085065416",
+					NormalMap = "rbxassetid://129937901582349",
+					RoughnessMap = "rbxassetid://133652158857212",
+					MetalnessMap = "rbxassetid://113661302473161"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://105697005113282",
+					NormalMap = "rbxassetid://129937901582349",
+					RoughnessMap = "rbxassetid://133652158857212",
+					MetalnessMap = "rbxassetid://113661302473161"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://79707766312282",
+					NormalMap = "rbxassetid://129937901582349",
+					RoughnessMap = "rbxassetid://133652158857212",
+					MetalnessMap = "rbxassetid://113661302473161"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://101805993875600",
+					NormalMap = "rbxassetid://129937901582349",
+					RoughnessMap = "rbxassetid://133652158857212",
+					MetalnessMap = "rbxassetid://113661302473161"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://108671870641663",
+					NormalMap = "rbxassetid://129937901582349",
+					RoughnessMap = "rbxassetid://133652158857212",
+					MetalnessMap = "rbxassetid://113661302473161"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://103374514615464",
+					NormalMap = "rbxassetid://129937901582349",
+					RoughnessMap = "rbxassetid://133652158857212",
+					MetalnessMap = "rbxassetid://113661302473161"}
+			}
+		}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'M9 Bayonet | Late Night (Non-Animated)', PLACEHOLDERICON, 0, function()
+	EquipSkin("M9 Bayonet", {
+		["Handle"] = {
+			ColorMap = "rbxassetid://118168456468751",
+			NormalMap = "rbxassetid://129937901582349",
+			RoughnessMap = "rbxassetid://133652158857212",
 			MetalnessMap = "rbxassetid://113661302473161"}
 	})
-	-- ColorMap = "rbxassetid://123137995114972", NormalMap: "rbxassetid://129937901582349", RoughnessMap: "rbxassetid://133652158857212", MetalnessMap: "rbxassetid://113661302473161"
-	-- ColorMap = "rbxassetid://99016793236126", NormalMap: "rbxassetid://129937901582349", RoughnessMap: "rbxassetid://133652158857212", MetalnessMap: "rbxassetid://113661302473161"
-	-- ColorMap = "rbxassetid://128863721099462", NormalMap: "rbxassetid://129937901582349", RoughnessMap: "rbxassetid://133652158857212", MetalnessMap: "rbxassetid://113661302473161"
-	-- ColorMap = "rbxassetid://127085050324891", NormalMap: "rbxassetid://129937901582349", RoughnessMap: "rbxassetid://133652158857212", MetalnessMap: "rbxassetid://113661302473161"
-	-- ColorMap = "rbxassetid://70950896506045", NormalMap: "rbxassetid://129937901582349", RoughnessMap: "rbxassetid://133652158857212", MetalnessMap: "rbxassetid://113661302473161"
-	-- ColorMap = "rbxassetid://134907458519938", NormalMap: "rbxassetid://129937901582349", RoughnessMap: "rbxassetid://133652158857212", MetalnessMap: "rbxassetid://113661302473161"
-	-- ColorMap = "rbxassetid://120426739855837", NormalMap: "rbxassetid://129937901582349", RoughnessMap: "rbxassetid://133652158857212", MetalnessMap: "rbxassetid://113661302473161"
-	-- ColorMap = "rbxassetid://76711544015419", NormalMap: "rbxassetid://129937901582349", RoughnessMap: "rbxassetid://133652158857212", MetalnessMap: "rbxassetid://113661302473161"
-	-- ColorMap = "rbxassetid://106405893707937", NormalMap: "rbxassetid://129937901582349", RoughnessMap: "rbxassetid://133652158857212", MetalnessMap: "rbxassetid://113661302473161"
-	-- ColorMap = "rbxassetid://101926085065416", NormalMap: "rbxassetid://129937901582349", RoughnessMap: "rbxassetid://133652158857212", MetalnessMap: "rbxassetid://113661302473161"
-	-- ColorMap = "rbxassetid://105697005113282", NormalMap: "rbxassetid://129937901582349", RoughnessMap: "rbxassetid://133652158857212", MetalnessMap: "rbxassetid://113661302473161"
-	-- ColorMap = "rbxassetid://79707766312282", NormalMap: "rbxassetid://129937901582349", RoughnessMap: "rbxassetid://133652158857212", MetalnessMap: "rbxassetid://113661302473161"
-	-- ColorMap = "rbxassetid://101805993875600", NormalMap: "rbxassetid://129937901582349", RoughnessMap: "rbxassetid://133652158857212", MetalnessMap: "rbxassetid://113661302473161"
-	-- ColorMap = "rbxassetid://108671870641663", NormalMap: "rbxassetid://129937901582349", RoughnessMap: "rbxassetid://133652158857212", MetalnessMap: "rbxassetid://113661302473161"
-	-- ColorMap = "rbxassetid://103374514615464", NormalMap: "rbxassetid://129937901582349", RoughnessMap: "rbxassetid://133652158857212", MetalnessMap: "rbxassetid://113661302473161"
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'M9 Bayonet | Marbleized', PLACEHOLDERICON, 0, function()
@@ -68287,6 +70544,16 @@ CreateTabButton('GameSkins', 'APPEND', 'M9 Bayonet | Naval', PLACEHOLDERICON, 0,
 	})
 end)
 
+CreateTabButton('GameSkins', 'APPEND', 'M9 Bayonet | Neonic', PLACEHOLDERICON, 0, function()
+	EquipSkin("M9 Bayonet", {
+		["Handle"] = {
+			ColorMap = "rbxassetid://73624524727465",
+			NormalMap = "rbxassetid://139074005742904",
+			RoughnessMap = "rbxassetid://77972792554108",
+			MetalnessMap = "rbxassetid://83305133807810"}
+	})
+end)
+
 CreateTabButton('GameSkins', 'APPEND', 'M9 Bayonet | RacerX', PLACEHOLDERICON, 0, function()
 	EquipSkin("M9 Bayonet", {
 		["Handle"] = {
@@ -68294,6 +70561,16 @@ CreateTabButton('GameSkins', 'APPEND', 'M9 Bayonet | RacerX', PLACEHOLDERICON, 0
 			NormalMap = "rbxassetid://82225044634582",
 			RoughnessMap = "rbxassetid://98990269176109",
 			MetalnessMap = "rbxassetid://76340246672696"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'M9 Bayonet | Relic', PLACEHOLDERICON, 0, function()
+	EquipSkin("M9 Bayonet", {
+		["Handle"] = {
+			ColorMap = "rbxassetid://95137199979091",
+			NormalMap = "rbxassetid://139368428077661",
+			RoughnessMap = "rbxassetid://104098155908374",
+			MetalnessMap = "rbxassetid://124989519205277"}
 	})
 end)
 
@@ -68589,6 +70866,36 @@ CreateTabButton('GameSkins', 'APPEND', 'MAC-10 | Wetland', PLACEHOLDERICON, 0, f
 	})
 end)
 
+CreateTabButton('GameSkins', 'APPEND', 'MAG-7 | Blast', PLACEHOLDERICON, 0, function()
+	EquipSkin("MAG7", {
+		["Handle2"] = {
+			ColorMap = "rbxassetid://99339678625559",
+			NormalMap = "rbxassetid://137803620710770",
+			RoughnessMap = "rbxassetid://128689833272436",
+			MetalnessMap = "rbxassetid://83298422556194"},
+		["Part"] = {
+			ColorMap = "rbxassetid://99339678625559",
+			NormalMap = "rbxassetid://137803620710770",
+			RoughnessMap = "rbxassetid://128689833272436",
+			MetalnessMap = "rbxassetid://83298422556194"},
+		["Pump"] = {
+			ColorMap = "rbxassetid://99339678625559",
+			NormalMap = "rbxassetid://137803620710770",
+			RoughnessMap = "rbxassetid://128689833272436",
+			MetalnessMap = "rbxassetid://83298422556194"},
+		["Slide1"] = {
+			ColorMap = "rbxassetid://99339678625559",
+			NormalMap = "rbxassetid://137803620710770",
+			RoughnessMap = "rbxassetid://128689833272436",
+			MetalnessMap = "rbxassetid://83298422556194"},
+		["Slide2"] = {
+			ColorMap = "rbxassetid://99339678625559",
+			NormalMap = "rbxassetid://137803620710770",
+			RoughnessMap = "rbxassetid://128689833272436",
+			MetalnessMap = "rbxassetid://83298422556194"}
+	})
+end)
+
 CreateTabButton('GameSkins', 'APPEND', 'MAG-7 | Bombshell', PLACEHOLDERICON, 0, function()
 	EquipSkin("MAG7", {
 		["Handle2"] = {
@@ -68800,6 +71107,21 @@ CreateTabButton('GameSkins', 'APPEND', 'MP5 | Industrial', PLACEHOLDERICON, 0, f
 	})
 end)
 
+CreateTabButton('GameSkins', 'APPEND', 'MP5 | Red Carbon', PLACEHOLDERICON, 0, function()
+	EquipSkin("MP5", {
+		["Handle2"] = {
+			ColorMap = "rbxassetid://89764661987265",
+			NormalMap = "rbxassetid://123639700454226",
+			RoughnessMap = "rbxassetid://92540743664371",
+			MetalnessMap = "rbxassetid://73822528614210"},
+		["Mag2"] = {
+			ColorMap = "rbxassetid://89764661987265",
+			NormalMap = "rbxassetid://123639700454226",
+			RoughnessMap = "rbxassetid://92540743664371",
+			MetalnessMap = "rbxassetid://73822528614210"}
+	})
+end)
+
 CreateTabButton('GameSkins', 'APPEND', 'MP5 | Reindeer', PLACEHOLDERICON, 0, function()
 	EquipSkin("MP5", {
 		["Handle2"] = {
@@ -68857,6 +71179,36 @@ CreateTabButton('GameSkins', 'APPEND', 'MP5-SD | Equalizer', PLACEHOLDERICON, 0,
 			ColorMap = "rbxassetid://81393520117006"},
 		["Suppressor"] = {
 			ColorMap = "rbxassetid://106238410938584"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'MP5-SD | Meta', PLACEHOLDERICON, 0, function()
+	EquipSkin("MP5SD", {
+		["Bolt"] = {
+			ColorMap = "rbxassetid://80845102522373",
+			NormalMap = "rbxassetid://136412259384207",
+			RoughnessMap = "rbxassetid://71872224167578",
+			MetalnessMap = "rbxassetid://140097995423592"},
+		["Handle"] = {
+			ColorMap = "rbxassetid://140479236361211",
+			NormalMap = "rbxassetid://116015389034421",
+			RoughnessMap = "rbxassetid://109605332863765",
+			MetalnessMap = "rbxassetid://75876587472304"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://80845102522373",
+			NormalMap = "rbxassetid://136412259384207",
+			RoughnessMap = "rbxassetid://71872224167578",
+			MetalnessMap = "rbxassetid://140097995423592"},
+		["Part"] = {
+			ColorMap = "rbxassetid://80845102522373",
+			NormalMap = "rbxassetid://136412259384207",
+			RoughnessMap = "rbxassetid://71872224167578",
+			MetalnessMap = "rbxassetid://140097995423592"},
+		["Suppressor"] = {
+			ColorMap = "rbxassetid://125446337999863",
+			NormalMap = "rbxassetid://115029830455477",
+			RoughnessMap = "rbxassetid://83990227538819",
+			MetalnessMap = "rbxassetid://81391996668360"}
 	})
 end)
 
@@ -69145,6 +71497,51 @@ CreateTabButton('GameSkins', 'APPEND', 'MG42 | Quazar', PLACEHOLDERICON, 0, func
 	})
 end)
 
+CreateTabButton('GameSkins', 'APPEND', 'MG42 | RailGun', PLACEHOLDERICON, 0, function()
+	EquipSkin("MG42", {
+		["Handle2"] = {
+			ColorMap = "rbxassetid://112511346581145",
+			NormalMap = "rbxassetid://90108719812419",
+			RoughnessMap = "rbxassetid://132316376916688",
+			MetalnessMap = "rbxassetid://99057933492617"},
+		["Lid2"] = {
+			ColorMap = "rbxassetid://112511346581145",
+			NormalMap = "rbxassetid://90108719812419",
+			RoughnessMap = "rbxassetid://132316376916688",
+			MetalnessMap = "rbxassetid://99057933492617"},
+		["Bolt2"] = {
+			ColorMap = "rbxassetid://112511346581145",
+			NormalMap = "rbxassetid://90108719812419",
+			RoughnessMap = "rbxassetid://132316376916688",
+			MetalnessMap = "rbxassetid://99057933492617"},
+		["Mag2"] = {
+			ColorMap = "rbxassetid://110549292363682",
+			NormalMap = "rbxassetid://106544408289111",
+			RoughnessMap = "rbxassetid://116546181966176",
+			MetalnessMap = "rbxassetid://121455384321650"},
+		["Part"] = {
+			ColorMap = "rbxassetid://112511346581145",
+			NormalMap = "rbxassetid://90108719812419",
+			RoughnessMap = "rbxassetid://132316376916688",
+			MetalnessMap = "rbxassetid://99057933492617"},
+		["Part2"] = {
+			ColorMap = "rbxassetid://112511346581145",
+			NormalMap = "rbxassetid://90108719812419",
+			RoughnessMap = "rbxassetid://132316376916688",
+			MetalnessMap = "rbxassetid://99057933492617"},
+		["Part3"] = {
+			ColorMap = "rbxassetid://112511346581145",
+			NormalMap = "rbxassetid://90108719812419",
+			RoughnessMap = "rbxassetid://132316376916688",
+			MetalnessMap = "rbxassetid://99057933492617"},
+		["Part4"] = {
+			ColorMap = "rbxassetid://112511346581145",
+			NormalMap = "rbxassetid://90108719812419",
+			RoughnessMap = "rbxassetid://132316376916688",
+			MetalnessMap = "rbxassetid://99057933492617"}
+	})
+end)
+
 CreateTabButton('GameSkins', 'APPEND', 'MG42 | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("MG42", {
 		["Handle2"] = {
@@ -69272,6 +71669,21 @@ CreateTabButton('GameSkins', 'APPEND', 'Nova | Paradise', PLACEHOLDERICON, 0, fu
 			ColorMap = "rbxassetid://3180037341"},
 		["Pump"] = {
 			ColorMap = "rbxassetid://3180037341"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Nova | Recon', PLACEHOLDERICON, 0, function()
+	EquipSkin("Nova", {
+		["Handle"] = {
+			ColorMap = "rbxassetid://116285947234502",
+			NormalMap = "rbxassetid://90373972726468",
+			RoughnessMap = "rbxassetid://73909862152669",
+			MetalnessMap = "rbxassetid://125535383228009"},
+		["Pump"] = {
+			ColorMap = "rbxassetid://116285947234502",
+			NormalMap = "rbxassetid://90373972726468",
+			RoughnessMap = "rbxassetid://73909862152669",
+			MetalnessMap = "rbxassetid://125535383228009"}
 	})
 end)
 
@@ -69483,6 +71895,117 @@ end)
 
 -- Note: Animated
 CreateTabButton('GameSkins', 'APPEND', 'PX4 | Spirit Box', PLACEHOLDERICON, 0, function()
+	EquipSkin("PX4", {
+		["Handle2"] = {
+			ColorMap = "rbxassetid://98523384101094"},
+		["Mag2"] = {
+			ColorMap = "rbxassetid://98523384101094"},
+		["Slide2"] = {
+			ColorMap = "rbxassetid://98523384101094"},
+
+		Animation = {
+			{
+				Delay = 0.2,
+				["Handle2"] = {
+					ColorMap = "rbxassetid://134219319297557"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://134219319297557"},
+				["Slide2"] = {
+					ColorMap = "rbxassetid://134219319297557"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://98696329390236"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://98696329390236"},
+				["Slide2"] = {
+					ColorMap = "rbxassetid://98696329390236"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://98523384101094"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://98523384101094"},
+				["Slide2"] = {
+					ColorMap = "rbxassetid://98523384101094"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://127931620116175"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://127931620116175"},
+				["Slide2"] = {
+					ColorMap = "rbxassetid://127931620116175"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://120717772602959"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://120717772602959"},
+				["Slide2"] = {
+					ColorMap = "rbxassetid://120717772602959"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://94276921233039"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://94276921233039"},
+				["Slide2"] = {
+					ColorMap = "rbxassetid://94276921233039"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://132248003052489"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://132248003052489"},
+				["Slide2"] = {
+					ColorMap = "rbxassetid://132248003052489"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://94687826882567"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://94687826882567"},
+				["Slide2"] = {
+					ColorMap = "rbxassetid://94687826882567"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://129233189676926"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://129233189676926"},
+				["Slide2"] = {
+					ColorMap = "rbxassetid://129233189676926"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://109689242254659"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://109689242254659"},
+				["Slide2"] = {
+					ColorMap = "rbxassetid://109689242254659"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://132048684930728"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://132048684930728"},
+				["Slide2"] = {
+					ColorMap = "rbxassetid://132048684930728"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://123327331138324"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://123327331138324"},
+				["Slide2"] = {
+					ColorMap = "rbxassetid://123327331138324"}
+			}
+		}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'PX4 | Spirit Box (Non-Animated)', PLACEHOLDERICON, 0, function()
 	EquipSkin("PX4", {
 		["Handle2"] = {
 			ColorMap = "rbxassetid://98523384101094"},
@@ -70354,6 +72877,36 @@ CreateTabButton('GameSkins', 'APPEND', 'Scout | Flowing Mists', PLACEHOLDERICON,
 	})
 end)
 
+CreateTabButton('GameSkins', 'APPEND', 'Scout | Fractured', PLACEHOLDERICON, 0, function()
+	EquipSkin("Scout", {
+		["Handle2"] = {
+			ColorMap = "rbxassetid://119701370956084",
+			NormalMap = "rbxassetid://80488768083934",
+			RoughnessMap = "rbxassetid://117104101829357",
+			MetalnessMap = "rbxassetid://98987597223682"},
+		["Mag2"] = {
+			ColorMap = "rbxassetid://119701370956084",
+			NormalMap = "rbxassetid://80488768083934",
+			RoughnessMap = "rbxassetid://117104101829357",
+			MetalnessMap = "rbxassetid://98987597223682"},
+		["Bolt2"] = {
+			ColorMap = "rbxassetid://119701370956084",
+			NormalMap = "rbxassetid://80488768083934",
+			RoughnessMap = "rbxassetid://117104101829357",
+			MetalnessMap = "rbxassetid://98987597223682"},
+		["Lever2"] = {
+			ColorMap = "rbxassetid://119701370956084",
+			NormalMap = "rbxassetid://80488768083934",
+			RoughnessMap = "rbxassetid://117104101829357",
+			MetalnessMap = "rbxassetid://98987597223682"},
+		["Part"] = {
+			ColorMap = "rbxassetid://119701370956084",
+			NormalMap = "rbxassetid://80488768083934",
+			RoughnessMap = "rbxassetid://117104101829357",
+			MetalnessMap = "rbxassetid://98987597223682"}
+	})
+end)
+
 CreateTabButton('GameSkins', 'APPEND', 'Scout | Hellborn', PLACEHOLDERICON, 0, function()
 	EquipSkin("Scout", {
 		["Handle2"] = {
@@ -70551,6 +73104,73 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'Sickle | Psychadelic', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sickle", {
 		["Handle"] = {
+			ColorMap = "rbxassetid://85849501060821"},
+
+		Animation = {
+			{
+				Delay = 0.055,
+				["Handle"] = {
+					ColorMap = "rbxassetid://85849501060821"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://87357675026682"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://116573060207598"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://110336368104379"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://133380502786212"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://118257513555526"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://120402136701572"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://76033086211015"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://114176248896041"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://100874997210364"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://129416627246761"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://137715532053931"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://71319302014559"}
+			},
+			{
+				["Handle"] = {
+					ColorMap = "rbxassetid://83453622816139"}
+			}
+		}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Sickle | Psychadelic (Non-Animated)', PLACEHOLDERICON, 0, function()
+	EquipSkin("Sickle", {
+		["Handle"] = {
 			ColorMap = "rbxassetid://85849501060821"}
 	})
 end)
@@ -70562,6 +73182,7 @@ CreateTabButton('GameSkins', 'APPEND', 'Sickle | Reaper', PLACEHOLDERICON, 0, fu
 	})
 end)
 
+-- Note: Archived
 CreateTabButton('GameSkins', 'APPEND', 'Sickle | Splattered', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sickle", {
 		["Handle"] = {
@@ -70631,6 +73252,36 @@ CreateTabButton('GameSkins', 'APPEND', 'TEC-9 | Crescent', PLACEHOLDERICON, 0, f
 			ColorMap = "rbxassetid://133327403341952"},
 		["Part2"] = {
 			ColorMap = "rbxassetid://133327403341952"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'TEC-9 | Engraved', PLACEHOLDERICON, 0, function()
+	EquipSkin("TEC9", {
+		["Handle2"] = {
+			ColorMap = "rbxassetid://94573138467055",
+			NormalMap = "rbxassetid://86038278416895",
+			RoughnessMap = "rbxassetid://89868487871786",
+			MetalnessMap = "rbxassetid://84024978907496"},
+		["Mag2"] = {
+			ColorMap = "rbxassetid://94573138467055",
+			NormalMap = "rbxassetid://86038278416895",
+			RoughnessMap = "rbxassetid://89868487871786",
+			MetalnessMap = "rbxassetid://84024978907496"},
+		["Bolt2"] = {
+			ColorMap = "rbxassetid://94573138467055",
+			NormalMap = "rbxassetid://86038278416895",
+			RoughnessMap = "rbxassetid://89868487871786",
+			MetalnessMap = "rbxassetid://84024978907496"},
+		["Part"] = {
+			ColorMap = "rbxassetid://94573138467055",
+			NormalMap = "rbxassetid://86038278416895",
+			RoughnessMap = "rbxassetid://89868487871786",
+			MetalnessMap = "rbxassetid://84024978907496"},
+		["Part2"] = {
+			ColorMap = "rbxassetid://94573138467055",
+			NormalMap = "rbxassetid://86038278416895",
+			RoughnessMap = "rbxassetid://89868487871786",
+			MetalnessMap = "rbxassetid://84024978907496"}
 	})
 end)
 
@@ -70811,6 +73462,493 @@ CreateTabButton('GameSkins', 'APPEND', 'TEC-9 | Whispers', PLACEHOLDERICON, 0, f
 		["Part"] = {
 			ColorMap = "rbxassetid://71907503687246"},
 		["Part2"] = {
+			ColorMap = "rbxassetid://71907503687246"},
+
+		Animation = {
+			{
+				Delay = 0.06666666666666667,
+				["Handle2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Part"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://125668577601850"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Part"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://125668577601850"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Part"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://125668577601850"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Part"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://125668577601850"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Part"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://125668577601850"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Part"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://125668577601850"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Part"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://125668577601850"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Part"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://125668577601850"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Part"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://125668577601850"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Part"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://125668577601850"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Part"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://125668577601850"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Part"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://125668577601850"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Part"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://125668577601850"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://103724115703122"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://103724115703122"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://103724115703122"},
+				["Part"] = {
+					ColorMap = "rbxassetid://103724115703122"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://103724115703122"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://92346226892261"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://92346226892261"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://92346226892261"},
+				["Part"] = {
+					ColorMap = "rbxassetid://92346226892261"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://92346226892261"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://115521954982894"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://115521954982894"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://115521954982894"},
+				["Part"] = {
+					ColorMap = "rbxassetid://115521954982894"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://115521954982894"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://71907503687246"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://71907503687246"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://71907503687246"},
+				["Part"] = {
+					ColorMap = "rbxassetid://71907503687246"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://71907503687246"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://131031514834642"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://131031514834642"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://131031514834642"},
+				["Part"] = {
+					ColorMap = "rbxassetid://131031514834642"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://131031514834642"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://123848931178606"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://123848931178606"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://123848931178606"},
+				["Part"] = {
+					ColorMap = "rbxassetid://123848931178606"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://123848931178606"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://122013134945746"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://122013134945746"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://122013134945746"},
+				["Part"] = {
+					ColorMap = "rbxassetid://122013134945746"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://122013134945746"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Part"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://73790111569230"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Part"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://73790111569230"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Part"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://73790111569230"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Part"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://73790111569230"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Part"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://73790111569230"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Part"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://73790111569230"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Part"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://73790111569230"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Part"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://73790111569230"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Part"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://73790111569230"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Part"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://73790111569230"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Part"] = {
+					ColorMap = "rbxassetid://73790111569230"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://73790111569230"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://122013134945746"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://122013134945746"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://122013134945746"},
+				["Part"] = {
+					ColorMap = "rbxassetid://122013134945746"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://122013134945746"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://123848931178606"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://123848931178606"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://123848931178606"},
+				["Part"] = {
+					ColorMap = "rbxassetid://123848931178606"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://123848931178606"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://131031514834642"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://131031514834642"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://131031514834642"},
+				["Part"] = {
+					ColorMap = "rbxassetid://131031514834642"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://131031514834642"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://71907503687246"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://71907503687246"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://71907503687246"},
+				["Part"] = {
+					ColorMap = "rbxassetid://71907503687246"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://71907503687246"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://115521954982894"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://115521954982894"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://115521954982894"},
+				["Part"] = {
+					ColorMap = "rbxassetid://115521954982894"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://115521954982894"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://92346226892261"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://92346226892261"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://92346226892261"},
+				["Part"] = {
+					ColorMap = "rbxassetid://92346226892261"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://92346226892261"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://103724115703122"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://103724115703122"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://103724115703122"},
+				["Part"] = {
+					ColorMap = "rbxassetid://103724115703122"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://103724115703122"}
+			},
+			{
+				["Handle2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Part"] = {
+					ColorMap = "rbxassetid://125668577601850"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://125668577601850"}
+			}
+		}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'TEC-9 | Whispers (Non-Animated)', PLACEHOLDERICON, 0, function()
+	EquipSkin("TEC9", {
+		["Handle2"] = {
+			ColorMap = "rbxassetid://71907503687246"},
+		["Mag2"] = {
+			ColorMap = "rbxassetid://71907503687246"},
+		["Bolt2"] = {
+			ColorMap = "rbxassetid://71907503687246"},
+		["Part"] = {
+			ColorMap = "rbxassetid://71907503687246"},
+		["Part2"] = {
 			ColorMap = "rbxassetid://71907503687246"}
 	})
 end)
@@ -70913,6 +74051,317 @@ end)
 
 -- Note: Animated
 CreateTabButton('GameSkins', 'APPEND', 'UMP-45 | Molten', PLACEHOLDERICON, 0, function()
+	EquipSkin("UMP", {
+		["Bolt2"] = {
+			ColorMap = "rbxassetid://4212749496"},
+		["Grip2"] = {
+			ColorMap = "rbxassetid://4212749496"},
+		["Handle2"] = {
+			ColorMap = "rbxassetid://4212749496"},
+		["Mag2"] = {
+			ColorMap = "rbxassetid://4212749496"},
+		["Part"] = {
+			ColorMap = "rbxassetid://4212749496"},
+		["Part2"] = {
+			ColorMap = "rbxassetid://4212749496"},
+		["Part3"] = {
+			ColorMap = "rbxassetid://4212749496"},
+
+		Animation = {
+			{
+				Delay = 0.04,
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://4212743737"},
+				["Grip2"] = {
+					ColorMap = "rbxassetid://4212743737"},
+				["Handle2"] = {
+					ColorMap = "rbxassetid://4212743737"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://4212743737"},
+				["Part"] = {
+					ColorMap = "rbxassetid://4212743737"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://4212743737"},
+				["Part3"] = {
+					ColorMap = "rbxassetid://4212743737"}
+			},
+			{
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://4212744388"},
+				["Grip2"] = {
+					ColorMap = "rbxassetid://4212744388"},
+				["Handle2"] = {
+					ColorMap = "rbxassetid://4212744388"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://4212744388"},
+				["Part"] = {
+					ColorMap = "rbxassetid://4212744388"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://4212744388"},
+				["Part3"] = {
+					ColorMap = "rbxassetid://4212744388"}
+			},
+			{
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://4212744919"},
+				["Grip2"] = {
+					ColorMap = "rbxassetid://4212744919"},
+				["Handle2"] = {
+					ColorMap = "rbxassetid://4212744919"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://4212744919"},
+				["Part"] = {
+					ColorMap = "rbxassetid://4212744919"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://4212744919"},
+				["Part3"] = {
+					ColorMap = "rbxassetid://4212744919"}
+			},
+			{
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://4212745435"},
+				["Grip2"] = {
+					ColorMap = "rbxassetid://4212745435"},
+				["Handle2"] = {
+					ColorMap = "rbxassetid://4212745435"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://4212745435"},
+				["Part"] = {
+					ColorMap = "rbxassetid://4212745435"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://4212745435"},
+				["Part3"] = {
+					ColorMap = "rbxassetid://4212745435"}
+			},
+			{
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://4212746252"},
+				["Grip2"] = {
+					ColorMap = "rbxassetid://4212746252"},
+				["Handle2"] = {
+					ColorMap = "rbxassetid://4212746252"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://4212746252"},
+				["Part"] = {
+					ColorMap = "rbxassetid://4212746252"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://4212746252"},
+				["Part3"] = {
+					ColorMap = "rbxassetid://4212746252"}
+			},
+			{
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://4212746772"},
+				["Grip2"] = {
+					ColorMap = "rbxassetid://4212746772"},
+				["Handle2"] = {
+					ColorMap = "rbxassetid://4212746772"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://4212746772"},
+				["Part"] = {
+					ColorMap = "rbxassetid://4212746772"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://4212746772"},
+				["Part3"] = {
+					ColorMap = "rbxassetid://4212746772"}
+			},
+			{
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://4212747429"},
+				["Grip2"] = {
+					ColorMap = "rbxassetid://4212747429"},
+				["Handle2"] = {
+					ColorMap = "rbxassetid://4212747429"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://4212747429"},
+				["Part"] = {
+					ColorMap = "rbxassetid://4212747429"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://4212747429"},
+				["Part3"] = {
+					ColorMap = "rbxassetid://4212747429"}
+			},
+			{
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://4212748097"},
+				["Grip2"] = {
+					ColorMap = "rbxassetid://4212748097"},
+				["Handle2"] = {
+					ColorMap = "rbxassetid://4212748097"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://4212748097"},
+				["Part"] = {
+					ColorMap = "rbxassetid://4212748097"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://4212748097"},
+				["Part3"] = {
+					ColorMap = "rbxassetid://4212748097"}
+			},
+			{
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://4212748930"},
+				["Grip2"] = {
+					ColorMap = "rbxassetid://4212748930"},
+				["Handle2"] = {
+					ColorMap = "rbxassetid://4212748930"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://4212748930"},
+				["Part"] = {
+					ColorMap = "rbxassetid://4212748930"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://4212748930"},
+				["Part3"] = {
+					ColorMap = "rbxassetid://4212748930"}
+			},
+			{
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://4212749496"},
+				["Grip2"] = {
+					ColorMap = "rbxassetid://4212749496"},
+				["Handle2"] = {
+					ColorMap = "rbxassetid://4212749496"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://4212749496"},
+				["Part"] = {
+					ColorMap = "rbxassetid://4212749496"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://4212749496"},
+				["Part3"] = {
+					ColorMap = "rbxassetid://4212749496"}
+			},
+			{
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://4212748930"},
+				["Grip2"] = {
+					ColorMap = "rbxassetid://4212748930"},
+				["Handle2"] = {
+					ColorMap = "rbxassetid://4212748930"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://4212748930"},
+				["Part"] = {
+					ColorMap = "rbxassetid://4212748930"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://4212748930"},
+				["Part3"] = {
+					ColorMap = "rbxassetid://4212748930"}
+			},
+			{
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://4212748097"},
+				["Grip2"] = {
+					ColorMap = "rbxassetid://4212748097"},
+				["Handle2"] = {
+					ColorMap = "rbxassetid://4212748097"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://4212748097"},
+				["Part"] = {
+					ColorMap = "rbxassetid://4212748097"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://4212748097"},
+				["Part3"] = {
+					ColorMap = "rbxassetid://4212748097"}
+			},
+			{
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://4212747429"},
+				["Grip2"] = {
+					ColorMap = "rbxassetid://4212747429"},
+				["Handle2"] = {
+					ColorMap = "rbxassetid://4212747429"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://4212747429"},
+				["Part"] = {
+					ColorMap = "rbxassetid://4212747429"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://4212747429"},
+				["Part3"] = {
+					ColorMap = "rbxassetid://4212747429"}
+			},
+			{
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://4212746772"},
+				["Grip2"] = {
+					ColorMap = "rbxassetid://4212746772"},
+				["Handle2"] = {
+					ColorMap = "rbxassetid://4212746772"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://4212746772"},
+				["Part"] = {
+					ColorMap = "rbxassetid://4212746772"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://4212746772"},
+				["Part3"] = {
+					ColorMap = "rbxassetid://4212746772"}
+			},
+			{
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://4212746252"},
+				["Grip2"] = {
+					ColorMap = "rbxassetid://4212746252"},
+				["Handle2"] = {
+					ColorMap = "rbxassetid://4212746252"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://4212746252"},
+				["Part"] = {
+					ColorMap = "rbxassetid://4212746252"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://4212746252"},
+				["Part3"] = {
+					ColorMap = "rbxassetid://4212746252"}
+			},
+			{
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://4212745435"},
+				["Grip2"] = {
+					ColorMap = "rbxassetid://4212745435"},
+				["Handle2"] = {
+					ColorMap = "rbxassetid://4212745435"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://4212745435"},
+				["Part"] = {
+					ColorMap = "rbxassetid://4212745435"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://4212745435"},
+				["Part3"] = {
+					ColorMap = "rbxassetid://4212745435"}
+			},
+			{
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://4212744919"},
+				["Grip2"] = {
+					ColorMap = "rbxassetid://4212744919"},
+				["Handle2"] = {
+					ColorMap = "rbxassetid://4212744919"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://4212744919"},
+				["Part"] = {
+					ColorMap = "rbxassetid://4212744919"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://4212744919"},
+				["Part3"] = {
+					ColorMap = "rbxassetid://4212744919"}
+			},
+			{
+				["Bolt2"] = {
+					ColorMap = "rbxassetid://4212744388"},
+				["Grip2"] = {
+					ColorMap = "rbxassetid://4212744388"},
+				["Handle2"] = {
+					ColorMap = "rbxassetid://4212744388"},
+				["Mag2"] = {
+					ColorMap = "rbxassetid://4212744388"},
+				["Part"] = {
+					ColorMap = "rbxassetid://4212744388"},
+				["Part2"] = {
+					ColorMap = "rbxassetid://4212744388"},
+				["Part3"] = {
+					ColorMap = "rbxassetid://4212744388"}
+			}
+		}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'UMP-45 | Molten (Non-Animated)', PLACEHOLDERICON, 0, function()
 	EquipSkin("UMP", {
 		["Bolt2"] = {
 			ColorMap = "rbxassetid://4212749496"},
@@ -71077,6 +74526,31 @@ CreateTabButton('GameSkins', 'APPEND', 'USP-S | Holiday', PLACEHOLDERICON, 0, fu
 			ColorMap = "rbxassetid://4540754549"},
 		["Slide2"] = {
 			ColorMap = "rbxassetid://4540754549"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'USP-S | Infantry', PLACEHOLDERICON, 0, function()
+	EquipSkin("USP", {
+		["Handle2"] = {
+			ColorMap = "rbxassetid://83249253963772",
+			NormalMap = "rbxassetid://73685162432021",
+			RoughnessMap = "rbxassetid://128250864236781",
+			MetalnessMap = "rbxassetid://89990487620615"},
+		["Mag2"] = {
+			ColorMap = "rbxassetid://83249253963772",
+			NormalMap = "rbxassetid://73685162432021",
+			RoughnessMap = "rbxassetid://128250864236781",
+			MetalnessMap = "rbxassetid://89990487620615"},
+		["Silencer2"] = {
+			ColorMap = "rbxassetid://83249253963772",
+			NormalMap = "rbxassetid://73685162432021",
+			RoughnessMap = "rbxassetid://128250864236781",
+			MetalnessMap = "rbxassetid://89990487620615"},
+		["Slide2"] = {
+			ColorMap = "rbxassetid://83249253963772",
+			NormalMap = "rbxassetid://73685162432021",
+			RoughnessMap = "rbxassetid://128250864236781",
+			MetalnessMap = "rbxassetid://89990487620615"}
 	})
 end)
 
@@ -71387,505 +74861,505 @@ CreateTabButton('GameSkins', 'APPEND', 'XM1014 | Stock', PLACEHOLDERICON, 0, fun
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Fingerless Gloves | Crystal', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Fingerless Gloves | Crystal', PLACEHOLDERICON, 0, function()
 	EquipSkin("Fingerless Gloves", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://2135973675"},
+			ColorMap = "rbxassetid://2135973675"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://2135973675"}
+			ColorMap = "rbxassetid://2135973675"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Fingerless Gloves | Digital', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Fingerless Gloves | Digital', PLACEHOLDERICON, 0, function()
 	EquipSkin("Fingerless Gloves", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://2135974031"},
+			ColorMap = "rbxassetid://2135974031"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://2135974031"}
+			ColorMap = "rbxassetid://2135974031"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Fingerless Gloves | Kimura', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Fingerless Gloves | Kimura', PLACEHOLDERICON, 0, function()
 	EquipSkin("Fingerless Gloves", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://89041056640438"},
+			ColorMap = "rbxassetid://89041056640438"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://89041056640438"}
+			ColorMap = "rbxassetid://89041056640438"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Fingerless Gloves | Patch', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Fingerless Gloves | Patch', PLACEHOLDERICON, 0, function()
 	EquipSkin("Fingerless Gloves", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://2135974348"},
+			ColorMap = "rbxassetid://2135974348"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://2135974348"}
+			ColorMap = "rbxassetid://2135974348"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Fingerless Gloves | Scapter', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Fingerless Gloves | Scapter', PLACEHOLDERICON, 0, function()
 	EquipSkin("Fingerless Gloves", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://2217790167"},
+			ColorMap = "rbxassetid://2217790167"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://2217790167"}
+			ColorMap = "rbxassetid://2217790167"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Fingerless Gloves | Spookiness', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Fingerless Gloves | Spookiness', PLACEHOLDERICON, 0, function()
 	EquipSkin("Fingerless Gloves", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://7944129369"},
+			ColorMap = "rbxassetid://7944129369"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://7944129369"}
+			ColorMap = "rbxassetid://7944129369"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Fingerless Gloves | Stock', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Fingerless Gloves | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("Fingerless Gloves", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://85625470681662"},
+			ColorMap = "rbxassetid://85625470681662"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://85625470681662"}
+			ColorMap = "rbxassetid://85625470681662"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Dark Damascus', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Handwraps | Dark Damascus', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://89766139472336"},
+			ColorMap = "rbxassetid://89766139472336"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://89766139472336"}
+			ColorMap = "rbxassetid://89766139472336"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Ghoul Hex', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Handwraps | Ghoul Hex', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://4212660824"},
+			ColorMap = "rbxassetid://4212660824"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://4212660824"}
+			ColorMap = "rbxassetid://4212660824"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Gilded', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Handwraps | Gilded', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://126795995401524"},
+			ColorMap = "rbxassetid://126795995401524"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://126795995401524"}
+			ColorMap = "rbxassetid://126795995401524"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Green Hex', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Handwraps | Green Hex', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://4212661339"},
+			ColorMap = "rbxassetid://4212661339"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://4212661339"}
+			ColorMap = "rbxassetid://4212661339"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Guts', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Handwraps | Guts', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://95496903700805"},
+			ColorMap = "rbxassetid://95496903700805"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://95496903700805"}
+			ColorMap = "rbxassetid://95496903700805"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | MMA', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Handwraps | MMA', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://114987738016404"},
+			ColorMap = "rbxassetid://114987738016404"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://114987738016404"}
+			ColorMap = "rbxassetid://114987738016404"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Microbes', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Handwraps | Microbes', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://7944157395"},
+			ColorMap = "rbxassetid://7944157395"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://7944157395"}
+			ColorMap = "rbxassetid://7944157395"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Mummy', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Handwraps | Mummy', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://5894322563"},
+			ColorMap = "rbxassetid://5894322563"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://5894322563"}
+			ColorMap = "rbxassetid://5894322563"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Orange Hex', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Handwraps | Orange Hex', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://4212661898"},
+			ColorMap = "rbxassetid://4212661898"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://4212661898"}
+			ColorMap = "rbxassetid://4212661898"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Phantom Hex', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Handwraps | Phantom Hex', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://4212662590"},
+			ColorMap = "rbxassetid://4212662590"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://4212662590"}
+			ColorMap = "rbxassetid://4212662590"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Purple Hex', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Handwraps | Purple Hex', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://4212663201"},
+			ColorMap = "rbxassetid://4212663201"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://4212663201"}
+			ColorMap = "rbxassetid://4212663201"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Spector Hex', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Handwraps | Spector Hex', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://4212663733"},
+			ColorMap = "rbxassetid://4212663733"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://4212663733"}
+			ColorMap = "rbxassetid://4212663733"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Stock', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Handwraps | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://115638307976493"},
+			ColorMap = "rbxassetid://115638307976493"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://115638307976493"}
+			ColorMap = "rbxassetid://115638307976493"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Tape', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Handwraps | Tape', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://110968161283312"},
+			ColorMap = "rbxassetid://110968161283312"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://110968161283312"}
+			ColorMap = "rbxassetid://110968161283312"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Toxic Nitro', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Handwraps | Toxic Nitro', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://4680487306"},
+			ColorMap = "rbxassetid://4680487306"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://4680487306"}
+			ColorMap = "rbxassetid://4680487306"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Wetland', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Handwraps | Wetland', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://112319150446072"},
+			ColorMap = "rbxassetid://112319150446072"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://112319150446072"}
+			ColorMap = "rbxassetid://112319150446072"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Handwraps | Yellow Hazard', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Handwraps | Yellow Hazard', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://74108980847744",
+			ColorMap = "rbxassetid://74108980847744",
 			NormalMap= "rbxassetid://121907918789945",
 			RoughnessMap= "rbxassetid://137511414861555",
 			MetalnessMap= "rbxassetid://135429296028655"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://74108980847744",
+			ColorMap = "rbxassetid://74108980847744",
 			NormalMap= "rbxassetid://121907918789945",
 			RoughnessMap= "rbxassetid://137511414861555",
 			MetalnessMap= "rbxassetid://135429296028655"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Amethyst', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Amethyst', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://137324499588396"},
+			ColorMap = "rbxassetid://137324499588396"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://137324499588396"}
+			ColorMap = "rbxassetid://137324499588396"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Blood Web', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Blood Web', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://77696820441822"},
+			ColorMap = "rbxassetid://77696820441822"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://77696820441822"}
+			ColorMap = "rbxassetid://77696820441822"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Calamity', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Calamity', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://6891919220"},
+			ColorMap = "rbxassetid://6891919220"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://6891919220"}
+			ColorMap = "rbxassetid://6891919220"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | CottonTail', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | CottonTail', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://3096311966"},
+			ColorMap = "rbxassetid://3096311966"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://3096311966"}
+			ColorMap = "rbxassetid://3096311966"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Dark Damascus', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Dark Damascus', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://127612234295604"},
+			ColorMap = "rbxassetid://127612234295604"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://127612234295604"}
+			ColorMap = "rbxassetid://127612234295604"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Dead Prey', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Dead Prey', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://7998990929"},
+			ColorMap = "rbxassetid://7998990929"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://7998990929"}
+			ColorMap = "rbxassetid://7998990929"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Hallows', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Hallows', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://2504760117"},
+			ColorMap = "rbxassetid://2504760117"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://2504760117"}
+			ColorMap = "rbxassetid://2504760117"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Hazard', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Hazard', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://2135535438"},
+			ColorMap = "rbxassetid://2135535438"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://2135535438"}
+			ColorMap = "rbxassetid://2135535438"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Hellfire', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Hellfire', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://89763492782581"},
+			ColorMap = "rbxassetid://89763492782581"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://89763492782581"}
+			ColorMap = "rbxassetid://89763492782581"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Majesty', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Majesty', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://2135581144"},
+			ColorMap = "rbxassetid://2135581144"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://2135581144"}
+			ColorMap = "rbxassetid://2135581144"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Mud Bath', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Mud Bath', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://103317132588064"},
+			ColorMap = "rbxassetid://103317132588064"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://103317132588064"}
+			ColorMap = "rbxassetid://103317132588064"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Pumpkin', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Pumpkin', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://5861601404"},
+			ColorMap = "rbxassetid://5861601404"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://5861601404"}
+			ColorMap = "rbxassetid://5861601404"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | RSL', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | RSL', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://3367350589"},
+			ColorMap = "rbxassetid://3367350589"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://3367350589"}
+			ColorMap = "rbxassetid://3367350589"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Reinforced', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Reinforced', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://71756736916558"},
+			ColorMap = "rbxassetid://71756736916558"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://71756736916558"}
+			ColorMap = "rbxassetid://71756736916558"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Royal', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Royal', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://2135534686"},
+			ColorMap = "rbxassetid://2135534686"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://2135534686"}
+			ColorMap = "rbxassetid://2135534686"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Skulls', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Skulls', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://5861139281"},
+			ColorMap = "rbxassetid://5861139281"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://5861139281"}
+			ColorMap = "rbxassetid://5861139281"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Stock', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://107664944433724"},
+			ColorMap = "rbxassetid://107664944433724"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://107664944433724"}
+			ColorMap = "rbxassetid://107664944433724"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Twitch', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Twitch', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://6899073614"},
+			ColorMap = "rbxassetid://6899073614"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://6899073614"}
+			ColorMap = "rbxassetid://6899073614"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Sport Gloves | Weeb', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Weeb', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://3055822171"},
+			ColorMap = "rbxassetid://3055822171"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://3055822171"}
+			ColorMap = "rbxassetid://3055822171"}
 	})
 end)
 
 -- Note: Archived
-CreateTabButton('GameSkins', 'RANDOM', 'Strapped Gloves | BloxersClub', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Strapped Gloves | BloxersClub', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://17611821908"},
+			ColorMap = "rbxassetid://17611821908"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://17611821908"}
+			ColorMap = "rbxassetid://17611821908"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Strapped Gloves | Caffeine', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Strapped Gloves | Caffeine', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://121078147459979"},
+			ColorMap = "rbxassetid://121078147459979"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://121078147459979"}
+			ColorMap = "rbxassetid://121078147459979"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Strapped Gloves | Cob Web', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Strapped Gloves | Cob Web', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://7944168763"},
+			ColorMap = "rbxassetid://7944168763"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://7944168763"}
+			ColorMap = "rbxassetid://7944168763"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Strapped Gloves | Drop-Out', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Strapped Gloves | Drop-Out', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://5894322927"},
+			ColorMap = "rbxassetid://5894322927"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://5894322927"}
+			ColorMap = "rbxassetid://5894322927"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Strapped Gloves | Grim', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Strapped Gloves | Grim', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://2132122442"},
+			ColorMap = "rbxassetid://2132122442"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://2132122442"}
+			ColorMap = "rbxassetid://2132122442"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Strapped Gloves | Kringle', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Strapped Gloves | Kringle', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://2664358019"},
+			ColorMap = "rbxassetid://2664358019"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://2664358019"}
+			ColorMap = "rbxassetid://2664358019"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Strapped Gloves | Molten', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Strapped Gloves | Molten', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://2135909426"},
+			ColorMap = "rbxassetid://2135909426"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://2135909426"}
+			ColorMap = "rbxassetid://2135909426"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Strapped Gloves | Racer', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Strapped Gloves | Racer', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://4614503547"},
+			ColorMap = "rbxassetid://4614503547"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://4614503547"}
+			ColorMap = "rbxassetid://4614503547"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Strapped Gloves | Snow Leopard', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Strapped Gloves | Snow Leopard', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://81717979708040"},
+			ColorMap = "rbxassetid://81717979708040"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://81717979708040"}
+			ColorMap = "rbxassetid://81717979708040"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Strapped Gloves | Stock', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Strapped Gloves | Stock', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://89172511600807"},
+			ColorMap = "rbxassetid://89172511600807"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://89172511600807"}
+			ColorMap = "rbxassetid://89172511600807"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Strapped Gloves | Vesper', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Strapped Gloves | Vesper', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://115852572279642"},
+			ColorMap = "rbxassetid://115852572279642"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://115852572279642"}
+			ColorMap = "rbxassetid://115852572279642"}
 	})
 end)
 
-CreateTabButton('GameSkins', 'RANDOM', 'Strapped Gloves | Wisk', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Strapped Gloves | Wisk', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
 		["LeftGlove"] = {
-			ColorMap= "rbxassetid://2135910089"},
+			ColorMap = "rbxassetid://2135910089"},
 		["RightGlove"] = {
-			ColorMap= "rbxassetid://2135910089"}
+			ColorMap = "rbxassetid://2135910089"}
 	})
 end)
 --GameSkins
@@ -72318,6 +75792,30 @@ pcall(function()
 	local UIPlayerName= LocalPlayer["PlayerGui"]["Menew"]["Main"]["Pages"]["Home"]["Wrap"]["TopRight"]["Wrap"]["Profile"]["Wrap"]["Info"]["PlayerInfo"]["PlayerName"]
 	if devmode == true or UIPlayerName.Text=="Skin" or UIPlayerName.Text=="SkinTest" or UIPlayerName.Text=="Anim9r" then CoreGui["BloxFunGui"]["BaseFrame"]["SideBarButtonsHolderFrame"]["SideBarButtonsHolderScrollingFrame"]["SideBar11_Frame"].Visible=true;
 		-- Template: CreateTabButton('11','RANDOM', 'Title', PLACEHOLDERICON,0,function() end)
+		CreateTabButton('11', 'RANDOM', 'Sport Gloves | (Animated Test)', PLACEHOLDERICON, 0, function()
+			EquipSkin("Sport Gloves", {
+				["LeftGlove"] = {
+					ColorMap = "rbxassetid://2135581144"},
+				["RightGlove"] = {
+					ColorMap = "rbxassetid://2135581144"},
+
+				Animation = {
+					{
+						Delay = 0.4,
+						["LeftGlove"] = {
+							ColorMap = "rbxassetid://89763492782581"},
+						["RightGlove"] = {
+							ColorMap = "rbxassetid://89763492782581"}
+					},
+					{
+						["LeftGlove"] = {
+							ColorMap = "rbxassetid://2135535438"},
+						["RightGlove"] = {
+							ColorMap = "rbxassetid://2135535438"}
+					}
+				}
+			})
+		end)
 		CreateTabButton('11', 'RANDOM', 'USP-S | YellowBelly (Remake)', PLACEHOLDERICON, 0, function()
 			EquipSkin("USP", {
 				["Handle2"] = {
