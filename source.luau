@@ -8678,7 +8678,7 @@ BloxFunGui.VersionText.BorderSizePixel = 0
 BloxFunGui.VersionText.Position = UDim2.new(0.150343642, 0, 0, 0)
 BloxFunGui.VersionText.Size = UDim2.new(0, 405, 0, 50)
 BloxFunGui.VersionText.Font = Enum.Font.Cartoon
-BloxFunGui.VersionText.Text = "Last Updated: 01/07ᴹ/2026"
+BloxFunGui.VersionText.Text = "Last Updated: 05/07ᴹ/2026"
 BloxFunGui.VersionText.TextColor3 = Color3.fromRGB(255, 255, 255)
 BloxFunGui.VersionText.TextScaled = true
 BloxFunGui.VersionText.TextSize = 50.000
@@ -62179,6 +62179,26 @@ CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Quicktime', PLACEHOLDERICON, 0, 
 	})
 end)
 
+CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Revolution', PLACEHOLDERICON, 0, function()
+	EquipSkin("AK47", {
+		["Bolt"] = {
+			ColorMap = "rbxassetid://138156865978773",
+			NormalMap = "rbxassetid://133086879079158",
+			RoughnessMap = "rbxassetid://125097760824561",
+			MetalnessMap = "rbxassetid://93166563953024"},
+		["Handle"] = {
+			ColorMap = "rbxassetid://138156865978773",
+			NormalMap = "rbxassetid://133086879079158",
+			RoughnessMap = "rbxassetid://125097760824561",
+			MetalnessMap = "rbxassetid://93166563953024"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://138156865978773",
+			NormalMap = "rbxassetid://133086879079158",
+			RoughnessMap = "rbxassetid://125097760824561",
+			MetalnessMap = "rbxassetid://93166563953024"}
+	})
+end)
+
 CreateTabButton('GameSkins', 'APPEND', 'AK-47 | Scapter', PLACEHOLDERICON, 0, function()
 	EquipSkin("AK47", {
 		["Bolt"] = {
@@ -62478,6 +62498,36 @@ CreateTabButton('GameSkins', 'APPEND', 'AUG A3 | Equalizer', PLACEHOLDERICON, 0,
 			ColorMap = "rbxassetid://83632488106302"},
 		["Scope"] = {
 			ColorMap = "rbxassetid://128882711919914"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'AUG A3 | Goddess', PLACEHOLDERICON, 0, function()
+	EquipSkin("AUG", {
+		["Bolt2"] = {
+			ColorMap = "rbxassetid://89265355378303",
+			NormalMap = "rbxassetid://95685000343943",
+			RoughnessMap = "rbxassetid://76213319712121",
+			MetalnessMap = "rbxassetid://79389272813613"},
+		["Handle2"] = {
+			ColorMap = "rbxassetid://89265355378303",
+			NormalMap = "rbxassetid://95685000343943",
+			RoughnessMap = "rbxassetid://76213319712121",
+			MetalnessMap = "rbxassetid://79389272813613"},
+		["Mag2"] = {
+			ColorMap = "rbxassetid://89265355378303",
+			NormalMap = "rbxassetid://95685000343943",
+			RoughnessMap = "rbxassetid://76213319712121",
+			MetalnessMap = "rbxassetid://79389272813613"},
+		["Part"] = {
+			ColorMap = "rbxassetid://89265355378303",
+			NormalMap = "rbxassetid://95685000343943",
+			RoughnessMap = "rbxassetid://76213319712121",
+			MetalnessMap = "rbxassetid://79389272813613"},
+		["Scope"] = {
+			ColorMap = "rbxassetid://127557595644670",
+			NormalMap = "rbxassetid://78283720037955",
+			RoughnessMap = "rbxassetid://92360121088738",
+			MetalnessMap = "rbxassetid://83649440801219"}
 	})
 end)
 
@@ -63330,6 +63380,46 @@ CreateTabButton('GameSkins', 'APPEND', 'AWP | Overdrive', PLACEHOLDERICON, 0, fu
 	})
 end)
 
+CreateTabButton('GameSkins', 'APPEND', 'AWP | Patriot', PLACEHOLDERICON, 0, function()
+	EquipSkin("AWP", {
+		["Barrel"] = {
+			ColorMap = "rbxassetid://132640609258940",
+			NormalMap = "rbxassetid://106241014817844",
+			RoughnessMap = "rbxassetid://110202037660802",
+			MetalnessMap = "rbxassetid://124693931110719"},
+		["Handle2"] = {
+			ColorMap = "rbxassetid://122976232885479",
+			NormalMap = "rbxassetid://102804036426126",
+			RoughnessMap = "rbxassetid://73077397139139",
+			MetalnessMap = "rbxassetid://139670296882297"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://132640609258940",
+			NormalMap = "rbxassetid://106241014817844",
+			RoughnessMap = "rbxassetid://110202037660802",
+			MetalnessMap = "rbxassetid://124693931110719"},
+		["Part"] = {
+			ColorMap = "rbxassetid://132640609258940",
+			NormalMap = "rbxassetid://106241014817844",
+			RoughnessMap = "rbxassetid://110202037660802",
+			MetalnessMap = "rbxassetid://124693931110719"},
+		["Slide"] = {
+			ColorMap = "rbxassetid://132640609258940",
+			NormalMap = "rbxassetid://106241014817844",
+			RoughnessMap = "rbxassetid://110202037660802",
+			MetalnessMap = "rbxassetid://124693931110719"},
+		["Slide 2"] = {
+			ColorMap = "rbxassetid://132640609258940",
+			NormalMap = "rbxassetid://106241014817844",
+			RoughnessMap = "rbxassetid://110202037660802",
+			MetalnessMap = "rbxassetid://124693931110719"},
+		["Part1"] = {
+			ColorMap = "rbxassetid://87736038193827",
+			NormalMap = "rbxassetid://109204114538746",
+			RoughnessMap = "rbxassetid://121384734635004",
+			MetalnessMap = "rbxassetid://112703771963975"}
+	})
+end)
+
 CreateTabButton('GameSkins', 'APPEND', 'AWP | Pear Tree', PLACEHOLDERICON, 0, function()
 	EquipSkin("AWP", {
 		["Barrel"] = {
@@ -64007,6 +64097,13 @@ CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Ghastly (Non-Animated)', PLACE
 	})
 end)
 
+CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Ghastly (Old)', PLACEHOLDERICON, 0, function()
+	EquipSkin("Bayonet", {
+		["Handle"] = {
+			ColorMap = "rbxassetid://4212709073"}
+	})
+end)
+
 CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Goo', PLACEHOLDERICON, 0, function()
 	EquipSkin("Bayonet", {
 		["Handle"] = {
@@ -64091,6 +64188,16 @@ CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Neonic', PLACEHOLDERICON, 0, f
 	EquipSkin("Bayonet", {
 		["Handle"] = {
 			ColorMap = "rbxassetid://3037422447"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Bayonet | Prince', PLACEHOLDERICON, 0, function()
+	EquipSkin("Bayonet", {
+		["Handle"] = {
+			ColorMap = "rbxassetid://105487854871561",
+			NormalMap = "rbxassetid://119851651346419",
+			RoughnessMap = "rbxassetid://73145399187133",
+			MetalnessMap = "rbxassetid://121345486561781"}
 	})
 end)
 
@@ -64954,6 +65061,26 @@ CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Neonic', PLACEHOLDERICON, 0,
 			ColorMap = "rbxassetid://3037421428"},
 		["Butterfly_RHandle"] = {
 			ColorMap = "rbxassetid://3037421428"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Butterfly | Opulence', PLACEHOLDERICON, 0, function()
+	EquipSkin("Butterfly", {
+		["Butterfly_Blade"] = {
+			ColorMap = "rbxassetid://97785580336101",
+			NormalMap = "rbxassetid://121853107432364",
+			RoughnessMap = "rbxassetid://115251498481079",
+			MetalnessMap = "rbxassetid://104010688090141"},
+		["Butterfly_LHandle"] = {
+			ColorMap = "rbxassetid://97785580336101",
+			NormalMap = "rbxassetid://121853107432364",
+			RoughnessMap = "rbxassetid://115251498481079",
+			MetalnessMap = "rbxassetid://104010688090141"},
+		["Butterfly_RHandle"] = {
+			ColorMap = "rbxassetid://97785580336101",
+			NormalMap = "rbxassetid://121853107432364",
+			RoughnessMap = "rbxassetid://115251498481079",
+			MetalnessMap = "rbxassetid://104010688090141"}
 	})
 end)
 
@@ -65870,6 +65997,26 @@ CreateTabButton('GameSkins', 'APPEND', 'Deagle | Xmas', PLACEHOLDERICON, 0, func
 			ColorMap = "rbxassetid://1777612792"},
 		["Slide2"] = {
 			ColorMap = "rbxassetid://1777612792"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Deagle | Zeus', PLACEHOLDERICON, 0, function()
+	EquipSkin("Deagle", {
+		["Handle2"] = {
+			ColorMap = "rbxassetid://85710677946103",
+			NormalMap = "rbxassetid://79215229562225",
+			RoughnessMap = "rbxassetid://88734128791591",
+			MetalnessMap = "rbxassetid://134782518250686"},
+		["Mag2"] = {
+			ColorMap = "rbxassetid://100459469841085",
+			NormalMap = "rbxassetid://92592875063647",
+			RoughnessMap = "rbxassetid://88895087314154",
+			MetalnessMap = "rbxassetid://98404273475183"},
+		["Slide2"] = {
+			ColorMap = "rbxassetid://85710677946103",
+			NormalMap = "rbxassetid://79215229562225",
+			RoughnessMap = "rbxassetid://88734128791591",
+			MetalnessMap = "rbxassetid://134782518250686"}
 	})
 end)
 
@@ -66900,6 +67047,26 @@ CreateTabButton('GameSkins', 'APPEND', 'FAMAS F1 | RacerX', PLACEHOLDERICON, 0, 
 	})
 end)
 
+CreateTabButton('GameSkins', 'APPEND', 'FAMAS F1 | Rebel Parade', PLACEHOLDERICON, 0, function()
+	EquipSkin("Famas", {
+		["Bolt"] = {
+			ColorMap = "rbxassetid://111077029938750",
+			NormalMap = "rbxassetid://90913057789521",
+			RoughnessMap = "rbxassetid://122780215777170",
+			MetalnessMap = "rbxassetid://139884808990370"},
+		["Handle"] = {
+			ColorMap = "rbxassetid://82816966342873",
+			NormalMap = "rbxassetid://101374009109165",
+			RoughnessMap = "rbxassetid://110907813732413",
+			MetalnessMap = "rbxassetid://119902398391960"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://111077029938750",
+			NormalMap = "rbxassetid://90913057789521",
+			RoughnessMap = "rbxassetid://122780215777170",
+			MetalnessMap = "rbxassetid://139884808990370"}
+	})
+end)
+
 CreateTabButton('GameSkins', 'APPEND', 'FAMAS F1 | Redux', PLACEHOLDERICON, 0, function()
 	EquipSkin("Famas", {
 		["Bolt"] = {
@@ -67554,6 +67721,26 @@ CreateTabButton('GameSkins', 'APPEND', 'Glock-18 | Hallows', PLACEHOLDERICON, 0,
 	})
 end)
 
+CreateTabButton('GameSkins', 'APPEND', 'Glock-18 | Independence', PLACEHOLDERICON, 0, function()
+	EquipSkin("Glock", {
+		["Handle2"] = {
+			ColorMap = "rbxassetid://119291434678145",
+			NormalMap = "rbxassetid://74126251251540",
+			RoughnessMap = "rbxassetid://98040971545390",
+			MetalnessMap = "rbxassetid://93674094700803"},
+		["Mag2"] = {
+			ColorMap = "rbxassetid://119291434678145",
+			NormalMap = "rbxassetid://74126251251540",
+			RoughnessMap = "rbxassetid://98040971545390",
+			MetalnessMap = "rbxassetid://93674094700803"},
+		["Slide2"] = {
+			ColorMap = "rbxassetid://119291434678145",
+			NormalMap = "rbxassetid://74126251251540",
+			RoughnessMap = "rbxassetid://98040971545390",
+			MetalnessMap = "rbxassetid://93674094700803"}
+	})
+end)
+
 CreateTabButton('GameSkins', 'APPEND', 'Glock-18 | Lantern', PLACEHOLDERICON, 0, function()
 	EquipSkin("Glock", {
 		["Handle2"] = {
@@ -67964,6 +68151,16 @@ CreateTabButton('GameSkins', 'APPEND', 'Gut | Neonic', PLACEHOLDERICON, 0, funct
 	EquipSkin("Gut", {
 		["Handle"] = {
 			ColorMap = "rbxassetid://3037421988"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Gut | Opulence', PLACEHOLDERICON, 0, function()
+	EquipSkin("Gut", {
+		["Handle"] = {
+			ColorMap = "rbxassetid://139248355633684",
+			NormalMap = "rbxassetid://138408769611264",
+			RoughnessMap = "rbxassetid://138772872203914",
+			MetalnessMap = "rbxassetid://117616899022428"}
 	})
 end)
 
@@ -68647,6 +68844,16 @@ CreateTabButton('GameSkins', 'APPEND', 'Karambit | Lantern', PLACEHOLDERICON, 0,
 	})
 end)
 
+CreateTabButton('GameSkins', 'APPEND', 'Karambit | Liberty', PLACEHOLDERICON, 0, function()
+	EquipSkin("Karambit", {
+		["Handle2"] = {
+			ColorMap = "rbxassetid://98181648612590",
+			NormalMap = "rbxassetid://105806674070787",
+			RoughnessMap = "rbxassetid://118083892527076",
+			MetalnessMap = "rbxassetid://103374759361776"}
+	})
+end)
+
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Liberty Camo', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
@@ -68720,6 +68927,7 @@ CreateTabButton('GameSkins', 'APPEND', 'Karambit | Ruby', PLACEHOLDERICON, 0, fu
 	})
 end)
 
+-- Note: Wrong UV
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Scapter', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
@@ -69811,6 +70019,56 @@ CreateTabButton('GameSkins', 'APPEND', 'M4A4 | Mistletoe', PLACEHOLDERICON, 0, f
 	})
 end)
 
+CreateTabButton('GameSkins', 'APPEND', 'M4A4 | Moonwalker', PLACEHOLDERICON, 0, function()
+	EquipSkin("M4A4", {
+		["Back"] = {
+			ColorMap = "rbxassetid://116496166718043",
+			NormalMap = "rbxassetid://116459424444341",
+			RoughnessMap = "rbxassetid://113896711992575",
+			MetalnessMap = "rbxassetid://134006571438051"},
+		["Barrel"] = {
+			ColorMap = "rbxassetid://116496166718043",
+			NormalMap = "rbxassetid://116459424444341",
+			RoughnessMap = "rbxassetid://113896711992575",
+			MetalnessMap = "rbxassetid://134006571438051"},
+		["Bolt2"] = {
+			ColorMap = "rbxassetid://116496166718043",
+			NormalMap = "rbxassetid://116459424444341",
+			RoughnessMap = "rbxassetid://113896711992575",
+			MetalnessMap = "rbxassetid://134006571438051"},
+		["Cover"] = {
+			ColorMap = "rbxassetid://116496166718043",
+			NormalMap = "rbxassetid://116459424444341",
+			RoughnessMap = "rbxassetid://113896711992575",
+			MetalnessMap = "rbxassetid://134006571438051"},
+		["Handle2"] = {
+			ColorMap = "rbxassetid://116496166718043",
+			NormalMap = "rbxassetid://116459424444341",
+			RoughnessMap = "rbxassetid://113896711992575",
+			MetalnessMap = "rbxassetid://134006571438051"},
+		["Mag2"] = {
+			ColorMap = "rbxassetid://116496166718043",
+			NormalMap = "rbxassetid://116459424444341",
+			RoughnessMap = "rbxassetid://113896711992575",
+			MetalnessMap = "rbxassetid://134006571438051"},
+		["Part2"] = {
+			ColorMap = "rbxassetid://116496166718043",
+			NormalMap = "rbxassetid://116459424444341",
+			RoughnessMap = "rbxassetid://113896711992575",
+			MetalnessMap = "rbxassetid://134006571438051"},
+		["Sight"] = {
+			ColorMap = "rbxassetid://134956224652257",
+			NormalMap = "rbxassetid://102094443918019",
+			RoughnessMap = "rbxassetid://118727020446117",
+			MetalnessMap = "rbxassetid://109984630911449"},
+		["Chamber"] = {
+			ColorMap = "rbxassetid://116496166718043",
+			NormalMap = "rbxassetid://116459424444341",
+			RoughnessMap = "rbxassetid://113896711992575",
+			MetalnessMap = "rbxassetid://134006571438051"}
+	})
+end)
+
 CreateTabButton('GameSkins', 'APPEND', 'M4A4 | Pinkie', PLACEHOLDERICON, 0, function()
 	EquipSkin("M4A4", {
 		["Back"] = {
@@ -70374,6 +70632,16 @@ CreateTabButton('GameSkins', 'APPEND', 'M9 Bayonet | Gamma Doppler P4', PLACEHOL
 	})
 end)
 
+CreateTabButton('GameSkins', 'APPEND', 'M9 Bayonet | Honor Fade', PLACEHOLDERICON, 0, function()
+	EquipSkin("M9 Bayonet", {
+		["Handle"] = {
+			ColorMap = "rbxassetid://70736619603725",
+			NormalMap = "rbxassetid://125146543996195",
+			RoughnessMap = "rbxassetid://102961206576884",
+			MetalnessMap = "rbxassetid://70973387107870"}
+	})
+end)
+
 CreateTabButton('GameSkins', 'APPEND', 'M9 Bayonet | Ignite', PLACEHOLDERICON, 0, function()
 	EquipSkin("M9 Bayonet", {
 		["Handle"] = {
@@ -70524,6 +70792,16 @@ CreateTabButton('GameSkins', 'APPEND', 'M9 Bayonet | Late Night (Non-Animated)',
 	})
 end)
 
+CreateTabButton('GameSkins', 'APPEND', 'M9 Bayonet | Liberty', PLACEHOLDERICON, 0, function()
+	EquipSkin("M9 Bayonet", {
+		["Handle"] = {
+			ColorMap = "rbxassetid://75533444784993",
+			NormalMap = "rbxassetid://85818392426797",
+			RoughnessMap = "rbxassetid://72612199476759",
+			MetalnessMap = "rbxassetid://101240943721797"}
+	})
+end)
+
 CreateTabButton('GameSkins', 'APPEND', 'M9 Bayonet | Marbleized', PLACEHOLDERICON, 0, function()
 	EquipSkin("M9 Bayonet", {
 		["Handle"] = {
@@ -70631,6 +70909,31 @@ CreateTabButton('GameSkins', 'APPEND', 'M9 Bayonet | Worn', PLACEHOLDERICON, 0, 
 			NormalMap = "rbxassetid://110659655225338",
 			RoughnessMap = "rbxassetid://138151268642101",
 			MetalnessMap = "rbxassetid://86843873563912"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'MAC-10 | Antique', PLACEHOLDERICON, 0, function()
+	EquipSkin("MAC10", {
+		["Bolt"] = {
+			ColorMap = "rbxassetid://82381314191845",
+			NormalMap = "rbxassetid://72564818567941",
+			RoughnessMap = "rbxassetid://112107024093625",
+			MetalnessMap = "rbxassetid://74478563802327"},
+		["Handle"] = {
+			ColorMap = "rbxassetid://82381314191845",
+			NormalMap = "rbxassetid://72564818567941",
+			RoughnessMap = "rbxassetid://112107024093625",
+			MetalnessMap = "rbxassetid://74478563802327"},
+		["Mag"] = {
+			ColorMap = "rbxassetid://82381314191845",
+			NormalMap = "rbxassetid://72564818567941",
+			RoughnessMap = "rbxassetid://112107024093625",
+			MetalnessMap = "rbxassetid://74478563802327"},
+		["Part"] = {
+			ColorMap = "rbxassetid://82381314191845",
+			NormalMap = "rbxassetid://72564818567941",
+			RoughnessMap = "rbxassetid://112107024093625",
+			MetalnessMap = "rbxassetid://74478563802327"}
 	})
 end)
 
@@ -72534,6 +72837,56 @@ CreateTabButton('GameSkins', 'APPEND', 'SG 553 | Dummy', PLACEHOLDERICON, 0, fun
 			ColorMap = "rbxassetid://3180126890"},
 		["Scope"] = {
 			ColorMap = "rbxassetid://3183426529"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'SG 553 | Electi', PLACEHOLDERICON, 0, function()
+	EquipSkin("SG", {
+		["Mag2"] = {
+			ColorMap = "rbxassetid://74926629847831",
+			NormalMap = "rbxassetid://119888306021275",
+			RoughnessMap = "rbxassetid://77843822973991",
+			MetalnessMap = "rbxassetid://113549381369561"},
+		["Part"] = {
+			ColorMap = "rbxassetid://74926629847831",
+			NormalMap = "rbxassetid://119888306021275",
+			RoughnessMap = "rbxassetid://77843822973991",
+			MetalnessMap = "rbxassetid://113549381369561"},
+		["Handle"] = {
+			ColorMap = "rbxassetid://74926629847831",
+			NormalMap = "rbxassetid://119888306021275",
+			RoughnessMap = "rbxassetid://77843822973991",
+			MetalnessMap = "rbxassetid://113549381369561"},
+		["Scope"] = {
+			ColorMap = "rbxassetid://79845579248440",
+			NormalMap = "rbxassetid://121340305340244",
+			RoughnessMap = "rbxassetid://106179522221500",
+			MetalnessMap = "rbxassetid://115951833636577"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'SG 553 | King', PLACEHOLDERICON, 0, function()
+	EquipSkin("SG", {
+		["Mag2"] = {
+			ColorMap = "rbxassetid://81378896514952",
+			NormalMap = "rbxassetid://91643309280382",
+			RoughnessMap = "rbxassetid://89201708696241",
+			MetalnessMap = "rbxassetid://122088647702712"},
+		["Part"] = {
+			ColorMap = "rbxassetid://81378896514952",
+			NormalMap = "rbxassetid://91643309280382",
+			RoughnessMap = "rbxassetid://89201708696241",
+			MetalnessMap = "rbxassetid://122088647702712"},
+		["Handle"] = {
+			ColorMap = "rbxassetid://81378896514952",
+			NormalMap = "rbxassetid://91643309280382",
+			RoughnessMap = "rbxassetid://89201708696241",
+			MetalnessMap = "rbxassetid://122088647702712"},
+		["Scope"] = {
+			ColorMap = "rbxassetid://117592049033169",
+			NormalMap = "rbxassetid://105954944454939",
+			RoughnessMap = "rbxassetid://94823618624511",
+			MetalnessMap = "rbxassetid://117868560910446"}
 	})
 end)
 
@@ -74861,6 +75214,30 @@ CreateTabButton('GameSkins', 'APPEND', 'XM1014 | Stock', PLACEHOLDERICON, 0, fun
 	})
 end)
 
+CreateTabButton('GameSkins', 'APPEND', 'Fingerless Gloves | Azure (Old)', PLACEHOLDERICON, 0, function()
+	EquipSkin("Fingerless Gloves", {
+		["LeftGlove"] = {
+			ColorMap = "rbxassetid://79478500399545"},
+		["RightGlove"] = {
+			ColorMap = "rbxassetid://79478500399545"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Fingerless Gloves | Azure', PLACEHOLDERICON, 0, function()
+	EquipSkin("Fingerless Gloves", {
+		["LeftGlove"] = {
+			ColorMap = "rbxassetid://78741943955678",
+			NormalMap = "rbxassetid://99160045225255",
+			RoughnessMap = "rbxassetid://135795500583897",
+			MetalnessMap = "rbxassetid://81539098961298"},
+		["RightGlove"] = {
+			ColorMap = "rbxassetid://78741943955678",
+			NormalMap = "rbxassetid://99160045225255",
+			RoughnessMap = "rbxassetid://135795500583897",
+			MetalnessMap = "rbxassetid://81539098961298"}
+	})
+end)
+
 CreateTabButton('GameSkins', 'APPEND', 'Fingerless Gloves | Crystal', PLACEHOLDERICON, 0, function()
 	EquipSkin("Fingerless Gloves", {
 		["LeftGlove"] = {
@@ -74879,12 +75256,57 @@ CreateTabButton('GameSkins', 'APPEND', 'Fingerless Gloves | Digital', PLACEHOLDE
 	})
 end)
 
-CreateTabButton('GameSkins', 'APPEND', 'Fingerless Gloves | Kimura', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Fingerless Gloves | Kimura (Old)', PLACEHOLDERICON, 0, function()
 	EquipSkin("Fingerless Gloves", {
 		["LeftGlove"] = {
 			ColorMap = "rbxassetid://89041056640438"},
 		["RightGlove"] = {
 			ColorMap = "rbxassetid://89041056640438"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Fingerless Gloves | Kimura', PLACEHOLDERICON, 0, function()
+	EquipSkin("Fingerless Gloves", {
+		["LeftGlove"] = {
+			ColorMap = "rbxassetid://92880457474766",
+			NormalMap = "rbxassetid://110263439406937",
+			RoughnessMap = "rbxassetid://135862704509463",
+			MetalnessMap = "rbxassetid://90405603036550"},
+		["RightGlove"] = {
+			ColorMap = "rbxassetid://92880457474766",
+			NormalMap = "rbxassetid://110263439406937",
+			RoughnessMap = "rbxassetid://135862704509463",
+			MetalnessMap = "rbxassetid://90405603036550"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Fingerless Gloves | Kimura (Glossy test)', PLACEHOLDERICON, 0, function()
+	EquipSkin("Fingerless Gloves", {
+		["LeftGlove"] = {
+			ColorMap = "rbxassetid://123266905946842",
+			NormalMap = "rbxassetid://105128584976464",
+			RoughnessMap = "rbxassetid://96536751240035",
+			MetalnessMap = "rbxassetid://87512234816917"},
+		["RightGlove"] = {
+			ColorMap = "rbxassetid://123266905946842",
+			NormalMap = "rbxassetid://105128584976464",
+			RoughnessMap = "rbxassetid://96536751240035",
+			MetalnessMap = "rbxassetid://87512234816917"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Fingerless Gloves | Kimura (PBR test)', PLACEHOLDERICON, 0, function()
+	EquipSkin("Fingerless Gloves", {
+		["LeftGlove"] = {
+			ColorMap = "rbxassetid://123266905946842",
+			NormalMap = "rbxassetid://105128584976464",
+			RoughnessMap = "rbxassetid://129756322461415",
+			MetalnessMap = "rbxassetid://87512234816917"},
+		["RightGlove"] = {
+			ColorMap = "rbxassetid://123266905946842",
+			NormalMap = "rbxassetid://105128584976464",
+			RoughnessMap = "rbxassetid://129756322461415",
+			MetalnessMap = "rbxassetid://87512234816917"}
 	})
 end)
 
@@ -74924,12 +75346,93 @@ CreateTabButton('GameSkins', 'APPEND', 'Fingerless Gloves | Stock', PLACEHOLDERI
 	})
 end)
 
+CreateTabButton('GameSkins', 'APPEND', 'Fingerless Gloves | Torque Hare P1', PLACEHOLDERICON, 0, function()
+	EquipSkin("Fingerless Gloves", {
+		["LeftGlove"] = {
+			ColorMap = "rbxassetid://70654510584114",
+			NormalMap = "rbxassetid://110280867689371",
+			RoughnessMap = "rbxassetid://99632718526541",
+			MetalnessMap = "rbxassetid://95794471403281"},
+		["RightGlove"] = {
+			ColorMap = "rbxassetid://111860608478823",
+			NormalMap = "rbxassetid://110280867689371",
+			RoughnessMap = "rbxassetid://85939552078810",
+			MetalnessMap = "rbxassetid://123843606158961"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Fingerless Gloves | Torque Hare P2', PLACEHOLDERICON, 0, function()
+	EquipSkin("Fingerless Gloves", {
+		["LeftGlove"] = {
+			ColorMap = "rbxassetid://125563188368237",
+			NormalMap = "rbxassetid://96200503343460",
+			RoughnessMap = "rbxassetid://88074818546530",
+			MetalnessMap = "rbxassetid://75496169721249"},
+		["RightGlove"] = {
+			ColorMap = "rbxassetid://123569525012693",
+			NormalMap = "rbxassetid://96200503343460",
+			RoughnessMap = "rbxassetid://121534285614782",
+			MetalnessMap = "rbxassetid://113441380825734"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Fingerless Gloves | Ultraviolet', PLACEHOLDERICON, 0, function()
+	EquipSkin("Fingerless Gloves", {
+		["LeftGlove"] = {
+			ColorMap = "rbxassetid://131150824038165", -- 84672766048087 (Previous)
+			NormalMap = "rbxassetid://87326147609262",
+			RoughnessMap = "rbxassetid://80863259530338",
+			MetalnessMap = "rbxassetid://87512234816917"},
+		["RightGlove"] = {
+			ColorMap = "rbxassetid://131150824038165",
+			NormalMap = "rbxassetid://87326147609262",
+			RoughnessMap = "rbxassetid://80863259530338",
+			MetalnessMap = "rbxassetid://87512234816917"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Fingerless Gloves | Ultraviolet (Old test)', PLACEHOLDERICON, 0, function()
+	EquipSkin("Fingerless Gloves", {
+		["LeftGlove"] = {
+			ColorMap = "rbxassetid://84672766048087",
+			NormalMap = "rbxassetid://87326147609262",
+			RoughnessMap = "rbxassetid://80863259530338",
+			MetalnessMap = "rbxassetid://87512234816917"},
+		["RightGlove"] = {
+			ColorMap = "rbxassetid://84672766048087",
+			NormalMap = "rbxassetid://87326147609262",
+			RoughnessMap = "rbxassetid://80863259530338",
+			MetalnessMap = "rbxassetid://87512234816917"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Fingerless Gloves | Verdant Apex', PLACEHOLDERICON, 0, function()
+	EquipSkin("Fingerless Gloves", {
+		["LeftGlove"] = {
+			ColorMap = "rbxassetid://127214425019381",
+			NormalMap = "rbxassetid://73788818673551",
+			RoughnessMap = "rbxassetid://106984276777644",
+			MetalnessMap = "rbxassetid://88304621887996"},
+		["RightGlove"] = {
+			ColorMap = "rbxassetid://127214425019381",
+			NormalMap = "rbxassetid://73788818673551",
+			RoughnessMap = "rbxassetid://106984276777644",
+			MetalnessMap = "rbxassetid://88304621887996"}
+	})
+end)
+
 CreateTabButton('GameSkins', 'APPEND', 'Handwraps | Dark Damascus', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
-			ColorMap = "rbxassetid://89766139472336"},
+			ColorMap = "rbxassetid://89766139472336",
+			NormalMap = "rbxassetid://74844665385190",
+			RoughnessMap = "rbxassetid://77753873008248",
+			MetalnessMap = "rbxassetid://109641694097836"},
 		["RightGlove"] = {
-			ColorMap = "rbxassetid://89766139472336"}
+			ColorMap = "rbxassetid://89766139472336",
+			NormalMap = "rbxassetid://74844665385190",
+			RoughnessMap = "rbxassetid://77753873008248",
+			MetalnessMap = "rbxassetid://109641694097836"}
 	})
 end)
 
@@ -74996,6 +75499,21 @@ CreateTabButton('GameSkins', 'APPEND', 'Handwraps | Mummy', PLACEHOLDERICON, 0, 
 	})
 end)
 
+CreateTabButton('GameSkins', 'APPEND', 'Handwraps | Opulence', PLACEHOLDERICON, 0, function()
+	EquipSkin("Handwraps", {
+		["LeftGlove"] = {
+			ColorMap = "rbxassetid://96155987028313",
+			NormalMap = "rbxassetid://79481186996128",
+			RoughnessMap = "rbxassetid://71984709542996",
+			MetalnessMap = "rbxassetid://132456550412929"},
+		["RightGlove"] = {
+			ColorMap = "rbxassetid://96155987028313",
+			NormalMap = "rbxassetid://79481186996128",
+			RoughnessMap = "rbxassetid://71984709542996",
+			MetalnessMap = "rbxassetid://132456550412929"}
+	})
+end)
+
 CreateTabButton('GameSkins', 'APPEND', 'Handwraps | Orange Hex', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
@@ -75032,19 +75550,37 @@ CreateTabButton('GameSkins', 'APPEND', 'Handwraps | Spector Hex', PLACEHOLDERICO
 	})
 end)
 
-CreateTabButton('GameSkins', 'APPEND', 'Handwraps | Stock', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Handwraps | Sweetheart (Old)', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
-			ColorMap = "rbxassetid://115638307976493"},
+			ColorMap = "rbxassetid://98890718143537"},
 		["RightGlove"] = {
-			ColorMap = "rbxassetid://115638307976493"}
+			ColorMap = "rbxassetid://98890718143537"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Handwraps | Sweetheart', PLACEHOLDERICON, 0, function()
+	EquipSkin("Handwraps", {
+		["LeftGlove"] = {
+			ColorMap = "rbxassetid://72825762656700",
+			NormalMap = "rbxassetid://119583520203135",
+			RoughnessMap = "rbxassetid://127452749228319",
+			MetalnessMap = "rbxassetid://113301495475857"},
+		["RightGlove"] = {
+			ColorMap = "rbxassetid://72825762656700",
+			NormalMap = "rbxassetid://119583520203135",
+			RoughnessMap = "rbxassetid://127452749228319",
+			MetalnessMap = "rbxassetid://113301495475857"}
 	})
 end)
 
 CreateTabButton('GameSkins', 'APPEND', 'Handwraps | Tape', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
-			ColorMap = "rbxassetid://110968161283312"},
+			ColorMap = "rbxassetid://115530503947581", -- 110968161283312 (Previous)
+			NormalMap = "rbxassetid://104315592113180",
+			RoughnessMap = "rbxassetid://86595435378757",
+			MetalnessMap = "rbxassetid://138368437599671"},
 		["RightGlove"] = {
 			ColorMap = "rbxassetid://110968161283312"}
 	})
@@ -75068,6 +75604,15 @@ CreateTabButton('GameSkins', 'APPEND', 'Handwraps | Wetland', PLACEHOLDERICON, 0
 	})
 end)
 
+CreateTabButton('GameSkins', 'APPEND', 'Handwraps | Wraps', PLACEHOLDERICON, 0, function()
+	EquipSkin("Handwraps", {
+		["LeftGlove"] = {
+			ColorMap = "rbxassetid://115638307976493"},
+		["RightGlove"] = {
+			ColorMap = "rbxassetid://115638307976493"}
+	})
+end)
+
 CreateTabButton('GameSkins', 'APPEND', 'Handwraps | Yellow Hazard', PLACEHOLDERICON, 0, function()
 	EquipSkin("Handwraps", {
 		["LeftGlove"] = {
@@ -75083,12 +75628,27 @@ CreateTabButton('GameSkins', 'APPEND', 'Handwraps | Yellow Hazard', PLACEHOLDERI
 	})
 end)
 
-CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Amethyst', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Amethyst (Old)', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
 			ColorMap = "rbxassetid://137324499588396"},
 		["RightGlove"] = {
 			ColorMap = "rbxassetid://137324499588396"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Amethyst', PLACEHOLDERICON, 0, function()
+	EquipSkin("Sport Gloves", {
+		["LeftGlove"] = {
+			ColorMap = "rbxassetid://79240151196463",
+			NormalMap = "rbxassetid://102113447497142",
+			RoughnessMap = "rbxassetid://100886490129771",
+			MetalnessMap = "rbxassetid://138820951638627"},
+		["RightGlove"] = {
+			ColorMap = "rbxassetid://79240151196463",
+			NormalMap = "rbxassetid://102113447497142",
+			RoughnessMap = "rbxassetid://100886490129771",
+			MetalnessMap = "rbxassetid://138820951638627"}
 	})
 end)
 
@@ -75122,9 +75682,15 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Dark Damascus', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap = "rbxassetid://127612234295604"},
+			ColorMap = "rbxassetid://127612234295604",
+			NormalMap = "rbxassetid://128745677408617",
+			RoughnessMap = "rbxassetid://96894679112124",
+			MetalnessMap = "rbxassetid://88716126144474"},
 		["RightGlove"] = {
-			ColorMap = "rbxassetid://127612234295604"}
+			ColorMap = "rbxassetid://127612234295604",
+			NormalMap = "rbxassetid://128745677408617",
+			RoughnessMap = "rbxassetid://96894679112124",
+			MetalnessMap = "rbxassetid://88716126144474"}
 	})
 end)
 
@@ -75158,9 +75724,31 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Hellfire', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
-			ColorMap = "rbxassetid://89763492782581"},
+			ColorMap = "rbxassetid://101812813617252",
+			NormalMap = "rbxassetid://88524760005036",
+			RoughnessMap = "rbxassetid://87196015253959",
+			MetalnessMap = "rbxassetid://113301495475857"},
 		["RightGlove"] = {
-			ColorMap = "rbxassetid://89763492782581"}
+			ColorMap = "rbxassetid://97372572108447",
+			NormalMap = "rbxassetid://88524760005036",
+			RoughnessMap = "rbxassetid://87196015253959",
+			MetalnessMap = "rbxassetid://113301495475857"}
+	})
+	-- 89763492782581 (Previous, ColorMap-only, both sides)
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Imperial', PLACEHOLDERICON, 0, function()
+	EquipSkin("Sport Gloves", {
+		["LeftGlove"] = {
+			ColorMap = "rbxassetid://134445338279729",
+			NormalMap = "rbxassetid://135156633913033",
+			RoughnessMap = "rbxassetid://116203988051839",
+			MetalnessMap = "rbxassetid://128648351285920"},
+		["RightGlove"] = {
+			ColorMap = "rbxassetid://134445338279729",
+			NormalMap = "rbxassetid://135156633913033",
+			RoughnessMap = "rbxassetid://116203988051839",
+			MetalnessMap = "rbxassetid://128648351285920"}
 	})
 end)
 
@@ -75173,12 +75761,27 @@ CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Majesty', PLACEHOLDERICON
 	})
 end)
 
-CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Mud Bath', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Mud Bath (Old)', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
 			ColorMap = "rbxassetid://103317132588064"},
 		["RightGlove"] = {
 			ColorMap = "rbxassetid://103317132588064"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Mud Bath', PLACEHOLDERICON, 0, function()
+	EquipSkin("Sport Gloves", {
+		["LeftGlove"] = {
+			ColorMap = "rbxassetid://93543725660110",
+			NormalMap = "rbxassetid://71455424026473",
+			RoughnessMap = "rbxassetid://138447631697042",
+			MetalnessMap = "rbxassetid://138820951638627"},
+		["RightGlove"] = {
+			ColorMap = "rbxassetid://93543725660110",
+			NormalMap = "rbxassetid://71455424026473",
+			RoughnessMap = "rbxassetid://138447631697042",
+			MetalnessMap = "rbxassetid://138820951638627"}
 	})
 end)
 
@@ -75200,7 +75803,31 @@ CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | RSL', PLACEHOLDERICON, 0,
 	})
 end)
 
-CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Reinforced', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Reinforced Aquamarine', PLACEHOLDERICON, 0, function()
+	EquipSkin("Sport Gloves", {
+		["LeftGlove"] = {
+			ColorMap = "rbxassetid://96337214615103"},
+		["RightGlove"] = {
+			ColorMap = "rbxassetid://96337214615103"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Reinforced Dark Blue', PLACEHOLDERICON, 0, function()
+	EquipSkin("Sport Gloves", {
+		["LeftGlove"] = {
+			ColorMap = "rbxassetid://101006684563255",
+			NormalMap = "rbxassetid://122921441753785",
+			RoughnessMap = "rbxassetid://106587259625469",
+			MetalnessMap = "rbxassetid://126934781394833"},
+		["RightGlove"] = {
+			ColorMap = "rbxassetid://101006684563255",
+			NormalMap = "rbxassetid://122921441753785",
+			RoughnessMap = "rbxassetid://106587259625469",
+			MetalnessMap = "rbxassetid://126934781394833"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Reinforced Green (Old)', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
 			ColorMap = "rbxassetid://71756736916558"},
@@ -75209,12 +75836,87 @@ CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Reinforced', PLACEHOLDERI
 	})
 end)
 
-CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Royal', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Reinforced Green', PLACEHOLDERICON, 0, function()
+	EquipSkin("Sport Gloves", {
+		["LeftGlove"] = {
+			ColorMap = "rbxassetid://110885051815341",
+			NormalMap = "rbxassetid://122921441753785",
+			RoughnessMap = "rbxassetid://106587259625469",
+			MetalnessMap = "rbxassetid://126934781394833"},
+		["RightGlove"] = {
+			ColorMap = "rbxassetid://110885051815341",
+			NormalMap = "rbxassetid://122921441753785",
+			RoughnessMap = "rbxassetid://106587259625469",
+			MetalnessMap = "rbxassetid://126934781394833"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Reinforced Hydro Blue', PLACEHOLDERICON, 0, function()
+	EquipSkin("Sport Gloves", {
+		["LeftGlove"] = {
+			ColorMap = "rbxassetid://82163031385671",
+			NormalMap = "rbxassetid://122921441753785",
+			RoughnessMap = "rbxassetid://106587259625469",
+			MetalnessMap = "rbxassetid://126934781394833"},
+		["RightGlove"] = {
+			ColorMap = "rbxassetid://82163031385671",
+			NormalMap = "rbxassetid://122921441753785",
+			RoughnessMap = "rbxassetid://106587259625469",
+			MetalnessMap = "rbxassetid://126934781394833"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Reinforced Pink', PLACEHOLDERICON, 0, function()
+	EquipSkin("Sport Gloves", {
+		["LeftGlove"] = {
+			ColorMap = "rbxassetid://129868925300142",
+			NormalMap = "rbxassetid://122921441753785",
+			RoughnessMap = "rbxassetid://106587259625469",
+			MetalnessMap = "rbxassetid://126934781394833"},
+		["RightGlove"] = {
+			ColorMap = "rbxassetid://129868925300142",
+			NormalMap = "rbxassetid://122921441753785",
+			RoughnessMap = "rbxassetid://106587259625469",
+			MetalnessMap = "rbxassetid://126934781394833"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Royal (Old)', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
 			ColorMap = "rbxassetid://2135534686"},
 		["RightGlove"] = {
 			ColorMap = "rbxassetid://2135534686"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Royal (Remake)', PLACEHOLDERICON, 0, function()
+	EquipSkin("Sport Gloves", {
+		["LeftGlove"] = {
+			ColorMap = "rbxassetid://87898906525160",
+			NormalMap = "rbxassetid://96271494202708",
+			RoughnessMap = "rbxassetid://121258080703579",
+			MetalnessMap = "rbxassetid://82449224347922"},
+		["RightGlove"] = {
+			ColorMap = "rbxassetid://87898906525160",
+			NormalMap = "rbxassetid://96271494202708",
+			RoughnessMap = "rbxassetid://121258080703579",
+			MetalnessMap = "rbxassetid://82449224347922"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Royal', PLACEHOLDERICON, 0, function()
+	EquipSkin("Sport Gloves", {
+		["LeftGlove"] = {
+			ColorMap = "rbxassetid://76892062996044",
+			NormalMap = "rbxassetid://100007394382221",
+			RoughnessMap = "rbxassetid://87454115024287",
+			MetalnessMap = "rbxassetid://97651344829427"},
+		["RightGlove"] = {
+			ColorMap = "rbxassetid://76892062996044",
+			NormalMap = "rbxassetid://100007394382221",
+			RoughnessMap = "rbxassetid://87454115024287",
+			MetalnessMap = "rbxassetid://97651344829427"}
 	})
 end)
 
@@ -75254,6 +75956,30 @@ CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Weeb', PLACEHOLDERICON, 0
 	})
 end)
 
+CreateTabButton('GameSkins', 'APPEND', 'Strapped Gloves | Blackout (Old)', PLACEHOLDERICON, 0, function()
+	EquipSkin("Strapped Gloves", {
+		["LeftGlove"] = {
+			ColorMap = "rbxassetid://73272222180241"},
+		["RightGlove"] = {
+			ColorMap = "rbxassetid://73272222180241"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Strapped Gloves | Blackout', PLACEHOLDERICON, 0, function()
+	EquipSkin("Strapped Gloves", {
+		["LeftGlove"] = {
+			ColorMap = "rbxassetid://72810143430355",
+			NormalMap = "rbxassetid://135732498992680",
+			RoughnessMap = "rbxassetid://112959460244035",
+			MetalnessMap = "rbxassetid://94661550671589"},
+		["RightGlove"] = {
+			ColorMap = "rbxassetid://129409440740081",
+			NormalMap = "rbxassetid://120589323158272",
+			RoughnessMap = "rbxassetid://116687288197878",
+			MetalnessMap = "rbxassetid://72200858946591"}
+	})
+end)
+
 -- Note: Archived
 CreateTabButton('GameSkins', 'APPEND', 'Strapped Gloves | BloxersClub', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
@@ -75267,9 +75993,15 @@ end)
 CreateTabButton('GameSkins', 'APPEND', 'Strapped Gloves | Caffeine', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
 		["LeftGlove"] = {
-			ColorMap = "rbxassetid://121078147459979"},
+			ColorMap = "rbxassetid://106743229284376", -- 121078147459979 (Previous)
+			NormalMap = "rbxassetid://107046385082815",
+			RoughnessMap = "rbxassetid://94343036244415",
+			MetalnessMap = "rbxassetid://119288284249640"},
 		["RightGlove"] = {
-			ColorMap = "rbxassetid://121078147459979"}
+			ColorMap = "rbxassetid://106743229284376",
+			NormalMap = "rbxassetid://107046385082815",
+			RoughnessMap = "rbxassetid://94343036244415",
+			MetalnessMap = "rbxassetid://119288284249640"}
 	})
 end)
 
@@ -75309,6 +76041,21 @@ CreateTabButton('GameSkins', 'APPEND', 'Strapped Gloves | Kringle', PLACEHOLDERI
 	})
 end)
 
+CreateTabButton('GameSkins', 'APPEND', 'Strapped Gloves | Liberty', PLACEHOLDERICON, 0, function()
+	EquipSkin("Strapped Gloves", {
+		["LeftGlove"] = {
+			ColorMap = "rbxassetid://83822138638778", -- 102888643956904 (Previous)
+			NormalMap = "rbxassetid://119819586473524",
+			RoughnessMap = "rbxassetid://102885187049096",
+			MetalnessMap = "rbxassetid://74127466850906"},
+		["RightGlove"] = {
+			ColorMap = "rbxassetid://83822138638778",
+			NormalMap = "rbxassetid://119819586473524",
+			RoughnessMap = "rbxassetid://102885187049096",
+			MetalnessMap = "rbxassetid://74127466850906"}
+	})
+end)
+
 CreateTabButton('GameSkins', 'APPEND', 'Strapped Gloves | Molten', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
 		["LeftGlove"] = {
@@ -75327,12 +76074,27 @@ CreateTabButton('GameSkins', 'APPEND', 'Strapped Gloves | Racer', PLACEHOLDERICO
 	})
 end)
 
-CreateTabButton('GameSkins', 'APPEND', 'Strapped Gloves | Snow Leopard', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Strapped Gloves | Snow Leopard (Old)', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
 		["LeftGlove"] = {
 			ColorMap = "rbxassetid://81717979708040"},
 		["RightGlove"] = {
 			ColorMap = "rbxassetid://81717979708040"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Strapped Gloves | Snow Leopard', PLACEHOLDERICON, 0, function()
+	EquipSkin("Strapped Gloves", {
+		["LeftGlove"] = {
+			ColorMap = "rbxassetid://86433268687012",
+			NormalMap = "rbxassetid://112301573953612",
+			RoughnessMap = "rbxassetid://95118236775547",
+			MetalnessMap = "rbxassetid://92995788331970"},
+		["RightGlove"] = {
+			ColorMap = "rbxassetid://86433268687012",
+			NormalMap = "rbxassetid://112301573953612",
+			RoughnessMap = "rbxassetid://95118236775547",
+			MetalnessMap = "rbxassetid://92995788331970"}
 	})
 end)
 
@@ -75345,12 +76107,42 @@ CreateTabButton('GameSkins', 'APPEND', 'Strapped Gloves | Stock', PLACEHOLDERICO
 	})
 end)
 
+CreateTabButton('GameSkins', 'APPEND', 'Strapped Gloves | Velvet Vow (Old)', PLACEHOLDERICON, 0, function()
+	EquipSkin("Strapped Gloves", {
+		["LeftGlove"] = {
+			ColorMap = "rbxassetid://122770011857364"},
+		["RightGlove"] = {
+			ColorMap = "rbxassetid://122770011857364"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Strapped Gloves | Velvet Vow', PLACEHOLDERICON, 0, function()
+	EquipSkin("Strapped Gloves", {
+		["LeftGlove"] = {
+			ColorMap = "rbxassetid://115052058028904",
+			NormalMap = "rbxassetid://121329845161473",
+			RoughnessMap = "rbxassetid://73052464457080",
+			MetalnessMap = "rbxassetid://77292403856282"},
+		["RightGlove"] = {
+			ColorMap = "rbxassetid://115052058028904",
+			NormalMap = "rbxassetid://121329845161473",
+			RoughnessMap = "rbxassetid://73052464457080",
+			MetalnessMap = "rbxassetid://77292403856282"}
+	})
+end)
+
 CreateTabButton('GameSkins', 'APPEND', 'Strapped Gloves | Vesper', PLACEHOLDERICON, 0, function()
 	EquipSkin("Strapped Gloves", {
 		["LeftGlove"] = {
-			ColorMap = "rbxassetid://115852572279642"},
+			ColorMap = "rbxassetid://100315637212448", -- 115852572279642 (Previous)
+			NormalMap = "rbxassetid://133943886264259",
+			RoughnessMap = "rbxassetid://120599748949031",
+			MetalnessMap = "rbxassetid://85045251343345"},
 		["RightGlove"] = {
-			ColorMap = "rbxassetid://115852572279642"}
+			ColorMap = "rbxassetid://100315637212448",
+			NormalMap = "rbxassetid://133943886264259",
+			RoughnessMap = "rbxassetid://120599748949031",
+			MetalnessMap = "rbxassetid://85045251343345"}
 	})
 end)
 
@@ -75792,6 +76584,135 @@ pcall(function()
 	local UIPlayerName= LocalPlayer["PlayerGui"]["Menew"]["Main"]["Pages"]["Home"]["Wrap"]["TopRight"]["Wrap"]["Profile"]["Wrap"]["Info"]["PlayerInfo"]["PlayerName"]
 	if devmode == true or UIPlayerName.Text=="Skin" or UIPlayerName.Text=="SkinTest" or UIPlayerName.Text=="Anim9r" then CoreGui["BloxFunGui"]["BaseFrame"]["SideBarButtonsHolderFrame"]["SideBarButtonsHolderScrollingFrame"]["SideBar11_Frame"].Visible=true;
 		-- Template: CreateTabButton('11','RANDOM', 'Title', PLACEHOLDERICON,0,function() end)
+		CreateTabButton('GameSkins', 'APPEND', 'Karambit | Late Night', PLACEHOLDERICON, 0, function()
+			EquipSkin("Karambit", {
+				["Handle2"] = {
+					ColorMap = GCA("SkinFolder/test/Karambit_LateNight_1.png")},
+
+					Animation = {
+					{
+						Delay = 0.055,
+						["Handle2"] = {
+							ColorMap = GCA("SkinFolder/test/Karambit_LateNight_1.png")}
+					},
+					{
+						["Handle2"] = {
+							ColorMap = GCA("SkinFolder/test/Karambit_LateNight_2.png")}
+					},
+					{
+						["Handle2"] = {
+							ColorMap = GCA("SkinFolder/test/Karambit_LateNight_3.png")}
+					},
+					{
+						["Handle2"] = {
+							ColorMap = GCA("SkinFolder/test/Karambit_LateNight_4.png")}
+					},
+					{
+						["Handle2"] = {
+							ColorMap = GCA("SkinFolder/test/Karambit_LateNight_5.png")}
+					},
+					{
+						["Handle2"] = {
+							ColorMap = GCA("SkinFolder/test/Karambit_LateNight_6.png")}
+					},
+					{
+						["Handle2"] = {
+							ColorMap = GCA("SkinFolder/test/Karambit_LateNight_7.png")}
+					},
+					{
+						["Handle2"] = {
+							ColorMap = GCA("SkinFolder/test/Karambit_LateNight_8.png")}
+					},
+					{
+						["Handle2"] = {
+							ColorMap = GCA("SkinFolder/test/Karambit_LateNight_9.png")}
+					},
+					{
+						["Handle2"] = {
+							ColorMap = GCA("SkinFolder/test/Karambit_LateNight_10.png")}
+					},
+					{
+						["Handle2"] = {
+							ColorMap = GCA("SkinFolder/test/Karambit_LateNight_11.png")}
+					},
+					{
+						["Handle2"] = {
+							ColorMap = GCA("SkinFolder/test/Karambit_LateNight_12.png")}
+					},
+					{
+						["Handle2"] = {
+							ColorMap = GCA("SkinFolder/test/Karambit_LateNight_13.png")}
+					},
+					{
+						["Handle2"] = {
+							ColorMap = GCA("SkinFolder/test/Karambit_LateNight_14.png")}
+					},
+					{
+						["Handle2"] = {
+							ColorMap = GCA("SkinFolder/test/Karambit_LateNight_15.png")}
+					},
+					{
+						["Handle2"] = {
+							ColorMap = GCA("SkinFolder/test/Karambit_LateNight_16.png")}
+					},
+					{
+						["Handle2"] = {
+							ColorMap = GCA("SkinFolder/test/Karambit_LateNight_17.png")}
+					},
+					{
+						["Handle2"] = {
+							ColorMap = GCA("SkinFolder/test/Karambit_LateNight_18.png")}
+					},
+					{
+						["Handle2"] = {
+							ColorMap = GCA("SkinFolder/test/Karambit_LateNight_19.png")}
+					},
+					{
+						["Handle2"] = {
+							ColorMap = GCA("SkinFolder/test/Karambit_LateNight_20.png")}
+					},
+					{
+						["Handle2"] = {
+							ColorMap = GCA("SkinFolder/test/Karambit_LateNight_21.png")}
+					},
+					{
+						["Handle2"] = {
+							ColorMap = GCA("SkinFolder/test/Karambit_LateNight_22.png")}
+					}
+				}
+			})
+		end)
+		CreateTabButton('11', 'RANDOM', 'Royal', '4839319839', 0, function()
+			EquipPin('rbxassetid://4839319839')
+		end)
+		CreateTabButton('11', 'RANDOM', 'Bayonet | Prince', '4839318534', 0, function()
+			EquipSkin("Bayonet", {
+				["Handle"] = {
+					ColorMap = "rbxassetid://4839318371"}
+			})
+		end)
+		CreateTabButton('11', 'RANDOM', 'FAMAS F1 | Goddess', '4839318672', 0, function()
+			EquipSkin("Famas", {
+				["Bolt"] = {
+					ColorMap = "rbxassetid://4839318837"},
+				["Handle"] = {
+					ColorMap = "rbxassetid://4839318837"},
+				["Mag"] = {
+					ColorMap = "rbxassetid://4839318837"}
+			})
+		end)
+		CreateTabButton('11', 'RANDOM', 'SG 553 | King', '4839319018', 0, function()
+			EquipSkin("SG", {
+				["Mag2"] = {
+					ColorMap = "rbxassetid://4839319383"},
+				["Part"] = {
+					ColorMap = "rbxassetid://4839319383"},
+				["Handle"] = {
+					ColorMap = "rbxassetid://4839319383"},
+				["Scope"] = {
+					ColorMap = "rbxassetid://4839319544"}
+			})
+		end)
 		CreateTabButton('11', 'RANDOM', 'Sport Gloves | (Animated Test)', PLACEHOLDERICON, 0, function()
 			EquipSkin("Sport Gloves", {
 				["LeftGlove"] = {
@@ -75884,7 +76805,7 @@ pcall(function()
 					ColorMap = GCA("SkinFolder/luxmag.png")}
 			})
 		end)
-		CreateTabButton('11', 'APPEND', "Deagle | Lux's", PLACEHOLDERICON, 0, function()
+		CreateTabButton('11', 'APPEND', "Deagle | Monster", PLACEHOLDERICON, 0, function()
 			EquipSkin("Deagle", {
 				["Handle2"] = {
 					ColorMap = "rbxassetid://13833939128"},
