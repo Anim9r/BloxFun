@@ -8678,7 +8678,7 @@ BloxFunGui.VersionText.BorderSizePixel = 0
 BloxFunGui.VersionText.Position = UDim2.new(0.150343642, 0, 0, 0)
 BloxFunGui.VersionText.Size = UDim2.new(0, 405, 0, 50)
 BloxFunGui.VersionText.Font = Enum.Font.Cartoon
-BloxFunGui.VersionText.Text = "Last Updated: 05/07ᴹ/2026"
+BloxFunGui.VersionText.Text = "Last Updated: 10/07ᴹ/2026"
 BloxFunGui.VersionText.TextColor3 = Color3.fromRGB(255, 255, 255)
 BloxFunGui.VersionText.TextScaled = true
 BloxFunGui.VersionText.TextSize = 50.000
@@ -68927,7 +68927,7 @@ CreateTabButton('GameSkins', 'APPEND', 'Karambit | Ruby', PLACEHOLDERICON, 0, fu
 	})
 end)
 
--- Note: Wrong UV
+-- Note: Wrong UV Map
 CreateTabButton('GameSkins', 'APPEND', 'Karambit | Scapter', PLACEHOLDERICON, 0, function()
 	EquipSkin("Karambit", {
 		["Handle2"] = {
@@ -72903,6 +72903,7 @@ CreateTabButton('GameSkins', 'APPEND', 'SG 553 | Kitty Cat', PLACEHOLDERICON, 0,
 	})
 end)
 
+-- Note: Wrong UV Map
 CreateTabButton('GameSkins', 'APPEND', 'SG 553 | Knighthood', PLACEHOLDERICON, 0, function()
 	EquipSkin("SG", {
 		["Mag2"] = {
@@ -75890,22 +75891,7 @@ CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Royal (Old)', PLACEHOLDER
 	})
 end)
 
-CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Royal (Remake)', PLACEHOLDERICON, 0, function()
-	EquipSkin("Sport Gloves", {
-		["LeftGlove"] = {
-			ColorMap = "rbxassetid://87898906525160",
-			NormalMap = "rbxassetid://96271494202708",
-			RoughnessMap = "rbxassetid://121258080703579",
-			MetalnessMap = "rbxassetid://82449224347922"},
-		["RightGlove"] = {
-			ColorMap = "rbxassetid://87898906525160",
-			NormalMap = "rbxassetid://96271494202708",
-			RoughnessMap = "rbxassetid://121258080703579",
-			MetalnessMap = "rbxassetid://82449224347922"}
-	})
-end)
-
-CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Royal', PLACEHOLDERICON, 0, function()
+CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Royal (Old Fixed)', PLACEHOLDERICON, 0, function()
 	EquipSkin("Sport Gloves", {
 		["LeftGlove"] = {
 			ColorMap = "rbxassetid://76892062996044",
@@ -75917,6 +75903,21 @@ CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Royal', PLACEHOLDERICON, 
 			NormalMap = "rbxassetid://100007394382221",
 			RoughnessMap = "rbxassetid://87454115024287",
 			MetalnessMap = "rbxassetid://97651344829427"}
+	})
+end)
+
+CreateTabButton('GameSkins', 'APPEND', 'Sport Gloves | Royal', PLACEHOLDERICON, 0, function()
+	EquipSkin("Sport Gloves", {
+		["LeftGlove"] = {
+			ColorMap = "rbxassetid://87898906525160",
+			NormalMap = "rbxassetid://96271494202708",
+			RoughnessMap = "rbxassetid://121258080703579",
+			MetalnessMap = "rbxassetid://82449224347922"},
+		["RightGlove"] = {
+			ColorMap = "rbxassetid://87898906525160",
+			NormalMap = "rbxassetid://96271494202708",
+			RoughnessMap = "rbxassetid://121258080703579",
+			MetalnessMap = "rbxassetid://82449224347922"}
 	})
 end)
 
@@ -76407,10 +76408,10 @@ CreateTabButton('GamePins', 'APPEND', 'Outlaws RSL EU S2', '2634109760', 0, func
     EquipPin('rbxassetid://2634109760') --6500069019 (Old), 2634109764 (Decal)
 end)
 CreateTabButton('GamePins', 'APPEND', 'ENDLINE RSL SA S1 2018', '2634132643', 0, function()
-    EquipPin('rbxassetid://2634132643') --6500072428 (Old), 2634132647 (Decal)
+    EquipPin('rbxassetid://2658305032') --6500072428, 2634132643 (Old), 2634132647, 2658305040 (Decal)
 end)
 CreateTabButton('GamePins', 'APPEND', 'ENDLINE RSL SA S1 2018', '2659999559', 0, function()
-    EquipPin('rbxassetid://2658305032') --2658305040 (Decal), 2659999559 (Previous version)
+    EquipPin('rbxassetid://2659999559')
 end)
 CreateTabButton('GamePins', 'APPEND', 'New Project', '4309574520', 0, function()
     EquipPin('rbxassetid://4309574520') --4309574560 (Decal)
@@ -76544,6 +76545,12 @@ CreateTabButton('GamePins', 'APPEND', 'Valentine 2025', '70569590204907', 0, fun
 end)
 CreateTabButton('GamePins', 'APPEND', 'Spring 2026', '125729329877794', 0, function()
     EquipPin('rbxassetid://125729329877794')
+end)
+CreateTabButton('GamePins', 'APPEND', 'Torque Hare (P1)', '78430045736956', 0, function()
+    EquipPin('rbxassetid://78430045736956')
+end)
+CreateTabButton('GamePins', 'APPEND', "OssieNomae's", '6898967450', 0, function()
+    EquipPin('rbxassetid://6898967450')
 end)
 -- Note: Animated
 CreateTabButton('GamePins', 'APPEND', 'Komaru', '71126846633032', 0, function()
